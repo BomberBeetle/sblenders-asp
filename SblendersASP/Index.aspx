@@ -37,6 +37,7 @@
             </div>
             <div class="carousel-item">
               <img class="d-block w-100 imgCarouselIndex2" src="Imagens/burguer2.jpg" alt="Segundo Slide"/>
+            balaçjcalçfja teste
             </div>
             <div class="carousel-item">
               <img class="d-block w-100 imgCarouselIndex2" src="Imagens/burguer3.jpg" alt="Terceiro Slide"/>
