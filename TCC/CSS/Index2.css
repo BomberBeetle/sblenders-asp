@@ -1,0 +1,118 @@
+﻿@font-face {font-family:Borg; src: url('Fontes/Borg.ttf');}
+@font-face {font-family:Roboto; src: url('Fontes/Roboto-Black.ttf');}
+
+body {
+}
+
+*{
+    margin:0 auto;
+    font-family:'Century Gothic';
+}
+
+#divCabecalho{
+    height:15vh;
+    background-color:rgba(255, 250, 237,0);/*255,115,0*/
+}
+
+.CabEsq{
+    height:15vh;
+    float:left;
+}
+
+.imgLogo{
+    height:15vh;
+    width:90%;
+    float:left;
+}
+
+.CabEsq p{
+    font-size:40px;
+    margin-top:30px;
+    margin-left:10px;
+}
+
+.aProjSblenders{
+    font-size:28px;
+    color:#FFF;
+    line-height:15vh;
+    margin-right:40px;
+    float:left;
+}
+
+.aProjSblenders:hover{
+    color:#434343;
+    text-decoration:none;
+}
+
+.aCad{
+    color:#fff !important;
+    font-size:28px;
+    /*background-color:#FF4400;*/
+    padding:15px 25px;
+    line-height:15vh;
+    margin-left:10px;
+    margin-right:30px;
+    border-radius:20px 20px;
+    /*box-shadow:#545454 1px 1px 1px;*/
+    cursor:pointer;
+
+}
+
+.aCad:hover{
+    color:#FFF;
+    text-decoration:none;
+}
+
+#divCorpo{
+    height:auto;
+    width:100%;
+    margin:0 auto;
+}
+
+#divRodape{
+    height:250px;
+    background-color:#E374A1;
+}
+
+
+#divCorpoIndex{
+    margin:0 auto;
+    height:100vh;
+    width:100%;
+}
+
+#divCorpoIndex nav:first-child{
+    position:relative;
+    z-index:2;
+}
+
+#divCorpoIndex nav:last-child{
+    position:relative;
+    top:-15vh;
+    z-index:1
+}
+
+#carouselBanner {
+    height: 100vh;
+    width:100%;
+}
+
+.imgCarrouselBanner{
+    height:100vh;
+}
+
+#carouselIndex2{
+    height:100vh;
+    width:80%;
+    align-items:center;
+    margin-top:50px;
+
+}
+
+.imgCarouselIndex2{
+    height:100vh;
+} 
+
+.aNeg{
+    z-index:2;
+}

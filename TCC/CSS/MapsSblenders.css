@@ -1,0 +1,50 @@
+﻿body {
+}
+
+.divCorpoMaps{
+    height:800px;
+    /*background-color:#FFF;*/
+    background-image:url("ImagensCSS/whiteTexture2.jpg");
+    background-repeat:round;
+    padding-top:20px;
+}
+
+.divTitMapa{
+    height:800px;
+    float:left;
+    
+}
+
+.divTitMapaChild{
+    height:800px;
+    width:90%;
+    border-radius:20px 20px;
+    /*background-color:rgb(255,183,0);*/
+    background-image:url("ImagensCSS/yellowTexture2.jpg");
+    background-repeat:round;
+    float:left;
+}
+
+.divTitMapaChild h1{
+    text-align:center;
+    margin-top:10px;
+}
+
+.divMapsSblenders{
+    height:800px;
+    float:left;
+    border-radius:20px 20px;
+}
+
+/*#mapa {
+    height: 400px;
+    width: 70%;
+    align-items: center;
+}*/
+
+.h2Maps {
+    margin-bottom: 25px;
+    margin-left: 10px;
+    font-size: 42px;
+    font-weight: bold;
+}
