@@ -185,7 +185,7 @@
         <nav id="carouselBanner" class="carousel slide carousel-fade" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100 imgCarrouselBanner" src="Imagens/burguer1.jpg" alt="Primeiro Slide"/>
+              <img class="d-block w-100 imgCarrouselBanner" src="Imagens/carroBurguer.jpeg" alt="Primeiro Slide"/>
             </div>
             <div class="carousel-item">
               <img class="d-block w-100 imgCarrouselBanner" src="Imagens/burgerk.png" alt="Segundo Slide"/>

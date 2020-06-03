@@ -116,6 +116,7 @@
     <Content Include="Imagens\novoSblenders.png" />
     <Content Include="Imagens\sblendersBlack.png" />
     <Content Include="Imagens\sblendersWhite.png" />
+    <Content Include="Imagens\carroBurguer.jpeg" />
     <Content Include="Index2.aspx" />
     <Content Include="JS\Funcoes.js" />
     <Content Include="MapsSblenders.aspx" />
