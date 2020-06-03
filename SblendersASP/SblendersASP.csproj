@@ -113,6 +113,7 @@
     <Content Include="Imagens\exterminador.png" />
     <Content Include="Imagens\iconX.png" />
     <Content Include="CSS\ImagensCSS\orangeTexture.jpg" />
+    <Content Include="Imagens\novoSblenders.png" />
     <Content Include="Imagens\sblendersBlack.png" />
     <Content Include="Imagens\sblendersWhite.png" />
     <Content Include="Index2.aspx" />

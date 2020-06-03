@@ -80,7 +80,7 @@
         <section class="container-fluid" id="divCabecalho">
             <div class="col-2 CabEsq">
                 <a href="Index.aspx">
-                    <img src="Imagens/sblendersBlack.png" class="imgLogo" />
+                    <img src="Imagens/novoSblenders.png" class="imgLogo" />
                 </a>
             </div>
             <div class="col-6 CabEsq">
