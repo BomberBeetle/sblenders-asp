@@ -103,14 +103,13 @@
     <Content Include="CSS\ImagensCSS\yellowTexture2.jpg" />
     <Content Include="CSS\MapsSblenders.css" />
     <Content Include="CSS\Index2.css" />
-    <Content Include="Imagens\asa.jpg" />
-    <Content Include="Imagens\batman.jpg" />
+    <Content Include="Imagens\bannerBurger.jpg" />
+    <Content Include="Imagens\bannerBurger.png" />
     <Content Include="Imagens\burgerk.png" />
     <Content Include="Imagens\burguer1.jpg" />
     <Content Include="Imagens\burguer2.jpg" />
     <Content Include="Imagens\burguer3.jpg" />
     <Content Include="Imagens\burguerk2.png" />
-    <Content Include="Imagens\exterminador.png" />
     <Content Include="Imagens\iconX.png" />
     <Content Include="CSS\ImagensCSS\orangeTexture.jpg" />
     <Content Include="Imagens\novoSblenders.png" />

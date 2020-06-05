@@ -188,7 +188,7 @@
               <img class="d-block w-100 imgCarrouselBanner" src="Imagens/carroBurguer.jpeg" alt="Primeiro Slide"/>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100 imgCarrouselBanner" src="Imagens/burgerk.png" alt="Segundo Slide"/>
+              <img class="d-block w-100 imgCarrouselBanner" src="Imagens/bannerBurger.jpg" alt="Segundo Slide"/>
             </div>
             <div class="carousel-item">
               <img class="d-block w-100 imgCarrouselBanner" src="Imagens/burguerk2.png" alt="Terceiro Slide"/>

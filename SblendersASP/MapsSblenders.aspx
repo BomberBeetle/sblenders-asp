@@ -20,7 +20,7 @@
                     };
                     var mapa = new google.maps.Map(document.getElementById("mapa"), opcoes);
                 }
-                window.onload = InicializaMapa;
+                    window.onload = InicializaMapa;
                 </script>
                 <!--<h2 class="h2 h2Maps">Usando Google Maps </h2>
                 <div ></div>-->
