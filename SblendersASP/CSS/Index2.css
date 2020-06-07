@@ -174,7 +174,7 @@ body {
     box-shadow:rgba(40,20,30,0.3) 5px 5px;*/
     color: #FEFEFE;
     align-items: center;
-    margin-top: 6vh; /*8vh*/
+    margin-top: 3vh; /*8vh*/
 }
 
 .divTitLogin, .divEmailLogin, .divSenhaLogin, .divBtnLogin {
@@ -183,20 +183,23 @@ body {
 }
 
 .divTitLogin {
-    height: 26%;
+    height: 22%;
 }
 
 .divSubTitLogin1 {
     margin-top: 10px;
+    margin-left:20px;
     height: 60%;
-    width: 17.5%;
+    width: 18.5%;
     z-index: 5;
+    float:left;
+    position:relative;
 }
 
 .imgLogoLogin {
     height: 100%;
     width: 100%;
-    align-items: center;
+    align-items:center;
 }
 
 .divSubTitLoginSair {
@@ -219,9 +222,12 @@ body {
 }
 
 .divSubTitLogin2 {
-    height: 40%;
+    height: 0%;
     width: 100%;
     float: left;
+    z-index:8;
+    position:relative;
+    margin-top:-2%;
 }
 
 .h1Login {
@@ -231,7 +237,7 @@ body {
 
 /*Login*/
 .divEmailLogin, .divSenhaLogin {
-    height: 25%;
+    height: 27%;
 }
 
 .divSenhaLogin {
@@ -331,7 +337,7 @@ body {
 /*Cadastro*/
 
 .divNomeCadastro, .divEmailCadastro {
-    height: 15%;
+    height: 16%;
     width: 100%;
     float: left;
 }

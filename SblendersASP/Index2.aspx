@@ -50,7 +50,7 @@
                         </div>
                         <div class="divTitLogin">
                             <div class="divSubTitLogin1">
-                                <img src="Imagens/sblendersBlack.png" class="imgLogoLogin"/>
+                                <img src="Imagens/novoSblenders.png" class="imgLogoLogin"/>
                             </div>
                             
                             <div class="divSubTitLogin2">
@@ -134,7 +134,7 @@
                         </div>
                         <div class="divTitLogin">
                             <div class="divSubTitLogin1">
-                                <img src="Imagens/sblendersBlack.png" class="imgLogoLogin"/>
+                                <img src="Imagens/novoSblenders.png" class="imgLogoLogin"/>
                             </div>
                             
                             <div class="divSubTitLogin2">
