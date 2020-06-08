@@ -20,7 +20,7 @@ Fusce convallis varius auctor. Ut eleifend lorem nisi, viverra commodo tortor sc
             </div>          
         </div>
         <div class="col-8 divMapsSblenders" id ="mapa">
-            <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+            <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCUSsVX-TY3GHNO9JLsDuI-fA56xJVwb9E"></script>
                 <script type ="text/javascript">
                 function InicializaMapa() {
                     var latlng = new google.maps.LatLng(-15.682543, -47.978874);
