@@ -51,3 +51,7 @@ function sairCad() {
     visibilidadeCad = false;
     se.style.display = "none";
 }
+
+function localMapa() {
+    alert("DIFSDIFUISODFUIO");
+}
