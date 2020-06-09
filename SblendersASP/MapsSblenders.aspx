@@ -7,33 +7,29 @@
             <div class="divTitMapaChild">
                 <h1> Onde Estamos</h1>
                 <b>
+                    Marker1 = R. Alvinópolis, 178 - Vila Beatriz, São Paulo - SP, 03644-070
+                    Marker2 = Av. Olavo Fontoura, 1078 - Santana São Paulo - SP 02012-021 
+                    Marker3 = R. Miquelino Gabriel Fraga, 51 - Vila Noca, São Paulo - SP, 04072-030
+                    Marker4 = R. Ipanema, 618-652 - Mooca, São Paulo - SP, 03164-200
+                    Marker5 = Avenida Tiradentes, Bom Retiro, São Paulo - SP, 01124-060
+                    Marker6 = Av. José Pinheiro Borges, s/n - 102 - Itaquera, São Paulo - SP, 08220-900
+                    Marker7 = R. Engenheiro Camilo Olivetti, Guarulhos - SP, 07034-911
+                    Marker8 = R. Mal. Maurício Cardoso, Paraíso, São Paulo - SP
+                    Marker9 = Av. Carlos Caldeira Filho, Cidade Auxiliadora, São Paulo - SP, 05798-300
+                    Marker10 = Av. Adolfo Pinheiro, 301 - Santo Amaro, São Paulo - SP, 04733-100
+                    Marker11 = Av. Vital Brasil, City Butantã - Butantã, São Paulo - SP
+                    Marker12 = R. Paulo de Faria, 212-364 - Vila Gustavo, São Paulo - SP
+                    Marker13 = Rua Ettore Lantieri, 102 - Sacomã, São Paulo - SP, 04249-095
+                    Marker14 = Av. Paulista, Jardins, São Paulo - SP
+                    Marker15 = Rua Vergueiro - Liberdade, São Paulo - SP, 01323-090
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at feugiat sapien. Sed nec ultrices leo. Proin mattis efficitur nibh placerat mattis. In hac habitasse platea dictumst. Sed augue eros, blandit vel convallis sed, mattis at lorem. Nunc lobortis eu justo vitae dapibus. Ut eget consequat ante, et placerat quam. Mauris ipsum orci, bibendum a neque quis, vestibulum sollicitudin eros. Suspendisse id suscipit magna. Aliquam nec laoreet libero.
-
-Proin eleifend arcu lacus, quis sollicitudin nibh egestas at. Sed in pellentesque tellus. Pellentesque fringilla eros non purus ultrices, sit amet feugiat sapien tempor. Nulla varius imperdiet rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst. Cras at augue maximus, tempus nisi sed, vestibulum nisi. Quisque tortor lectus, scelerisque nec porta non, elementum at enim. Proin eros magna, egestas eu risus at, finibus molestie erat. Aliquam mauris libero, malesuada id venenatis ut, luctus at erat. Nam eget lacus malesuada, laoreet enim vel, hendrerit orci. Donec efficitur lorem ut maximus efficitur. Proin scelerisque eu ex eu malesuada. Aenean et ante aliquam, condimentum arcu eu, mollis nunc.
-
-Donec mi ligula, blandit tristique nisl eu, mollis facilisis neque. Nunc nec sem efficitur, accumsan orci eget, dictum urna. Sed ut ligula sed ante venenatis consectetur ac ut libero. Morbi risus turpis, elementum faucibus libero sit amet, gravida molestie neque. Cras faucibus mauris dapibus arcu auctor, et blandit sem feugiat. Aliquam vel blandit eros. Nulla dignissim libero et libero consequat, sed fermentum nulla mattis. In egestas, felis eu luctus egestas, lacus magna congue purus, vitae venenatis tortor purus venenatis enim. Donec sapien lorem, scelerisque id elit sed, aliquet convallis est. Cras ultrices mi at mi placerat tristique. Donec sed turpis ante. Aliquam erat volutpat. Cras arcu arcu, fringilla eget nisi at, maximus consectetur magna. Sed luctus diam eget accumsan iaculis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam ac consequat turpis, sit amet lacinia tortor.
-
-Ut maximus urna congue nulla ultricies, non cursus diam porta. Morbi at ultrices justo, non ornare quam. Curabitur sed metus ac tellus pharetra fringilla. Aliquam id sagittis nunc. Vestibulum interdum metus id ipsum dignissim maximus. Ut et dapibus ante, eget euismod diam. Aenean elementum, mauris sed elementum bibendum, lorem lectus dictum erat, eu euismod tortor felis non erat.
-
-Fusce convallis varius auctor. Ut eleifend lorem nisi, viverra commodo tortor scelerisque et. Praesent lacinia quam et dui euismod, quis bibendum augue bibendum. Ut vitae justo sed magna aliquet iaculis. Proin scelerisque magna at luctus iaculis. Sed suscipit tristique lectus posuere rutrum. Phasellus leo mi, vestibulum a tincidunt nec, lobortis eget magna. Proin quis auctor lectus. Aliquam ultricies at ex congue dapibus. </b>
+                </b>
             </div>          
         </div>
         <div class="col-8 divMapsSblenders" id ="mapa">
             <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCUSsVX-TY3GHNO9JLsDuI-fA56xJVwb9E"></script>
                 <script type ="text/javascript">
-                    styles:[{
-                          "featureType": "poi",
-                          "stylers": [{
-                            "visibility": "off"
-                          }]
-                    }]
-                    styles:[{
-                      "featureType": "transit.station.bus",
-                      "stylers": [{
-                        "visibility": "off"
-                      }]
-                }]
+
                 function InicializaMapa() {
                     var latlng = new google.maps.LatLng(-23.5489, -46.6388);
                     var opcoes = {
@@ -41,9 +37,50 @@ Fusce convallis varius auctor. Ut eleifend lorem nisi, viverra commodo tortor sc
                         center: latlng,
                         mapTypeId: google.maps.MapTypeId.ROADMAP
                     };
-                    var map = new google.maps.Map(document.getElementById("mapa"), opcoes);
+                    var styledMapType = new google.maps.StyledMapType([
+                        {
+                            featureType: 'administrative',
+                            elementType: 'geometry',
+                            stylers: [
+                              {
+                                visibility: 'off'
+                              }
+                            ]
+                          },
+                          {
+                            featureType: 'poi',
+                            stylers: [
+                              {
+                                visibility: 'off'
+                              }
+                            ]
+                          },
+                          {
+                            featureType: 'road',
+                            elementType: 'labels.icon',
+                            stylers: [
+                              {
+                                visibility: 'off'
+                              }
+                            ]
+                          },
+                          {
+                            featureType: 'transit',
+                            stylers: [
+                              {
+                                visibility: 'off'
+                              }
+                            ]
+                          }
+                    ]
+                    )
 
-                    var locations = [
+                    var map = new google.maps.Map(document.getElementById("mapa"), opcoes);
+                    map.mapTypes.set('styled_map', styledMapType);
+                    map.setMapTypeId('styled_map');
+
+
+                    /*var locations = [
                       ['First Shoppe', -23.51094057, -46.63993478],
                       ['Second Shoppe', -23.62200102, -46.6548425],
                       ['Third Shoppe', -23.54674172, -46.60619795],
@@ -58,16 +95,166 @@ Fusce convallis varius auctor. Ut eleifend lorem nisi, viverra commodo tortor sc
                       ['dshsdh', -23.603058, -46.604008],
                       ['dshsdh',-23.563546, -46.655087],
                       ['dshsdh',-23.568796, -46.639941],
-                    ];
+                    ];*/
+
+                    var marker1 = new google.maps.Marker({
+                        position: new google.maps.LatLng(-23.533446, -46.542555),
+                        map: map,
+                        icon: 'Imagens/novoSblendersIcon.png',
+                    })
+
+                    marker1.addListener('click', function() {
+                         alert("pegou click no marcador");
+                    });
+
+                    var marker2 = new google.maps.Marker({
+                        position: new google.maps.LatLng(-23.51094057, -46.63993478),
+                        map: map,
+                        icon: 'Imagens/novoSblendersIcon.png',
+                    })
+
+                    marker2.addListener('click', function() {
+                         alert("pegou click no marcador");
+                    });
+
+                    var marker3 = new google.maps.Marker({
+                        position: new google.maps.LatLng(-23.62200102, -46.6548425),
+                        map: map,
+                        icon: 'Imagens/novoSblendersIcon.png',
+                    })
+
+                    marker3.addListener('click', function() {
+                         alert("pegou click no marcador");
+                    });
+
+                    var marker4 = new google.maps.Marker({
+                        position: new google.maps.LatLng(-23.54674172, -46.60619795),
+                        map: map,
+                        icon: 'Imagens/novoSblendersIcon.png',
+                    })
+
+                    marker4.addListener('click', function() {
+                         alert("pegou click no marcador");
+                    });
+
+                    var marker5 = new google.maps.Marker({
+                        position: new google.maps.LatLng(-23.530822, -46.632565),
+                        map: map,
+                        icon: 'Imagens/novoSblendersIcon.png',
+                    })
+
+                    marker5.addListener('click', function() {
+                         alert("pegou click no marcador");
+                    });
+
+                    var marker6 = new google.maps.Marker({
+                        position: new google.maps.LatLng(-23.540086, -46.471189),
+                        map: map,
+                        icon: 'Imagens/novoSblendersIcon.png',
+                    })
+
+                    marker6.addListener('click', function() {
+                         alert("pegou click no marcador");
+                    });
+
+                    var marker7 = new google.maps.Marker({
+                        position: new google.maps.LatLng(-23.488445, -46.548990),
+                        map: map,
+                        icon: 'Imagens/novoSblendersIcon.png',
+                    })
+
+                    marker7.addListener('click', function() {
+                         alert("pegou click no marcador");
+                    });
+
+                    var marker8 = new google.maps.Marker({
+                        position: new google.maps.LatLng(-23.580961, -46.656938),
+                        map: map,
+                        icon: 'Imagens/novoSblendersIcon.png',
+                    })
+
+                    marker8.addListener('click', function() {
+                         alert("pegou click no marcador");
+                    });
+
+                    var marker9 = new google.maps.Marker({
+                        position: new google.maps.LatLng(-23.659340, -46.768888),
+                        map: map,
+                        icon: 'Imagens/novoSblendersIcon.png',
+                    })
+
+                    marker9.addListener('click', function() {
+                         alert("pegou click no marcador");
+                    });
+
+                    var marker10 = new google.maps.Marker({
+                        position: new google.maps.LatLng(-23.650001, -46.704369),
+                        map: map,
+                        icon: 'Imagens/novoSblendersIcon.png',
+                    })
+
+                    marker10.addListener('click', function() {
+                         alert("pegou click no marcador");
+                    });
+
+                    var marker11 = new google.maps.Marker({
+                        position: new google.maps.LatLng(-23.571713, -46.708885),
+                        map: map,
+                        icon: 'Imagens/novoSblendersIcon.png',
+                    })
+
+                    marker11.addListener('click', function() {
+                         alert("pegou click no marcador");
+                    });
+
+                    var marker12 = new google.maps.Marker({
+                        position: new google.maps.LatLng(-23.479693, -46.601862),
+                        map: map,
+                        icon: 'Imagens/novoSblendersIcon.png',
+                    })
+
+                    marker12.addListener('click', function() {
+                         alert("pegou click no marcador");
+                    });
+
+                    var marker13 = new google.maps.Marker({
+                        position: new google.maps.LatLng(-23.603058, -46.604008),
+                        map: map,
+                        icon: 'Imagens/novoSblendersIcon.png',
+                    })
+
+                    marker13.addListener('click', function() {
+                         alert("pegou click no marcador");
+                    });
+
+                    var marker14 = new google.maps.Marker({
+                        position: new google.maps.LatLng(-23.563546, -46.655087),
+                        map: map,
+                        icon: 'Imagens/novoSblendersIcon.png',
+                    })
+
+                    marker14.addListener('click', function() {
+                         alert("pegou click no marcador");
+                    });
+
+                    var marker15 = new google.maps.Marker({
+                        position: new google.maps.LatLng(-23.568796, -46.639941),
+                        map: map,
+                        icon: 'Imagens/novoSblendersIcon.png',
+                    })
+
+                    marker15.addListener('click', function() {
+                         alert("pegou click no marcador");
+                    });
  
-                    for (i = 0; i < locations.length; i++) {  
+                    /*for (i = 0; i < locations.length; i++) {  
                       marker = new google.maps.Marker({
                     position: new google.maps.LatLng(locations[i][1], locations[i][2]),
                         title: locations[i][0],
                         map: map,
                         icon: 'Imagens/novoSblendersIcon.png',
                       });
-                    }
+                    }*/
                     }
 
                     window.onload = InicializaMapa;
