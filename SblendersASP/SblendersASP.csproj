@@ -106,6 +106,7 @@
     <Content Include="CSS\ImagensCSS\yellowTexture2.jpg" />
     <Content Include="CSS\MapsSblenders.css" />
     <Content Include="CSS\Index2.css" />
+    <Content Include="Imagens\background.png" />
     <Content Include="Imagens\bannerBurger.jpg" />
     <Content Include="Imagens\bannerBurger.png" />
     <Content Include="Imagens\burgerk.png" />
@@ -127,6 +128,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Produtos.aspx" />
+    <Content Include="CSS\Produtos.css" />
     <Content Include="scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="scripts\jquery-3.0.0.min.map" />
     <Content Include="Fontes\Borg.ttf" />
@@ -240,6 +243,13 @@
     </Compile>
     <Compile Include="Mestre.Master.designer.cs">
       <DependentUpon>Mestre.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos.aspx.cs">
+      <DependentUpon>Produtos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Produtos.aspx.designer.cs">
+      <DependentUpon>Produtos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
