@@ -35,7 +35,7 @@
             </div>          
         </div>
         <div class="col-8 divMapsSblenders" id ="mapa" onload="InicializaMapa()">
-            <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCUSsVX-TY3GHNO9JLsDuI-fA56xJVwb9E"></script>
+            <script type="text/javascript" src=""></script><!--http://maps.googleapis.com/maps/api/js?key=AIzaSyCUSsVX-TY3GHNO9JLsDuI-fA56xJVwb9E-->
                 <script type ="text/javascript">
                     var latlng = new google.maps.LatLng(-23.5489, -46.6388);
                     var opcoes = {
@@ -83,10 +83,7 @@
                           }
                     ]
                     )
-
                      
-
-
                     var map = new google.maps.Map(document.getElementById("mapa"), opcoes);
                     map.mapTypes.set('styled_map', styledMapType);
                     map.setMapTypeId('styled_map');
@@ -283,12 +280,6 @@
                         content: conteudo16
                     });
 
-                    //var endereco1 = document.getElementById('lblEndereco1');
-
-                    /*function MudarCor() {
-                        alert("jdhfjkdsh");
-                        document.getElementById('lblEndereco1').style.color = "#FFF";
-                    }*/
 
                 function localMapa1() {
                     map.setZoom(16);
@@ -371,28 +362,7 @@
                 }
 
                 function InicializaMapa() {
-
-                    /*var locations = [
-                      ['First Shoppe', -23.51094057, -46.63993478],
-                      ['Second Shoppe', -23.62200102, -46.6548425],
-                      ['Third Shoppe', -23.54674172, -46.60619795],
-                      ['Fourth Shoppe', -23.530822, -46.632565],
-                      ['Fifth Shoppe', -23.540086, -46.471189],
-                      ['Sixth Shoppe', -23.488445, -46.548990],
-                      ['Seventh Shoppe', -23.580961, -46.656938],
-                      ['dshsdh', -23.659340, -46.768888],
-                      ['dshsdh', -23.650001, -46.704369],
-                      ['dshsdh', -23.571713, -46.708885],
-                      ['dshsdh', -23.479693, -46.601862],
-                      ['dshsdh', -23.603058, -46.604008],
-                      ['dshsdh',-23.563546, -46.655087],
-                      ['dshsdh',-23.568796, -46.639941],
-                    ];*/
-
-                    //var infowindow = new google.maps.InfoWindow(), marker;
-
-                    
-
+                   
                     marker1.addListener('click', function () {
                         //endereco1.style.color = '#DD5599';
                         map.setZoom(16);
@@ -620,8 +590,7 @@
 
                     
                 </script>
-                <!--<h2 class="h2 h2Maps">Usando Google Maps </h2>
-                <div ></div>-->
+
         </div>
     </div>
 </asp:Content>

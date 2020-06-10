@@ -18,7 +18,7 @@
 .divTitMapaChild{
     height:790px;
     width:90%;
-    border-radius:20px 20px;
+    border-radius:20px 20px 0px 0px;
     /*background-color:rgb(255,183,0);*/
     background-image:url("ImagensCSS/yellowTexture2.jpg");
     background-repeat:round;
@@ -77,7 +77,7 @@
     display: inline-block;
     width: 90%;
     font-size: 16px;
-    text-align: left;
+    text-align: justify;
     margin-left: 10px;
     margin-right: 50px;
     margin-top: 30px;
@@ -86,27 +86,28 @@
     color:rgb(33, 37, 41) ;
 }
 
-.divTitMapaChild::-webkit-scrollbar {
-    height: 790px;
-    width: 0px;
-} 
-
-.divTitMapaChild::-webkit-scrollbar-button { 
-
+.divSubTitMapChild3::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 16px;
 }
 
-.divTitMapaChild::-webkit-scrollbar-track {
-    border-radius:20px ;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+.divSubTitMapChild3::-webkit-scrollbar-track-piece {
+    background-image: url("ImagensCSS/yellowTexture2.jpg");
+    background-repeat: round;
+    -webkit-border-radius: 3px;
 }
 
-.divTitMapaChild::-webkit-scrollbar-track-piece { 
-
+.divSubTitMapChild3::-webkit-scrollbar-thumb:vertical {
+    height: 5px;
+    background-color: #58AA23;
+    -webkit-border-radius: 3px;
 }
 
-.divTitMapaChild::-webkit-scrollbar-thumb { 
-    border-radius:20px ;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+.divSubTitMapChild3::-webkit-scrollbar-thumb:horizontal {
+    width: 5px;
+    background-color: #666;
+    -webkit-border-radius: 3px;
 }
 
 .divTitMapaChild::-webkit-scrollbar-corner {
@@ -144,7 +145,7 @@ estou colocando uma cor azul clara nela
 #divInfobox1 {
     width: 350px !important;
     height: 200px;
-    background-image: url("ImagensCSS/restauranteSblenders1.png");
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders1.png");
     background-repeat: no-repeat;
     background-size: contain;
     top: 0 !important;
@@ -155,13 +156,168 @@ estou colocando uma cor azul clara nela
 #divInfobox2 {
     width: 350px !important;
     height: 200px;
-    background-image: url("ImagensCSS/restauranteSblenders2.png");
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders2.png");
     background-repeat: no-repeat;
     background-size: contain;
     top: 0 !important;
     left: 0 !important;
     border-radius: 2px 2px 0 0;
 }
+
+#divInfobox3 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
+#divInfobox4 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders4.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
+#divInfobox5 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders5.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
+#divInfobox6 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders6.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
+#divInfobox7 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders7.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
+#divInfobox8 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders8.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
+#divInfobox9 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders9.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
+#divInfobox10 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders10.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
+#divInfobox11 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders11.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
+#divInfobox12 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders12.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
+#divInfobox13 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders13.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
+#divInfobox14 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders14.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
+#divInfobox15 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders15.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
+#divInfobox16 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/ImagensRestaurantes/restauranteSblenders16.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
 
 /*.gm-style-iw {
     width: 350px !important;
