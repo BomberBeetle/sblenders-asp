@@ -39,7 +39,7 @@ body {
 #divCabecalho {
     height: 15vh;
     /*background-color:rgba(255,115,0,1);*/
-    background-image: linear-gradient(to bottom right, rgb(222, 100, 0),rgb(240, 141, 60),rgb(240, 155, 86));
+    background-color: #ff7300;
 }
 
 .CabEsq {
@@ -77,7 +77,7 @@ body {
 .aCad {
     color: #fff !important;
     font-size: 24px;
-    background-color: #ffd000;
+    background-color: #ffad15;
     padding: 15px 25px;
     line-height: 15vh;
     margin-left: 10px;
@@ -89,7 +89,7 @@ body {
 
     .aCad:hover {
         color: #6e6a5c !important;
-        background-color: #ffae00;
+        background-color: #ffa200;
         transition: 0.75s;
     }
 

@@ -27,10 +27,8 @@
                     <asp:Label ID="lblEndereco12" runat="server" CssClass="lblEndereco" Text="12 - R. Paulo de Faria, 212-364 - Vila Gustavo, São Paulo - SP" OnClick="localMapa12()"></asp:Label>
                     <asp:Label ID="lblEndereco13" runat="server" CssClass="lblEndereco" Text="13 - Rua Ettore Lantieri, 102 - Sacomã, São Paulo - SP, 04249-095" OnClick="localMapa13()"></asp:Label>
                     <asp:Label ID="lblEndereco14" runat="server" CssClass="lblEndereco" Text="14 - Av. Paulista, Jardins, São Paulo - SP" OnClick="localMapa14()"></asp:Label>
-                    <asp:Label ID="lblEndereco15" runat="server" CssClass="lblEndereco" Text="15 - Rua Vergueiro - Liberdade, São Paulo - SP, 01323-090" OnClick="localMapa15()"></asp:Label>
-                                   
+                    <asp:Label ID="lblEndereco15" runat="server" CssClass="lblEndereco" Text="15 - Rua Vergueiro - Liberdade, São Paulo - SP, 01323-090" OnClick="localMapa15()"></asp:Label>              
                 </div>
-                
             </div>          
         </div>
         <div class="col-8 divMapsSblenders" id ="mapa" onload="InicializaMapa()">
