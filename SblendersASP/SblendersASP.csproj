@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\ImagensCSS\lupa.png" />
+    <Content Include="CSS\ImagensCSS\restauranteSblenders.png" />
     <Content Include="CSS\ImagensCSS\whiteTexture.jpg" />
     <Content Include="CSS\ImagensCSS\whiteTexture2.jpg" />
     <Content Include="CSS\ImagensCSS\yellowTexture.jpg" />

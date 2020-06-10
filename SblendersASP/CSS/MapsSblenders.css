@@ -73,16 +73,17 @@
     overflow-x:hidden;
 }
 
-.lblEndereco{
-    display:inline-block;
-    width:90%;
-    font-size:16px;
-    text-align:left;
-    margin-left:10px;
-    margin-right:50px;
-    margin-top:30px;
-    white-space:pre-line;
-    cursor:pointer;
+.lblEndereco {
+    display: inline-block;
+    width: 90%;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 50px;
+    margin-top: 30px;
+    white-space: pre-line;
+    cursor: pointer;
+    color:rgb(33, 37, 41) ;
 }
 
 .divTitMapaChild::-webkit-scrollbar {
@@ -138,6 +139,17 @@ estou colocando uma cor azul clara nela
     height:790px;
     float:left;
     border-radius:20px 20px;
+}
+
+.gm-style-iw {
+    width: 350px !important;
+    height:200px;
+    background-image:url("ImagensCSS/restauranteSblenders.png");
+    background-repeat:no-repeat;
+    background-size:contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
 }
 
 /*#mapa {
