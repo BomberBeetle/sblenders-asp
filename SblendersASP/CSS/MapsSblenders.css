@@ -141,7 +141,29 @@ estou colocando uma cor azul clara nela
     border-radius:20px 20px;
 }
 
-.gm-style-iw {
+#divInfobox1 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/restauranteSblenders1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
+#divInfobox2 {
+    width: 350px !important;
+    height: 200px;
+    background-image: url("ImagensCSS/restauranteSblenders2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 2px 2px 0 0;
+}
+
+/*.gm-style-iw {
     width: 350px !important;
     height:200px;
     background-image:url("ImagensCSS/restauranteSblenders.png");
@@ -150,7 +172,7 @@ estou colocando uma cor azul clara nela
     top: 0 !important;
     left: 0 !important;
     border-radius: 2px 2px 0 0;
-}
+}*/
 
 /*#mapa {
     height: 400px;
