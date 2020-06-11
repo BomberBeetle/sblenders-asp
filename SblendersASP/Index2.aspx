@@ -17,7 +17,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="JS/Funcoes.js" type="text/javascript"></script>
 </head>
-<body>
+<body onload="indexDinamico()">
     <form id="form1" runat="server">  
     <div id="divCorpoIndex">
         <nav class="container-fluid" id="divCabecalho">
@@ -184,13 +184,13 @@
 
         <nav id="carouselBanner" class="carousel slide carousel-fade" data-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active" id="itemCarro1">
               <img class="d-block w-100 imgCarrouselBanner" src="Imagens/carroBurguer.jpeg" alt="Primeiro Slide"/>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" id="itemCarro2">
               <img class="d-block w-100 imgCarrouselBanner" src="Imagens/bannerBurger.jpg" alt="Segundo Slide"/>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" id="itemCarro3">
               <img class="d-block w-100 imgCarrouselBanner" src="Imagens/burguerk2.png" alt="Terceiro Slide"/>
             </div>
           </div>

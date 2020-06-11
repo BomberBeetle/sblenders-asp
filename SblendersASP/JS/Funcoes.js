@@ -52,6 +52,18 @@ function sairCad() {
     se.style.display = "none";
 }
 
-function localMapa() {
-    alert("DIFSDIFUISODFUIO");
+function indexDinamico() {
+    var itemCarro1 = document.getElementById("itemCarro1");
+    var itemCarro2 = document.getElementById("itemCarro2");
+    var itemCarro3 = document.getElementById("itemCarro3");
+
+    if (itemCarro1.classList.contains('carousel-item active')) {
+        alert("jhjkhfkjahs");
+    }
+    else if (itemCarro2.getElementsByClassName("carousel-item active")) {
+
+    }
+    else if (itemCarro3.getElementsByClassName("carousel-item active")) {
+
+    }
 }

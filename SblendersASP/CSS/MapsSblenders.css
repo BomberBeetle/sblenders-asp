@@ -65,12 +65,13 @@
     background-repeat:no-repeat;
 }
 
-.divSubTitMapChild3{
-    height:610px;
-    width:100%;
-    float:left;
-    overflow-y:auto;
-    overflow-x:hidden;
+.divSubTitMapChild3 {
+    height: 610px;
+    width: 100%;
+    float: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-track-color: #ff7300;
 }
 
 .lblEndereco {
@@ -100,7 +101,7 @@
 
 .divSubTitMapChild3::-webkit-scrollbar-thumb:vertical {
     height: 5px;
-    background-color: #58AA23;
+    background-color: #894654;
     -webkit-border-radius: 3px;
 }
 

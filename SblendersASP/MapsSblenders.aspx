@@ -33,7 +33,7 @@
             </div>          
         </div>
         <div class="col-8 divMapsSblenders" id ="mapa" onload="InicializaMapa()">
-            <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCUSsVX-TY3GHNO9JLsDuI-fA56xJVwb9E"></script>
+            <script type="text/javascript" src=""></script><!--http://maps.googleapis.com/maps/api/js?key=AIzaSyCUSsVX-TY3GHNO9JLsDuI-fA56xJVwb9E-->
                 <script type ="text/javascript">
                     var latlng = new google.maps.LatLng(-23.5489, -46.6388);
                     var opcoes = {
