@@ -97,6 +97,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\ImagensCSS\ImagensRestaurantes\fachada1.png" />
+    <Content Include="CSS\ImagensCSS\ImagensRestaurantes\fachada2.png" />
+    <Content Include="CSS\ImagensCSS\ImagensRestaurantes\fachada3.png" />
+    <Content Include="CSS\ImagensCSS\ImagensRestaurantes\fachada4.png" />
+    <Content Include="CSS\ImagensCSS\ImagensRestaurantes\fachada5.png" />
     <Content Include="CSS\ImagensCSS\lupa.png" />
     <Content Include="CSS\ImagensCSS\ImagensRestaurantes\restauranteSblenders1.png" />
     <Content Include="CSS\ImagensCSS\ImagensRestaurantes\restauranteSblenders2.png" />
