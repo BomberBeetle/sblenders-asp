@@ -56,14 +56,45 @@ function indexDinamico() {
     var itemCarro1 = document.getElementById("itemCarro1");
     var itemCarro2 = document.getElementById("itemCarro2");
     var itemCarro3 = document.getElementById("itemCarro3");
+    var quemSomos = document.getElementById("quemSomos");
+    var faleConosco = document.getElementById("faleConosco");
+    var maisInformacoes = document.getElementById("maisInformacoes");
+    var textoLogin = document.getElementById("textoLogin");
+    var textoCadastro = document.getElementById("textoCadastro");
 
-    if (itemCarro1.classList.contains('carousel-item active')) {
-        alert("jhjkhfkjahs");
+    if (itemCarro1.className === "carousel-item active") {
+        quemSomos.style.color = "#FFF";
     }
-    else if (itemCarro2.getElementsByClassName("carousel-item active")) {
+    else if (itemCarro2.className === "carousel-item active") {
+        quemSomos.style.color = "#635532";
+    }
+    else if (itemCarro3.className === "carousel-item active") {
+        quemSomos.style.color = "#260DEF";
+    }
+}
 
-    }
-    else if (itemCarro3.getElementsByClassName("carousel-item active")) {
+var quantidadeMusica = 0;
 
+function tocarMusica() {
+    var audio = document.getElementById("audio1");   
+    if (quantidadeMusica >= 1) {       
+        return;
     }
+    else {
+        audio.play();
+    }
+}
+
+function fecharMusica() {
+    quantidadeMusica = 1;
+}
+
+function Teste() {
+    var itemCarro1 = document.getElementById("itemCarro1");
+    //alert("3q4756");
+    Object.defineProperties(itemCarro1, {
+        className: {
+            set: (classe) => {
+            this.className = classe; (indexDinamico());
+}}})
 }

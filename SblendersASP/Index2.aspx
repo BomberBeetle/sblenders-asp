@@ -17,23 +17,27 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="JS/Funcoes.js" type="text/javascript"></script>
 </head>
-<body onload="indexDinamico()">
+<body  onmouseover="indexDinamico()"> <!--onpagehide="indexDinamico()"-->
     <form id="form1" runat="server">  
-    <div id="divCorpoIndex">
+        
+    <div id="divCorpoIndex" onmouseover="tocarMusica()">
         <nav class="container-fluid" id="divCabecalho">
             <div class="col-2 CabEsq">
+                <audio controls="controls" id="audio1" style="visibility:hidden; height:0px; width:0px;" onload="tocarMusica()" onended="fecharMusica()">
+                    <source src="Audio/teste.mp3" type="audio/mp3"/>
+                </audio>
                 <a href="Index.aspx">
                     <img src="Imagens/novoSblenders.png" class="imgLogo" />
                 </a>
             </div>
             <div class="col-6 CabEsq">
-                <a class="aProjSblenders" href="Q">Quem Somos</a>
-                <a class="aProjSblenders" href="A">Fale Conosco</a>
-                <a class="aProjSblenders" href="V">Mais Informações</a>
+                <a class="aProjSblenders" href="Q" id="quemSomos">Quem Somos</a>
+                <a class="aProjSblenders" href="A" id="faleConosco">Fale Conosco</a>
+                <a class="aProjSblenders" href="V" id="maisInformacoes">Mais Informações</a>
             </div>
             <div class="col-4 CabEsq">
-                <a class="aCad" onclick="Login()">Login</a>
-                <a class="aCad" onclick="Cadastro()">Cadastre-se</a>
+                <a class="aCad" onclick="Login()" id="textoLogin">Login</a>
+                <a class="aCad" onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
             </div>
         </nav>
 
@@ -182,9 +186,9 @@
                 </div>
             </section>      
 
-        <nav id="carouselBanner" class="carousel slide carousel-fade" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" id="itemCarro1">
+        <nav id="carouselBanner" class="carousel slide carousel-fade" data-ride="carousel" >
+          <div class="carousel-inner" onload="Teste()">
+            <div class="carousel-item active" id="itemCarro1" >
               <img class="d-block w-100 imgCarrouselBanner" src="Imagens/carroBurguer.jpeg" alt="Primeiro Slide"/>
             </div>
             <div class="carousel-item" id="itemCarro2">
