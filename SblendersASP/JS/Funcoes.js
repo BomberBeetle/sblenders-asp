@@ -72,6 +72,9 @@ function indexDinamico() {
         quemSomos.style.color = "#260DEF";
     }
 }
+function repetidor() {
+    setInterval(indexDinamico, 100);
+}
 
 var quantidadeMusica = 0;
 
@@ -89,7 +92,7 @@ function fecharMusica() {
     quantidadeMusica = 1;
 }
 
-function Teste() {
+/*function Teste() {
     var itemCarro1 = document.getElementById("itemCarro1");
     //alert("3q4756");
     Object.defineProperties(itemCarro1, {
@@ -97,4 +100,4 @@ function Teste() {
             set: (classe) => {
             this.className = classe; (indexDinamico());
 }}})
-}
+}*/
