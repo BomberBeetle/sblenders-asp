@@ -20,7 +20,7 @@
 <body  onload="repetidor()"> <!--onpagehide/onmouseover="indexDinamico()"-->
     <form id="form1" runat="server">  
         
-    <div id="divCorpoIndex" onmouseover="tocarMusica()"> 
+    <div id="divCorpoIndex" onmouseover="tocaMusica()"> 
         <nav class="container-fluid" id="divCabecalho">
             <div class="col-2 CabEsq">
                 <audio controls="controls" id="audio1" style="visibility:hidden; height:0px; width:0px;" onload="tocarMusica()" onended="fecharMusica()">
@@ -130,7 +130,59 @@
 
                 </div>
                 <div class="col-6 divFacaLogin">
-                    <div class="divLogIn">
+                    <div class="divLogin">
+                        <div class="divSubLoginSair">
+                            <a class="aDivSubLoginSair" onclick="sair()">
+                                <img src="Imagens/iconX.png" class="imgDivSubLoginSair" />
+                            </a>
+                        </div>
+
+                        <div class="divSubLoginLogo">
+                            <img src="Imagens/novoSblenders.png" class="imgDivSubLoginLogo" />
+                        </div>
+
+                        <div class="divSubLoginTitulo">
+                            <h1 class="h1LoginTitulo">Faça seu Login</h1>
+                        </div>
+
+                        <div class="divEspacoLogin">
+
+                        </div>
+
+                        <div class="divLoginEmail">
+                            <div class="divSubLoginEmail1">
+                                <asp:Label ID="lblEmailLogin1" runat="server" Text="E-mail" CssClass="lblDivLogin"></asp:Label>
+                            </div>
+                            <div class="divSubLoginEmail2">
+                                <asp:TextBox ID="txtEmailLogin1" runat="server" CssClass="txtDivLogin"></asp:TextBox>
+                            </div>
+                            <div class="divSubLoginEmail3">
+                                <asp:Label ID="lblEmailAvisoLogin1" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
+                            </div>
+                        </div>
+
+                        <div class="divLoginSenha">
+                            <div class="divSubLoginEmail1">
+                                <asp:Label ID="lblSenhaLogin1" runat="server" Text="Senha" CssClass="lblDivLogin"></asp:Label>
+                            </div>
+                            <div class="divSubLoginEmail2">
+                                <asp:TextBox ID="txtSenhaLogin1" runat="server" CssClass="txtDivLogin" TextMode="Password"></asp:TextBox>
+                            </div>
+                            <div class="divSubLoginEmail3">
+                                <asp:Label ID="lblSenhaAvisoLogin1" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
+                            </div>
+                        </div>
+                        <div class="divLoginEntrar">
+                            <div class="divBtnEspacoVazio"></div>
+                            <div class="divBtnSubLogin1">
+                                <a onclick="" class="aEsqueceuSenha">Esqueceu sua Senha?</a>
+                            </div>
+                            <div class="divBtnSubLogin2">
+                                <asp:Button ID="btnLogin1" runat="server" Text="Entrar" CssClass="btnLogin"/>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="divLogIn">
                         <div class="divSubTitLoginSair">
                             <a class="x" onclick="sair()">
                                 <img src="Imagens/iconX.png" class="imgDivSubTitLoginSair"/>
@@ -179,7 +231,7 @@
                             
                         </div>
                         
-                    </div>
+                    </div>-->
                 </div>
                 <div class="col-3 divFG">
 

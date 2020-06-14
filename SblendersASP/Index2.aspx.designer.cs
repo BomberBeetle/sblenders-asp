@@ -139,6 +139,69 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button btnCadastro;
         
         /// <summary>
+        /// Controle lblEmailLogin1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEmailLogin1;
+        
+        /// <summary>
+        /// Controle txtEmailLogin1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmailLogin1;
+        
+        /// <summary>
+        /// Controle lblEmailAvisoLogin1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEmailAvisoLogin1;
+        
+        /// <summary>
+        /// Controle lblSenhaLogin1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSenhaLogin1;
+        
+        /// <summary>
+        /// Controle txtSenhaLogin1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSenhaLogin1;
+        
+        /// <summary>
+        /// Controle lblSenhaAvisoLogin1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSenhaAvisoLogin1;
+        
+        /// <summary>
+        /// Controle btnLogin1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnLogin1;
+        
+        /// <summary>
         /// Controle lblEmailLogin.
         /// </summary>
         /// <remarks>
