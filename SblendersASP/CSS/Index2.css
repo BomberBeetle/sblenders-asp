@@ -156,259 +156,6 @@ body {
     float: left;
 }
 
-.divLogIn {
-    height: 75vh; /*70vh*/
-    width: 80%;
-    /*background-color: rgba(255,115,0,1);*/
-    background-image: url("ImagensCSS/orangeTexture.jpg");
-    background-repeat: round;
-    border-radius: 45px 45px;
-    /*display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    box-shadow:rgba(40,20,30,0.3) 5px 5px;*/
-    color: #FEFEFE;
-    align-items: center;
-    margin-top: 3vh; /*8vh*/
-}
-
-.divTitLogin, .divEmailLogin, .divSenhaLogin, .divBtnLogin {
-    width: 100%;
-    float: left;
-}
-
-.divTitLogin {
-    height: 22%;
-}
-
-.divSubTitLogin1 {
-    margin-top: 10px;
-    margin-left:20px;
-    height: 60%;
-    width: 18.5%;
-    z-index: 5;
-    float:left;
-    position:relative;
-}
-
-.imgLogoLogin {
-    height: 100%;
-    width: 100%;
-    align-items:center;
-}
-
-.divSubTitLoginSair {
-    /*height:26%;*/
-    width: inherit;
-    position: absolute;
-    z-index: 2;
-}
-
-.x {
-    float: right;
-    margin-right: 50px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-.imgDivSubTitLoginSair {
-    width: 30px;
-    height: 30px;
-}
-
-.divSubTitLogin2 {
-    height: 0%;
-    width: 100%;
-    float: left;
-    z-index:8;
-    position:relative;
-    margin-top:-2%;
-}
-
-.h1Login {
-    text-align: center;
-    font-size: calc(1rem + 1vw);
-}
-
-/*Login*/
-.divEmailLogin, .divSenhaLogin {
-    height: 27%;
-}
-
-.divSenhaLogin {
-    margin-top: -15px;
-}
-
-.divSubEmailLogin1, .divSubEmailLogin2, .divSubEmailLogin3 {
-    width: 50%;
-    text-align: center;
-}
-
-.divSubEmailLogin1 {
-    height: 30%;
-    float: left;
-    margin-top: calc(2.2rem + 1vw);
-}
-
-.divSubEmailLogin2 {
-    height: 50%;
-    /*margin-top:calc(0rem + 1vw);*/
-}
-
-.divSubEmailLogin3 {
-    height: 20%;
-    margin-top: calc(1.6rem + 1vw);
-}
-
-.lblLogin {
-    width: 100%;
-    font-size: calc(0.15rem + 1vw);
-}
-
-.txtLogin {
-    height: 50%;
-    width: 100%;
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: calc(0.09rem + 1vw);
-    border-radius: 20px 4px;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center !important;
-    float: none;
-    display: flex;
-}
-
-.lblAvisoLogin {
-    height: 50%;
-    width: 100%;
-    margin-top: /*calc(0.5rem + 1vw)*/ 25px;
-    float: left;
-    font-size: calc(0.09rem + 1vw);
-}
-
-.divBtnLogin {
-    height: 24%;
-    margin-top: 20px;
-}
-
-.divSubBtnLoginVazio {
-    height: 15%;
-}
-
-.divSubBtnLogin1 {
-    height: 30%;
-    width: 100%;
-    float: left;
-    text-align: center !important;
-    padding-top: 5px;
-}
-
-.aEsqueceuSenha {
-    font-size: calc(0.2rem + 1vw);
-}
-
-.divSubBtnLogin2 {
-    height: 55%;
-    width: 100%;
-    float: left;
-}
-
-.btnLogin {
-    height: 70%;
-    color: #fff;
-    width: 30%;
-    margin-left: 34%;
-    background-color: #ffb300;
-    border-radius: 15px 15px;
-    font-size: calc(0.3rem + 1vw);
-    border: none;
-}
-
-    .btnLogin:hover {
-    }
-
-/*Cadastro*/
-
-.divNomeCadastro, .divEmailCadastro {
-    height: 16%;
-    width: 100%;
-    float: left;
-}
-
-.divSubNomeCadastro1, .divSubNomeCadastro2, .divSubNomeCadastro3 {
-    width: 50%;
-    text-align: center;
-}
-
-.divSubNomeCadastro1 {
-    height: 30%;
-    float: left;
-    margin-top: calc(0.1rem + 0.6vw);
-}
-
-.divSubNomeCadastro2 {
-    height: 50%;
-    /*margin-top:calc(0rem + 1vw);*/
-}
-
-.divSubNomeCadastro3 {
-    height: 20%;
-    margin-top: calc(0.1rem + 0.5vw);
-}
-
-.lblLogin {
-    width: 100%;
-    font-size: calc(0.15rem + 1vw);
-}
-
-.txtCadastro {
-    height: 60%;
-    width: 100%;
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: calc(0.09rem + 1vw);
-    border-radius: 20px 4px;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center !important;
-    float: none;
-    display: flex;
-}
-
-.lblAvisoCadastro {
-    height: 50%;
-    width: 100%;
-    margin-top: calc(0.1rem + 0.7vw);
-    float: left;
-    font-size: calc(0.09rem + 1vw);
-}
-
-.divBtnCadastro {
-    height: 14%;
-    float: left;
-    width: 100%;
-}
-
-.btnCadastro {
-    height: 60%;
-    color: #fff;
-    width: 30%;
-    margin-left: 34%;
-    background-color: #ffb300;
-    border-radius: 15px 15px;
-    font-size: calc(0.3rem + 1vw);
-    border: none;
-    margin-top: calc(0.3rem + 1vw);
-}
-
 /*Novo div Login*/
 .divLogin {
     height: 60vh; /*70vh*/
@@ -501,6 +248,7 @@ body {
 .divSubLoginEmail1{
     height:30%;
     float:left;
+    text-align:left !important;
 }
 
 .divSubEmailLogin2 {
@@ -519,6 +267,7 @@ body {
 
 .lblDivLogin {
     font-size: calc(0.15rem + 1vw);
+    margin-left:17.5%;
 }
 
 .txtDivLogin {
@@ -559,6 +308,7 @@ body {
 
 .aEsqueceuSenha {
     font-size: calc(0.2rem + 1vw);
+    cursor:pointer;
 }
 
 .divBtnSubLogin2 {
@@ -576,102 +326,118 @@ body {
     border-radius: 15px 15px;
     font-size: calc(0.3rem + 1vw);
     border: none;
+} 
+
+/*Div Cadastro*/
+.divCadastro {
+    height: 75vh; /*70vh*/
+    width: 75%;
+    /*background-color: rgba(255,115,0,1);*/
+    background-image: url("ImagensCSS/orangeTexture.jpg");
+    background-repeat: round;
+    border-radius: 45px 45px;
+    color: #FEFEFE;
+    align-items: center;
+    margin-top: 3vh; /*8vh*/
+    position: relative;
 }
 
-/*.divEmailLogin, .divSenhaLogin {
-    height: 27%;
-}
-
-.divSenhaLogin {
-    margin-top: -15px;
-}
-
-.divSubEmailLogin1, .divSubEmailLogin2, .divSubEmailLogin3 {
-    width: 50%;
-    text-align: center;
-}
-
-.divSubEmailLogin1 {
-    height: 30%;
-    float: left;
-    margin-top: calc(2.2rem + 1vw);
-}
-
-.divSubEmailLogin2 {
-    height: 50%;
-
-}
-
-.divSubEmailLogin3 {
-    height: 20%;
-    margin-top: calc(1.6rem + 1vw);
-}
-
-.lblLogin {
+.divSubCadastroSair {
     width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.divSubCadastroSair a {
+    float: right;
+    margin-right: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.divSubCadastroSair img {
+    width: 30px;
+    height: 30px;
+}
+
+.divSubCadastroLogo {
+    height: 12%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    /*float:left;*/
+}
+
+.divSubCadastroLogo img {
+    height: 100%;
+    width: 15%;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.divSubCadastroTitulo {
+    height: 16%;
+    width: 100%;
+    /*float:left;*/
+    z-index: 5;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divSubCadastroTitulo h1 {
+    font-size: calc(1.2rem + 1vw);
+    font-weight: bold;
+}
+
+.divEspacoCadastro{
+    height:5%;
+    float:left;
+    width:100%;
+}
+
+.divCadastroItem{
+    height:16%;
+    width:100%;
+    float:left;
+}
+
+.lblDivCadastro {
     font-size: calc(0.15rem + 1vw);
+    margin-left: 20%;
 }
 
-.txtLogin {
-    height: 50%;
-    width: 100%;
+.txtDivCadastro {
+    height: 85%;
+    width: 60%;
     border: none;
     padding-left: 10px;
     padding-right: 10px;
     font-size: calc(0.09rem + 1vw);
     border-radius: 20px 4px;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center !important;
-    float: none;
-    display: flex;
 }
 
-.lblAvisoLogin {
-    height: 50%;
-    width: 100%;
-    margin-top: 25px;
-    float: left;
-    font-size: calc(0.09rem + 1vw);
-}
-
-.divBtnLogin {
-    height: 24%;
-    margin-top: 20px;
-}
-
-.divSubBtnLoginVazio {
+.divCadastroBtn {
     height: 15%;
-}
-
-.divSubBtnLogin1 {
-    height: 30%;
-    width: 100%;
     float: left;
-    text-align: center !important;
-    padding-top: 5px;
-}
-
-.aEsqueceuSenha {
-    font-size: calc(0.2rem + 1vw);
-}
-
-.divSubBtnLogin2 {
-    height: 55%;
     width: 100%;
-    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.btnLogin {
-    height: 70%;
+.btnDivCadastro {
+    height: 60%;
     color: #fff;
     width: 30%;
-    margin-left: 34%;
     background-color: #ffb300;
     border-radius: 15px 15px;
     font-size: calc(0.3rem + 1vw);
     border: none;
+    /*margin-top: calc(0.3rem + 1vw);*/
 }
-
-    .btnLogin:hover {
-    }*/

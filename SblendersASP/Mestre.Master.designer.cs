@@ -85,58 +85,58 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Label txtEmailAvisoCadastro;
         
         /// <summary>
-        /// Controle Label1.
+        /// Controle lblSenhaCadastro.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblSenhaCadastro;
         
         /// <summary>
-        /// Controle TextBox1.
+        /// Controle txtSenhaCadastro.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtSenhaCadastro;
         
         /// <summary>
-        /// Controle Label2.
+        /// Controle lblAvisoCadastro.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblAvisoCadastro;
         
         /// <summary>
-        /// Controle Label3.
+        /// Controle lblConfirmarSenhaCadastro.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label lblConfirmarSenhaCadastro;
         
         /// <summary>
-        /// Controle TextBox2.
+        /// Controle txtConfirmarSenhaCadastro.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtConfirmarSenhaCadastro;
         
         /// <summary>
-        /// Controle Label4.
+        /// Controle lblAvisoConfirmarSenhaCadastro.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label lblAvisoConfirmarSenhaCadastro;
         
         /// <summary>
         /// Controle btnCadastro.
