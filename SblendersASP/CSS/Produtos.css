@@ -3,6 +3,64 @@
     background-size: cover;
 }
 
+.divIndicadorPagina{
+    width:100%;
+    height:100px;
+    float:left;
+}
+
+.divTriangulo {
+    width: 0;
+    height: 0;
+    border: 50px solid;
+    position:absolute;
+    border-color: #f5e107 transparent transparent #f5e107;
+    float: left;
+}
+
+.divParalelo {
+    width: 12%;
+    height: 100px;
+    position: relative;
+    margin-left: 15px;
+    z-index: 5;
+    border: 1px transparent;
+    -webkit-transform: skew(-45deg);
+    -moz-transform: skew(-45deg);
+    -o-transform: skew(-45deg);
+    background: #f5e107;
+    float: left;
+    border-right: solid white 1px;
+}
+
+.divParalelo2 {
+    width: 12%;
+    height: 100px;
+    position: relative;
+    z-index: 5;
+    border: 1px transparent;
+    -webkit-transform: skew(-45deg);
+    -moz-transform: skew(-45deg);
+    -o-transform: skew(-45deg);
+    background: #f5e107;
+    float: left;
+    border-right: solid white 1px;
+}
+
+.divSubTriangulo {
+    height: 70px;
+    width: 100%;
+    float:left;
+}
+
+.divSubParalelo {
+    height: 30px;
+    width: 100%;
+    background-color: #ba1111;
+    float: left;
+}
+
+/*
 #divlista {
     display: flex;
     flex-direction: column;
@@ -29,4 +87,4 @@ h1 {
     height: 1000px;
     width: 20%;
     margin: 0;
-}
+}*/
