@@ -3,7 +3,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/Produtos.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="divIndicadorPagina">
+    <!--<div class="divIndicadorPagina">
         <div class="divTriangulo">
             <div class="divSubTriangulo">
 
@@ -73,6 +73,15 @@
             </div>
             <div id="lista">
                 
+            </div>
+        </div>
+
+    </div>-->
+
+    <div class="divCorpoProdutos">
+        <div class="divAdicionarLanches">
+            <div class="divBurguer">
+                <h1 class="h1Burguer"> Sblenders 1 </h1>
             </div>
         </div>
     </div>

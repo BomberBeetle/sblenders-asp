@@ -1,9 +1,10 @@
-﻿body {
+﻿
+body {
     background-image: url(Imagens/background.png);
-    background-size: cover;
+    background-size: cover;  
 }
 
-.divIndicadorPagina{
+/*.divIndicadorPagina{
     width:100%;
     height:100px;
     float:left;
@@ -58,7 +59,7 @@
     width: 100%;
     background-color: #ba1111;
     float: left;
-}
+}*/
 
 /*
 #divlista {
@@ -88,3 +89,32 @@ h1 {
     width: 20%;
     margin: 0;
 }*/
+
+.divCorpoProdutos {
+    height: 1000px;
+    width: 100%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divAdicionarLanches{
+    height:800px;
+    width:80%;
+    /*background-color:#245676;*/
+}
+
+.divBurguer{
+    height:400px;
+    width:100%;
+    float:left;
+    border-radius:160px 160px;
+    background-color:antiquewhite;
+}
+
+.h1Burguer{
+    font-size:30px;
+}
