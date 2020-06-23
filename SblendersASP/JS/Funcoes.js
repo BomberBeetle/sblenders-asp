@@ -101,3 +101,21 @@ function fecharMusica() {
             this.className = classe; (indexDinamico());
 }}})
 }*/
+
+function AdicionarLanche() {
+    var divBurguer1 = document.getElementById("divBurguer1");
+    var divBurguer2 = document.getElementById("divBurguer2");
+    var divBurguer3 = document.getElementById("divBurguer3");
+    var divBurguer4 = document.getElementById("divBurguer4");
+    var divBurguer5 = document.getElementById("divBurguer5");
+    var divBurguer6 = document.getElementById("divBurguer6");
+    var divBurguer7 = document.getElementById("divBurguer7");
+    var divBurguer8 = document.getElementById("divBurguer8");
+    var divBurguer9 = document.getElementById("divBurguer9");
+    
+
+    if (divBurguer2.style.display = "none") {
+        alert("sggsdgsg");
+        divBurguer2.style.display = "block";
+    }
+}

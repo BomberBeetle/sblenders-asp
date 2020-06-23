@@ -94,6 +94,24 @@ h1 {
     height: 1000px;
     width: 100%;
     float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divNomePagina{
+    height:110px;
+    width:100%;
+    float:left;
+}
+
+.divTituloPagina {
+    height: 110px;
+    width: 25%;
+    float: left;
+    background-color: #e33d00;
+    border-radius: 0px 0px 30px 0px;
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -101,20 +119,173 @@ h1 {
     justify-content: center;
 }
 
-.divAdicionarLanches{
-    height:800px;
-    width:80%;
+.divTituloPagina h1{
+    color:#FFF;
+    font-size:48px;
+}
+
+.divAdicionarLanches {
+    height: 800px;
+    width: 80%;
+    margin-top:40px;
     /*background-color:#245676;*/
 }
 
-.divBurguer{
-    height:400px;
-    width:100%;
+.divBurguer {
+    height: 450px;
+    width: 100%;
+    float: left;
+    border-radius: 60px 60px;
+    background-color: #ffe76e;
+    margin-bottom:50px;
+}
+
+.divSubBurguer1{
+    height:300px;
+    width:70%;
     float:left;
-    border-radius:160px 160px;
-    background-color:antiquewhite;
 }
 
 .h1Burguer{
-    font-size:30px;
+    font-size:36px;
+    text-align:left;
+    margin-left:60px;
+    margin-top:20px;
+}
+
+.lblBurguerDescricao{
+    height:200px;
+    width:100%;
+    float:left;
+    margin-left:60px;
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-right:100px;
+    text-align:justify;
+    overflow:auto;
+}
+
+.divSubBurguer2 {
+    height: 300px;
+    width: 30%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imgDivBurguer{
+    height:80%;
+    width:60%;
+}
+
+.divSubBurguer3 {
+    height: 150px;
+    width: 100%;
+    float: left;
+}
+
+.divBtnBurguer1 {
+    height: 150px;
+    width: 25%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btnAdicionarIngredientes {
+    height: 60px;
+    width: 75%;
+    /*float: left;
+    margin-top: 50px;
+    margin-left: 60px;*/
+    border-radius: 15px;
+    border: solid 1px #454545;
+    box-shadow: #787878 1px 1px;
+    background-color: #ff9c40;
+    font-size: 20px;
+}
+
+.divBtnBurguer3{
+    height:150px;
+    width:25%;
+    float:left;
+}
+
+.divBtnBurguer4 {
+    height: 150px;
+    width: 25%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lblValorLanche{
+    font-size:24px;
+}
+
+.divBtnOpcoesPagLanches{
+    height:200px;
+    width:100%;
+    float:left;
+}
+
+.divSubBtnOpcoesPagLanches1 {
+    height: 200px;
+    width: 50%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btnAdicionarLancheProximo {
+    height: 70px;
+    width: 35%;
+    border-radius: 15px;
+    background-color: #4cff00;
+    border: solid 1px #454545;
+    box-shadow: #787878 1px 1px;
+}
+
+#divBurguer2{
+    display:none;
+}
+
+#divBurguer3 {
+    display: none;
+}
+
+#divBurguer4 {
+    display: none;
+}
+
+#divBurguer5 {
+    display: none;
+}
+
+#divBurguer6 {
+    display: none;
+}
+
+#divBurguer7 {
+    display: none;
+}
+
+#divBurguer8 {
+    display: none;
+}
+
+#divBurguer9 {
+    display: none;
 }
