@@ -78,7 +78,7 @@
 
     </div>-->
 
-    <div class="divCorpoProdutos">
+    <div class="divCorpoProdutos" onclick="TesteConexao()">
 
         <div class="divNomePagina">
                 <div class="divTituloPagina">

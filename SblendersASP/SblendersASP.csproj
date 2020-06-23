@@ -129,6 +129,7 @@
     <Content Include="Imagens\sblendersWhite.png" />
     <Content Include="Imagens\carroBurguer.jpeg" />
     <Content Include="Index2.aspx" />
+    <Content Include="JS\conexaoApi.js" />
     <Content Include="JS\Funcoes.js" />
     <Content Include="MapsSblenders.aspx" />
     <Content Include="packages.config" />
