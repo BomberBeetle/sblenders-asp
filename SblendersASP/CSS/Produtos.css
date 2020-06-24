@@ -94,10 +94,6 @@ h1 {
     height: 1000px;
     width: 100%;
     float: left;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .divNomePagina{
@@ -125,19 +121,23 @@ h1 {
 }
 
 .divAdicionarLanches {
-    height: 800px;
-    width: 80%;
-    margin-top:40px;
+    height: 450px;
+    width: 100%;
+    margin-top: 40px;
+    float:left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     /*background-color:#245676;*/
 }
 
 .divBurguer {
     height: 450px;
-    width: 100%;
+    width: 80%;
     float: left;
     border-radius: 60px 60px;
     background-color: #ffe76e;
-    margin-bottom:50px;
 }
 
 .divSubBurguer1{
@@ -256,36 +256,4 @@ h1 {
     background-color: #4cff00;
     border: solid 1px #454545;
     box-shadow: #787878 1px 1px;
-}
-
-#divBurguer2{
-    display:none;
-}
-
-#divBurguer3 {
-    display: none;
-}
-
-#divBurguer4 {
-    display: none;
-}
-
-#divBurguer5 {
-    display: none;
-}
-
-#divBurguer6 {
-    display: none;
-}
-
-#divBurguer7 {
-    display: none;
-}
-
-#divBurguer8 {
-    display: none;
-}
-
-#divBurguer9 {
-    display: none;
 }
