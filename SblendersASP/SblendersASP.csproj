@@ -106,6 +106,10 @@
     <Content Include="CSS\ImagensCSS\lupa.png" />
     <Content Include="CSS\ImagensCSS\ImagensRestaurantes\restauranteSblenders1.png" />
     <Content Include="CSS\ImagensCSS\ImagensRestaurantes\restauranteSblenders2.png" />
+    <Content Include="CSS\ImagensCSS\setaBaixo.png" />
+    <Content Include="CSS\ImagensCSS\setaCima.png" />
+    <Content Include="CSS\ImagensCSS\texturaAzul.png" />
+    <Content Include="CSS\ImagensCSS\texturaRepetitiva.png" />
     <Content Include="CSS\ImagensCSS\whiteTexture.jpg" />
     <Content Include="CSS\ImagensCSS\whiteTexture2.jpg" />
     <Content Include="CSS\ImagensCSS\yellowTexture.jpg" />
@@ -119,12 +123,14 @@
     <Content Include="Imagens\burgerk.png" />
     <Content Include="Imagens\burguer1.jpg" />
     <Content Include="Imagens\burguer2.jpg" />
+    <Content Include="Imagens\burguer2.png" />
     <Content Include="Imagens\burguer3.jpg" />
     <Content Include="Imagens\burguerk2.png" />
     <Content Include="Imagens\iconX.png" />
     <Content Include="CSS\ImagensCSS\orangeTexture.jpg" />
     <Content Include="Imagens\novoSblenders.png" />
     <Content Include="Imagens\novoSblendersIcon.png" />
+    <Content Include="Imagens\ProdutosComplementares\cocacola.png" />
     <Content Include="Imagens\sblendersBlack.png" />
     <Content Include="Imagens\sblendersWhite.png" />
     <Content Include="Imagens\carroBurguer.jpeg" />

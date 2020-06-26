@@ -84,44 +84,43 @@
                 <div class="divTituloPagina">
                     <h1> Monte seu Pedido </h1>
                 </div>
-            </div>
+        </div>
 
         <div class="divAdicionarLanches">
-            
-            <div class="divBurguer" id="divBurguer1" onclick="TesteConexao()">
-                <div class="divSubBurguer1">
-                    <h1 class="h1Burguer"> Sblenders 1 </h1>
-                    <asp:Label ID="lblBurguerDescricao" runat="server" Text="
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac feugiat massa, id sodales nibh. Donec vel orci nec dui rhoncus scelerisque. Nullam imperdiet eget dui a aliquam. Vestibulum a est ac lorem tincidunt sollicitudin. In ut orci eget tellus rutrum tempus. Ut cursus dui non risus fringilla, id mattis ligula interdum. Phasellus facilisis, eros interdum varius ultrices, urna mauris ultricies est, a viverra felis sem nec libero. In et libero consequat, ullamcorper est et, blandit ante. Quisque in lobortis ipsum. Curabitur efficitur, lectus scelerisque gravida vehicula, risus nisl tincidunt lacus, in elementum nunc erat id sapien. Aliquam posuere eleifend nisl, ac luctus purus vehicula eu. Phasellus quis commodo augue. Morbi eget mi molestie, egestas magna eu, tempus ligula. Duis malesuada, dui eu posuere volutpat, metus erat accumsan dui, nec dignissim eros turpis ac nulla.
-
-Aliquam ornare congue lorem at facilisis. Nulla placerat urna porta, placerat odio eu, pulvinar libero. Phasellus sagittis justo odio, sed malesuada massa ornare et. Aenean condimentum felis tincidunt velit sagittis finibus. Curabitur feugiat volutpat sem. Mauris egestas tristique sapien, id tempus nisi. Fusce aliquet sem interdum urna rhoncus, ac hendrerit velit aliquet. Vestibulum finibus metus sit amet purus vestibulum, eget hendrerit lacus molestie. Proin egestas dolor in ex consectetur pellentesque. Nam nec nunc sem. Mauris accumsan consequat ligula vitae sagittis. Nulla mollis eleifend leo ut pellentesque. Donec sollicitudin ut magna ac luctus. In sodales quam et tempus luctus.
-
-In tristique quis erat et tincidunt. Etiam et leo nec massa consectetur cursus quis non tortor. Proin finibus auctor leo quis placerat. Fusce blandit risus turpis, at rutrum quam porttitor at. Donec ante lacus, euismod eget erat vel, hendrerit vehicula turpis. Aliquam ut ex ligula. Morbi id tristique mi, sit amet consectetur tortor. Aenean a dui in diam interdum lacinia id sed ex. Ut at ante euismod, ornare nibh ut, tempor ex. Etiam semper erat a quam elementum, et pretium orci molestie. Praesent sagittis egestas leo, quis luctus odio lacinia in. Etiam sit amet risus tristique, dictum nisi ut, tempor nunc. Sed pellentesque enim neque, a rhoncus magna interdum at. Integer ut ipsum nec dui auctor porttitor sed sed neque. Fusce vestibulum, quam non sodales aliquam, mi ante bibendum ex, at pretium elit tortor et diam.
-
-Suspendisse potenti. Donec a imperdiet leo, vel efficitur orci. Morbi tristique elit massa, aliquam faucibus nisl accumsan a. Duis lobortis mollis turpis. Morbi metus nisl, euismod vitae malesuada et, molestie ac sapien. Praesent nec mauris efficitur augue cursus vulputate. Vivamus at semper dolor. Nam nec interdum massa, quis blandit risus. Sed nulla dui, semper vitae pellentesque quis, varius nec orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed justo nisi, rutrum et massa nec, semper pretium turpis. Cras vehicula sit amet neque porta porttitor. Fusce ut porttitor urna, vel consequat tortor. Proin sed justo ac urna sollicitudin sodales. In sagittis quam in mauris accumsan gravida.
-
-Donec tincidunt posuere porttitor. Nunc id neque id risus auctor aliquam non vitae massa. Aenean fringilla orci non dictum scelerisque. Quisque at urna vitae eros imperdiet tincidunt. Vivamus urna urna, rhoncus et tincidunt ut, volutpat eget ex. Mauris in varius nibh. Ut vel nulla non lorem varius scelerisque. Nunc orci magna, accumsan sit amet cursus vitae, congue id enim. " CssClass="lblBurguerDescricao"></asp:Label>
+            <div class="divCustomizarLanches">
+                <div class="divBurguer" id="divBurguer1" >
+                <a href="">
+                    <div class="divTxtBurguer">
+                    <h1> Monte seu Sblurger </h1>
                 </div>
-                <div class="divSubBurguer2">
-                    <img src="Imagens/burger7.png" class="imgDivBurguer"/>
+                <div class="divImgBurguer">
+                    <img src="Imagens/burguer2.png" class="imgDivImgBurger"/>
                 </div>
-                <div class="divSubBurguer3">
-                    <div class="divBtnBurguer1">
-                        <asp:Button ID="Button1" runat="server" Text="Adicionar Ingredientes" CssClass="btnAdicionarIngredientes"/>
-                    </div>
-                    <div class="divBtnBurguer1">
-                        <asp:Button ID="Button2" runat="server" Text="Excluir Lanches" CssClass="btnAdicionarIngredientes"/>
-                    </div>
-                    <div class="divBtnBurguer3">
+                </a>
+                
+                </div>
 
+                <div class="divBurguer2">
+
+                </div>
+
+                <div class="divBurguer3">
+
+                </div>
+
+                <div class="divBurguer" id="divBurguer2" >
+                    <a href="">
+                        <div class="divTxtBurguer">
+                        <h1> Monte seu Sblurger </h1>
                     </div>
-                    <div class="divBtnBurguer4">
-                        <asp:Label ID="Label1" runat="server" Text="Valor Unitário: R$87,75" CssClass="lblValorLanche"></asp:Label>
+                    <div class="divImgBurguer">
+                        <img src="Imagens/burguer2.png" class="imgDivImgBurger"/>
                     </div>
-                    
+                    </a>
+                
                 </div>
             </div>
+            
 
             <div class="divBtnOpcoesPagLanches">
                 <div class="divSubBtnOpcoesPagLanches1">
@@ -132,6 +131,355 @@ Donec tincidunt posuere porttitor. Nunc id neque id risus auctor aliquam non vit
                     <asp:Button ID="Button4" runat="server" Text="Adicionar Complementos" CssClass="btnAdicionarLancheProximo"/>
                 </div>
             </div>
+        </div>
+
+        <div class="divProdutosCustomizaveis">
+            <div class="divNomeComplemento">
+                <div class="divTituloComplemento">
+                    <h1> Adicione Complementos </h1>
+                </div>
+            </div>
+
+            <div class="divBebidas">
+                <div class="divSubBebidas">
+                    <p> <b> Acompanhamentos </b></p>
+                </div>                
+            </div>
+
+            <div class="divSubProdutosCustomizaveis" id="divAcompanhamento">
+                <div class="divProdCustom">
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label25" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label26" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button12" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+                   
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label27" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label28" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button13" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label29" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label30" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button14" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label31" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label32" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button15" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divBotaoExpandir">
+                <div class="divSubBotaoExpandir">
+                    <button class="btnExpandir" onclick="expandirAcompanhamentos()" id="btnExpandirAcompanhamento"></button>
+                </div>
+                
+            </div>
+
+            <div class="divBebidas">
+                <div class="divSubBebidas">
+                    <p> <b> Bebidas </b></p>
+                </div>                
+            </div>
+
+            <div class="divSubProdutosCustomizaveis" id="divBebida">
+                <div class="divProdCustom">
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label1" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label2" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button1" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+                   
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label3" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label4" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button2" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label5" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label6" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button87" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label7" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label8" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button5" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divBotaoExpandir">
+                <div class="divSubBotaoExpandir">
+                    <button class="btnExpandir" onclick="expandirBebidas()" id="btnExpandirBebida"></button>
+                </div>
+                
+            </div>
+
+            <div class="divBebidas">
+                <div class="divSubBebidas">
+                    <p> <b> Sobremesas </b></p>
+                </div>                
+            </div>
+
+            <div class="divSubProdutosCustomizaveis" id="divSobremesa">
+                <div class="divProdCustom">
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label9" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label10" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button375" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+                   
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label11" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label12" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button6" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label13" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label14" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button7" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label15" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label16" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button8" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divBotaoExpandir">
+                <div class="divSubBotaoExpandir">
+                    <button class="btnExpandir" onclick="expandirSobremesas()" id="btnExpandirSobremesa"></button>
+                </div>
+                
+            </div>
+
+            <div class="divBebidas">
+                <div class="divSubBebidas">
+                    <p> <b> Molhos </b></p>
+                </div>                
+            </div>
+
+            <div class="divSubProdutosCustomizaveis" id="divMolho">
+                <div class="divProdCustom">
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label17" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label18" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button366" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+                   
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label19" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label20" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button9" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label21" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label22" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button10" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+
+                    <div class="divProduto">
+                        <a href=""> 
+                            <div class="divSubProduto1">
+                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
+                            </div>
+
+                            <div class="divSubProduto2">
+                                <asp:Label ID="Label23" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="Label24" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                            </div>
+                        </a>
+                        
+                        <div class="divSubProduto3">
+                            <asp:Button ID="Button11" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divBotaoExpandir">
+                <div class="divSubBotaoExpandir">
+                    <button class="btnExpandir" onclick="expandirMolhos()" id="btnExpandirMolho"></button>
+                </div>
+                
+            </div>
+
         </div>
     </div>
 </asp:Content>
