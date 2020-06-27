@@ -89,56 +89,60 @@
         <div class="divAdicionarLanches">
             <div class="divCustomizarLanches">
                 <div class="divBurguer" id="divBurguer1" >
-                <a href="">
-                    <div class="divTxtBurguer">
-                    <h1> Monte seu Sblurger </h1>
-                </div>
-                <div class="divImgBurguer">
-                    <img src="Imagens/burguer2.png" class="imgDivImgBurger"/>
-                </div>
-                </a>
+                    <a href="">
+                        <div class="divTxtBurguer">
+                            <h1> Monte seu Sblurger </h1>
+                        </div>
+                        <div class="divImgBurguer">
+                            <img src="Imagens/burguer2.png" class="imgDivImgBurger"/>
+                        </div>
+                    </a>
                 
                 </div>
 
                 <div class="divBurguer2">
-
+                    <a href="" class="aBurg">
+                        <div class="divTxtBurguer2">
+                            <h1> Personalize sua Batata Frita</h1>
+                        </div>
+                        <div class="divImgBurguer2">
+                            <img src="Imagens/batataFrita.png" class="imgDivImgBurger"/>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="divBurguer3">
-
+                    <a href="" class="aBurg">
+                        <div class="divTxtBurguer2">
+                            <h1> Personalize seu Hot Dog </h1>
+                        </div>
+                        <div class="divImgBurguer2">
+                            <img src="Imagens/hotDog.png" class="imgDivImgBurger"/>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="divBurguer" id="divBurguer2" >
                     <a href="">
                         <div class="divTxtBurguer">
-                        <h1> Monte seu Sblurger </h1>
+                        <h1> Personalize seu Churros </h1>
                     </div>
                     <div class="divImgBurguer">
-                        <img src="Imagens/burguer2.png" class="imgDivImgBurger"/>
+                        <img src="Imagens/churros.png" class="imgDivImgBurger"/>
                     </div>
                     </a>
                 
                 </div>
-            </div>
+            </div>           
             
-
-            <div class="divBtnOpcoesPagLanches">
-                <div class="divSubBtnOpcoesPagLanches1">
-                    <!--<asp:Button ID="Button3" runat="server" Text="Adicionar Lanche" CssClass="btnAdicionarLancheProximo" OnClientClick="AdicionarLanche()"/>-->
-                    <button onclick="AdicionarLanche()" class="btnAdicionarLancheProximo">Adicionar Lanche</button>
-                </div>
-                <div class="divSubBtnOpcoesPagLanches1">
-                    <asp:Button ID="Button4" runat="server" Text="Adicionar Complementos" CssClass="btnAdicionarLancheProximo"/>
-                </div>
-            </div>
         </div>
 
         <div class="divProdutosCustomizaveis">
-            <div class="divNomeComplemento">
+            <!--<div class="divNomeComplemento">
                 <div class="divTituloComplemento">
                     <h1> Adicione Complementos </h1>
                 </div>
-            </div>
+            </div>-->
 
             <div class="divBebidas">
                 <div class="divSubBebidas">
@@ -149,7 +153,7 @@
             <div class="divSubProdutosCustomizaveis" id="divAcompanhamento">
                 <div class="divProdCustom">
                     <div class="divProduto">
-                        <a href=""> 
+                        <a href="javascript:void(0)" onclick="popupProduto()"> 
                             <div class="divSubProduto1">
                                 <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
                             </div>
@@ -480,6 +484,10 @@
                 
             </div>
 
+        </div>
+
+        <div class="divBtnOpcoesPagLanches">
+            <asp:Button ID="Button3" runat="server" Text="Ir para o carrinho"  CssClass="btnIrCarrinho"/>
         </div>
     </div>
 </asp:Content>

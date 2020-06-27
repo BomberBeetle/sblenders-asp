@@ -94,8 +94,9 @@ h1 {
     height: auto;
     width: 100%;
     float: left;
-    background-image:url(ImagensCSS/texturaRepetitiva.png);
-    background-repeat:repeat;
+    /*background-image:url(ImagensCSS/texturaRepetitiva.png);
+    background-repeat:repeat;*/
+    background-color:#EEE;
 }
 
 .divNomePagina{
@@ -123,9 +124,9 @@ h1 {
 }
 
 .divAdicionarLanches {
-    height: 1400px;
+    height: 1100px;
     width: 100%;
-    margin-top: 60px;
+    margin-top: 80px;
     margin-bottom:60px;
     float: left;
     display: flex;
@@ -146,9 +147,9 @@ h1 {
     float: left;
     border-radius: 30px 30px;
     /*background-color: #ffe76e;*/
-    background-image: url(ImagensCSS/texturaAzul.png);
-    background-size: cover;
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
     margin-bottom: 40px;
+    box-shadow: 7px 7px 7px #878787;
 }
 
 .divBurguer a{
@@ -170,7 +171,10 @@ h1 {
 }
 
 .divTxtBurguer h1{
-
+    text-transform:uppercase;
+    font-size:64px;
+    text-shadow:2px 2px 2px #454545;
+    color:#FEFEFE;
 }
 
 .divImgBurguer {
@@ -195,9 +199,46 @@ h1 {
     float: left;
     border-radius: 20px 20px;
     /*background-color: #ffe76e;*/
-    background-image: url(ImagensCSS/texturaAzul.png);
-    background-size: cover;
+    background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
     margin-bottom: 40px;
+    box-shadow: 4px 4px 4px #878787;
+}
+
+.divTxtBurguer2 {
+    height: inherit;
+    width: 60%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+
+    .divTxtBurguer2 h1 {
+        text-transform: uppercase;
+        font-size: 42px;
+        text-shadow: 2px 2px 2px #454545;
+        color: #FEFEFE;
+    }
+
+.divImgBurguer2 {
+    height: inherit;
+    width: 40%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.divBurguer2 a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    float: left;
 }
 
 .divBurguer3 {
@@ -206,41 +247,27 @@ h1 {
     float: right;
     border-radius: 20px 20px;
     /*background-color: #ffe76e;*/
-    background-image: url(ImagensCSS/texturaAzul.png);
+    background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
     background-size: cover;
     margin-bottom: 40px;
+    box-shadow: 4px 4px 4px #878787;
 }
 
-.divBtnOpcoesPagLanches {
-    height: 200px;
+.divBurguer3 a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+#divBurguer2 {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+.divProdutosCustomizaveis {
+    height: auto;
     width: 100%;
     float: left;
-}
-
-.divSubBtnOpcoesPagLanches1 {
-    height: 200px;
-    width: 50%;
-    float: left;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.btnAdicionarLancheProximo {
-    height: 70px;
-    width: 35%;
-    border-radius: 15px;
-    background-color: #4cff00;
-    border: solid 1px #454545;
-    box-shadow: #787878 1px 1px;
-}
-
-.divProdutosCustomizaveis{
-    height:auto;
-    width:100%;
-    float:left;
 }
 
 .divNomeComplemento {
@@ -432,4 +459,28 @@ h1 {
     font-size: 48px;
     background-image: url(ImagensCSS/setaBaixo.png);
     background-size: contain;
+}
+
+.divBtnOpcoesPagLanches {
+    height: 200px;
+    width: 100%;
+    float: left;
+    align-items: initial;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btnIrCarrinho {
+    height: 80px;
+    width: 35%;
+    background-color: #ffb338;
+    font-size:32px;
+    font-weight:bold;
+    text-transform:uppercase;
+    border-radius:20px 20px;
+    border:none;
+    color:#F8F8F8;
+    box-shadow:6px 6px 6px #656565;
 }

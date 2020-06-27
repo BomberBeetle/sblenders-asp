@@ -119,6 +119,7 @@
     <Content Include="Imagens\background.png" />
     <Content Include="Imagens\bannerBurger.jpg" />
     <Content Include="Imagens\bannerBurger.png" />
+    <Content Include="Imagens\batataFrita.png" />
     <Content Include="Imagens\burger7.png" />
     <Content Include="Imagens\burgerk.png" />
     <Content Include="Imagens\burguer1.jpg" />
@@ -126,6 +127,8 @@
     <Content Include="Imagens\burguer2.png" />
     <Content Include="Imagens\burguer3.jpg" />
     <Content Include="Imagens\burguerk2.png" />
+    <Content Include="Imagens\churros.png" />
+    <Content Include="Imagens\hotDog.png" />
     <Content Include="Imagens\iconX.png" />
     <Content Include="CSS\ImagensCSS\orangeTexture.jpg" />
     <Content Include="Imagens\novoSblenders.png" />

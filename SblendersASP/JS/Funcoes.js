@@ -169,3 +169,8 @@ function expandirMolhos() {
     }
     event.preventDefault();
 }
+
+function popupProduto() {
+    //varWindow = window.open("popup.html", "popup");
+    window.document.getElementById("divAcompanhamento");
+}
