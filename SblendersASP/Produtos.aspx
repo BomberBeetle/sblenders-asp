@@ -27,7 +27,7 @@
         <div class="divAdicionarLanches">
             <div class="divCustomizarLanches">
                 <div class="divBurguer" id="divBurguer1" >
-                    <a href="">
+                    <a href="Ingredientes.aspx">
                         <div class="divTxtBurguer">
                             <h1> Monte seu Sblurger </h1>
                         </div>

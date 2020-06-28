@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Audio\teste.mp3" />
+    <Content Include="CSS\ImagensCSS\fundoIngredientes.png" />
     <Content Include="CSS\ImagensCSS\ImagensRestaurantes\fachada1.png" />
     <Content Include="CSS\ImagensCSS\ImagensRestaurantes\fachada2.png" />
     <Content Include="CSS\ImagensCSS\ImagensRestaurantes\fachada3.png" />
