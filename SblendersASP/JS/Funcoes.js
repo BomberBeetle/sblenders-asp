@@ -76,23 +76,6 @@ function repetidor() {
     setInterval(indexDinamico, 100);
 }
 
-var quantidadeMusica = 0;
-
-function tocarMusica() {
-    var audio = document.getElementById("audio1");   
-    if (quantidadeMusica >= 1) {       
-        return;
-    }
-    else {
-        audio.play();
-    }
-}
-
-function fecharMusica() {
-    quantidadeMusica = 1;
-}
-
-
 acompanhamentoAberto = false;
 bebidaAberto = false;
 sobremesaAberto = false;

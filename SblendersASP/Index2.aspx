@@ -21,13 +21,13 @@
 <body  onload="repetidor()"> <!--onpagehide/onmouseover="indexDinamico()"-->
     <form id="form1" runat="server">  
         
-    <div id="divCorpoIndex" onmouseover="tocarMusica()"> 
+    <div id="divCorpoIndex"> 
         <nav class="container-fluid" id="divCabecalho">
             <div class="col-2 CabEsq">
                 <audio controls="controls" id="audio1" style="visibility:hidden; height:0px; width:0px;" onload="tocarMusica()" onended="fecharMusica()">
                     <source src="Audio/teste.mp3" type="audio/mp3"/>
                 </audio>
-                <a href="Index.aspx" >
+                <a href="Index2.aspx" >
                     <img src="Imagens/novoSblenders.png" class="imgLogo" />
                 </a>
             </div>

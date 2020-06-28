@@ -114,6 +114,7 @@
     <Content Include="CSS\ImagensCSS\whiteTexture2.jpg" />
     <Content Include="CSS\ImagensCSS\yellowTexture.jpg" />
     <Content Include="CSS\ImagensCSS\yellowTexture2.jpg" />
+    <Content Include="CSS\Ingredientes.css" />
     <Content Include="CSS\MapsSblenders.css" />
     <Content Include="CSS\Index2.css" />
     <Content Include="Imagens\background.png" />
@@ -138,6 +139,7 @@
     <Content Include="Imagens\sblendersWhite.png" />
     <Content Include="Imagens\carroBurguer.jpeg" />
     <Content Include="Index2.aspx" />
+    <Content Include="Ingredientes.aspx" />
     <Content Include="JS\conexaoApi.js" />
     <Content Include="JS\Funcoes.js" />
     <Content Include="MapsSblenders.aspx" />
@@ -180,8 +182,6 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="CSS\Index.css" />
-    <Content Include="Index.aspx" />
     <Content Include="CSS\Master.css" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
@@ -233,19 +233,19 @@
     <Content Include="scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Index2.aspx.cs">
       <DependentUpon>Index2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Index2.aspx.designer.cs">
       <DependentUpon>Index2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ingredientes.aspx.cs">
+      <DependentUpon>Ingredientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ingredientes.aspx.designer.cs">
+      <DependentUpon>Ingredientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="MapsSblenders.aspx.cs">
       <DependentUpon>MapsSblenders.aspx</DependentUpon>
