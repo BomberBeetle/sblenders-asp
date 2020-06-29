@@ -53,7 +53,7 @@ h1 {
     height: 110px;
     width: 25%;
     float: left;
-    background-color: #e33d00;
+    background-color: #ed4218;
     border-radius: 0px 0px 30px 0px;
     align-items: center;
     display: flex;
@@ -295,7 +295,7 @@ h1 {
     border-radius: 40px;
     /*border: 1px solid #323232;*/
     background-color: #FFF;
-    filter: drop-shadow(16px 16px 12px #656565);
+    filter: drop-shadow(12px 12px 12px #656565);
 }
 
 .divProduto a{

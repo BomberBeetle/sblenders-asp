@@ -28,14 +28,19 @@
 }
 
 .divSubTitMapChild1 {
-    height: 100px;
+    height: 140px;
     width: 100%;
     float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .divSubTitMapChild1 h1 {
-    text-align: center;
-    margin-top: 30px;
+    
     font-size:42px;
     font-weight:bold;
 }
@@ -66,7 +71,7 @@
 }
 
 .divSubTitMapChild3 {
-    height: 610px;
+    height: 650px;
     width: 100%;
     float: left;
     overflow-y: auto;

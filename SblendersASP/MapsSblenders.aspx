@@ -8,10 +8,10 @@
                 <div class="divSubTitMapChild1">
                     <h1> Onde Estamos</h1>
                 </div>
-                <div class="divSubTitMapChild2">
+                <!--<div class="divSubTitMapChild2">
                     <asp:TextBox ID="txtPesquisarMapa" runat="server" CssClass="txtPesquisarMapa"></asp:TextBox>
                     <asp:Button ID="btnPesquisarMapa" runat="server" Text="" CssClass="btnPesquisarMapa"/>
-                </div>
+                </div>-->
                 <div class="divSubTitMapChild3">
                     <asp:Label ID="lblEndereco1" runat="server" CssClass="lblEndereco" Text="1 - R. Alvinópolis, 178 - Vila Beatriz, São Paulo - SP, 03644-070" OnClick="localMapa1()"></asp:Label>
                     <asp:Label ID="lblEndereco2" runat="server" CssClass="lblEndereco" Text="2 - Av. Olavo Fontoura, 1078 - Santana São Paulo - SP 02012-021 " OnClick="localMapa2()"></asp:Label>

@@ -135,6 +135,7 @@
     <Content Include="CSS\ImagensCSS\orangeTexture.jpg" />
     <Content Include="Imagens\novoSblenders.png" />
     <Content Include="Imagens\novoSblendersIcon.png" />
+    <Content Include="Imagens\paoHamburguerSuperior.png" />
     <Content Include="Imagens\ProdutosComplementares\cocacola.png" />
     <Content Include="Imagens\sblendersBlack.png" />
     <Content Include="Imagens\sblendersWhite.png" />

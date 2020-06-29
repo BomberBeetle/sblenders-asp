@@ -1,6 +1,5 @@
 ﻿body {
     background-image: url(ImagensCSS/fundoIngredientes.png);
-    background-attachment:fixed;
     background-size:100% 100%;
     background-position:center;
 }
@@ -15,7 +14,7 @@
     height: 110px;
     width: 35%;
     float: left;
-    background-color: #e33d00;
+    background-color: #ed4218;
     border-radius: 0px 0px 30px 0px;
     align-items: center;
     display: flex;
@@ -93,24 +92,86 @@
     float:left;
 }
 
-.divIngredientePaes{
-    height:200px;
-    width:100%;
-    float:left;
-    border-bottom:1px solid #454545;
+.divIngredientePaes {
+    height: 200px;
+    width: 100%;
+    float: left;
+    margin-top:15px;
+    margin-bottom:15px;
+
 }
 
-.divImagemIngrediente{
-    height:inherit;
-    width:30%;
-    float:left;
-    border-right:1px solid #454545;
+.divImagemIngrediente {
+    height: inherit;
+    width: 30%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgIngrediente{
+    height:80%;
+    width:80%;
 }
 
 .divDescricaoIngrediente{
     height:inherit;
-    width:70%;
+    width:50%;
     float:left;
+}
+
+.divSubDescricaoIngrediente{
+    height: 50%;
+    width:100%;
+    float:left;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.lblNomeIngrediente{
+    font-size:20px;
+}
+
+.divBtnIngrediente {
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+
+.btnMaisInformacoesIngredientes{
+    height:40%;
+    width:80%;
+    font-size:14px;
+    border-radius:10px 10px;
+    box-shadow:3px 3px 3px #656565;
+    border:none;
+    background-color:#e33d00;
+    color:#fff;
+}
+
+.divValorIngrediente {
+    height: inherit;
+    width: 20%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.lblValorIngrediente{
+    font-size:22px;
+    font-weight:bold;
 }
 
 .divCarnes {

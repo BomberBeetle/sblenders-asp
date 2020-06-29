@@ -87,13 +87,15 @@ function expandirAcompanhamentos(){
     if (acompanhamentoAberto === false) {
         divAcompanhamento.style.overflow = "visible";
         divAcompanhamento.style.height = "1300px";
-        btnAcompanhamento.style.backgroundImage = "url(CSS/ImagensCSS/setaCima.png)";
+        btnAcompanhamento.style.transform = "rotate(180deg)";
+        btnAcompanhamento.style.transitionDuration = "1s";
         acompanhamentoAberto = true;
     }
     else if (acompanhamentoAberto === true) {
         divAcompanhamento.style.overflow = "hidden";
         divAcompanhamento.style.height = "700px";
-        btnAcompanhamento.style.backgroundImage = "url(CSS/ImagensCSS/setaBaixo.png)";
+        btnAcompanhamento.style.transform = "none";
+        btnAcompanhamento.style.transitionDuration = "1s";
         acompanhamentoAberto = false;
     }
     event.preventDefault();
@@ -105,13 +107,15 @@ function expandirBebidas() {
     if (bebidaAberto === false) {
         divAcompanhamento.style.overflow = "visible";
         divAcompanhamento.style.height = "1300px";
-        btnAcompanhamento.style.backgroundImage = "url(CSS/ImagensCSS/setaCima.png)";
+        btnAcompanhamento.style.transform = "rotate(180deg)";
+        btnAcompanhamento.style.transitionDuration = "1s";
         bebidaAberto = true;
     }
     else if (bebidaAberto === true) {
         divAcompanhamento.style.overflow = "hidden";
         divAcompanhamento.style.height = "700px";
-        btnAcompanhamento.style.backgroundImage = "url(CSS/ImagensCSS/setaBaixo.png)";
+        btnAcompanhamento.style.transform = "none";
+        btnAcompanhamento.style.transitionDuration = "1s";
         bebidaAberto = false;
     }
     event.preventDefault();
@@ -123,13 +127,15 @@ function expandirSobremesas() {
     if (sobremesaAberto === false) {
         divAcompanhamento.style.overflow = "visible";
         divAcompanhamento.style.height = "1300px";
-        btnAcompanhamento.style.backgroundImage = "url(CSS/ImagensCSS/setaCima.png)";
+        btnAcompanhamento.style.transform = "rotate(180deg)";
+        btnAcompanhamento.style.transitionDuration = "1s";
         sobremesaAberto = true;
     }
     else if (sobremesaAberto === true) {
         divAcompanhamento.style.overflow = "hidden";
         divAcompanhamento.style.height = "700px";
-        btnAcompanhamento.style.backgroundImage = "url(CSS/ImagensCSS/setaBaixo.png)";
+        btnAcompanhamento.style.transform = "none";
+        btnAcompanhamento.style.transitionDuration = "1s";
         sobremesaAberto = false;
     }
     event.preventDefault();
@@ -141,13 +147,15 @@ function expandirMolhos() {
     if (molhoAberto === false) {
         divAcompanhamento.style.overflow = "visible";
         divAcompanhamento.style.height = "1300px";
-        btnAcompanhamento.style.backgroundImage = "url(CSS/ImagensCSS/setaCima.png)";
+        btnAcompanhamento.style.transform = "rotate(180deg)";
+        btnAcompanhamento.style.transitionDuration = "1s";
         molhoAberto = true;
     }
     else if (molhoAberto === true) {
         divAcompanhamento.style.overflow = "hidden";
         divAcompanhamento.style.height = "700px";
-        btnAcompanhamento.style.backgroundImage = "url(CSS/ImagensCSS/setaBaixo.png)";
+        btnAcompanhamento.style.transform = "none";
+        btnAcompanhamento.style.transitionDuration = "1s";
         molhoAberto = false;
     }
     event.preventDefault();
