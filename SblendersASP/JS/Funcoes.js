@@ -81,12 +81,14 @@ bebidaAberto = false;
 sobremesaAberto = false;
 molhoAberto = false;
 
-function expandirAcompanhamentos(){
+function expandirAcompanhamentos() {
     var divAcompanhamento = document.getElementById("divAcompanhamento");
     var btnAcompanhamento = document.getElementById("btnExpandirAcompanhamento");
     if (acompanhamentoAberto === false) {
-        divAcompanhamento.style.overflow = "visible";
+        
         divAcompanhamento.style.height = "1300px";
+        divAcompanhamento.style.transitionDuration = "2s";
+        setTimeout(function () { divAcompanhamento.style.overflow = "visible"; },2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         acompanhamentoAberto = true;
@@ -94,6 +96,7 @@ function expandirAcompanhamentos(){
     else if (acompanhamentoAberto === true) {
         divAcompanhamento.style.overflow = "hidden";
         divAcompanhamento.style.height = "700px";
+        divAcompanhamento.style.transitionDuration = "2s";
         btnAcompanhamento.style.transform = "none";
         btnAcompanhamento.style.transitionDuration = "1s";
         acompanhamentoAberto = false;
@@ -105,8 +108,9 @@ function expandirBebidas() {
     var divAcompanhamento = document.getElementById("divBebida");
     var btnAcompanhamento = document.getElementById("btnExpandirBebida");
     if (bebidaAberto === false) {
-        divAcompanhamento.style.overflow = "visible";
         divAcompanhamento.style.height = "1300px";
+        divAcompanhamento.style.transitionDuration = "2s";
+        setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         bebidaAberto = true;
@@ -114,6 +118,7 @@ function expandirBebidas() {
     else if (bebidaAberto === true) {
         divAcompanhamento.style.overflow = "hidden";
         divAcompanhamento.style.height = "700px";
+        divAcompanhamento.style.transitionDuration = "2s";
         btnAcompanhamento.style.transform = "none";
         btnAcompanhamento.style.transitionDuration = "1s";
         bebidaAberto = false;
@@ -125,8 +130,9 @@ function expandirSobremesas() {
     var divAcompanhamento = document.getElementById("divSobremesa");
     var btnAcompanhamento = document.getElementById("btnExpandirSobremesa");
     if (sobremesaAberto === false) {
-        divAcompanhamento.style.overflow = "visible";
         divAcompanhamento.style.height = "1300px";
+        divAcompanhamento.style.transitionDuration = "2s";
+        setTimeout(function () { divAcompanhamento.style.overflow = "visible";  }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         sobremesaAberto = true;
@@ -134,6 +140,7 @@ function expandirSobremesas() {
     else if (sobremesaAberto === true) {
         divAcompanhamento.style.overflow = "hidden";
         divAcompanhamento.style.height = "700px";
+        divAcompanhamento.style.transitionDuration = "2s";
         btnAcompanhamento.style.transform = "none";
         btnAcompanhamento.style.transitionDuration = "1s";
         sobremesaAberto = false;
@@ -145,8 +152,9 @@ function expandirMolhos() {
     var divAcompanhamento = document.getElementById("divMolho");
     var btnAcompanhamento = document.getElementById("btnExpandirMolho");
     if (molhoAberto === false) {
-        divAcompanhamento.style.overflow = "visible";
         divAcompanhamento.style.height = "1300px";
+        divAcompanhamento.style.transitionDuration = "2s";
+        setTimeout(function () { divAcompanhamento.style.overflow = "visible";}, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         molhoAberto = true;
@@ -154,6 +162,7 @@ function expandirMolhos() {
     else if (molhoAberto === true) {
         divAcompanhamento.style.overflow = "hidden";
         divAcompanhamento.style.height = "700px";
+        divAcompanhamento.style.transitionDuration = "2s";
         btnAcompanhamento.style.transform = "none";
         btnAcompanhamento.style.transitionDuration = "1s";
         molhoAberto = false;
@@ -164,4 +173,21 @@ function expandirMolhos() {
 function popupProduto() {
     //varWindow = window.open("popup.html", "popup");
     window.document.getElementById("divAcompanhamento");
+}
+
+var paesAtivado = true;
+var carnesAtivado = false;
+
+
+function mostrarCategoriaSelecao() {
+    alert("dgdfaf");
+    var selectCategoria = document.getElementById("select1");
+    var paes = document.getElementById("divPaes");
+    var carnes = document.getElementById("divCarnes");
+    if (value === "carnes") {
+        paes.style.display = "none";
+        carnes.style.display = "flex";
+        paesAtivado = false;
+        carnesAtivado = true;
+    }
 }
