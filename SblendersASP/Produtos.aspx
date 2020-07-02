@@ -16,7 +16,7 @@
 
     </div>-->
 
-    <div class="divCorpoProdutos" >
+    <div class="divCorpoProdutos" onload="testeConexao()">
 
         <div class="divNomePagina">
                 <div class="divTituloPagina">

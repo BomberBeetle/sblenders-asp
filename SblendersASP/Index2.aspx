@@ -176,7 +176,7 @@
                                 <a onclick="" class="aEsqueceuSenha">Esqueceu sua Senha?</a>
                             </div>
                             <div class="divBtnSubLogin2">
-                                <asp:Button ID="btnLogin" runat="server" Text="Entrar" CssClass="btnLogin"/>
+                                <asp:Button ID="btnLogin" runat="server" Text="Entrar" CssClass="btnLogin" OnClientClick="efetuarLogin()"/>
                             </div>
                         </div>
                     </div>

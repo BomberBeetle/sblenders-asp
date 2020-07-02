@@ -180,11 +180,14 @@ var carnesAtivado = false;
 
 
 function mostrarCategoriaSelecao() {
-    alert("dgdfaf");
-    var selectCategoria = document.getElementById("select1");
+
+    var selectCategoria = document.getElementById("select1").options[document.getElementById("select1").selectedIndex];
+    alert(selectCategoria);
+    var value = selectCategoria.options[selectCategoria.selectedIndex];
     var paes = document.getElementById("divPaes");
     var carnes = document.getElementById("divCarnes");
     if (value === "carnes") {
+        alert("hjkh");
         paes.style.display = "none";
         carnes.style.display = "flex";
         paesAtivado = false;
