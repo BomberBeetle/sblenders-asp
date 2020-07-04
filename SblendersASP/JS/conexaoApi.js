@@ -15,7 +15,7 @@ function TesteConexao() {
     }
 }
 
-btnLogin.onclick = () => {
+/*btnLogin.onclick = () => {
     fetch(`https://localhost:44323/api/AgenteToken/${encodeURIComponent(txtEmailLogin.texto)}/${encodeURIComponent(txtSenhaLogin.texto)}`,
         { method: "GET" }).then((res) => {
             if (res.ok) {
@@ -52,4 +52,4 @@ function efetuarLogin() {
                 else { alert("algo deu errado") }
             }
         }).catch(() => { })
-}
+}*/
