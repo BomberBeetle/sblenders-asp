@@ -113,7 +113,7 @@
                         </div>
 
                         <div class="divCadastroBtn">
-                                <asp:Button ID="btnCadastro" runat="server" Text="Entrar" CssClass="btnDivCadastro"/>                            
+                                <asp:Button ID="btnCadastro" runat="server" Text="Entrar" CssClass="btnDivCadastro" OnClick="btnCadastro_Click"/>                            
                         </div>
                     </div>
 

@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Web.Script.Serialization;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
+using SblendersAPI.Models;
 
 namespace TCC
 {
@@ -18,10 +20,7 @@ namespace TCC
         
 
         private bool GetUserDetails()
-        {
-            Session["userID"] = null;
-            Session["userToken"] = null;
-            Session["userRID"] = null;
+        {           
             string URL = $"https://localhost:44323/api/Agente/{Session["userID"]}";
             string urlParameters = "";
             HttpClient client = new HttpClient();
@@ -54,6 +53,27 @@ namespace TCC
             client.Dispose();
         }
 
+        /*private bool setUserDetails()
+        {
+            string URL = $"https://localhost:44323/api/ClientOnline/{Session["userID"]}";
+            string urlParameters = "";
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(URL);
+
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+            // Add an Accept header for JSON format.
+            client.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/json"));
+
+            client.Content = new StringContent(serializer.Serialize(new ClienteOnline(a, b, c, d)), Encoding.UTF8, "application/json");
+
+            // List data response.
+            JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+            HttpResponseMessage response = client.PostAsync(urlParameters, client.).Result;
+            Dictionary<string, Object> resultado = (Dictionary<string, Object>)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+        }*/
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -61,6 +81,9 @@ namespace TCC
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            Session["userID"] = null;
+            Session["userToken"] = null;
+            Session["userRID"] = null;
             String txtEmail = txtEmailLogin.Text;
             String txtSenha = txtSenhaLogin.Text;
             if(!String.IsNullOrWhiteSpace(txtEmailLogin.Text) && !String.IsNullOrWhiteSpace(txtSenhaLogin.Text))
@@ -85,7 +108,7 @@ namespace TCC
                     Session["userToken"] = (string)resultado["token"];
                     if (GetUserDetails())
                     {
-                        lblSenhaAvisoLogin.Text = "Parabens";
+                        Response.Redirect("Ingredientes.aspx");
                     }
                     else
                     {
@@ -116,6 +139,35 @@ namespace TCC
             else if(String.IsNullOrWhiteSpace(txtSenhaLogin.Text))
             {
                 lblSenhaAvisoLogin.Text = "Insira uma senha para efetuar o login";
+            }
+        }
+
+        protected void btnCadastro_Click(object sender, EventArgs e)
+        {
+            string URL = $"https://localhost:44323/api/ClienteOnline";
+            string urlParameters = "";
+            HttpClient client = new HttpClient();            
+            client.BaseAddress = new Uri(URL);
+
+
+            // Add an Accept header for JSON format.
+            client.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/json"));
+
+            // List data response.
+            JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            //HttpContent clientContent = new StringContent(serializer.Serialize(new ClienteOnline(a, b, c, d)), Encoding.UTF8, "application/json");
+            //client.Content = new StringContent(serializer.Serialize(new ClienteOnline(a, b, c, d)), Encoding.UTF8, "application/json");
+            HttpResponseMessage response = client.PostAsync(urlParameters, new StringContent(serializer.Serialize(new ClienteOnline(txtNomeCadastro.Text, txtConfirmarSenhaCadastro.Text, txtEmailCadastro.Text, txtSenhaCadastro.Text)), Encoding.UTF8, "application/json")).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+            Dictionary<string, Object> resultado = (Dictionary<string, Object>)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+
+            if (response.IsSuccessStatusCode)
+            {
+                lblAvisoCadastro.Text = "Batata";
+            }
+            else
+            {
+                lblAvisoCadastro.Text = "HUR DUR";
             }
         }
     }
