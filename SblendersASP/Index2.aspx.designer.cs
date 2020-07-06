@@ -175,6 +175,15 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button btnCadastro;
         
         /// <summary>
+        /// Controle divLog.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divLog;
+        
+        /// <summary>
         /// Controle lblEmailLogin.
         /// </summary>
         /// <remarks>

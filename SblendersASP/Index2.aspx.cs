@@ -53,27 +53,6 @@ namespace TCC
             client.Dispose();
         }
 
-        /*private bool setUserDetails()
-        {
-            string URL = $"https://localhost:44323/api/ClientOnline/{Session["userID"]}";
-            string urlParameters = "";
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(URL);
-
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
-            // Add an Accept header for JSON format.
-            client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/json"));
-
-            client.Content = new StringContent(serializer.Serialize(new ClienteOnline(a, b, c, d)), Encoding.UTF8, "application/json");
-
-            // List data response.
-            JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
-            HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-            HttpResponseMessage response = client.PostAsync(urlParameters, client.).Result;
-            Dictionary<string, Object> resultado = (Dictionary<string, Object>)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
-        }*/
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -84,9 +63,20 @@ namespace TCC
             Session["userID"] = null;
             Session["userToken"] = null;
             Session["userRID"] = null;
-            String txtEmail = txtEmailLogin.Text;
-            String txtSenha = txtSenhaLogin.Text;
-            if(!String.IsNullOrWhiteSpace(txtEmailLogin.Text) && !String.IsNullOrWhiteSpace(txtSenhaLogin.Text))
+            lblEmailAvisoLogin.Text = "";
+            lblSenhaAvisoLogin.Text = "";
+            bool camposPreenchidos = true;
+            if (String.IsNullOrWhiteSpace(txtEmailLogin.Text))
+            {
+                lblEmailAvisoLogin.Text = "Insira um email para efetuar o login";
+                camposPreenchidos = false;
+            }
+            if (String.IsNullOrWhiteSpace(txtSenhaLogin.Text))
+            {
+                lblSenhaAvisoLogin.Text = "Insira uma senha para efetuar o login";
+                camposPreenchidos = false;
+            }
+            if (camposPreenchidos)
             {
                 string URL = $"https://localhost:44323/api/AgenteToken/{Uri.EscapeUriString(txtEmailLogin.Text)}/{Uri.EscapeUriString(txtSenhaLogin.Text)}";
                 string urlParameters = "";
@@ -127,19 +117,7 @@ namespace TCC
 
                 lblEmailAvisoLogin.Text = "Beleza";
             }
-            else if(String.IsNullOrWhiteSpace(txtEmailLogin.Text) && String.IsNullOrWhiteSpace(txtSenhaLogin.Text))
-            {
-                lblEmailAvisoLogin.Text = "Insira um email para efetuar o login";
-                lblSenhaAvisoLogin.Text = "Insira uma senha para efetuar o login";
-            }
-            else if(String.IsNullOrWhiteSpace(txtEmailLogin.Text))
-            {
-                lblEmailAvisoLogin.Text = "Insira um email para efetuar o login";
-            }
-            else if(String.IsNullOrWhiteSpace(txtSenhaLogin.Text))
-            {
-                lblSenhaAvisoLogin.Text = "Insira uma senha para efetuar o login";
-            }
+            divLog.Attributes.CssStyle.Add("display", "block");
         }
 
         protected void btnCadastro_Click(object sender, EventArgs e)
@@ -186,7 +164,7 @@ namespace TCC
                 string urlParameters = "";
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(URL);
-                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "excecao", "Excecao()", true);
+                //ScriptManager.RegisterStartupScript(Page, Page.GetType(), "excecao", "Excecao()", true);
 
 
                 // Add an Accept header for JSON format.
@@ -195,19 +173,40 @@ namespace TCC
 
                 // List data response.
                 JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
-                //HttpContent clientContent = new StringContent(serializer.Serialize(new ClienteOnline(a, b, c, d)), Encoding.UTF8, "application/json");
                 HttpResponseMessage response = client.PutAsync(urlParameters, new StringContent(serializer.Serialize(new ClienteOnline(
                     txtNomeCadastro.Text, txtSobrenomeCadastro.Text, txtEmailCadastro.Text, txtSenhaCadastro.Text)), Encoding.UTF8, "application/json")).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
                 Dictionary<string, Object> resultado = (Dictionary<string, Object>)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
 
                 if (response.IsSuccessStatusCode)
                 {
+                    string URL2 = $"https://localhost:44323/api/AgenteToken/{Uri.EscapeUriString(txtEmailCadastro.Text)}/{Uri.EscapeUriString(txtSenhaCadastro.Text)}";
+                    string urlParameters2 = "";
+                    HttpClient client2 = new HttpClient();
+                    client2.BaseAddress = new Uri(URL2);
+
+                    // Add an Accept header for JSON format.
+                    client2.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    JavaScriptSerializer serializer2 = new System.Web.Script.Serialization.JavaScriptSerializer();
+                    HttpResponseMessage response2 = client2.GetAsync(urlParameters2).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                    Dictionary<string, Object> resultado2 = (Dictionary<string, Object>)serializer2.DeserializeObject(response2.Content.ReadAsStringAsync().Result);
                     lblSenhaAvisoCadastro.Text = "Batata";
+                    Session["userID"] = int.Parse((string)resultado2["id"]);
+                    Session["userToken"] = (string)resultado2["token"];
+                    if (GetUserDetails())
+                    {
+                        Response.Redirect("Ingredientes.aspx");
+                    }
+                    else
+                    {
+                        lblSenhaAvisoLogin.Text = "Usuário ou senha incorreto";
+                    }
                     //lblNomeAvisoCadastro.Text = resultado.ToString();
                 }
                 else
                 {
-                    lblSenhaAvisoCadastro.Text = "HUR DUR";
+                    lblEmailAvisoCadastro.Text = "Email inválido";
                     //lblNomeAvisoCadastro.Text = resultado.ToString();
                 }
             }

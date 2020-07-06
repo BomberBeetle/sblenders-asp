@@ -140,7 +140,7 @@
                 </div>
             </section>      
 
-        <section class="container-fluid" id="divLog">
+        <section class="container-fluid" id="divLog" runat="server">
                 <div class="col-3 divFG">
 
                 </div>
