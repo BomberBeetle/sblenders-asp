@@ -144,31 +144,75 @@ namespace TCC
 
         protected void btnCadastro_Click(object sender, EventArgs e)
         {
-            string URL = $"https://localhost:44323/api/ClienteOnline";
-            string urlParameters = "";
-            HttpClient client = new HttpClient();            
-            client.BaseAddress = new Uri(URL);
-
-
-            // Add an Accept header for JSON format.
-            client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/json"));
-
-            // List data response.
-            JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
-            //HttpContent clientContent = new StringContent(serializer.Serialize(new ClienteOnline(a, b, c, d)), Encoding.UTF8, "application/json");
-            //client.Content = new StringContent(serializer.Serialize(new ClienteOnline(a, b, c, d)), Encoding.UTF8, "application/json");
-            HttpResponseMessage response = client.PostAsync(urlParameters, new StringContent(serializer.Serialize(new ClienteOnline(txtNomeCadastro.Text, txtConfirmarSenhaCadastro.Text, txtEmailCadastro.Text, txtSenhaCadastro.Text)), Encoding.UTF8, "application/json")).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-            Dictionary<string, Object> resultado = (Dictionary<string, Object>)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
-
-            if (response.IsSuccessStatusCode)
+            lblNomeAvisoCadastro.Text = "";
+            lblSobrenomeAvisoCadastro.Text = "";
+            lblEmailAvisoCadastro.Text = "";
+            lblSenhaAvisoCadastro.Text = "";
+            lblAvisoConfirmarSenhaCadastro.Text = "";
+            bool camposPreenchidos = true;
+            if (String.IsNullOrWhiteSpace(txtNomeCadastro.Text))
             {
-                lblAvisoCadastro.Text = "Batata";
+                lblNomeAvisoCadastro.Text = "Insira um nome";
+                camposPreenchidos = false;
             }
-            else
+            if (String.IsNullOrWhiteSpace(txtSobrenomeCadastro.Text))
             {
-                lblAvisoCadastro.Text = "HUR DUR";
+                lblSobrenomeAvisoCadastro.Text = "Insira um Sobrenome";
+                camposPreenchidos = false;
             }
+            if (String.IsNullOrWhiteSpace(txtEmailCadastro.Text))
+            {
+                lblEmailAvisoCadastro.Text = "Insira um Email";
+                camposPreenchidos = false;
+            }
+            if (String.IsNullOrWhiteSpace(txtSenhaCadastro.Text))
+            {
+                lblSenhaAvisoCadastro.Text = "Insira uma Senha";
+                camposPreenchidos = false;
+            }
+            if (String.IsNullOrWhiteSpace(txtConfirmarSenhaCadastro.Text))
+            {
+                lblAvisoConfirmarSenhaCadastro.Text = "Confirme a Senha";
+                camposPreenchidos = false;
+            }
+            if(txtSenhaCadastro.Text != txtConfirmarSenhaCadastro.Text)
+            {
+                lblAvisoConfirmarSenhaCadastro.Text = "Corfirme a senha corretamente";
+                camposPreenchidos = false;
+            }
+            if (camposPreenchidos)
+            {
+                string URL = $"https://localhost:44323/api/ClienteOnline";
+                string urlParameters = "";
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(URL);
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "excecao", "Excecao()", true);
+
+
+                // Add an Accept header for JSON format.
+                client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+
+                // List data response.
+                JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+                //HttpContent clientContent = new StringContent(serializer.Serialize(new ClienteOnline(a, b, c, d)), Encoding.UTF8, "application/json");
+                HttpResponseMessage response = client.PutAsync(urlParameters, new StringContent(serializer.Serialize(new ClienteOnline(
+                    txtNomeCadastro.Text, txtSobrenomeCadastro.Text, txtEmailCadastro.Text, txtSenhaCadastro.Text)), Encoding.UTF8, "application/json")).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                Dictionary<string, Object> resultado = (Dictionary<string, Object>)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    lblSenhaAvisoCadastro.Text = "Batata";
+                    //lblNomeAvisoCadastro.Text = resultado.ToString();
+                }
+                else
+                {
+                    lblSenhaAvisoCadastro.Text = "HUR DUR";
+                    //lblNomeAvisoCadastro.Text = resultado.ToString();
+                }
+            }
+
+            divCad.Attributes.CssStyle.Add("display","block");
         }
     }
 }

@@ -407,12 +407,55 @@ body {
 
 .lblDivCadastro {
     font-size: calc(0.15rem + 1vw);
-    margin-left: 20%;
+    margin-left: 15%;
 }
 
 .txtDivCadastro {
     height: 85%;
-    width: 60%;
+    width: 70%;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: calc(0.09rem + 1vw);
+    border-radius: 20px 4px;
+}
+
+.divCadastroItem2 {
+    height: 16%;
+    width: 100%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divNomeCadastro{
+    height:100%;
+    width:35%;
+    float:left;
+}
+
+.divSobrenomeCadastro {
+    height: 100%;
+    width: 55%;
+    float: right;
+}
+
+.divNomeSobrenome {
+    height: 100%;
+    width: 70%;
+}
+
+.lblDivCadastro2 {
+    font-size: calc(0.15rem + 1vw);
+    margin-left: 0%;
+}
+
+.txtDivCadastro2 {
+    height: 85%;
+    width: 100%;
     border: none;
     padding-left: 10px;
     padding-right: 10px;

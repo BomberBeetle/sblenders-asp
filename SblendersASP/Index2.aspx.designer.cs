@@ -22,6 +22,15 @@ namespace TCC {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// Controle divCad.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCad;
+        
+        /// <summary>
         /// Controle lblNomeCadastro.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,33 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Label lblNomeAvisoCadastro;
         
         /// <summary>
+        /// Controle lblSobrenomeCadastro.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSobrenomeCadastro;
+        
+        /// <summary>
+        /// Controle txtSobrenomeCadastro.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSobrenomeCadastro;
+        
+        /// <summary>
+        /// Controle lblSobrenomeAvisoCadastro.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSobrenomeAvisoCadastro;
+        
+        /// <summary>
         /// Controle lblEmailCadastro.
         /// </summary>
         /// <remarks>
@@ -67,13 +103,13 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.TextBox txtEmailCadastro;
         
         /// <summary>
-        /// Controle txtEmailAvisoCadastro.
+        /// Controle lblEmailAvisoCadastro.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtEmailAvisoCadastro;
+        protected global::System.Web.UI.WebControls.Label lblEmailAvisoCadastro;
         
         /// <summary>
         /// Controle lblSenhaCadastro.
@@ -94,13 +130,13 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.TextBox txtSenhaCadastro;
         
         /// <summary>
-        /// Controle lblAvisoCadastro.
+        /// Controle lblSenhaAvisoCadastro.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAvisoCadastro;
+        protected global::System.Web.UI.WebControls.Label lblSenhaAvisoCadastro;
         
         /// <summary>
         /// Controle lblConfirmarSenhaCadastro.

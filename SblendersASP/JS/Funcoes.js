@@ -194,3 +194,10 @@ function mostrarCategoriaSelecao() {
         carnesAtivado = true;
     }
 }
+
+function verificarCamposCadastro() {
+    if (document.getElementById("txtNomeCadastro").innerText === null || document.getElementById("txtNomeCadastro").innerText.trim() === "") {
+        alert("uiyfiudaiyifa");
+    }
+    event.preventDefault();
+}
