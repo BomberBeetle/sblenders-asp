@@ -24,9 +24,6 @@
     <div id="divCorpoIndex"> 
         <nav class="container-fluid" id="divCabecalho">
             <div class="col-2 CabEsq">
-                <audio controls="controls" id="audio1" style="visibility:hidden; height:0px; width:0px;" onload="tocarMusica()" onended="fecharMusica()">
-                    <source src="Audio/teste.mp3" type="audio/mp3"/>
-                </audio>
                 <a href="Index2.aspx" >
                     <img src="Imagens/novoSblenders.png" class="imgLogo" />
                 </a>
@@ -36,9 +33,22 @@
                 <a class="aProjSblenders" href="A" id="faleConosco">Fale Conosco</a>
                 <a class="aProjSblenders" href="V" id="maisInformacoes">Mais Informações</a>
             </div>
-            <div class="col-4 CabEsq">
+            <div class="col-4 CabEsq" id="divDesconectado" runat="server">
                 <a class="aCad" onclick="Login()" id="textoLogin">Login</a>
                 <a class="aCad" onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
+            </div>
+            <div class="col-4 CabEsq" id="divConectado" runat="server">
+                <div class="divUsuario">
+                    <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
+                    <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="linkSair_Click" >Sair</asp:LinkButton>
+                    <!--<asp:Label ID="vvv" runat="server" Text="Sair" CssClass="lblSair" OnServerClick="lblSair_Click"></asp:Label>-->
+                </div>
+                <div class="divFotoUsuario">
+                    <a href="" class="aFotoUsuario">
+                        <img src="Imagens/usuario.png" class="imgUsuario" />
+                    </a>
+                    
+                </div>
             </div>
         </nav>
 

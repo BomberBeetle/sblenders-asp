@@ -27,6 +27,68 @@ body {
     float: left;
 }
 
+#divDesconectado{
+    display:block;
+}
+
+#divConectado{
+    display:none;
+}
+
+.divUsuario {
+    height: 100%;
+    width: 60%;
+    float: left;
+}
+
+.lblBemVindo {
+    width: 100%;
+    height: 50%;
+    text-align: right;
+    font-size: 22px;
+    line-height: 10vh;
+    display: block;
+    color: white;
+}
+
+.lblSair {
+    height: 50%;
+    width: 100%;
+    text-align: right;
+    font-size: 20px;
+    text-decoration:underline;
+    display: block;
+    color: white;
+    cursor:pointer;
+}
+
+.divFotoUsuario {
+    height: 100%;
+    width: 40%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.aFotoUsuario {
+    height:100%;
+    width:100%;
+    float:left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imgUsuario{
+    height:80%;
+    width:50%;
+}
+
 .imgLogo {
     /*height:13vh;
     width:75%;
@@ -143,7 +205,7 @@ body {
     display: none;
     background-color: rgba(255,255,255,0);
     z-index: 3;
-    position: fixed;
+    position: fixed;    
 }
 
 .divFG {
@@ -167,7 +229,8 @@ body {
     color: #FEFEFE;
     align-items: center;
     margin-top: 3vh; /*8vh*/
-    position:relative;
+    position: relative;
+    box-shadow: 1px 1px 1px #656565;
 }
 
 .divSubLoginSair{
@@ -340,6 +403,7 @@ body {
     align-items: center;
     margin-top: 3vh; /*8vh*/
     position: relative;
+    box-shadow: 1px 1px 1px #656565;
 }
 
 .divSubCadastroSair {

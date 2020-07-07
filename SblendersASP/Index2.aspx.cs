@@ -55,7 +55,24 @@ namespace TCC
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["userRID"] != null)
+            {
+                divConectado.Attributes.CssStyle.Add("display", "block");
+                divDesconectado.Attributes.CssStyle.Add("display", "none");
+                /*string URL = $"https://localhost:44323/api/ClienteOnline/{Uri.EscapeUriString((string)Session["userID"])}";
+                string urlParameters = "";
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(URL);
 
+                // Add an Accept header for JSON format.
+                client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+
+                // List data response.
+                JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+                HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                Dictionary<string, Object> resultado = (Dictionary<string, Object>)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);*/
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -212,6 +229,15 @@ namespace TCC
             }
 
             divCad.Attributes.CssStyle.Add("display","block");
+        }
+
+        protected void linkSair_Click(object sender, EventArgs e)
+        {
+            Session["userID"] = null;
+            Session["userToken"] = null;
+            Session["userRID"] = null;
+            divConectado.Attributes.CssStyle.Add("display", "none");
+            divDesconectado.Attributes.CssStyle.Add("display", "block");
         }
     }
 }

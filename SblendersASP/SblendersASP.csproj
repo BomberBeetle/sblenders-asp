@@ -141,6 +141,7 @@
     <Content Include="Imagens\sblendersBlack.png" />
     <Content Include="Imagens\sblendersWhite.png" />
     <Content Include="Imagens\carroBurguer.jpeg" />
+    <Content Include="Imagens\usuario.png" />
     <Content Include="Index2.aspx" />
     <Content Include="Ingredientes.aspx" />
     <Content Include="JS\conexaoApi.js" />
