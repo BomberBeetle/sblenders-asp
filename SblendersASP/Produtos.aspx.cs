@@ -24,7 +24,7 @@ namespace TCC
             HttpClient client2 = new HttpClient();
             client2.BaseAddress = new Uri(URL2);
 
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+            /*client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
             // Add an Accept header for JSON format.
             client.DefaultRequestHeaders.Accept.Add(
             new MediaTypeWithQualityHeaderValue("application/json"));
@@ -32,7 +32,7 @@ namespace TCC
             // List data response.
             JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
             HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-            Dictionary<string, Object> resultado = (Dictionary<string, Object>)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+            Dictionary<string, Object> resultado = (Dictionary<string, Object>)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);*/
         }
     }
 }

@@ -57,6 +57,8 @@ namespace TCC
         {
             if(Session["userRID"] != null)
             {
+                divConectado.Visible = true;
+                divDesconectado.Visible = false;
                 divConectado.Attributes.CssStyle.Add("display", "block");
                 divDesconectado.Attributes.CssStyle.Add("display", "none");
                 /*string URL = $"https://localhost:44323/api/ClienteOnline/{Uri.EscapeUriString((string)Session["userID"])}";
@@ -236,6 +238,8 @@ namespace TCC
             Session["userID"] = null;
             Session["userToken"] = null;
             Session["userRID"] = null;
+            divConectado.Visible = false;
+            divDesconectado.Visible = true;
             divConectado.Attributes.CssStyle.Add("display", "none");
             divDesconectado.Attributes.CssStyle.Add("display", "block");
         }

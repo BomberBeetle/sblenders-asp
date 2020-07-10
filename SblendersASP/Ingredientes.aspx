@@ -16,7 +16,7 @@
         
         <div class="divIngredientesCategoria">
             <h1>Selecione a Categoria:</h1>
-            <select id="select1" name="select1" runat="server" class="selectCategoria" onchange="mostrarCategoriaSelecao()">
+            <select id="select1" name="select1" runat="server" class="selectCategoria ls-select" onchange="mostrarCategoriaSelecao()">
                 <option class="optionCategoria" value="paes">Pães</option>
                 <option class="optionCategoria" value="carnes" >Carnes</option>
                 <option class="optionCategoria" value="verduras">Verduras</option>

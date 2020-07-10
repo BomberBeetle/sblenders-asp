@@ -60,11 +60,11 @@
     display: flex;
     justify-content: flex-start;
     margin-left: 20px;
-    padding-right:10px;
+    padding-right: 10px;
 }
 
-.optionCategoria{
-    font-size:30px;
+.optionCategoria {
+    font-size: 30px;
 }
 
     .optionCategoria:hover {
