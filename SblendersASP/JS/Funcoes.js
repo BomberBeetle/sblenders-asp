@@ -8,18 +8,23 @@ $('#carouselIndex2').carousel({
 
 var visibilidadeLogin = false;
 var visibilidadeCad = false;
+var visiblidadeEsqSenha = false;
 
 function Login() {
     var divLog = document.getElementById("divLog");
     var divCad = document.getElementById("divCad");
+    var divEsqSenha = document.getElementById("divEsqSenha");
     if (visibilidadeLogin == false) {
         divCad.style.display = "none";
         divLog.style.display = "block";
+        divEsqSenha.style.display = "none";
         visibilidadeCad = false;
+        visiblidadeEsqSenha = false;
         visibilidadeLogin = true;
     }
     else if (visibilidadeLogin == true) {
         divLog.style.display = "none";
+        divEsqSenha.style.display = "none";
         visibilidadeLogin = false;
     }
     
@@ -28,16 +33,41 @@ function Login() {
 function Cadastro() {
     var divLog = document.getElementById("divLog");
     var divCad = document.getElementById("divCad");
+    var divEsqSenha = document.getElementById("divEsqSenha");
     if (visibilidadeCad == false) {
         divLog.style.display = "none";
+        divEsqSenha.style.display = "none";
         divCad.style.display = "block";
         visibilidadeLogin = false;
+        visiblidadeEsqSenha = false;
         visibilidadeCad = true;
     }
     else if (visibilidadeCad == true) {
         divCad.style.display = "none";
+        divEsqSenha.style.display = "none";
         visibilidadeCad = false;
     }
+}
+
+function esqueceuSenha() {
+    var divLog = document.getElementById("divLog");
+    var divCad = document.getElementById("divCad");
+    var divEsqSenha = document.getElementById("divEsqSenha");
+    if (visiblidadeEsqSenha == false) {
+        divLog.style.display = "none";
+        divCad.style.display = "none";
+        divEsqSenha.style.display = "block";
+        visibilidadeLogin = false;
+        visibilidadeCad = false;
+        visiblidadeEsqSenha = true;
+    }
+    else if (visiblidadeEsqSenha == true) {
+        divCad.style.display = "none";
+        divLog.style.display = "none";
+        divEsqSenha.style.display = "none";
+        visiblidadeEsqSenha = false;
+    }
+    event.preventDefault();
 }
 
 function sair() {
@@ -172,7 +202,8 @@ function expandirMolhos() {
 
 function popupProduto() {
     //varWindow = window.open("popup.html", "popup");
-    window.document.getElementById("divAcompanhamento");
+    //window.document.getElementById("divAcompanhamento");
+    document.getElementById("secProd1").style.display = "block";
 }
 
 var paesAtivado = true;
@@ -193,11 +224,4 @@ function mostrarCategoriaSelecao() {
         paesAtivado = false;
         carnesAtivado = true;
     }
-}
-
-function verificarCamposCadastro() {
-    if (document.getElementById("txtNomeCadastro").innerText === null || document.getElementById("txtNomeCadastro").innerText.trim() === "") {
-        alert("uiyfiudaiyifa");
-    }
-    event.preventDefault();
 }

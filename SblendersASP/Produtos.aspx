@@ -428,4 +428,23 @@
             <asp:Button ID="Button3" runat="server" Text="Ir para o carrinho"  CssClass="btnIrCarrinho"/>
         </div>
     </div>
+
+    <div id="secProd1" class="sectionProd">
+        <div class="divDescricaoProduto">
+            <div class="divDescricaoProdutoTitulo">
+                <div class="divSubDescricaoProdutoTitulo1">
+                    <h1 class="h1InfoNutri">Informações Nutricionais</h1>
+                </div>
+                <div class="divSubDescricaoProdutoTitulo2">
+                    <a href="">
+                        <img src="Imagens/iconX.png" class="imgIconX" />
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="divDescricaoProdutoCorpo">
+
+            </div>
+        </div>
+    </div>
 </asp:Content>
