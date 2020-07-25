@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mestre.Master" AutoEventWireup="true" CodeBehind="Produtos.aspx.cs" Inherits="TCC.Produtos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" type="text/css" href="CSS/Produtos.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/Produtos.css" />    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--
@@ -89,16 +89,16 @@
             </div>
 
             <div class="divSubProdutosCustomizaveis" id="divAcompanhamento">
-                <div class="divProdCustom">
-                    <div class="divProduto">
+                <div class="divProdCustom" id="divProds">
+                    <div class="divProduto" id="divPro">
                         <a href="javascript:void(0)" onclick="popupProduto()"> 
                             <div class="divSubProduto1">
                                 <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label25" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label26" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome1" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor1" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         
@@ -114,8 +114,8 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label27" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label28" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome2" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor2" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         
@@ -131,8 +131,8 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label29" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label30" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome3" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor3" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         
@@ -148,8 +148,8 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label31" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label32" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome4" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor4" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         
@@ -182,8 +182,8 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label1" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label2" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome5" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor5" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         
@@ -199,8 +199,8 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label3" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label4" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome6" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor6" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         
@@ -216,8 +216,8 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label5" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label6" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome7" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor7" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         
@@ -233,8 +233,8 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label7" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label8" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome8" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor8" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         
@@ -267,8 +267,8 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label9" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label10" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome9" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor9" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         
@@ -284,8 +284,8 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label11" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label12" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome10" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor10" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         
@@ -301,8 +301,8 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label13" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label14" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome11" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor11" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         
@@ -318,7 +318,7 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label15" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblNome12" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
                                 <asp:Label ID="Label16" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
@@ -352,8 +352,8 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label17" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label18" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome13" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor13" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         
@@ -369,8 +369,8 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label19" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label20" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome14" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor14" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         
@@ -386,8 +386,8 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label21" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label22" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome15" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor15" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         
@@ -403,8 +403,8 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="Label23" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label24" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome16" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor16" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         

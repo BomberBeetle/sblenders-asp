@@ -13,22 +13,22 @@ namespace TCC {
     public partial class Produtos {
         
         /// <summary>
-        /// Controle Label25.
+        /// Controle lblNome1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label25;
+        protected global::System.Web.UI.WebControls.Label lblNome1;
         
         /// <summary>
-        /// Controle Label26.
+        /// Controle lblValor1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label26;
+        protected global::System.Web.UI.WebControls.Label lblValor1;
         
         /// <summary>
         /// Controle Button12.
@@ -40,22 +40,22 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button12;
         
         /// <summary>
-        /// Controle Label27.
+        /// Controle lblNome2.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label27;
+        protected global::System.Web.UI.WebControls.Label lblNome2;
         
         /// <summary>
-        /// Controle Label28.
+        /// Controle lblValor2.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label28;
+        protected global::System.Web.UI.WebControls.Label lblValor2;
         
         /// <summary>
         /// Controle Button13.
@@ -67,22 +67,22 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button13;
         
         /// <summary>
-        /// Controle Label29.
+        /// Controle lblNome3.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label29;
+        protected global::System.Web.UI.WebControls.Label lblNome3;
         
         /// <summary>
-        /// Controle Label30.
+        /// Controle lblValor3.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label30;
+        protected global::System.Web.UI.WebControls.Label lblValor3;
         
         /// <summary>
         /// Controle Button14.
@@ -94,22 +94,22 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button14;
         
         /// <summary>
-        /// Controle Label31.
+        /// Controle lblNome4.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label31;
+        protected global::System.Web.UI.WebControls.Label lblNome4;
         
         /// <summary>
-        /// Controle Label32.
+        /// Controle lblValor4.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label32;
+        protected global::System.Web.UI.WebControls.Label lblValor4;
         
         /// <summary>
         /// Controle Button15.
@@ -121,22 +121,22 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button15;
         
         /// <summary>
-        /// Controle Label1.
+        /// Controle lblNome5.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblNome5;
         
         /// <summary>
-        /// Controle Label2.
+        /// Controle lblValor5.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblValor5;
         
         /// <summary>
         /// Controle Button1.
@@ -148,22 +148,22 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// Controle Label3.
+        /// Controle lblNome6.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label lblNome6;
         
         /// <summary>
-        /// Controle Label4.
+        /// Controle lblValor6.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label lblValor6;
         
         /// <summary>
         /// Controle Button2.
@@ -175,22 +175,22 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// Controle Label5.
+        /// Controle lblNome7.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label lblNome7;
         
         /// <summary>
-        /// Controle Label6.
+        /// Controle lblValor7.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label lblValor7;
         
         /// <summary>
         /// Controle Button87.
@@ -202,22 +202,22 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button87;
         
         /// <summary>
-        /// Controle Label7.
+        /// Controle lblNome8.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.Label lblNome8;
         
         /// <summary>
-        /// Controle Label8.
+        /// Controle lblValor8.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.Label lblValor8;
         
         /// <summary>
         /// Controle Button5.
@@ -229,22 +229,22 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button5;
         
         /// <summary>
-        /// Controle Label9.
+        /// Controle lblNome9.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
+        protected global::System.Web.UI.WebControls.Label lblNome9;
         
         /// <summary>
-        /// Controle Label10.
+        /// Controle lblValor9.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.Label lblValor9;
         
         /// <summary>
         /// Controle Button375.
@@ -256,22 +256,22 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button375;
         
         /// <summary>
-        /// Controle Label11.
+        /// Controle lblNome10.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label11;
+        protected global::System.Web.UI.WebControls.Label lblNome10;
         
         /// <summary>
-        /// Controle Label12.
+        /// Controle lblValor10.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label12;
+        protected global::System.Web.UI.WebControls.Label lblValor10;
         
         /// <summary>
         /// Controle Button6.
@@ -283,22 +283,22 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button6;
         
         /// <summary>
-        /// Controle Label13.
+        /// Controle lblNome11.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label13;
+        protected global::System.Web.UI.WebControls.Label lblNome11;
         
         /// <summary>
-        /// Controle Label14.
+        /// Controle lblValor11.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label14;
+        protected global::System.Web.UI.WebControls.Label lblValor11;
         
         /// <summary>
         /// Controle Button7.
@@ -310,13 +310,13 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button7;
         
         /// <summary>
-        /// Controle Label15.
+        /// Controle lblNome12.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label15;
+        protected global::System.Web.UI.WebControls.Label lblNome12;
         
         /// <summary>
         /// Controle Label16.
@@ -337,22 +337,22 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button8;
         
         /// <summary>
-        /// Controle Label17.
+        /// Controle lblNome13.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label17;
+        protected global::System.Web.UI.WebControls.Label lblNome13;
         
         /// <summary>
-        /// Controle Label18.
+        /// Controle lblValor13.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label18;
+        protected global::System.Web.UI.WebControls.Label lblValor13;
         
         /// <summary>
         /// Controle Button366.
@@ -364,22 +364,22 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button366;
         
         /// <summary>
-        /// Controle Label19.
+        /// Controle lblNome14.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label19;
+        protected global::System.Web.UI.WebControls.Label lblNome14;
         
         /// <summary>
-        /// Controle Label20.
+        /// Controle lblValor14.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label20;
+        protected global::System.Web.UI.WebControls.Label lblValor14;
         
         /// <summary>
         /// Controle Button9.
@@ -391,22 +391,22 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button9;
         
         /// <summary>
-        /// Controle Label21.
+        /// Controle lblNome15.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label21;
+        protected global::System.Web.UI.WebControls.Label lblNome15;
         
         /// <summary>
-        /// Controle Label22.
+        /// Controle lblValor15.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label22;
+        protected global::System.Web.UI.WebControls.Label lblValor15;
         
         /// <summary>
         /// Controle Button10.
@@ -418,22 +418,22 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button10;
         
         /// <summary>
-        /// Controle Label23.
+        /// Controle lblNome16.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label23;
+        protected global::System.Web.UI.WebControls.Label lblNome16;
         
         /// <summary>
-        /// Controle Label24.
+        /// Controle lblValor16.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label24;
+        protected global::System.Web.UI.WebControls.Label lblValor16;
         
         /// <summary>
         /// Controle Button11.

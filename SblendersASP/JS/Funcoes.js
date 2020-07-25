@@ -225,3 +225,11 @@ function mostrarCategoriaSelecao() {
         carnesAtivado = true;
     }
 }
+
+$(document).ready(function () {
+
+    $("#divAcompanhamento").click(function () {
+        $("#divPro").clone().appendTo("#divProds");
+    });
+
+});
