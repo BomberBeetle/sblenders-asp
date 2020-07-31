@@ -206,23 +206,71 @@ function popupProduto() {
     document.getElementById("secProd1").style.display = "block";
 }
 
-var paesAtivado = true;
+/*var paesAtivado = true;
 var carnesAtivado = false;
-
+var verdurasAtivado = false;
+var legumesAtivado = false;
+var queijosAtivado = false;
+var molhosAtivado = false;*/
 
 function mostrarCategoriaSelecao() {
-
-    var selectCategoria = document.getElementById("select1").options[document.getElementById("select1").selectedIndex];
-    alert(selectCategoria);
-    var value = selectCategoria.options[selectCategoria.selectedIndex];
+    var value = document.getElementById("select1").value;
+    //alert(value);
+    //var selectCategoria = document.getElementById("select1");
+    //var value = selectCategoria.options[selectCategoria.selectedIndex].value;
     var paes = document.getElementById("divPaes");
     var carnes = document.getElementById("divCarnes");
+    var verduras = document.getElementById("divVerduras");
+    var legumes = document.getElementById("divLegumes");
+    var queijos = document.getElementById("divQueijos");
+    var molhos = document.getElementById("divMolhos");
     if (value === "carnes") {
-        alert("hjkh");
         paes.style.display = "none";
         carnes.style.display = "flex";
-        paesAtivado = false;
-        carnesAtivado = true;
+        verduras.style.display = "none";
+        legumes.style.display = "none";
+        queijos.style.display = "none";
+        molhos.style.display = "none";
+    }
+    else if (value = "paes") {
+        paes.style.display = "flex";
+        carnes.style.display = "none";
+        verduras.style.display = "none";
+        legumes.style.display = "none";
+        queijos.style.display = "none";
+        molhos.style.display = "none";
+    }
+    else if (value = "verduras") {
+        paes.style.display = "none";
+        carnes.style.display = "none";
+        verduras.style.display = "flex";
+        legumes.style.display = "none";
+        queijos.style.display = "none";
+        molhos.style.display = "none";
+    }
+    else if (value = "legumes") {
+        paes.style.display = "none";
+        carnes.style.display = "none";
+        verduras.style.display = "none";
+        legumes.style.display = "flex";
+        queijos.style.display = "none";
+        molhos.style.display = "none";
+    }
+    else if (value = "queijos") {
+        paes.style.display = "none";
+        carnes.style.display = "none";
+        verduras.style.display = "none";
+        legumes.style.display = "none";
+        queijos.style.display = "flex";
+        molhos.style.display = "none";
+    }
+    else if (value = "molhos") {
+        paes.style.display = "none";
+        carnes.style.display = "none";
+        verduras.style.display = "none";
+        legumes.style.display = "none";
+        queijos.style.display = "none";
+        molhos.style.display = "flex";
     }
 }
 

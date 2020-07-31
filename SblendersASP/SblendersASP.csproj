@@ -99,6 +99,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Audio\teste.mp3" />
+    <Content Include="Carrinho.aspx" />
+    <Content Include="CSS\Carrinho.css" />
+    <Content Include="CSS\ImagensCSS\carrinhoCompras.png" />
     <Content Include="CSS\ImagensCSS\fundoIngredientes.png" />
     <Content Include="CSS\ImagensCSS\ImagensRestaurantes\restauranteSblenders3.png" />
     <Content Include="CSS\ImagensCSS\ImagensRestaurantes\restauranteSblenders4.png" />
@@ -118,6 +121,7 @@
     <Content Include="CSS\ImagensCSS\yellowTexture.jpg" />
     <Content Include="CSS\ImagensCSS\yellowTexture2.jpg" />
     <Content Include="CSS\Ingredientes.css" />
+    <Content Include="CSS\LocalEntrega.css" />
     <Content Include="CSS\MapsSblenders.css" />
     <Content Include="CSS\Index2.css" />
     <Content Include="Imagens\background.png" />
@@ -131,6 +135,7 @@
     <Content Include="Imagens\burguer2.png" />
     <Content Include="Imagens\burguer3.jpg" />
     <Content Include="Imagens\burguerk2.png" />
+    <Content Include="Imagens\carroBurguer2.jpeg" />
     <Content Include="Imagens\churros.png" />
     <Content Include="Imagens\hotDog.png" />
     <Content Include="Imagens\iconX.png" />
@@ -147,6 +152,7 @@
     <Content Include="Ingredientes.aspx" />
     <Content Include="JS\conexaoApi.js" />
     <Content Include="JS\Funcoes.js" />
+    <Content Include="LocalEntrega.aspx" />
     <Content Include="MapsSblenders.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -239,6 +245,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agente.cs" />
+    <Compile Include="Carrinho.aspx.cs">
+      <DependentUpon>Carrinho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrinho.aspx.designer.cs">
+      <DependentUpon>Carrinho.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ClienteOnline.cs" />
     <Compile Include="Index2.aspx.cs">
       <DependentUpon>Index2.aspx</DependentUpon>
@@ -253,6 +266,13 @@
     </Compile>
     <Compile Include="Ingredientes.aspx.designer.cs">
       <DependentUpon>Ingredientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalEntrega.aspx.cs">
+      <DependentUpon>LocalEntrega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LocalEntrega.aspx.designer.cs">
+      <DependentUpon>LocalEntrega.aspx</DependentUpon>
     </Compile>
     <Compile Include="MapsSblenders.aspx.cs">
       <DependentUpon>MapsSblenders.aspx</DependentUpon>

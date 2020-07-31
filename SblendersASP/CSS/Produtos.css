@@ -419,33 +419,75 @@ h1 {
 
 .btnIrCarrinho {
     height: 80px;
-    width: 35%;
-    background-color: #ffb338;
-    font-size:32px;
-    font-weight:bold;
-    text-transform:uppercase;
-    border-radius:20px 20px;
-    border:none;
-    color:#F8F8F8;
-    box-shadow:6px 6px 6px #656565;
+    width: 30%;
+    background-image: linear-gradient(135deg, rgba(255,248,12,1) 0%, rgba(255,167,35,1) 50%, rgba(255,245,33,1) 100%);
+    /*background-image: url(ImagensCSS/carrinhoCompras.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;*/
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left:0px;
+    padding-right:0px;
+    border-radius: 30px 30px;
+    border: 0px;
+    color: #F8F8F8;
+    box-shadow: 6px 6px 6px #656565;
 }
 
-/*Popup Css*/
-
-.sectionProd {
-    height: 100vh;
-    width: 100%;
+.divTextoBtnCarrinho {
+    height: 80px;
+    width: 85%;
     float: left;
-    background-color: transparent;
-    display: none;
-    z-index: 999;
-    position: fixed;
-    align-items: initial;
+    align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
+
+    .divTextoBtnCarrinho p{
+        margin-bottom:0;
+    }
+
+.divImgBtnCarrinho {
+    height: 80px;
+    width: 15%;
+    border-radius: 30px 30px;
+    float: left;
+    background-image: linear-gradient(135deg, rgba(255,251,141,1) 0%, rgba(230,206,18,1) 50%, rgba(255,248,100,1) 100%);
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divSubImgBtnCarrinho{
+    height:70px;
+    width:70px;
+}
+
+    .divSubImgBtnCarrinho img{
+        height:100%;
+        width:100%;
+    }
+    /*Popup Css*/
+    .sectionProd {
+        height: 100vh;
+        width: 100%;
+        float: left;
+        background-color: transparent;
+        display: none;
+        z-index: 999;
+        position: fixed;
+        align-items: initial;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
 .divDescricaoProduto{
     height:50vh;

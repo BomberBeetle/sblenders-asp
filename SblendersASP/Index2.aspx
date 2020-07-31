@@ -276,7 +276,7 @@
               <img class="d-block w-100 imgCarrouselBanner" src="Imagens/bannerBurger.jpg" alt="Segundo Slide"/>
             </div>
             <div class="carousel-item" id="itemCarro3">
-              <img class="d-block w-100 imgCarrouselBanner" src="Imagens/burguerk2.png" alt="Terceiro Slide"/>
+              <img class="d-block w-100 imgCarrouselBanner" src="Imagens/carroBurguer2.jpeg" alt="Terceiro Slide"/>
             </div>
           </div>
           <a class="carousel-control-prev aNeg" href="#carouselBanner" role="button" data-slide="prev" >

@@ -1,0 +1,264 @@
+﻿body {
+}
+
+.divCorpoCarrinho{
+    height:auto;
+    width:100%;
+    float:left;
+}
+
+.divNomeCarrinho {
+    height: 90px;
+    width: 100%;
+    float: left;
+}
+
+.divTituloCarrinho {
+    height: 90px;
+    width: 20%;
+    float: left;
+    background-color: #ed4218;
+    border-radius: 0px 0px 30px 0px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+    .divTituloCarrinho h1 {
+        color: #FFF;
+        font-size: 48px;
+        text-shadow: 2px 2px 2px #989898;
+    }
+
+.divItensCarrinhos {
+    height: auto;
+    width: 100%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divCaixaItens{
+    height:auto;
+    width:80%;
+    margin-top:100px;
+    margin-bottom:100px;
+}
+
+.divNomeCampos{
+    height:70px;
+    width:100%;
+    float:left;
+    border-bottom:1px solid #454545;
+}
+
+.divSubCampo1 {
+    height: 70px;
+    width: 60%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divSubCampo2 {
+    height: 70px;
+    width: 20%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divSubCampo3 {
+    height: 70px;
+    width: 20%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.h1Campo{
+    font-size:30px;
+}
+
+.h1Campo2{
+    font-size:44px;
+    margin-left:15px;
+}
+
+.divItemCarrinho {
+    height: 300px;
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #454545;
+}
+
+.divImgItem {
+    height: 300px;
+    width: 25%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imgItem{
+    height:250px;
+    width:80%;
+}
+
+.divInfoItem {
+    height: 300px;
+    width: 35%;
+    float: left;
+}
+
+.divSubInfoItem1 {
+    height: 150px;
+    width: 100%;
+}
+
+.divSubInfoItem1::before{
+    height: 100%;
+    content:'';
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.lblNomeItem {
+    font-size: 32px;
+}
+
+.divSubInfoItem2 {
+    height: 150px;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.btnExcluirItem {
+    height: 40px;
+    width: 20%;
+    background-color: #ff4524;
+    border:none;
+    border-radius:5px 5px;
+    box-shadow:1px 1px 1px #454545;
+    font-size:18px;
+    color:#FFF;
+}
+
+.btnAlterarItem {
+    height: 40px;
+    width: 20%;
+    background-color: #04cf15;
+    border: none;
+    border-radius: 5px 5px;
+    box-shadow: 1px 1px 1px #454545;
+    font-size: 18px;
+    color: #FFF;
+    margin-left: 20px;
+}
+
+.divQuantidadeItem {
+    height: 300px;
+    width: 20%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.selectQuantidadeItem {
+    font-size: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.divPrecoItem {
+    height: 300px;
+    width: 20%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lblPrecoItem{
+    font-size:28px;
+}
+
+.divTotal {
+    height: 70px;
+    width: 100%;
+    float: left;
+    margin-top:20px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+.lblItens{
+    float:left;
+    font-size:24px;
+}
+
+.lblTotal {
+    float: right;
+    font-size: 24px;   
+}
+
+.divBtnAvancar {
+    height: 150px;
+    width: 100%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.btnVoltarCarrinho {
+    height: 60px;
+    width: 20%;
+    background-color: #ffad61;
+    border: none;
+    border-radius: 15px 15px;
+    box-shadow: 1px 1px 1px #454545;
+    font-size: 22px;
+    color: #FFF;
+}
+
+.btnAvancarCarrinho {
+    height: 60px;
+    width: 30%;
+    background-color: #ffad61;
+    border: none;
+    border-radius: 15px 15px;
+    box-shadow: 1px 1px 1px #454545;
+    font-size: 22px;
+    color: #FFF;
+}

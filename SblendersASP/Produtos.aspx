@@ -89,8 +89,8 @@
             </div>
 
             <div class="divSubProdutosCustomizaveis" id="divAcompanhamento">
-                <div class="divProdCustom" id="divProds">
-                    <div class="divProduto" id="divPro">
+                <div class="divProdCustom" id="divProds" runat="server">
+                    <!--<div class="divProduto" id="divPro">
                         <a href="javascript:void(0)" onclick="popupProduto()"> 
                             <div class="divSubProduto1">
                                 <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
@@ -103,7 +103,7 @@
                         </a>
                         
                         <div class="divSubProduto3">
-                            <asp:Button ID="Button12" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                            <asp:Button ID="btnAdicionarCarrinho1" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
                         </div>
                     </div>
                    
@@ -156,7 +156,7 @@
                         <div class="divSubProduto3">
                             <asp:Button ID="Button15" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
 
@@ -174,8 +174,8 @@
             </div>
 
             <div class="divSubProdutosCustomizaveis" id="divBebida">
-                <div class="divProdCustom">
-                    <div class="divProduto">
+                <div class="divProdCustom" id="divProds2" runat="server">
+                    <!--<div class="divProduto">
                         <a href=""> 
                             <div class="divSubProduto1">
                                 <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
@@ -241,7 +241,7 @@
                         <div class="divSubProduto3">
                             <asp:Button ID="Button5" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
 
@@ -259,8 +259,8 @@
             </div>
 
             <div class="divSubProdutosCustomizaveis" id="divSobremesa">
-                <div class="divProdCustom">
-                    <div class="divProduto">
+                <div class="divProdCustom" id="divProds3" runat="server">
+                    <!--<div class="divProduto">
                         <a href=""> 
                             <div class="divSubProduto1">
                                 <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
@@ -326,7 +326,7 @@
                         <div class="divSubProduto3">
                             <asp:Button ID="Button8" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
 
@@ -344,8 +344,8 @@
             </div>
 
             <div class="divSubProdutosCustomizaveis" id="divMolho">
-                <div class="divProdCustom">
-                    <div class="divProduto">
+                <div class="divProdCustom" id="divProds4" runat="server">
+                    <!--<div class="divProduto">
                         <a href=""> 
                             <div class="divSubProduto1">
                                 <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
@@ -411,7 +411,7 @@
                         <div class="divSubProduto3">
                             <asp:Button ID="Button11" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
 
@@ -425,7 +425,17 @@
         </div>
 
         <div class="divBtnOpcoesPagLanches">
-            <asp:Button ID="Button3" runat="server" Text="Ir para o carrinho"  CssClass="btnIrCarrinho"/>
+            <button class="btnIrCarrinho" id="btnIrCarrinho" runat="server">
+                <div class="divTextoBtnCarrinho">
+                    <p>Ir Para o Carrinho</p>
+                </div>
+                <div class="divImgBtnCarrinho">
+                    <div class="divSubImgBtnCarrinho">
+                        <img src="CSS/ImagensCSS/carrinhoCompras.png" />
+                    </div>
+                </div>
+                
+            </button>
         </div>
     </div>
 

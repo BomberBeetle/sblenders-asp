@@ -1,0 +1,103 @@
+﻿body {
+}
+
+.divCorpoEntrega{
+    height:auto;
+    width:100%;
+    float:left;
+}
+
+.divNomeEntrega {
+    height: 90px;
+    width: 100%;
+    float: left;
+    margin-bottom:30px;
+}
+
+.divTituloEntrega {
+    height: 90px;
+    width: 30%;
+    float: left;
+    background-color: #ed4218;
+    border-radius: 0px 0px 30px 0px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+    .divTituloEntrega h1 {
+        color: #FFF;
+        font-size: 48px;
+        text-shadow: 2px 2px 2px #989898;
+    }
+
+.divEnderecoEntrega {
+    height: 700px;
+    width: 35%;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.divSubEndereco {
+    height: 500px;
+    width: 90%;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+
+.lblEnderecoMaps{
+    width:100%;
+    float:left;
+    font-size:30px;
+}
+
+.txtEnderecoMaps{
+    height:40px;
+    width:70%;
+    float:left;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.lblAvisoEnderecoMaps{
+    width:100%;
+    float:left;
+    margin-bottom:20px;
+}
+
+.btnEnderecoMaps {
+    height: 40px;
+    width: 45%;
+    background-color: #04cf15;
+    border: none;
+    border-radius: 5px 5px;
+    box-shadow: 1px 1px 1px #454545;
+    font-size: 18px;
+    color: #FFF;
+}
+
+.lblCustoFrete{
+    width:100%;
+    margin-top:15px;
+    float:left;
+    font-size:24px;
+}
+
+.divMapsEntrega {
+    height: 700px;
+    width: 65%;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.divMapsE{
+    height:650px;
+    width:90%;
+}

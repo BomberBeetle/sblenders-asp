@@ -13,6 +13,15 @@ namespace TCC {
     public partial class Produtos {
         
         /// <summary>
+        /// Controle divProds.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divProds;
+        
+        /// <summary>
         /// Controle lblNome1.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,13 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Label lblValor1;
         
         /// <summary>
-        /// Controle Button12.
+        /// Controle btnAdicionarCarrinho1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button12;
+        protected global::System.Web.UI.WebControls.Button btnAdicionarCarrinho1;
         
         /// <summary>
         /// Controle lblNome2.
@@ -119,6 +128,15 @@ namespace TCC {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button15;
+        
+        /// <summary>
+        /// Controle divProds2.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divProds2;
         
         /// <summary>
         /// Controle lblNome5.
@@ -229,6 +247,15 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button5;
         
         /// <summary>
+        /// Controle divProds3.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divProds3;
+        
+        /// <summary>
         /// Controle lblNome9.
         /// </summary>
         /// <remarks>
@@ -335,6 +362,15 @@ namespace TCC {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button8;
+        
+        /// <summary>
+        /// Controle divProds4.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divProds4;
         
         /// <summary>
         /// Controle lblNome13.
@@ -445,12 +481,12 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Button Button11;
         
         /// <summary>
-        /// Controle Button3.
+        /// Controle btnIrCarrinho.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnIrCarrinho;
     }
 }
