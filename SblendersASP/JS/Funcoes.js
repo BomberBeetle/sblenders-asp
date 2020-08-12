@@ -276,8 +276,8 @@ function mostrarCategoriaSelecao() {
 
 $(document).ready(function () {
 
-    $("#divAcompanhamento").click(function () {
+   /* $("#divAcompanhamento").click(function () {
         $("#divPro").clone().appendTo("#divProds");
-    });
+    });*/
 
 });

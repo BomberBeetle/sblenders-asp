@@ -11,8 +11,8 @@
                 </div>
         </div>
 
-        <div class="divItensCarrinhos">
-            <div class="divCaixaItens">
+        <div class="divItensCarrinhos" >
+            <div class="divCaixaItens" id="divItensCarrinhos" runat="server">
                 <div class="divNomeCampos">
                     <div class="divSubCampo1">
                         <h1 class="h1Campo2">Lista de Produtos</h1>

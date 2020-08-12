@@ -15,11 +15,14 @@ namespace TCC
 {
     public partial class Produtos : System.Web.UI.Page
     {
-        int pagina = 1;
-        int paginas = 0;
-        public static ProdutoParcial[] produtos;
-        int indiceProduto = 1;
-        
+        //int pagina = 1;
+        //int paginas = 0;
+        public static ProdutoParcial[] produtos;        
+        public static List<PedidoProduto> ppl = new List<PedidoProduto>();
+        PedidoProduto pedido;
+
+        //int indiceProduto = 1;
+
         /*void ComputeTotal()
         {
             Session["Carrinho"] = new SblendersAPI.Models.Pedido(0, 0, 0, DateTime.Now, "", new PedidoProduto[0]);
@@ -67,6 +70,7 @@ namespace TCC
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Session["Carrinho"] = new SblendersAPI.Models.Pedido(0, 0, 0, DateTime.Now, "", new PedidoProduto[1]);
             int x = 4;
             while (x > 0)
             {
@@ -109,9 +113,8 @@ namespace TCC
                             HtmlGenericControl divProduto = new HtmlGenericControl("DIV");
 
                             //Adicionando propriedades
-                            divProduto.ID = "divPro";
+                            //divProduto.ID = "divPro";
                             divProduto.Attributes.Add("class", "divProduto");
-
                             divProds.Controls.Add(divProduto);
 
                             HtmlGenericControl a = new HtmlGenericControl("A");
@@ -125,27 +128,21 @@ namespace TCC
 
                             HtmlGenericControl imgSubProduto = new HtmlGenericControl("IMG");
                             imgSubProduto.Attributes.Add("class", "imgSubProduto");
-                            imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/ProdutoFoto/" + i + "/");
+                            imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/ProdutoFoto/" + produtos[i-1].ID + "/");
                             divSubProduto1.Controls.Add(imgSubProduto);
-
-                            /*Image imgSubProduto1 = new Image();
-                            imgSubProduto1.ID = "imgSubProduto1";
-                            imgSubProduto1.CssClass = "imgSubProduto";
-                            imgSubProduto1.ImageUrl = "https://localhost:44323/api/ProdutoFoto/1/";
-                            divSubProduto1.Controls.Add(imgSubProduto1);*/
 
                             HtmlGenericControl divSubProduto2 = new HtmlGenericControl("DIV");
                             divSubProduto2.Attributes.Add("class", "divSubProduto2");
                             a.Controls.Add(divSubProduto2);
 
                             Label lblNome1 = new Label();
-                            lblNome1.ID = "lblNome1";
+                            lblNome1.ID = "lblNome"+ produtos[i - 1].ID;
                             lblNome1.CssClass = "lblDescricaoProduto";
                             lblNome1.Text = produtos[i - 1].Name;
                             divSubProduto2.Controls.Add(lblNome1);
 
                             Label lblValor1 = new Label();
-                            lblValor1.ID = "lblValor1";
+                            lblValor1.ID = "lblValor"+produtos[i - 1].ID;
                             lblValor1.CssClass = "lblValorProduto";
                             lblValor1.Text = "R$" + produtos[i - 1].Cost;
                             divSubProduto2.Controls.Add(lblValor1);
@@ -156,7 +153,7 @@ namespace TCC
                             divProduto.Controls.Add(divSubProduto3);
 
                             Button btnAdicionarCarrinho1 = new Button();
-                            btnAdicionarCarrinho1.ID = "btnAdicionarCarrinho1";
+                            btnAdicionarCarrinho1.ID = produtos[i - 1].ID.ToString();
                             btnAdicionarCarrinho1.CssClass = "btnAdicionarCarrinho";
                             btnAdicionarCarrinho1.Text = "Adicionar ao Carrinho";
                             divSubProduto3.Controls.Add(btnAdicionarCarrinho1);
@@ -169,21 +166,11 @@ namespace TCC
                     else if(x == 2){
                         while (i > 0)
                         {
-                            /*string URL2 = $"https://localhost:44323/api/ProdutoFoto/{Uri.EscapeUriString(i.ToString())}";
-                            HttpClient client2 = new HttpClient();
-                            client2.BaseAddress = new Uri(URL2);
-
-                            JavaScriptSerializer serializer2 = new System.Web.Script.Serialization.JavaScriptSerializer();
-                            HttpResponseMessage response2 = client2.GetAsync(urlParameters).Result;  
-                            Image resultado2 = (Image)serializer2.Deserialize<Image>(response2.Content.ReadAsStringAsync().Result);
-
-                            imgProd[i - 1] = resultado2;*/
-
 
                             HtmlGenericControl divProduto = new HtmlGenericControl("DIV");
 
                             //Adicionando propriedades
-                            divProduto.ID = "divPro";
+                            //divProduto.ID = "divPro";
                             divProduto.Attributes.Add("class", "divProduto");
 
                             divProds2.Controls.Add(divProduto);
@@ -199,27 +186,21 @@ namespace TCC
 
                             HtmlGenericControl imgSubProduto = new HtmlGenericControl("IMG");
                             imgSubProduto.Attributes.Add("class", "imgSubProduto");
-                            imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/ProdutoFoto/" + i + "/");
+                            imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/ProdutoFoto/" + produtos[i-1].ID + "/");
                             divSubProduto1.Controls.Add(imgSubProduto);
-
-                            /*Image imgSubProduto1 = new Image();
-                            imgSubProduto1.ID = "imgSubProduto1";
-                            imgSubProduto1.CssClass = "imgSubProduto";
-                            imgSubProduto1.ImageUrl = "https://localhost:44323/api/ProdutoFoto/1/";
-                            divSubProduto1.Controls.Add(imgSubProduto1);*/
 
                             HtmlGenericControl divSubProduto2 = new HtmlGenericControl("DIV");
                             divSubProduto2.Attributes.Add("class", "divSubProduto2");
                             a.Controls.Add(divSubProduto2);
 
                             Label lblNome1 = new Label();
-                            lblNome1.ID = "lblNome1";
+                            lblNome1.ID = "lblNome"+ produtos[i - 1].ID;
                             lblNome1.CssClass = "lblDescricaoProduto";
                             lblNome1.Text = produtos[i - 1].Name;
                             divSubProduto2.Controls.Add(lblNome1);
 
                             Label lblValor1 = new Label();
-                            lblValor1.ID = "lblValor1";
+                            lblValor1.ID = "lblValor"+ produtos[i - 1].ID;
                             lblValor1.CssClass = "lblValorProduto";
                             lblValor1.Text = "R$" + produtos[i - 1].Cost;
                             divSubProduto2.Controls.Add(lblValor1);
@@ -230,7 +211,7 @@ namespace TCC
                             divProduto.Controls.Add(divSubProduto3);
 
                             Button btnAdicionarCarrinho1 = new Button();
-                            btnAdicionarCarrinho1.ID = "btnAdicionarCarrinho1";
+                            btnAdicionarCarrinho1.ID = produtos[i - 1].ID.ToString();
                             btnAdicionarCarrinho1.CssClass = "btnAdicionarCarrinho";
                             btnAdicionarCarrinho1.Text = "Adicionar ao Carrinho";
                             divSubProduto3.Controls.Add(btnAdicionarCarrinho1);
@@ -244,21 +225,11 @@ namespace TCC
                     {
                         while (i > 0)
                         {
-                            /*string URL2 = $"https://localhost:44323/api/ProdutoFoto/{Uri.EscapeUriString(i.ToString())}";
-                            HttpClient client2 = new HttpClient();
-                            client2.BaseAddress = new Uri(URL2);
-
-                            JavaScriptSerializer serializer2 = new System.Web.Script.Serialization.JavaScriptSerializer();
-                            HttpResponseMessage response2 = client2.GetAsync(urlParameters).Result;  
-                            Image resultado2 = (Image)serializer2.Deserialize<Image>(response2.Content.ReadAsStringAsync().Result);
-
-                            imgProd[i - 1] = resultado2;*/
-
 
                             HtmlGenericControl divProduto = new HtmlGenericControl("DIV");
 
                             //Adicionando propriedades
-                            divProduto.ID = "divPro";
+                            //divProduto.ID = "divPro";
                             divProduto.Attributes.Add("class", "divProduto");
 
                             divProds3.Controls.Add(divProduto);
@@ -274,27 +245,21 @@ namespace TCC
 
                             HtmlGenericControl imgSubProduto = new HtmlGenericControl("IMG");
                             imgSubProduto.Attributes.Add("class", "imgSubProduto");
-                            imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/ProdutoFoto/" + i + "/");
+                            imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/ProdutoFoto/" + produtos[i-1].ID + "/");
                             divSubProduto1.Controls.Add(imgSubProduto);
-
-                            /*Image imgSubProduto1 = new Image();
-                            imgSubProduto1.ID = "imgSubProduto1";
-                            imgSubProduto1.CssClass = "imgSubProduto";
-                            imgSubProduto1.ImageUrl = "https://localhost:44323/api/ProdutoFoto/1/";
-                            divSubProduto1.Controls.Add(imgSubProduto1);*/
 
                             HtmlGenericControl divSubProduto2 = new HtmlGenericControl("DIV");
                             divSubProduto2.Attributes.Add("class", "divSubProduto2");
                             a.Controls.Add(divSubProduto2);
 
                             Label lblNome1 = new Label();
-                            lblNome1.ID = "lblNome1";
+                            lblNome1.ID = "lblNome"+produtos[i - 1].ID;
                             lblNome1.CssClass = "lblDescricaoProduto";
                             lblNome1.Text = produtos[i - 1].Name;
                             divSubProduto2.Controls.Add(lblNome1);
 
                             Label lblValor1 = new Label();
-                            lblValor1.ID = "lblValor1";
+                            lblValor1.ID = "lblValor"+ produtos[i - 1].ID;
                             lblValor1.CssClass = "lblValorProduto";
                             lblValor1.Text = "R$" + produtos[i - 1].Cost;
                             divSubProduto2.Controls.Add(lblValor1);
@@ -305,7 +270,7 @@ namespace TCC
                             divProduto.Controls.Add(divSubProduto3);
 
                             Button btnAdicionarCarrinho1 = new Button();
-                            btnAdicionarCarrinho1.ID = "btnAdicionarCarrinho1";
+                            btnAdicionarCarrinho1.ID = produtos[i - 1].ID.ToString();
                             btnAdicionarCarrinho1.CssClass = "btnAdicionarCarrinho";
                             btnAdicionarCarrinho1.Text = "Adicionar ao Carrinho";
                             divSubProduto3.Controls.Add(btnAdicionarCarrinho1);
@@ -319,21 +284,11 @@ namespace TCC
                     {
                         while (i > 0)
                         {
-                            /*string URL2 = $"https://localhost:44323/api/ProdutoFoto/{Uri.EscapeUriString(i.ToString())}";
-                            HttpClient client2 = new HttpClient();
-                            client2.BaseAddress = new Uri(URL2);
-
-                            JavaScriptSerializer serializer2 = new System.Web.Script.Serialization.JavaScriptSerializer();
-                            HttpResponseMessage response2 = client2.GetAsync(urlParameters).Result;  
-                            Image resultado2 = (Image)serializer2.Deserialize<Image>(response2.Content.ReadAsStringAsync().Result);
-
-                            imgProd[i - 1] = resultado2;*/
-
 
                             HtmlGenericControl divProduto = new HtmlGenericControl("DIV");
 
                             //Adicionando propriedades
-                            divProduto.ID = "divPro";
+                            //divProduto.ID = "divPro";
                             divProduto.Attributes.Add("class", "divProduto");
 
                             divProds4.Controls.Add(divProduto);
@@ -349,27 +304,21 @@ namespace TCC
 
                             HtmlGenericControl imgSubProduto = new HtmlGenericControl("IMG");
                             imgSubProduto.Attributes.Add("class", "imgSubProduto");
-                            imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/ProdutoFoto/" + i + "/");
+                            imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/ProdutoFoto/" + produtos[i-1].ID + "/");
                             divSubProduto1.Controls.Add(imgSubProduto);
-
-                            /*Image imgSubProduto1 = new Image();
-                            imgSubProduto1.ID = "imgSubProduto1";
-                            imgSubProduto1.CssClass = "imgSubProduto";
-                            imgSubProduto1.ImageUrl = "https://localhost:44323/api/ProdutoFoto/1/";
-                            divSubProduto1.Controls.Add(imgSubProduto1);*/
 
                             HtmlGenericControl divSubProduto2 = new HtmlGenericControl("DIV");
                             divSubProduto2.Attributes.Add("class", "divSubProduto2");
                             a.Controls.Add(divSubProduto2);
 
                             Label lblNome1 = new Label();
-                            lblNome1.ID = "lblNome1";
+                            lblNome1.ID = "lblNome"+ produtos[i - 1].ID;
                             lblNome1.CssClass = "lblDescricaoProduto";
                             lblNome1.Text = produtos[i - 1].Name;
                             divSubProduto2.Controls.Add(lblNome1);
 
                             Label lblValor1 = new Label();
-                            lblValor1.ID = "lblValor1";
+                            lblValor1.ID = "lblValor"+produtos[i - 1].ID;
                             lblValor1.CssClass = "lblValorProduto";
                             lblValor1.Text = "R$" + produtos[i - 1].Cost;
                             divSubProduto2.Controls.Add(lblValor1);
@@ -380,18 +329,19 @@ namespace TCC
                             divProduto.Controls.Add(divSubProduto3);
 
                             Button btnAdicionarCarrinho1 = new Button();
-                            btnAdicionarCarrinho1.ID = "btnAdicionarCarrinho1";
+                            btnAdicionarCarrinho1.ID = produtos[i - 1].ID.ToString();
                             btnAdicionarCarrinho1.CssClass = "btnAdicionarCarrinho";
-                            btnAdicionarCarrinho1.Text = "Adicionar ao Carrinho";
+                            btnAdicionarCarrinho1.Text = "Adicionar ao Carrinho";                            
                             divSubProduto3.Controls.Add(btnAdicionarCarrinho1);
                             btnAdicionarCarrinho1.Click += new EventHandler(AdicionarProduto);
+                            
                             i--;
 
                         }
                     }
 
-                    pagina = 1;
-                    paginas = (int)Math.Ceiling(produtos.Length / 8d);
+                    //pagina = 1;
+                    //paginas = (int)Math.Ceiling(produtos.Length / 8d);
                     //showPagina(pagina);
 
                 }
@@ -406,7 +356,42 @@ namespace TCC
 
         protected void AdicionarProduto(object sender, EventArgs e)
         {
+            Button iButton = (Button)sender;
+            int id = Convert.ToInt32(iButton.ID);
+            bool produtoE = false;
+            //ppl = ((Pedido)Session["Carrinho"]).produtos.ToList();
+            foreach (PedidoProduto pp in ppl)
+            {
+                if(id == pp.produtoID)
+                {
+                    produtoE = true;
+                }
+                else
+                {
 
+                }
+            }
+            if (!produtoE)
+            {
+                //Session["Carrinho"] = new SblendersAPI.Models.Pedido(0, 0, 0, DateTime.Now, "", new PedidoProduto[0]);           
+                iButton.Text = "Adicionado ao Carrinho";
+                pedido = new PedidoProduto(1, id, new PedidoProdutoIngrediente[0]);
+                //ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
+                ppl.Add(pedido);
+                int numeroProdutos = ppl.Count;
+                Session["Carrinho"] = new SblendersAPI.Models.Pedido(0, 0, 0, DateTime.Now, "", new PedidoProduto[numeroProdutos - 1]);
+                ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
+            }
+            else
+            {
+
+            }
+
+        }
+
+        protected void btnIrCarrinho_ServerClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Carrinho.aspx");
         }
     }
 }

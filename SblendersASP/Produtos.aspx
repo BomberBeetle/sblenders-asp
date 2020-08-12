@@ -97,64 +97,13 @@
                             </div>
 
                             <div class="divSubProduto2">
-                                <asp:Label ID="lblNome1" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="lblValor1" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
+                                <asp:Label ID="lblNome17987987" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
+                                <asp:Label ID="lblValor189799797" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
                         
                         <div class="divSubProduto3">
-                            <asp:Button ID="btnAdicionarCarrinho1" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                    </div>
-                   
-                    <div class="divProduto">
-                        <a href=""> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-
-                            <div class="divSubProduto2">
-                                <asp:Label ID="lblNome2" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="lblValor2" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button13" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                    </div>
-
-                    <div class="divProduto">
-                        <a href=""> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-
-                            <div class="divSubProduto2">
-                                <asp:Label ID="lblNome3" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="lblValor3" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button14" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                    </div>
-
-                    <div class="divProduto">
-                        <a href=""> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-
-                            <div class="divSubProduto2">
-                                <asp:Label ID="lblNome4" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="lblValor4" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button15" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
+                            <asp:Button ID="btnAdicionarCarrinho179879787" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
                         </div>
                     </div>-->
                 </div>
@@ -175,73 +124,7 @@
 
             <div class="divSubProdutosCustomizaveis" id="divBebida">
                 <div class="divProdCustom" id="divProds2" runat="server">
-                    <!--<div class="divProduto">
-                        <a href=""> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-
-                            <div class="divSubProduto2">
-                                <asp:Label ID="lblNome5" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="lblValor5" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button1" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                    </div>
-                   
-                    <div class="divProduto">
-                        <a href=""> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-
-                            <div class="divSubProduto2">
-                                <asp:Label ID="lblNome6" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="lblValor6" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button2" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                    </div>
-
-                    <div class="divProduto">
-                        <a href=""> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-
-                            <div class="divSubProduto2">
-                                <asp:Label ID="lblNome7" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="lblValor7" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button87" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                    </div>
-
-                    <div class="divProduto">
-                        <a href=""> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-
-                            <div class="divSubProduto2">
-                                <asp:Label ID="lblNome8" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="lblValor8" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button5" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                    </div>-->
+                    
                 </div>
             </div>
 
@@ -260,73 +143,7 @@
 
             <div class="divSubProdutosCustomizaveis" id="divSobremesa">
                 <div class="divProdCustom" id="divProds3" runat="server">
-                    <!--<div class="divProduto">
-                        <a href=""> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-
-                            <div class="divSubProduto2">
-                                <asp:Label ID="lblNome9" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="lblValor9" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button375" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                    </div>
-                   
-                    <div class="divProduto">
-                        <a href=""> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-
-                            <div class="divSubProduto2">
-                                <asp:Label ID="lblNome10" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="lblValor10" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button6" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                    </div>
-
-                    <div class="divProduto">
-                        <a href=""> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-
-                            <div class="divSubProduto2">
-                                <asp:Label ID="lblNome11" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="lblValor11" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button7" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                    </div>
-
-                    <div class="divProduto">
-                        <a href=""> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-
-                            <div class="divSubProduto2">
-                                <asp:Label ID="lblNome12" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label16" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button8" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                    </div>-->
+                    
                 </div>
             </div>
 
@@ -345,73 +162,7 @@
 
             <div class="divSubProdutosCustomizaveis" id="divMolho">
                 <div class="divProdCustom" id="divProds4" runat="server">
-                    <!--<div class="divProduto">
-                        <a href=""> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-
-                            <div class="divSubProduto2">
-                                <asp:Label ID="lblNome13" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="lblValor13" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button366" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                    </div>
-                   
-                    <div class="divProduto">
-                        <a href=""> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-
-                            <div class="divSubProduto2">
-                                <asp:Label ID="lblNome14" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="lblValor14" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button9" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                    </div>
-
-                    <div class="divProduto">
-                        <a href=""> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-
-                            <div class="divSubProduto2">
-                                <asp:Label ID="lblNome15" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="lblValor15" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button10" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                    </div>
-
-                    <div class="divProduto">
-                        <a href=""> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-
-                            <div class="divSubProduto2">
-                                <asp:Label ID="lblNome16" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="lblValor16" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button11" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                    </div>-->
+                    
                 </div>
             </div>
 
@@ -425,7 +176,7 @@
         </div>
 
         <div class="divBtnOpcoesPagLanches">
-            <button class="btnIrCarrinho" id="btnIrCarrinho" runat="server">
+            <button class="btnIrCarrinho" id="btnIrCarrinho" runat="server" onserverclick="btnIrCarrinho_ServerClick">
                 <div class="divTextoBtnCarrinho">
                     <p>Ir Para o Carrinho</p>
                 </div>
