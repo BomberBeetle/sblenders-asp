@@ -10,6 +10,11 @@ namespace SblendersAPI.Models
         public string Desc;
         public ProdutoIngrediente[] ingredientes;
 
+        public Produto()
+        {
+
+        }
+
         public Produto(int iD, decimal cost, string name, string desc, ProdutoIngrediente[] ingredientes) : base(iD, cost, name)
         {
             Desc = desc;

@@ -81,8 +81,7 @@
 .divPaes {
     height: 1700px;
     width: 100%;
-    float: left;
-    display: flex;
+    float: left;    
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -90,8 +89,28 @@
     margin-bottom: 100px;
 }
 
-#divCarnes{
-    display:none;
+#ContentPlaceHolder1_divPaes {
+    display: flex;
+}
+
+#ContentPlaceHolder1_divCarnes {
+    display: none;
+}
+
+#ContentPlaceHolder1_divVerduras {
+    display: none;
+}
+
+#ContentPlaceHolder1_divLegumes {
+    display: none;
+}
+
+#ContentPlaceHolder1_divQueijos {
+    display: none;
+}
+
+#ContentPlaceHolder1_divMolhos {
+    display: none;
 }
 
 .divProduto {

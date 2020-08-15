@@ -15,6 +15,11 @@ namespace SblendersAPI.Models
         public string Name;
         public string Desc;
 
+        public ProdutoIngrediente()
+        {
+
+        }
+
         public ProdutoIngrediente(int defaultQuantity, int ingredientID, decimal price, string name, string desc, int pIngredientID, int cIngredientID)
         {
             PIngredientID = pIngredientID;

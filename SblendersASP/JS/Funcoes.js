@@ -218,12 +218,12 @@ function mostrarCategoriaSelecao() {
     //alert(value);
     //var selectCategoria = document.getElementById("select1");
     //var value = selectCategoria.options[selectCategoria.selectedIndex].value;
-    var paes = document.getElementById("divPaes");
-    var carnes = document.getElementById("divCarnes");
-    var verduras = document.getElementById("divVerduras");
-    var legumes = document.getElementById("divLegumes");
-    var queijos = document.getElementById("divQueijos");
-    var molhos = document.getElementById("divMolhos");
+    var paes = document.getElementById("ContentPlaceHolder1_divPaes");
+    var carnes = document.getElementById("ContentPlaceHolder1_divCarnes");
+    var verduras = document.getElementById("ContentPlaceHolder1_divVerduras");
+    var legumes = document.getElementById("ContentPlaceHolder1_divLegumes");
+    var queijos = document.getElementById("ContentPlaceHolder1_divQueijos");
+    var molhos = document.getElementById("ContentPlaceHolder1_divMolhos");
     if (value === "carnes") {
         paes.style.display = "none";
         carnes.style.display = "flex";
@@ -232,7 +232,7 @@ function mostrarCategoriaSelecao() {
         queijos.style.display = "none";
         molhos.style.display = "none";
     }
-    else if (value = "paes") {
+    else if (value === "paes") {
         paes.style.display = "flex";
         carnes.style.display = "none";
         verduras.style.display = "none";
@@ -240,7 +240,7 @@ function mostrarCategoriaSelecao() {
         queijos.style.display = "none";
         molhos.style.display = "none";
     }
-    else if (value = "verduras") {
+    else if (value === "verduras") {
         paes.style.display = "none";
         carnes.style.display = "none";
         verduras.style.display = "flex";
@@ -248,7 +248,7 @@ function mostrarCategoriaSelecao() {
         queijos.style.display = "none";
         molhos.style.display = "none";
     }
-    else if (value = "legumes") {
+    else if (value === "legumes") {
         paes.style.display = "none";
         carnes.style.display = "none";
         verduras.style.display = "none";
@@ -256,7 +256,7 @@ function mostrarCategoriaSelecao() {
         queijos.style.display = "none";
         molhos.style.display = "none";
     }
-    else if (value = "queijos") {
+    else if (value === "queijos") {
         paes.style.display = "none";
         carnes.style.display = "none";
         verduras.style.display = "none";
@@ -264,7 +264,7 @@ function mostrarCategoriaSelecao() {
         queijos.style.display = "flex";
         molhos.style.display = "none";
     }
-    else if (value = "molhos") {
+    else if (value === "molhos") {
         paes.style.display = "none";
         carnes.style.display = "none";
         verduras.style.display = "none";

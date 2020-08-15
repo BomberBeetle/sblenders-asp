@@ -27,7 +27,7 @@ namespace TCC
             while (indice >= 0)
             {
                 int id = ppl[indice].produtoID;
-                string URL = $"https://localhost:44323/api/Produtos/?id={Uri.EscapeUriString(id.ToString())}";
+                string URL = $"https://localhost:44323/api/Produtos/{Uri.EscapeUriString(id.ToString())}";
                 string urlParameters = "";
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(URL);
@@ -40,7 +40,7 @@ namespace TCC
                 // List data response.
                 JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
                 HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-                ProdutoParcial[] resultado = (ProdutoParcial[])serializer.Deserialize<List<ProdutoParcial>>(response.Content.ReadAsStringAsync().Result).ToArray();
+                ProdutoParcial resultado = (ProdutoParcial)serializer.Deserialize<ProdutoParcial>(response.Content.ReadAsStringAsync().Result);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -48,7 +48,7 @@ namespace TCC
 
                     HtmlGenericControl divItemCarrinho = new HtmlGenericControl("DIV");
                     divItemCarrinho.Attributes.Add("class", "divItemCarrinho");
-                    divItemCarrinho.ID = "divItemCarrinho" + resultado[0].ID;
+                    divItemCarrinho.ID = "divItemCarrinho" + resultado.ID;
                     divItensCarrinhos.Controls.Add(divItemCarrinho);
 
                     HtmlGenericControl divImgItem = new HtmlGenericControl("DIV");
@@ -69,9 +69,9 @@ namespace TCC
                     divInfoItem.Controls.Add(divSubInfoItem1);
 
                     Label lblNome1 = new Label();
-                    lblNome1.ID = "lblNome" + resultado[0].ID;
+                    lblNome1.ID = "lblNome" + resultado.ID;
                     lblNome1.CssClass = "lblNomeItem";
-                    lblNome1.Text = resultado[0].Name;
+                    lblNome1.Text = resultado.Name;
                     divSubInfoItem1.Controls.Add(lblNome1);
 
                     HtmlGenericControl divSubInfoItem2 = new HtmlGenericControl("DIV");
@@ -79,7 +79,7 @@ namespace TCC
                     divInfoItem.Controls.Add(divSubInfoItem2);
 
                     Button btnExcluir = new Button();
-                    btnExcluir.ID = resultado[0].ID.ToString();
+                    btnExcluir.ID = resultado.ID.ToString();
                     btnExcluir.CssClass = "btnExcluirItem";
                     btnExcluir.Text = "Excluir";
                     divSubInfoItem2.Controls.Add(btnExcluir);
@@ -90,7 +90,7 @@ namespace TCC
                     divItemCarrinho.Controls.Add(divQuantidadeItem);
 
                     DropDownList ddlQtde = new DropDownList();
-                    ddlQtde.ID = "ddlQtde" + resultado[0].ID;
+                    ddlQtde.ID = "ddlQtde" + resultado.ID;
                     ddlQtde.CssClass = "selectQuantidadeItem";
                     ddlQtde.AutoPostBack = true;
                     ddlQtde.TextChanged += new EventHandler(NovaQuantidade); 
@@ -107,7 +107,7 @@ namespace TCC
                     ListItem lstQtde3 = new ListItem();
                     lstQtde3.Text = "3";
                     ddlQtde.Items.Add(lstQtde3);
-
+                
                     ListItem lstQtde4 = new ListItem();
                     lstQtde4.Text = "4";
                     ddlQtde.Items.Add(lstQtde4);
@@ -126,9 +126,9 @@ namespace TCC
 
                     //Label lblPreco1 = new Label();
                     lblPreco1 = new Label();
-                    lblPreco1.ID = "lblPreco" + resultado[0].ID;
+                    lblPreco1.ID = "lblPreco" + resultado.ID;
                     lblPreco1.CssClass = "lblPrecoItem";
-                    lblPreco1.Text = (resultado[0].Cost*ppl[indice].pedidoProdutoQtde).ToString();
+                    lblPreco1.Text = (resultado.Cost*ppl[indice].pedidoProdutoQtde).ToString();
                     divPrecoItem.Controls.Add(lblPreco1);
 
                     if(ppl[indice].pedidoProdutoQtde == 1)
@@ -173,16 +173,23 @@ namespace TCC
             List<PedidoProduto> ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
             Control div = divItensCarrinhos.FindControl(idDiv);
             divItensCarrinhos.Controls.Remove(div);
+            bool existId = false;
+            int ind = 0;
             foreach (PedidoProduto pp in ppl)
             {
                 if (pp.produtoID == id)
                 {
-                    ppl.Remove(pp);
+                    existId = true;
+                    ind = ppl.FindIndex(a => a.produtoID.Equals(id));
                 }
                 else
                 {
 
                 }
+            }
+            if (existId)
+            {
+                ppl.RemoveAt(ind);
             }
             ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
         }
@@ -217,7 +224,7 @@ namespace TCC
                 }
             }
 
-            string URL = $"https://localhost:44323/api/Produtos/?id={id}/";
+            string URL = $"https://localhost:44323/api/Produtos/{id}/";
             string urlParameters = "";
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(URL);
@@ -230,11 +237,11 @@ namespace TCC
             // List data response.
             JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
             HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-            ProdutoParcial[] resultado = (ProdutoParcial[])serializer.Deserialize<List<ProdutoParcial>>(response.Content.ReadAsStringAsync().Result).ToArray();
+            ProdutoParcial resultado = (ProdutoParcial)serializer.Deserialize<ProdutoParcial>(response.Content.ReadAsStringAsync().Result);
 
             if (response.IsSuccessStatusCode)
             {
-                x.Text = (resultado[0].Cost * qtde).ToString();
+                x.Text = (resultado.Cost * qtde).ToString();
             }
             else
             {

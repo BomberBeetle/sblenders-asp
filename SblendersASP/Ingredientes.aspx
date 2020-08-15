@@ -11,7 +11,7 @@
     <div class="divIngredientes">
         <div class="divIngredientesCategoria">
             <h1>Selecione a Categoria:</h1>
-            <select id="select1" name="select1" runat="server" class="selectCategoria ls-select" onchange="mostrarCategoriaSelecao()">
+            <select id="select1" name="select1" class="selectCategoria ls-select" onchange="mostrarCategoriaSelecao()">
                 <option class="optionCategoria" value="paes">Pães</option>
                 <option class="optionCategoria" value="carnes" >Carnes</option>
                 <option class="optionCategoria" value="verduras">Verduras</option>
@@ -21,7 +21,7 @@
             </select>
         </div>
         <div class="divMostrarIngredientes">
-            <div class="divPaes" id="divPaes">
+            <div class="divPaes" id="divPaes" runat="server">
                 <div class="divProduto">
                         <a href="javascript:void(0)" onclick="popupProduto()"> 
                             <div class="divSubProduto1">
@@ -36,6 +36,26 @@
                             <asp:Button ID="Button12" runat="server" Text="Adicionar Ingrediente" CssClass="btnAdicionarCarrinho"/>
                         </div>
                 </div>
+            </div>
+
+            <div class="divPaes" id="divCarnes" runat="server">
+
+            </div>
+
+            <div class="divPaes" id="divVerduras" runat="server">
+
+            </div>
+
+            <div class="divPaes" id="divLegumes" runat="server">
+
+            </div>
+
+            <div class="divPaes" id="divQueijos" runat="server">
+
+            </div>
+
+            <div class="divPaes" id="divMolhos" runat="server">
+
             </div>
         </div>
     </div>
