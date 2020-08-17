@@ -59,12 +59,12 @@
             </div>
         </div>
     </div>
-    <div class="divIngredientesCliente">
+    <div class="divIngredientesCliente" id="divIngredientesCliente" runat="server">
         <div class="divIngredientesCategoria">
             <h1></h1>
         </div>
     </div>
     <div class="divBtnOpcoesPagLanches">
-            <asp:Button ID="Button6" runat="server" Text="Ir para o carrinho"  CssClass="btnIrCarrinho"/>
+            <asp:Button ID="Button6" runat="server" Text="Ir para o carrinho"  CssClass="btnIrCarrinho" OnClick="Button6_Click"/>
     </div>
 </asp:Content>

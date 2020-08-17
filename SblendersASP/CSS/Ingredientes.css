@@ -204,3 +204,26 @@
     justify-content: center;
     align-items: center;
 }
+
+.divIngredienteCliente {
+    height: 300px;
+    width: 80%;
+    float:left;
+    background-color:#37c418;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.lblNomeIngredienteCliente{
+    font-size:24px;
+    color:aqua;
+}
+
+.btnExcluirIngrediente {
+    height: 50px;
+    width: 50%;
+}

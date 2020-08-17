@@ -94,6 +94,15 @@ namespace TCC {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divMolhos;
         
         /// <summary>
+        /// Controle divIngredientesCliente.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divIngredientesCliente;
+        
+        /// <summary>
         /// Controle Button6.
         /// </summary>
         /// <remarks>

@@ -15,12 +15,13 @@ namespace TCC
 {
     public partial class Ingredientes : System.Web.UI.Page
     {
-        static Produto prod;
+        public static Produto prod;
         public static List<PedidoProdutoIngrediente> ppi = new List<PedidoProdutoIngrediente>();
+        public static List<ProdutoIngrediente> pi = new List<ProdutoIngrediente>();
+        public static List<PedidoProduto> ppl;
 
         protected void Page_Load(object sender, EventArgs e)
-        {           
-            List<ProdutoIngrediente> pi = new List<ProdutoIngrediente>();
+        {                      
 
             string URL = $"https://localhost:44323/api/Produtos/17";
             string urlParameters = "";
@@ -327,17 +328,107 @@ namespace TCC
 
             }
 
-            
+            int i = 0;
+            for(i=0; i <= ppi.Count-1; i++)
+            {
+                int produtoIngredienteID = ppi[i].ProdutoIngredienteID;
+                String nomeIngrediente = "";
+                foreach(ProdutoIngrediente p in pi)
+                {
+                    if(p.PIngredientID == produtoIngredienteID)
+                    {
+                        nomeIngrediente = p.Name;
+                    }
+                }
+                HtmlGenericControl divIngredienteCliente = new HtmlGenericControl("DIV");
+                divIngredienteCliente.Attributes.Add("class", "divIngredienteCliente");
+                divIngredienteCliente.ID = "divIngredienteCliente" + i;
+                divIngredientesCliente.Controls.Add(divIngredienteCliente);
+
+                Label lblNomeIngredienteCliente = new Label();
+                lblNomeIngredienteCliente.ID = "lblNomeIngredienteCliente" + i;
+                lblNomeIngredienteCliente.CssClass = "lblNomeIngredienteCliente";
+                lblNomeIngredienteCliente.Text = nomeIngrediente;
+                divIngredienteCliente.Controls.Add(lblNomeIngredienteCliente);
+
+                Button btnExcluirIngrediente = new Button();
+                btnExcluirIngrediente.ID = "btnExcluirIngrediente" + i;
+                btnExcluirIngrediente.CssClass = "btnExcluirIngrediente";
+                btnExcluirIngrediente.Text = "Excluir Ingrediente";
+                divIngredienteCliente.Controls.Add(btnExcluirIngrediente);
+                btnExcluirIngrediente.Click += new EventHandler(ExcluirIngrediente);
+            }
         }
 
         protected void AdicionarIngrediente(object sender, EventArgs e)
         {
             Button iButton = (Button)sender;
             int id = Convert.ToInt32(iButton.ID);
+            int pid = 0;
             iButton.Text = "Ingrediente Adicionado";
-            PedidoProdutoIngrediente ppa = new PedidoProdutoIngrediente(id,1,1);
+            foreach (ProdutoIngrediente p in pi)
+            {
+                if (p.IngredientID == id)
+                {
+                    pid = p.PIngredientID;
+                }
+                else
+                {
+
+                }
+            }            
+
+            PedidoProdutoIngrediente ppa = new PedidoProdutoIngrediente(pid,1,0);
             ppi.Add(ppa);
-            
+            int indice = ppi.Count - 1;
+
+            int produtoIngredienteID = ppi[indice].ProdutoIngredienteID;
+            String nomeIngrediente = "";
+            foreach (ProdutoIngrediente p in pi)
+            {
+                if (p.PIngredientID == produtoIngredienteID)
+                {
+                    nomeIngrediente = p.Name;
+                }
+            }
+
+            HtmlGenericControl divIngredienteCliente = new HtmlGenericControl("DIV");
+            divIngredienteCliente.Attributes.Add("class", "divIngredienteCliente");
+            divIngredienteCliente.ID = "divIngredienteCliente" + indice;
+            divIngredientesCliente.Controls.Add(divIngredienteCliente);
+
+            Label lblNomeIngredienteCliente = new Label();
+            lblNomeIngredienteCliente.ID = "lblNomeIngredienteCliente" + indice;
+            lblNomeIngredienteCliente.CssClass = "lblNomeIngredienteCliente";
+            lblNomeIngredienteCliente.Text = nomeIngrediente;
+            divIngredienteCliente.Controls.Add(lblNomeIngredienteCliente);
+
+            Button btnExcluirIngrediente = new Button();
+            btnExcluirIngrediente.ID = "btnExcluirIngrediente"+indice;
+            btnExcluirIngrediente.CssClass = "btnExcluirIngrediente";
+            btnExcluirIngrediente.Text = "Excluir Ingrediente";
+            divIngredienteCliente.Controls.Add(btnExcluirIngrediente);
+            btnExcluirIngrediente.Click += new EventHandler(ExcluirIngrediente);
+
+        }
+
+        protected void ExcluirIngrediente(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            String id = btn.ID;
+            int indice = Convert.ToInt32(id.Substring(21, id.Length - 21));
+            String nomeDiv = "divIngredienteCliente" + indice;
+            Control div = divIngredientesCliente.FindControl(nomeDiv);
+            divIngredientesCliente.Controls.Remove(div);
+            ppi.RemoveAt(indice);
+        }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            PedidoProduto ppc = new PedidoProduto(1, 17, ppi.ToArray());
+            ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
+            ppl.Add(ppc);
+            ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
         }
     }
 }
