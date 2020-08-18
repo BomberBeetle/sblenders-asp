@@ -376,10 +376,10 @@ namespace TCC
                 //Session["Carrinho"] = new SblendersAPI.Models.Pedido(0, 0, 0, DateTime.Now, "", new PedidoProduto[0]);           
                 iButton.Text = "Adicionado ao Carrinho";
                 pedido = new PedidoProduto(1, id, new PedidoProdutoIngrediente[0]);
-                //ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
+                ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
                 ppl.Add(pedido);
                 int numeroProdutos = ppl.Count;
-                Session["Carrinho"] = new SblendersAPI.Models.Pedido(0, 0, 0, DateTime.Now, "", new PedidoProduto[numeroProdutos - 1]);
+                //Session["Carrinho"] = new SblendersAPI.Models.Pedido(0, 0, 0, DateTime.Now, "", new PedidoProduto[numeroProdutos - 1]);
                 ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
             }
             else

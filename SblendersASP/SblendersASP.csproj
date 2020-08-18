@@ -125,6 +125,7 @@
     <Content Include="CSS\LocalEntrega.css" />
     <Content Include="CSS\MapsSblenders.css" />
     <Content Include="CSS\Index2.css" />
+    <Content Include="Global.asax" />
     <Content Include="Imagens\background.png" />
     <Content Include="Imagens\bannerBurger.jpg" />
     <Content Include="Imagens\bannerBurger.png" />
@@ -254,6 +255,9 @@
       <DependentUpon>Carrinho.aspx</DependentUpon>
     </Compile>
     <Compile Include="ClienteOnline.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Index2.aspx.cs">
       <DependentUpon>Index2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
