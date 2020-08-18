@@ -268,6 +268,9 @@
     <Compile Include="Ingredientes.aspx.designer.cs">
       <DependentUpon>Ingredientes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Ingredientes.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="LocalEntrega.aspx.cs">
       <DependentUpon>LocalEntrega.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

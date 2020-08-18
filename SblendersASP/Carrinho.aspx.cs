@@ -22,9 +22,8 @@ namespace TCC
         {
             List<PedidoProduto> ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
             int numeroProdutos = ppl.Count-1;
-            int indice = numeroProdutos;
-            //int id = ppl[indice].produtoID;
-            while (indice >= 0)
+            int indice = 0;
+            for (indice = 0 ; indice <= numeroProdutos; indice++)
             {
                 int id = ppl[indice].produtoID;
                 string URL = $"https://localhost:44323/api/Produtos/{Uri.EscapeUriString(id.ToString())}";
@@ -48,7 +47,7 @@ namespace TCC
 
                     HtmlGenericControl divItemCarrinho = new HtmlGenericControl("DIV");
                     divItemCarrinho.Attributes.Add("class", "divItemCarrinho");
-                    divItemCarrinho.ID = "divItemCarrinho" + resultado.ID;
+                    divItemCarrinho.ID = "divItemCarrinho" + indice;
                     divItensCarrinhos.Controls.Add(divItemCarrinho);
 
                     HtmlGenericControl divImgItem = new HtmlGenericControl("DIV");
@@ -69,7 +68,7 @@ namespace TCC
                     divInfoItem.Controls.Add(divSubInfoItem1);
 
                     Label lblNome1 = new Label();
-                    lblNome1.ID = "lblNome" + resultado.ID;
+                    lblNome1.ID = "lblNome" + indice;
                     lblNome1.CssClass = "lblNomeItem";
                     lblNome1.Text = resultado.Name;
                     divSubInfoItem1.Controls.Add(lblNome1);
@@ -79,23 +78,42 @@ namespace TCC
                     divInfoItem.Controls.Add(divSubInfoItem2);
 
                     Button btnExcluir = new Button();
-                    btnExcluir.ID = resultado.ID.ToString();
+                    btnExcluir.ID = "btnExcluir" + indice.ToString();
                     btnExcluir.CssClass = "btnExcluirItem";
                     btnExcluir.Text = "Excluir";
                     divSubInfoItem2.Controls.Add(btnExcluir);
                     btnExcluir.Click += new EventHandler(ExcluirProduto);
+
+                    List<PedidoProdutoIngrediente> ppi = ppl[indice].ingredientes.ToList();
+                    int y = ppi.Count-1;
+                    if (y >= 0)
+                    {
+                        Button btnAlterarItem = new Button();
+                        btnAlterarItem.ID = "btnAlterarItem" + indice.ToString();
+                        btnAlterarItem.CssClass = "btnAlterarItem";
+                        btnAlterarItem.Text = "Alterar";
+                        divSubInfoItem2.Controls.Add(btnAlterarItem);
+                        btnAlterarItem.Click += new EventHandler(AlterarProduto);
+                    }
 
                     HtmlGenericControl divQuantidadeItem = new HtmlGenericControl("DIV");
                     divQuantidadeItem.Attributes.Add("class", "divQuantidadeItem");
                     divItemCarrinho.Controls.Add(divQuantidadeItem);
 
                     DropDownList ddlQtde = new DropDownList();
-                    ddlQtde.ID = "ddlQtde" + resultado.ID;
+                    ddlQtde.ID = "ddlQtde" + indice;
                     ddlQtde.CssClass = "selectQuantidadeItem";
                     ddlQtde.AutoPostBack = true;
                     ddlQtde.TextChanged += new EventHandler(NovaQuantidade); 
                     divQuantidadeItem.Controls.Add(ddlQtde);
 
+                    int elements = ddlQtde.Items.Count-1;
+                    while(elements >= 0)
+                    {
+                        ddlQtde.Items.RemoveAt(elements);
+                        elements--;
+                    }
+                    
                     ListItem lstQtde1 = new ListItem();
                     lstQtde1.Text = "1";
                     ddlQtde.Items.Add(lstQtde1);
@@ -126,7 +144,7 @@ namespace TCC
 
                     //Label lblPreco1 = new Label();
                     lblPreco1 = new Label();
-                    lblPreco1.ID = "lblPreco" + resultado.ID;
+                    lblPreco1.ID = "lblPreco" + indice;
                     lblPreco1.CssClass = "lblPrecoItem";
                     lblPreco1.Text = (resultado.Cost*ppl[indice].pedidoProdutoQtde).ToString();
                     divPrecoItem.Controls.Add(lblPreco1);
@@ -161,19 +179,20 @@ namespace TCC
                 {
 
                 }
-                indice--;
             }
         }
 
         protected void ExcluirProduto(object sender, EventArgs e)
         {
             Button iButton = (Button)sender;
-            int id = Convert.ToInt32(iButton.ID);
+            String textId = iButton.ID;
+            int id = Convert.ToInt32(textId.Substring(10, textId.Length - 10));
             String idDiv = "divItemCarrinho" + id;
             List<PedidoProduto> ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
             Control div = divItensCarrinhos.FindControl(idDiv);
             divItensCarrinhos.Controls.Remove(div);
-            bool existId = false;
+            ppl.RemoveAt(id);
+            /*bool existId = false;
             int ind = 0;
             foreach (PedidoProduto pp in ppl)
             {
@@ -190,15 +209,19 @@ namespace TCC
             if (existId)
             {
                 ppl.RemoveAt(ind);
-            }
+            }*/
             ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
         }
 
         protected void AlterarProduto(object sender, EventArgs e)
         {
+            Ingredientes ing = new Ingredientes();
             Button iButton = (Button)sender;
             String textId = iButton.ID;
-            int id = Convert.ToInt32(textId.Substring(7, textId.Length - 7));
+            int id = Convert.ToInt32(textId.Substring(14, textId.Length - 14));
+            List<PedidoProduto> ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
+            List<PedidoProdutoIngrediente> pp = ppl[id].ingredientes.ToList();
+            ing.setIngredientes(pp);
             Response.Redirect("Ingredientes.aspx");
         }
 
@@ -211,8 +234,10 @@ namespace TCC
             String lbl = "lblPreco" + id;
             Label x = (Label)divItensCarrinhos.FindControl(lbl);
             List<PedidoProduto> ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
+            ppl[id].pedidoProdutoQtde = qtde;
+            int idd = ppl[id].produtoID;
             //PedidoProduto pp =  ppl.FirstOrDefault(a => a.produtoID == id);
-            foreach(PedidoProduto pp in ppl)
+            /*foreach(PedidoProduto pp in ppl)
             {
                 if(pp.produtoID == id)
                 {
@@ -222,9 +247,9 @@ namespace TCC
                 {
 
                 }
-            }
+            }*/
 
-            string URL = $"https://localhost:44323/api/Produtos/{id}/";
+            string URL = $"https://localhost:44323/api/Produtos/{idd}/";
             string urlParameters = "";
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(URL);
