@@ -54,8 +54,8 @@
                 </div>
 
                 <div class="divTotal">
-                    <asp:label runat="server" text="Itens:" CssClass="lblItens"></asp:label>
-                    <asp:label runat="server" text="Total:" CssClass="lblTotal"></asp:label>
+                    <asp:label ID="lblItens" runat="server" text="Itens:" CssClass="lblItens"></asp:label>
+                    <asp:label ID="lblTotal" runat="server" text="Total:" CssClass="lblTotal"></asp:label>
                 </div>
 
                 <div class="divBtnAvancar">

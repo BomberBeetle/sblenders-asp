@@ -16,7 +16,7 @@ namespace TCC
     public partial class Carrinho : System.Web.UI.Page
     {
         //public static ProdutoParcial[] produtos;
-        public static Label lblPreco1;
+        //public static Label lblPreco1;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -82,19 +82,7 @@ namespace TCC
                     btnExcluir.CssClass = "btnExcluirItem";
                     btnExcluir.Text = "Excluir";
                     divSubInfoItem2.Controls.Add(btnExcluir);
-                    btnExcluir.Click += new EventHandler(ExcluirProduto);
-
-                    List<PedidoProdutoIngrediente> ppi = ppl[indice].ingredientes.ToList();
-                    int y = ppi.Count-1;
-                    if (y >= 0)
-                    {
-                        Button btnAlterarItem = new Button();
-                        btnAlterarItem.ID = "btnAlterarItem" + indice.ToString();
-                        btnAlterarItem.CssClass = "btnAlterarItem";
-                        btnAlterarItem.Text = "Alterar";
-                        divSubInfoItem2.Controls.Add(btnAlterarItem);
-                        btnAlterarItem.Click += new EventHandler(AlterarProduto);
-                    }
+                    btnExcluir.Click += new EventHandler(ExcluirProduto);                    
 
                     HtmlGenericControl divQuantidadeItem = new HtmlGenericControl("DIV");
                     divQuantidadeItem.Attributes.Add("class", "divQuantidadeItem");
@@ -142,14 +130,63 @@ namespace TCC
                     divPrecoItem.Attributes.Add("class", "divPrecoItem");
                     divItemCarrinho.Controls.Add(divPrecoItem);
 
-                    //Label lblPreco1 = new Label();
-                    lblPreco1 = new Label();
+                    Label lblPreco1 = new Label();
                     lblPreco1.ID = "lblPreco" + indice;
-                    lblPreco1.CssClass = "lblPrecoItem";
-                    lblPreco1.Text = (resultado.Cost*ppl[indice].pedidoProdutoQtde).ToString();
+                    lblPreco1.CssClass = "lblPrecoItem";                    
                     divPrecoItem.Controls.Add(lblPreco1);
 
-                    if(ppl[indice].pedidoProdutoQtde == 1)
+                    List<PedidoProdutoIngrediente> ppi = ppl[indice].ingredientes.ToList();
+                    int y = ppi.Count - 1;
+                    if (y >= 0)
+                    {
+                        Button btnAlterarItem = new Button();
+                        btnAlterarItem.ID = "btnAlterarItem" + indice.ToString();
+                        btnAlterarItem.CssClass = "btnAlterarItem";
+                        btnAlterarItem.Text = "Alterar";
+                        divSubInfoItem2.Controls.Add(btnAlterarItem);
+                        btnAlterarItem.Click += new EventHandler(AlterarProduto);
+
+                        int ppId = 0;
+                        decimal ingPrec = 0;
+                        List<ProdutoIngrediente> pi = new List<ProdutoIngrediente>();
+                        int t = ppl[indice].produtoID;
+                        string URL2 = $"https://localhost:44323/api/Produtos/{t}/";
+                        string urlParameters2 = "";
+                        HttpClient client2 = new HttpClient();
+                        client2.BaseAddress = new Uri(URL2);
+
+                        //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+                        // Add an Accept header for JSON format.
+                        client2.DefaultRequestHeaders.Accept.Add(
+                        new MediaTypeWithQualityHeaderValue("application/json"));
+
+                        // List data response.
+                        JavaScriptSerializer serializer2 = new System.Web.Script.Serialization.JavaScriptSerializer();
+                        HttpResponseMessage response2 = client2.GetAsync(urlParameters2).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                        Produto resultado2 = (Produto)serializer2.Deserialize<Produto>(response2.Content.ReadAsStringAsync().Result);
+
+                        if (response2.IsSuccessStatusCode)
+                        {
+                            pi = resultado2.ingredientes.ToList();
+                            foreach (PedidoProdutoIngrediente p in ppi)
+                            {
+                                ppId = p.ProdutoIngredienteID;
+                                int ind = pi.FindIndex(a => a.PIngredientID.Equals(ppId));
+                                ingPrec += p.Quantidade * pi[ind].Price;
+                            }
+                            lblPreco1.Text = (ingPrec * ppl[indice].pedidoProdutoQtde).ToString();
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    else
+                    {
+                        lblPreco1.Text = (resultado.Cost * ppl[indice].pedidoProdutoQtde).ToString();
+                    }
+
+                    if (ppl[indice].pedidoProdutoQtde == 1)
                     {
                         lstQtde1.Selected = true;
                     }
@@ -180,6 +217,79 @@ namespace TCC
 
                 }
             }
+            int itens = 0;
+            decimal total = 0;
+            int i = 0;
+            foreach (PedidoProduto pp in ppl)
+            {
+                List<PedidoProdutoIngrediente> d = pp.ingredientes.ToList();
+                int tam = d.Count - 1;
+                decimal ingPrec = 0;
+                i = pp.produtoID;
+                if (tam >= 0)
+                {                    
+                    int ppId = 0;
+                    List<ProdutoIngrediente> pi = new List<ProdutoIngrediente>();
+                    string URL2 = $"https://localhost:44323/api/Produtos/{i}/";
+                    string urlParameters2 = "";
+                    HttpClient client2 = new HttpClient();
+                    client2.BaseAddress = new Uri(URL2);
+
+                    //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+                    // Add an Accept header for JSON format.
+                    client2.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    // List data response.
+                    JavaScriptSerializer serializer2 = new System.Web.Script.Serialization.JavaScriptSerializer();
+                    HttpResponseMessage response2 = client2.GetAsync(urlParameters2).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                    Produto resultado2 = (Produto)serializer2.Deserialize<Produto>(response2.Content.ReadAsStringAsync().Result);
+
+                    if (response2.IsSuccessStatusCode)
+                    {
+                        pi = resultado2.ingredientes.ToList();
+                        foreach (PedidoProdutoIngrediente p in d)
+                        {
+                            ppId = p.ProdutoIngredienteID;
+                            int ind = pi.FindIndex(a => a.PIngredientID.Equals(ppId));
+                            ingPrec += p.Quantidade * pi[ind].Price;
+                        }
+                    }
+                    else
+                    {
+
+                    }
+                    total += ingPrec * pp.pedidoProdutoQtde;
+                    itens += pp.pedidoProdutoQtde;
+
+                }
+                else
+                {
+                    string URL3 = $"https://localhost:44323/api/Produtos/{i}/";
+                    string urlParameters3 = "";
+                    HttpClient client3 = new HttpClient();
+                    client3.BaseAddress = new Uri(URL3);
+
+                    //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+                    // Add an Accept header for JSON format.
+                    client3.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    // List data response.
+                    JavaScriptSerializer serializer3 = new System.Web.Script.Serialization.JavaScriptSerializer();
+                    HttpResponseMessage response3 = client3.GetAsync(urlParameters3).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                    Produto resultado3 = (Produto)serializer3.Deserialize<Produto>(response3.Content.ReadAsStringAsync().Result);
+                    if (response3.IsSuccessStatusCode)
+                    {
+                        itens += pp.pedidoProdutoQtde;
+                        total += resultado3.Cost * pp.pedidoProdutoQtde;
+                    }
+                    
+                }
+
+            }
+            lblItens.Text = "Itens: " + itens;
+            lblTotal.Text = "Total: " + total;
         }
 
         protected void ExcluirProduto(object sender, EventArgs e)
@@ -192,24 +302,6 @@ namespace TCC
             Control div = divItensCarrinhos.FindControl(idDiv);
             divItensCarrinhos.Controls.Remove(div);
             ppl.RemoveAt(id);
-            /*bool existId = false;
-            int ind = 0;
-            foreach (PedidoProduto pp in ppl)
-            {
-                if (pp.produtoID == id)
-                {
-                    existId = true;
-                    ind = ppl.FindIndex(a => a.produtoID.Equals(id));
-                }
-                else
-                {
-
-                }
-            }
-            if (existId)
-            {
-                ppl.RemoveAt(ind);
-            }*/
             ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
         }
 
@@ -236,43 +328,145 @@ namespace TCC
             List<PedidoProduto> ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
             ppl[id].pedidoProdutoQtde = qtde;
             int idd = ppl[id].produtoID;
-            //PedidoProduto pp =  ppl.FirstOrDefault(a => a.produtoID == id);
-            /*foreach(PedidoProduto pp in ppl)
+            int en = ppl[id].ingredientes.Length - 1;
+            int itens = 0;
+            decimal total = 0;                        
+            int i = 0;
+            foreach (PedidoProduto pp in ppl)
             {
-                if(pp.produtoID == id)
+                List<PedidoProdutoIngrediente> d = pp.ingredientes.ToList();
+                int tam = d.Count - 1;
+                decimal ingPrec = 0;
+                i = pp.produtoID;
+                if (tam >= 0)
+                {                    
+                    int ppId = 0;
+                    List<ProdutoIngrediente> pi = new List<ProdutoIngrediente>();
+                    string URL2 = $"https://localhost:44323/api/Produtos/{i}/";
+                    string urlParameters2 = "";
+                    HttpClient client2 = new HttpClient();
+                    client2.BaseAddress = new Uri(URL2);
+
+                    //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+                    // Add an Accept header for JSON format.
+                    client2.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    // List data response.
+                    JavaScriptSerializer serializer2 = new System.Web.Script.Serialization.JavaScriptSerializer();
+                    HttpResponseMessage response2 = client2.GetAsync(urlParameters2).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                    Produto resultado2 = (Produto)serializer2.Deserialize<Produto>(response2.Content.ReadAsStringAsync().Result);
+
+                    if (response2.IsSuccessStatusCode)
+                    {
+                        pi = resultado2.ingredientes.ToList();
+                        foreach (PedidoProdutoIngrediente p in d)
+                        {
+                            ppId = p.ProdutoIngredienteID;
+                            int ind = pi.FindIndex(a => a.PIngredientID.Equals(ppId));
+                            ingPrec += p.Quantidade * pi[ind].Price;
+                        }
+                    }
+                    else
+                    {
+
+                    }
+                    total += ingPrec * pp.pedidoProdutoQtde;
+                    itens += pp.pedidoProdutoQtde;
+
+                }
+                else
                 {
-                    pp.pedidoProdutoQtde = qtde;
+                    string URL3 = $"https://localhost:44323/api/Produtos/{i}/";
+                    string urlParameters3 = "";
+                    HttpClient client3 = new HttpClient();
+                    client3.BaseAddress = new Uri(URL3);
+
+                    //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+                    // Add an Accept header for JSON format.
+                    client3.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    // List data response.
+                    JavaScriptSerializer serializer3 = new System.Web.Script.Serialization.JavaScriptSerializer();
+                    HttpResponseMessage response3 = client3.GetAsync(urlParameters3).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                    Produto resultado3 = (Produto)serializer3.Deserialize<Produto>(response3.Content.ReadAsStringAsync().Result);
+                    if (response3.IsSuccessStatusCode)
+                    {
+                        itens += pp.pedidoProdutoQtde;
+                        total += resultado3.Cost * pp.pedidoProdutoQtde;
+                    }
+                }
+                               
+            }
+            lblItens.Text = "Itens: " + itens;
+            lblTotal.Text = "Total: " + total;
+
+            if(en >= 0)
+            {
+                decimal ingPrec = 0;
+                int ppId = 0;
+                List<ProdutoIngrediente> pi = new List<ProdutoIngrediente>();
+                List<PedidoProdutoIngrediente> pp = ppl[id].ingredientes.ToList();
+                string URL = $"https://localhost:44323/api/Produtos/{idd}/";
+                string urlParameters = "";
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(URL);
+
+                //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+                // Add an Accept header for JSON format.
+                client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+
+                // List data response.
+                JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+                HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                Produto resultado = (Produto)serializer.Deserialize<Produto>(response.Content.ReadAsStringAsync().Result);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    pi = resultado.ingredientes.ToList();
+                    foreach (PedidoProdutoIngrediente p in pp)
+                    {
+                        ppId = p.ProdutoIngredienteID;
+                        int ind = pi.FindIndex(a => a.PIngredientID.Equals(ppId));
+                        ingPrec += p.Quantidade * pi[ind].Price;
+                    }
+                    x.Text = (ingPrec * qtde).ToString();
                 }
                 else
                 {
 
                 }
-            }*/
-
-            string URL = $"https://localhost:44323/api/Produtos/{idd}/";
-            string urlParameters = "";
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(URL);
-
-            //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
-            // Add an Accept header for JSON format.
-            client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/json"));
-
-            // List data response.
-            JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
-            HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-            ProdutoParcial resultado = (ProdutoParcial)serializer.Deserialize<ProdutoParcial>(response.Content.ReadAsStringAsync().Result);
-
-            if (response.IsSuccessStatusCode)
-            {
-                x.Text = (resultado.Cost * qtde).ToString();
+                
             }
             else
             {
+                string URL = $"https://localhost:44323/api/Produtos/{idd}/";
+                string urlParameters = "";
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(URL);
 
+                //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+                // Add an Accept header for JSON format.
+                client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+
+                // List data response.
+                JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+                HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                ProdutoParcial resultado = (ProdutoParcial)serializer.Deserialize<ProdutoParcial>(response.Content.ReadAsStringAsync().Result);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    x.Text = (resultado.Cost * qtde).ToString();
+                }
+                else
+                {
+
+                }
             }
-            
+                        
             ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
         }
     }
