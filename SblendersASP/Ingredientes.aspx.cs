@@ -19,6 +19,7 @@ namespace TCC
         public static List<PedidoProdutoIngrediente> ppi = new List<PedidoProdutoIngrediente>();
         public static List<ProdutoIngrediente> pi = new List<ProdutoIngrediente>();
         public static List<PedidoProduto> ppl;
+        Ingredientes ingredient;
 
         protected void Page_Load(object sender, EventArgs e)
         {                      
@@ -328,6 +329,13 @@ namespace TCC
 
             }
 
+            if(ppi.Count-1 < 0)
+            {
+                ingredient = new Ingredientes();
+                ppi = ingredient.getIngredientes();
+                ingredient.excluirList();
+            }
+            
             int i = 0;
             for(i=0; i <= ppi.Count-1; i++)
             {
@@ -358,6 +366,16 @@ namespace TCC
                 divIngredienteCliente.Controls.Add(btnExcluirIngrediente);
                 btnExcluirIngrediente.Click += new EventHandler(ExcluirIngrediente);
             }
+
+            decimal ingPrec = 0;
+            int ppId = 0;
+            foreach (PedidoProdutoIngrediente p in ppi)
+            {
+                ppId = p.ProdutoIngredienteID;
+                int ind = pi.FindIndex(a => a.PIngredientID.Equals(ppId));
+                ingPrec += p.Quantidade * pi[ind].Price;
+            }
+            lblTotalIngredientes.Text = "R$ " + ingPrec;
         }
 
         protected void AdicionarIngrediente(object sender, EventArgs e)
@@ -410,6 +428,16 @@ namespace TCC
             divIngredienteCliente.Controls.Add(btnExcluirIngrediente);
             btnExcluirIngrediente.Click += new EventHandler(ExcluirIngrediente);
 
+            decimal ingPrec = 0;
+            int ppId = 0;
+            foreach (PedidoProdutoIngrediente p in ppi)
+            {
+                ppId = p.ProdutoIngredienteID;
+                int ind = pi.FindIndex(a => a.PIngredientID.Equals(ppId));
+                ingPrec += p.Quantidade * pi[ind].Price;
+            }
+            lblTotalIngredientes.Text = "R$ " + ingPrec;
+
         }
 
         protected void ExcluirIngrediente(object sender, EventArgs e)
@@ -429,6 +457,7 @@ namespace TCC
             ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
             ppl.Add(ppc);
             ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
+            Response.Redirect("Carrinho.aspx");
         }
     }
 }

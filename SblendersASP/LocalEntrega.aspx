@@ -15,7 +15,7 @@
                 <asp:Label ID="Label1" runat="server" Text="Endereço de Entrega:" CssClass="lblEnderecoMaps"></asp:Label>
                 <asp:TextBox ID="txtEndMaps" runat="server" ClientIDMode="Static" CssClass="txtEnderecoMaps"></asp:TextBox>
                 <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEnderecoMaps"></asp:Label>
-                <asp:Button ID="Button1" runat="server" Text="Calcular Frete" CssClass="btnEnderecoMaps" OnClientClick="tracarRota()"/>
+                <asp:Button ID="Button1" runat="server" Text="Calcular Frete" CssClass="btnEnderecoMaps" OnClientClick="tracarRota()" OnClick="Button1_Click"/>
                 <asp:Label ID="lblCustoFrete" runat="server" Text="Custo do Frete:" CssClass="lblCustoFrete"></asp:Label>
             </div>
             
@@ -25,6 +25,16 @@
 
                 <script type="text/javascript" src=""></script><!--http://maps.googleapis.com/maps/api/js?key=AIzaSyCUSsVX-TY3GHNO9JLsDuI-fA56xJVwb9E-->
                 <script type ="text/javascript">
+                    /*var url = "https://localhost:44323/api/Restaurante/"+lat+"/"+lng+"/500";
+                            fetch(url).then((res) => {
+                                res.json().then((dados) => {
+                                    lat = dados.geometry.location.lat;
+                                    lng = dados.geometry.location.lng;
+                                    console.log(dados);
+                                    status = dados.status;
+                                })
+                            }).catch((err) => {alert("Não foi possivel obter localização: " + status); })*/
+
                     var latlng = new google.maps.LatLng(-23.5489, -46.6388);
                     var opcoes = {
                         zoom: 12,
@@ -495,16 +505,6 @@
                             lat = results[0].geometry.location.lat();
                             lng = results[0].geometry.location.lng();
                             alert('Latitude: ' + lat + ' Logitude: ' + lng);
-
-                            /*var url = "https://localhost:44323/api/Restaurante/"+lat+"/"+lng+"/500";
-                            fetch(url).then((res) => {
-                                res.json().then((dados) => {
-                                    lat = dados.geometry.location.lat;
-                                    lng = dados.geometry.location.lng;
-                                    console.log(dados);
-                                    status = dados.status;
-                                })
-                            }).catch((err) => {alert("Não foi possivel obter localização: " + status); })*/
 
                             directionsService.route({
                                 origin: marker10.position,  // Paulista inicia.
