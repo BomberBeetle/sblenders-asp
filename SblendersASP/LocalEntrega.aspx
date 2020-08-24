@@ -23,17 +23,8 @@
         <div class="divMapsEntrega">
             <div class="divMapsE" id ="mapa" onload="InicializaMapa()">
 
-                <script type="text/javascript" src=""></script><!--http://maps.googleapis.com/maps/api/js?key=AIzaSyCUSsVX-TY3GHNO9JLsDuI-fA56xJVwb9E-->
-                <script type ="text/javascript">
-                    /*var url = "https://localhost:44323/api/Restaurante/"+lat+"/"+lng+"/500";
-                            fetch(url).then((res) => {
-                                res.json().then((dados) => {
-                                    lat = dados.geometry.location.lat;
-                                    lng = dados.geometry.location.lng;
-                                    console.log(dados);
-                                    status = dados.status;
-                                })
-                            }).catch((err) => {alert("Não foi possivel obter localização: " + status); })*/
+                <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCUSsVX-TY3GHNO9JLsDuI-fA56xJVwb9E"></script><!---->
+                <script type ="text/javascript">                    
 
                     var latlng = new google.maps.LatLng(-23.5489, -46.6388);
                     var opcoes = {
@@ -481,22 +472,14 @@
                 }
 
                 var lat = '';
-                var lng = '';   
+                var lng = '';  
+                var lat2 = '';
+                var lng2 = ''; 
                 var distancia = '';
                 var tempo = '';    
 
                 function tracarRota() {                    
                     var address = document.getElementById("txtEndMaps").value;
-                    //alert("Baatat" + address);
-                    /*var url = "https://maps.googleapis.com/maps/api/geocode/json?address="+address+"&key=AIzaSyCUSsVX-TY3GHNO9JLsDuI-fA56xJVwb9E";
-                    fetch(url).then((res) => {
-                        res.json().then((dados) => {
-                            lat = dados.geometry.location.lat;
-                            lng = dados.geometry.location.lng;
-                            console.log(dados);
-                            status = dados.status;
-                        })
-                    }).catch((err) => {alert("Não foi possivel obter localização: " + status); });*/
 
                     geocoder.geocode({ 'address': address }, function (results, status) {
 
@@ -506,8 +489,17 @@
                             lng = results[0].geometry.location.lng();
                             alert('Latitude: ' + lat + ' Logitude: ' + lng);
 
+                            var url = "https://localhost:44323/api/Restaurante/" + lat + "/" + lng + "/5000";                       
+                            fetch(url).then((res) => {
+                                res.json().then((dados) => {
+                                    lat2 = dados.restauranteLat;
+                                    lng2 = dados.restauranteLong;
+                                    console.log(dados);
+                                })
+                            }).catch((err) => {alert("Não foi possivel obter localização: " + err); })
+
                             directionsService.route({
-                                origin: marker10.position,  // Paulista inicia.
+                                origin: {lat: lat2, lng: lng2}/*marker10.position*/,  // Paulista inicia.
                                 destination: {lat: lat, lng: lng},  // Paulista final.
                                 travelMode: google.maps.DirectionsTravelMode.DRIVING
        
