@@ -15,7 +15,7 @@
                 <asp:Label ID="Label1" runat="server" Text="Endereço de Entrega:" CssClass="lblEnderecoMaps"></asp:Label>
                 <asp:TextBox ID="txtEndMaps" runat="server" ClientIDMode="Static" CssClass="txtEnderecoMaps"></asp:TextBox>
                 <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEnderecoMaps"></asp:Label>
-                <asp:Button ID="Button1" runat="server" Text="Calcular Frete" CssClass="btnEnderecoMaps" OnClientClick="tracarRota()" OnClick="Button1_Click"/>
+                <asp:Button ID="btnCalcularRota" runat="server" Text="Calcular Frete" CssClass="btnEnderecoMaps" OnClick="Button1_Click" ClientIDMode="Static"/>
                 <asp:Label ID="lblCustoFrete" runat="server" Text="Custo do Frete:" CssClass="lblCustoFrete"></asp:Label>
             </div>
             
@@ -476,10 +476,11 @@
                 var lat2 = '';
                 var lng2 = ''; 
                 var distancia = '';
-                var tempo = '';    
+                var tempo = '';                    
 
                 function tracarRota() {                    
                     var address = document.getElementById("txtEndMaps").value;
+                    var validate = false;
 
                     geocoder.geocode({ 'address': address }, function (results, status) {
 
@@ -487,20 +488,23 @@
 
                             lat = results[0].geometry.location.lat();
                             lng = results[0].geometry.location.lng();
-                            alert('Latitude: ' + lat + ' Logitude: ' + lng);
+                            //alert('Latitude: ' + lat + ' Logitude: ' + lng);
 
                             var url = "https://localhost:44323/api/Restaurante/" + lat + "/" + lng + "/5000";                       
-                            fetch(url).then((res) => {
+                            fetch(url , {cors:"anonymous"}).then((res) => {
                                 res.json().then((dados) => {
-                                    lat2 = dados.restauranteLat;
-                                    lng2 = dados.restauranteLong;
+                                    lat2 = dados[0].restauranteLat;
+                                    lng2 = dados[0].restauranteLong;
                                     console.log(dados);
                                 })
-                            }).catch((err) => {alert("Não foi possivel obter localização: " + err); })
+                            }).catch((err) => {
+                                alert("Não foi possivel obter localização: " + err);
+                                validate = false;
+                            })
 
                             directionsService.route({
-                                origin: {lat: lat2, lng: lng2}/*marker10.position*/,  // Paulista inicia.
-                                destination: {lat: lat, lng: lng},  // Paulista final.
+                                origin: {lat: lat2, lng: lng2},  
+                                destination: {lat: lat, lng: lng},  
                                 travelMode: google.maps.DirectionsTravelMode.DRIVING
        
                             },function(response, status) {
@@ -512,10 +516,16 @@
                                   directionsDisplay.setDirections(response);
                                   alert(distancia);
                                   alert(tempo);
-                              } else {
+                                  //document.getElementById("btnTracarRota").value = true;
+                                  validate = true;
+                              }
+                              else {
                                   alert('Directions request failed due to ' + status);
+                                  //document.getElementById("btnTracarRota").value = false;
+                                  validate = false;
                               }
                             });
+
                             
                             /*service.getDistanceMatrix(
                               {
@@ -543,19 +553,22 @@
                         }
                         else {
                             alert("Não foi possivel obter localização: " + status);
+                            validate = false;
+                            //document.getElementById("btnTracarRota").value = false;
                         }
+                        
                     });
-
-
+                    /*if (validate == false) {
+                            alert('Insira um endereço válido');
+                            $('#btnCalcularRota').attr('Enabled', 'false');
+                        }*/
+                    <%=ok%> = validate;
                     event.preventDefault();
+                    return validate;
                 }    
                    
-
                     window.onload = InicializaMapa;
-
-                    
-
-                    
+                                        
                 </script>
             </div>
         </div>

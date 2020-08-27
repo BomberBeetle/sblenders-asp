@@ -40,13 +40,13 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// Controle Button1.
+        /// Controle btnCalcularRota.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnCalcularRota;
         
         /// <summary>
         /// Controle lblCustoFrete.
