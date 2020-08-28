@@ -20,8 +20,8 @@ namespace TCC
         }
 
         protected void Button1_Click(object sender, EventArgs e)
-        {
-            ScriptManager.RegisterClientScriptBlock(Page, Page.GetType(), "traçar rota", "tracarRota()", true); 
+        {           
+            //ScriptManager.RegisterStartupScript(Page, Page.GetType(), "traçar rota", "tracarRota()", true); 
             //Button x = (Button)sender;
             //bool validate = x.Attributes["value"].Contains("true");
             lblCustoFrete.Text = ok.ToString();
@@ -29,8 +29,7 @@ namespace TCC
             {
                 ((Pedido)Session["Carrinho"]).endereco = txtEndMaps.Text;
             }
-            
-            
+                       
         }
     }
 }
