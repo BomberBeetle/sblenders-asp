@@ -1,0 +1,16 @@
+﻿{
+  "name": "Sblenders",
+  "short_name": "Sblenders",
+  "icons": [
+    {
+      "src": "/Imagens/hotDog.png",
+      "sizes": "260x220",
+      "type": "image/png"
+    }
+  ],
+
+  "start_url": "/Index2.aspx",
+  "display": "standalone",
+  "background_color": "#FFFCED",
+  "theme_color": "#F7B036"
+}

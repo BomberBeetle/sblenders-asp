@@ -15,7 +15,7 @@
                 <asp:Label ID="Label1" runat="server" Text="Endereço de Entrega:" CssClass="lblEnderecoMaps"></asp:Label>
                 <asp:TextBox ID="txtEndMaps" runat="server" ClientIDMode="Static" CssClass="txtEnderecoMaps"></asp:TextBox>
                 <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEnderecoMaps"></asp:Label>
-                <asp:Button ID="btnCalcularRota" runat="server" Text="Calcular Frete" CssClass="btnEnderecoMaps" ClientIDMode="Static" OnClientClick="tracarRota()" OnClick="Button1_Click"/>
+                <asp:Button ID="btnCalcularRota" runat="server" Text="Calcular Frete" CssClass="btnEnderecoMaps" ClientIDMode="Static" OnClick="Button1_Click"/>
                 <asp:Label ID="lblCustoFrete" runat="server" Text="Custo do Frete:" CssClass="lblCustoFrete"></asp:Label>
             </div>
             
@@ -25,7 +25,7 @@
 
                 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCUSsVX-TY3GHNO9JLsDuI-fA56xJVwb9E"></script><!---->
                 <script type ="text/javascript">                    
-
+                    
                     var latlng = new google.maps.LatLng(-23.5489, -46.6388);
                     var opcoes = {
                         zoom: 12,
@@ -478,7 +478,8 @@
                 var distancia = '';
                 var tempo = '';                    
 
-                function tracarRota() {                    
+                    function tracarRota() {  
+                        alert("<3 -andre");
                     var address = document.getElementById("txtEndMaps").value;
                     var validate = false;
 
@@ -559,7 +560,7 @@
                     event.preventDefault();
                     return validate;
                 }    
-                   
+                    document.getElementById("btnCalcularRota").onclick = tracarRota
                     window.onload = InicializaMapa;
                                         
                 </script>
