@@ -181,6 +181,7 @@
     <Content Include="Fontes\Roboto-Thin.ttf" />
     <Content Include="Fontes\Roboto-ThinItalic.ttf" />
     <Content Include="manifest.json" />
+    <Content Include="Diagrama_de_classe.cd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
