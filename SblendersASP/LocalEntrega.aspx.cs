@@ -31,5 +31,15 @@ namespace TCC
             }
                        
         }
+
+        protected bool validarEndereco()
+        {
+            lblCustoFrete.Text = ok.ToString();
+            if (ok)
+            {
+                ((Pedido)Session["Carrinho"]).endereco = txtEndMaps.Text;
+            }
+            return ok;
+        }
     }
 }

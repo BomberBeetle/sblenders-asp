@@ -15,7 +15,7 @@
                 <asp:Label ID="Label1" runat="server" Text="Endereço de Entrega:" CssClass="lblEnderecoMaps"></asp:Label>
                 <asp:TextBox ID="txtEndMaps" runat="server" ClientIDMode="Static" CssClass="txtEnderecoMaps"></asp:TextBox>
                 <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEnderecoMaps"></asp:Label>
-                <asp:Button ID="btnCalcularRota" runat="server" Text="Calcular Frete" CssClass="btnEnderecoMaps" ClientIDMode="Static" OnClick="Button1_Click"/>
+                <asp:Button ID="btnCalcularRota" runat="server" Text="Calcular Frete" CssClass="btnEnderecoMaps" ClientIDMode="Static" OnClientClick="tracarRota()"/>
                 <asp:Label ID="lblCustoFrete" runat="server" Text="Custo do Frete:" CssClass="lblCustoFrete"></asp:Label>
             </div>
             
@@ -557,6 +557,7 @@
                     });
 
                     <%=ok%> = validate;
+                    var event = <%=validarEndereco()%>;
                     event.preventDefault();
                     return validate;
                 }    
