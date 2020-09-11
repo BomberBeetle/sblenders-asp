@@ -15,7 +15,7 @@
                 <asp:Label ID="Label1" runat="server" Text="Endereço de Entrega:" CssClass="lblEnderecoMaps"></asp:Label>
                 <asp:TextBox ID="txtEndMaps" runat="server" ClientIDMode="Static" CssClass="txtEnderecoMaps"></asp:TextBox>
                 <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEnderecoMaps"></asp:Label>
-                <asp:Button ID="btnCalcularRota" runat="server" Text="Calcular Frete" CssClass="btnEnderecoMaps" ClientIDMode="Static" OnClientClick="tracarRota()"/>
+                <asp:Button ID="btnCalcularRota" runat="server" Text="Calcular Frete" CssClass="btnEnderecoMaps" ClientIDMode="Static" OnClientClick="tracarRota()" OnClick="Button1_Click"/>
                 <asp:Label ID="lblCustoFrete" runat="server" Text="Custo do Frete:" CssClass="lblCustoFrete"></asp:Label>
             </div>
             
@@ -478,19 +478,18 @@
                 var distancia = '';
                 var tempo = '';                    
 
-                    function tracarRota() {  
-                        alert("<3 -andre");
+                function tracarRota() {  
+                    alert("<3 -andre");  
                     var address = document.getElementById("txtEndMaps").value;
                     var validate = false;
 
                     geocoder.geocode({ 'address': address }, function (results, status) {
 
                         if (status == google.maps.GeocoderStatus.OK) {
-
                             lat = results[0].geometry.location.lat();
                             lng = results[0].geometry.location.lng();
 
-                            var url = "https://localhost:44323/api/Restaurante/" + lat + "/" + lng + "/5000";                       
+                            var url = "https://localhost:44323/api/Restaurante/" + lat + "/" + lng + "/5000";  
                             fetch(url , {cors:"anonymous"}).then((res) => {
                                 res.json().then((dados) => {
                                     lat2 = dados[0].restauranteLat;
@@ -522,46 +521,21 @@
                                   alert('Directions request failed due to ' + status);
                                   validate = false;
                               }
-                            });
-
-                              /*service.getDistanceMatrix(
-                              {
-                                  //Origem
-                                  origins: marker10.position,
-                                  //Destino
-                                  destinations: {lat: lat, lng: lng},
-                                  //Modo (DRIVING | WALKING | BICYCLING)
-                                  travelMode: google.maps.TravelMode.DRIVING,
-                                  //Sistema de medida (METRIC | IMPERIAL)
-                                  unitSystem: google.maps.UnitSystem.METRIC
-                                  //Vai chamar o callback
-                              }, function (response, status) {
-                                    //Verificar o Status
-                                  if (status == google.maps.DistanceMatrixStatus.OK) {
-                                      distancia = response.rows[0].elements[0].distance.value();
-                                      tempo = response.rows[0].elements[0].duration.value();
-                                      document.getElementById("lblCustoFrete").value = "Custo do Frete:" + distancia + " " + tempo;
-                                  }
-                                        
-                                    else {
-                                        alert('Directions request failed due to ' + status);
-                                    }
-                                });*/
+                            });                              
                            
                         }
                         else {
-                            alert("Não foi possivel obter localização: " + status);
+                            alert("Não foi possivel obter localização: BATATA " + status);
                             validate = false;
                         }
                         
                     });
 
                     <%=ok%> = validate;
-                    var event = <%=validarEndereco()%>;
-                    event.preventDefault();
-                    return validate;
+                        
+                        return true;
                 }    
-                    document.getElementById("btnCalcularRota").onclick = tracarRota
+                    //document.getElementById("btnCalcularRota").onclick = tracarRota;
                     window.onload = InicializaMapa;
                                         
                 </script>
