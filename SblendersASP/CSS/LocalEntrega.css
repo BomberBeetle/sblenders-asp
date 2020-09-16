@@ -81,7 +81,9 @@
     font-size: 18px;
     color: #FFF;
 }
-
+.hidden{
+    display:none;
+}
 .lblCustoFrete{
     width:100%;
     margin-top:15px;

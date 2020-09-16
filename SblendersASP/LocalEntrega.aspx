@@ -15,7 +15,8 @@
                 <asp:Label ID="Label1" runat="server" Text="Endereço de Entrega:" CssClass="lblEnderecoMaps"></asp:Label>
                 <asp:TextBox ID="txtEndMaps" runat="server" ClientIDMode="Static" CssClass="txtEnderecoMaps"></asp:TextBox>
                 <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEnderecoMaps"></asp:Label>
-                <asp:Button ID="btnCalcularRota" runat="server" Text="Calcular Frete" CssClass="btnEnderecoMaps" ClientIDMode="Static" OnClientClick="tracarRota()" OnClick="Button1_Click"/>
+                <button id="btnCalcularRota" type="button" class="btnEnderecoMaps" onclick="tracarRota()">Calcular Frete</button>
+                <asp:Button ID="hiddenFuncButton" runat="server" OnClick="Button1_Click" ClientIDMode="Static" CssClass="hidden"/>
                 <asp:Label ID="lblCustoFrete" runat="server" Text="Custo do Frete:" CssClass="lblCustoFrete"></asp:Label>
             </div>
             
@@ -477,64 +478,72 @@
                 var lng2 = ''; 
                 var distancia = '';
                 var tempo = '';                    
-
-                function tracarRota() {  
-                    alert("<3 -andre");  
+                var url = "";
+                async function tracarRota() {    
                     var address = document.getElementById("txtEndMaps").value;
-                    var validate = false;
 
                     geocoder.geocode({ 'address': address }, function (results, status) {
-
+                        
                         if (status == google.maps.GeocoderStatus.OK) {
                             lat = results[0].geometry.location.lat();
                             lng = results[0].geometry.location.lng();
-
-                            var url = "https://localhost:44323/api/Restaurante/" + lat + "/" + lng + "/5000";  
+                            url = "https://localhost:44323/api/Restaurante/" + lat + "/" + lng + "/5000";
                             fetch(url , {cors:"anonymous"}).then((res) => {
                                 res.json().then((dados) => {
+                                    if (dados.length < 1) {
+                                        alert("Nenhum restaurante em 5km de distância")
+                                        tracarRotaCallbackFinished(false);
+                                        return;
+                                    }
                                     lat2 = dados[0].restauranteLat;
                                     lng2 = dados[0].restauranteLong;
                                     console.log(dados);
+                                    directionsService.route({
+                                        origin: { lat: lat2, lng: lng2 },
+                                        destination: { lat: lat, lng: lng },
+                                        travelMode: google.maps.DirectionsTravelMode.DRIVING
+
+                                    }, function (response, status) {
+
+                                        if (status == google.maps.DirectionsStatus.OK) {
+                                            distancia = response.routes[0].legs[0].distance.value;
+                                            tempo = response.routes[0].legs[0].duration.text;
+                                            directionsDisplay.setOptions({ preserveViewport: true });
+                                            directionsDisplay.setDirections(response);
+                                            alert(distancia);
+                                            alert(tempo);
+                                            tracarRotaCallbackFinished(true);
+                                        }
+                                        else {
+                                            alert('Directions request failed due to ' + status);
+                                            tracarRotaCallbackFinished(false);
+                                        }
+                                    });     
                                 })
                             }).catch((err) => {
                                 alert("Não foi possivel obter localização: " + err);
-                                validate = false;
+                                tracarRotaCallbackFinished(false);
                             })
 
-                            directionsService.route({
-                                origin: {lat: lat2, lng: lng2},  
-                                destination: {lat: lat, lng: lng},  
-                                travelMode: google.maps.DirectionsTravelMode.DRIVING
-       
-                            },function(response, status) {
-          
-                              if (status == google.maps.DirectionsStatus.OK) {
-                                  distancia = response.routes[0].legs[0].distance.value;
-                                  tempo = response.routes[0].legs[0].duration.text;
-                                  directionsDisplay.setOptions({ preserveViewport: true });
-                                  directionsDisplay.setDirections(response);
-                                  alert(distancia);
-                                  alert(tempo);
-                                  validate = true;
-                              }
-                              else {
-                                  alert('Directions request failed due to ' + status);
-                                  validate = false;
-                              }
-                            });                              
-                           
+                                                     
+                          
                         }
                         else {
                             alert("Não foi possivel obter localização: BATATA " + status);
-                            validate = false;
+                            tracarRotaCallbackFinished(false);
                         }
                         
                     });
-
-                    <%=ok%> = validate;
+                    
+                    
                         
                         return true;
-                }    
+                    }    
+
+                    function tracarRotaCallbackFinished(ok) {
+                        <%=ok%> = ok;
+                        document.getElementById('hiddenFuncButton').click();
+                    }
                     //document.getElementById("btnCalcularRota").onclick = tracarRota;
                     window.onload = InicializaMapa;
                                         

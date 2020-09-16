@@ -7,11 +7,13 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace TCC {
-    
-    
-    public partial class LocalEntrega {
-        
+namespace TCC
+{
+
+
+    public partial class LocalEntrega
+    {
+
         /// <summary>
         /// Controle Label1.
         /// </summary>
@@ -20,7 +22,7 @@ namespace TCC {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
+
         /// <summary>
         /// Controle txtEndMaps.
         /// </summary>
@@ -29,7 +31,7 @@ namespace TCC {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEndMaps;
-        
+
         /// <summary>
         /// Controle Label2.
         /// </summary>
@@ -38,16 +40,16 @@ namespace TCC {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-        
+
         /// <summary>
-        /// Controle btnCalcularRota.
+        /// Controle hiddenFuncButton.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCalcularRota;
-        
+        protected global::System.Web.UI.WebControls.Button hiddenFuncButton;
+
         /// <summary>
         /// Controle lblCustoFrete.
         /// </summary>
