@@ -60,7 +60,7 @@
 
                 <div class="divBtnAvancar">
                     <asp:button runat="server" text="Voltar para os produtos" CssClass="btnVoltarCarrinho"/>
-                    <asp:button runat="server" text="Avançar para o local de entrega" CssClass="btnAvancarCarrinho"/>
+                    <asp:button runat="server" text="Avançar para o local de entrega" CssClass="btnAvancarCarrinho" OnClick="Avancar"/>
                 </div>
             </div>
         </div>

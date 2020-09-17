@@ -469,5 +469,10 @@ namespace TCC
                         
             ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
         }
+
+        protected void Avancar(object sender, EventArgs e)
+        {
+            Response.Redirect("LocalEntrega.aspx");
+        }
     }
 }

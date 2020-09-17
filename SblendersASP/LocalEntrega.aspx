@@ -14,10 +14,11 @@
             <div class="divSubEndereco">
                 <asp:Label ID="Label1" runat="server" Text="Endereço de Entrega:" CssClass="lblEnderecoMaps"></asp:Label>
                 <asp:TextBox ID="txtEndMaps" runat="server" ClientIDMode="Static" CssClass="txtEnderecoMaps"></asp:TextBox>
-                <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEnderecoMaps"></asp:Label>
+                <asp:Label ID="lblOculto" runat="server" Text="" CssClass="hidden" ClientIDMode="Static"></asp:Label>
                 <button id="btnCalcularRota" type="button" class="btnEnderecoMaps" onclick="tracarRota()">Calcular Frete</button>
                 <asp:Button ID="hiddenFuncButton" runat="server" OnClick="Button1_Click" ClientIDMode="Static" CssClass="hidden"/>
-                <asp:Label ID="lblCustoFrete" runat="server" Text="Custo do Frete:" CssClass="lblCustoFrete"></asp:Label>
+                <asp:Label ID="lblCustoFrete" runat="server" Text="Custo do Frete:" CssClass="lblCustoFrete"></asp:Label>     
+                <asp:HiddenField ID="hiddenOk" runat="server" Value="bt" ClientIDMode="Static"/>
             </div>
             
         </div>
@@ -538,10 +539,58 @@
                     
                         
                         return true;
-                    }    
+                    }  
+
+                async function tracarRotaReverso() {    
+                    var address = document.getElementById("txtEndMaps").value;
+
+                    geocoder.geocode({ 'address': address }, function (results, status) {
+                        
+                        if (status == google.maps.GeocoderStatus.OK) {
+                            lat = results[0].geometry.location.lat();
+                            lng = results[0].geometry.location.lng();
+                            url = "https://localhost:44323/api/Restaurante/" + lat + "/" + lng + "/5000";
+                            fetch(url , {cors:"anonymous"}).then((res) => {
+                                res.json().then((dados) => {
+                                    if (dados.length < 1) {
+                                        return;
+                                    }
+                                    lat2 = dados[0].restauranteLat;
+                                    lng2 = dados[0].restauranteLong;
+                                    directionsService.route({
+                                        origin: { lat: lat2, lng: lng2 },
+                                        destination: { lat: lat, lng: lng },
+                                        travelMode: google.maps.DirectionsTravelMode.DRIVING
+
+                                    }, function (response, status) {
+
+                                        if (status == google.maps.DirectionsStatus.OK) {
+                                            distancia = response.routes[0].legs[0].distance.value;
+                                            tempo = response.routes[0].legs[0].duration.text;
+                                            directionsDisplay.setOptions({ preserveViewport: true });
+                                            directionsDisplay.setDirections(response);
+                                        }
+                                        else {
+
+                                        }
+                                    });     
+                                })
+                            }).catch((err) => {
+
+                            })
+
+                                                     
+                          
+                        }
+                        else {
+
+                        }                        
+                    });                                                               
+                        return true;
+                }
 
                     function tracarRotaCallbackFinished(ok) {
-                        <%=ok%> = ok;
+                        document.getElementById("hiddenOk").value = ok;
                         document.getElementById('hiddenFuncButton').click();
                     }
                     //document.getElementById("btnCalcularRota").onclick = tracarRota;
