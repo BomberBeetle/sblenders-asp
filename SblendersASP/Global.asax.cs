@@ -18,6 +18,9 @@ namespace TCC
 
         protected void Session_Start(object sender, EventArgs e)
         {
+            Session["userID"] = null;
+            Session["userToken"] = null;
+            Session["userRID"] = null;
             Session["Carrinho"] = new SblendersAPI.Models.Pedido(0, 0, 0, DateTime.Now, "", new PedidoProduto[0]);
         }
 

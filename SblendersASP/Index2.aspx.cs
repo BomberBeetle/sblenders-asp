@@ -78,10 +78,7 @@ namespace TCC
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
-        {
-            Session["userID"] = null;
-            Session["userToken"] = null;
-            Session["userRID"] = null;
+        {            
             lblEmailAvisoLogin.Text = "";
             lblSenhaAvisoLogin.Text = "";
             bool camposPreenchidos = true;
