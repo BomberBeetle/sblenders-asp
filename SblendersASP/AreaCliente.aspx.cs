@@ -19,11 +19,12 @@ namespace TCC
         {
             if(Session["userID"] != null)
             {
-                string URL = $"https://localhost:44323/api/ClienteOnline/{Uri.EscapeUriString((string)Session["userID"])}";
+                string URL = $"https://localhost:44323/api/Agente/"+Session["userID"];
                 string urlParameters = "";
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(URL);
 
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
                 // Add an Accept header for JSON format.
                 client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
@@ -31,31 +32,62 @@ namespace TCC
                 // List data response.
                 JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
                 HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-                ClienteOnline resultado = (ClienteOnline)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                Dictionary<string, Object> resultado = (Dictionary<string, Object>)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
 
                 if (response.IsSuccessStatusCode)
                 {
-                    TextBox1.Text = resultado.Nome;
-                    TextBox2.Text = resultado.Sobrenome;
-                    TextBox3.Text = resultado.Login;
-                    TextBox4.Text = resultado.Password;
+                    TextBox1.Text = (string)resultado["client_name"];
+                    TextBox2.Text = (string)resultado["client_surname"];
 
-                    string URL2 = $"https://localhost:44323/api/Pedidos/{Uri.EscapeUriString((string)Session["userID"])}";
+                    string URL2 = $"https://localhost:44323/api/Pedidos/"+Session["userID"];
                     HttpClient client2 = new HttpClient();
-                    client.BaseAddress = new Uri(URL);
+                    client2.BaseAddress = new Uri(URL2);
 
+                    client2.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
                     // Add an Accept header for JSON format.
-                    client.DefaultRequestHeaders.Accept.Add(
+                    client2.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
 
                     // List data response.
                     JavaScriptSerializer serializer2 = new System.Web.Script.Serialization.JavaScriptSerializer();
-                    HttpResponseMessage response2 = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-                    Pedido resultado2 = (Pedido)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                    HttpResponseMessage response2 = client2.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                    String resultado2 = response2.Content.ReadAsStringAsync().Result;
+                    Dictionary<string, string>[] result = serializer2.Deserialize<Dictionary<string, string>[]>(resultado2);                    
 
                     if (response2.IsSuccessStatusCode)
                     {
+                        int tam = result.Length-1;
+                        while(tam >= 0)
+                        {
+                            string URL3 = $"https://localhost:44323/api/Pedidos/" + Session["userID"] + "/"+ tam;
+                            HttpClient client3 = new HttpClient();
+                            client3.BaseAddress = new Uri(URL3);
 
+                            client3.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+                            // Add an Accept header for JSON format.
+                            client3.DefaultRequestHeaders.Accept.Add(
+                            new MediaTypeWithQualityHeaderValue("application/json"));
+
+                            JavaScriptSerializer serializer3 = new System.Web.Script.Serialization.JavaScriptSerializer();
+                            HttpResponseMessage response3 = client3.GetAsync(urlParameters).Result;
+                            Pedido resultado3 = serializer.Deserialize<Pedido>(response.Content.ReadAsStringAsync().Result);
+
+                            if (response3.IsSuccessStatusCode)
+                            {
+                                Button btnA = new Button();
+                                btnA.ID = "btnEstado" + tam;
+                                btnA.Text = resultado3.estadoID.ToString();
+                                btnA.Click += new EventHandler(alterarEstadoPedido);
+                                divBodyAreaCliente.Controls.Add(btnA);
+                            }
+                            else
+                            {
+
+                            }
+                            tam--;
+                        }
+                        Label1.Text = result[0]["pedidoID"].ToString();
+                        
                     }
                     else
                     {
@@ -81,19 +113,27 @@ namespace TCC
 
         protected void alterarEstadoPedido(object sender, EventArgs e)
         {
-            string URL = $"https://localhost:44323/api/Pedidos/{Uri.EscapeUriString((string)Session["userID"])}";
-            string urlParameters = "";
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(URL);
+            Button iButton = (Button)sender;
+            String textId = iButton.ID;
+            int id = Convert.ToInt32(textId.Substring(9, textId.Length - 9));
+            if (id == 1)
+            {
+                string URL = $"https://localhost:44323/api/Pedidos/"+Session["userID"]+"/"+id+"/"+iButton.Text;
+                string urlParameters = "";
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(URL);
 
-            // Add an Accept header for JSON format.
-            client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+                // Add an Accept header for JSON format.
+                client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
 
-            // List data response.
-            JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
-            HttpResponseMessage response = client.PostAsync(urlParameters, new StringContent(serializer.Serialize(Session["userID"]), Encoding.UTF8, "application/json")).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-            ClienteOnline resultado = (ClienteOnline)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                // List data response.
+                JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+                //HttpResponseMessage response = client.PostAsync(urlParameters, new StringContent(serializer.Serialize(Session["userID"],id,iButton.Text), Encoding.UTF8, "application/json")).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                //ClienteOnline resultado = (ClienteOnline)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+            }
+            
         }
     }
 }

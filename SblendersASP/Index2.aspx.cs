@@ -55,7 +55,7 @@ namespace TCC
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["userRID"] != null)
+            if(Session["userID"] != null)
             {
                 divConectado.Visible = true;
                 divDesconectado.Visible = false;
@@ -112,14 +112,15 @@ namespace TCC
                 {
                     Session["userID"] = int.Parse((string)resultado["id"]);
                     Session["userToken"] = (string)resultado["token"];
-                    if (GetUserDetails())
+                    Response.Redirect("AreaCliente.aspx");
+                    /*if (GetUserDetails())
                     {
                         Response.Redirect("Ingredientes.aspx");
                     }
                     else
                     {
                         lblSenhaAvisoLogin.Text = "Usuário ou senha incorreto";
-                    }
+                    }*/
                 }
                 else
                 {
