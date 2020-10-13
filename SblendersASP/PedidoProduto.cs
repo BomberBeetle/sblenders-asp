@@ -13,6 +13,11 @@ namespace SblendersAPI.Models
         public decimal computatedPrice;
         public PedidoProdutoIngrediente[] ingredientes;
 
+        public PedidoProduto()
+        {
+
+        }
+
         public PedidoProduto(int pedidoProdutoQtde, int produtoID, PedidoProdutoIngrediente[] ingredientes)
         {
             this.pedidoProdutoQtde = pedidoProdutoQtde;

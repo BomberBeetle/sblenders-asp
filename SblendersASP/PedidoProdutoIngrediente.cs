@@ -11,6 +11,10 @@ namespace SblendersAPI.Models
         public int Quantidade;
         public int PedidoProdutoIngredienteID;
         
+        public PedidoProdutoIngrediente()
+        {
+
+        }
 
         public PedidoProdutoIngrediente(int ingredientID, int quantidade, int ppiID)
         {
