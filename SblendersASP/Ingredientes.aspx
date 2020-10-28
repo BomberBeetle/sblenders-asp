@@ -61,7 +61,6 @@
     </div>
     <div class="divIngredientesCliente" id="divIngredientesCliente" runat="server">
         <div class="divIngredientesCategoria">
-            <h1></h1>
             <asp:Label ID="lblTotalIngredientes" runat="server" Text="R$ 0"></asp:Label>
         </div>
     </div>
