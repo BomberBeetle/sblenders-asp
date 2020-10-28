@@ -59,7 +59,7 @@ namespace TCC
                         int tam = result.Length-1;
                         while(tam >= 0)
                         {
-                            string URL3 = $"https://localhost:44323/api/Pedidos/" + Session["userID"] + "/"+ tam;
+                            string URL3 = $"https://localhost:44323/api/Pedidos/" + Session["userID"] + "/"+ result[tam]["pedidoID"];
                             HttpClient client3 = new HttpClient();
                             client3.BaseAddress = new Uri(URL3);
 
@@ -75,10 +75,10 @@ namespace TCC
                             if (response3.IsSuccessStatusCode)
                             {
                                 Button btnA = new Button();
-                                btnA.ID = "btnEstado" + tam;
-                                btnA.Text = resultado3.estadoID.ToString();
-                                btnA.Click += new EventHandler(alterarEstadoPedido);
+                                btnA.ID = "btnEstado" + result[tam]["pedidoID"];
+                                btnA.Text = resultado3.estadoID.ToString();                                
                                 divBodyAreaCliente.Controls.Add(btnA);
+                                btnA.Click += new EventHandler(alterarEstadoPedido);
                             }
                             else
                             {
@@ -108,11 +108,11 @@ namespace TCC
 
         protected void alterarDados(object sender, EventArgs e)
         {
-            string URL = $"https://localhost:44323/api/Pedidos/";
+            string URL = $"https://localhost:44323/api/ClienteOnline/"+Session["userID"];
             string urlParameters = "";
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(URL);
-            String[] d = { Session["userID"].ToString(), TextBox1.Text, TextBox2.Text };
+            ClienteOnline cli = new ClienteOnline(TextBox1.Text, TextBox2.Text, null, null);
 
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
             // Add an Accept header for JSON format.
@@ -121,7 +121,15 @@ namespace TCC
 
             // List data response.
             JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
-            HttpResponseMessage response = client.PostAsync(urlParameters, new StringContent(serializer.Serialize(d), Encoding.UTF8, "application/json")).Result;
+            HttpResponseMessage response = client.PostAsync(urlParameters, new StringContent(serializer.Serialize(cli), Encoding.UTF8, "application/json")).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                Label1.Text = "Certo";
+            }
+            else
+            {
+                Label1.Text = "Erro";
+            }
         }
 
         protected void alterarEstadoPedido(object sender, EventArgs e)
@@ -130,13 +138,13 @@ namespace TCC
             String textId = iButton.ID;
             int id = Convert.ToInt32(textId.Substring(9, textId.Length - 9));
             
-            if (iButton.Text.Equals(1))
+            if (iButton.Text.Equals("1"))
             {
-                string URL = $"https://localhost:44323/api/Pedidos/";
+                string URL = $"https://localhost:44323/api/Pedidos/"+ Session["userID"] + "/"+ id.ToString() + "/4/";
                 string urlParameters = "";
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(URL);
-                String[] d = { Session["userID"].ToString(), id.ToString(), iButton.Text }; 
+                String[] d = { "4" }; 
 
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
                 // Add an Accept header for JSON format.
@@ -145,10 +153,45 @@ namespace TCC
 
                 // List data response.
                 JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
-                HttpResponseMessage response = client.PostAsync(urlParameters, new StringContent(serializer.Serialize(d), Encoding.UTF8, "application/json")).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                HttpResponseMessage response = client.PostAsync(urlParameters, null).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
                 //ClienteOnline resultado = (ClienteOnline)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                if (response.IsSuccessStatusCode)
+                {
+                    Label1.Text = "Certo";
+                }
+                else
+                {
+                    Label1.Text = "Erro";
+                }
             }
             
+        }
+
+        protected void alterarSenha(object sender, EventArgs e)
+        {
+            string URL = $"https://localhost:44323/api/ClienteOnline/"+Session["userID"];
+            string urlParameters = "";
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(URL);
+            ClienteOnline cli = new ClienteOnline(null, null, null,txtSenha.Text);
+
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+            // Add an Accept header for JSON format.
+            client.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/json"));
+
+            // List data response.
+            JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            HttpResponseMessage response = client.PostAsync(urlParameters, new StringContent(serializer.Serialize(cli), Encoding.UTF8, "application/json")).Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                Label1.Text = "Batata";
+            }
+            else
+            {
+                Label1.Text = "Erro";
+            }
         }
     }
 }

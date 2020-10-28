@@ -6,9 +6,9 @@
     <div class="divBodyAreaCliente" runat="server" id="divBodyAreaCliente">
         <asp:TextBox ID="TextBox1" runat="server" Text=""></asp:TextBox>
         <asp:TextBox ID="TextBox2" runat="server" Text=""></asp:TextBox>
-        <asp:TextBox ID="TextBox4" runat="server" Text=""></asp:TextBox>
+        <asp:TextBox ID="txtSenha" runat="server" Text=""></asp:TextBox>
         <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
         <asp:Button ID="Button1" runat="server" Text="Alterar Dados" OnClick="alterarDados"/>
-        <asp:Button ID="Button2" runat="server" Text="Alterar Senha" />
+        <asp:Button ID="Button2" runat="server" Text="Alterar Senha" OnClick="alterarSenha"/>
     </div>
 </asp:Content>
