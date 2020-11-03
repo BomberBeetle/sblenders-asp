@@ -140,7 +140,7 @@ namespace TCC
             
             if (iButton.Text.Equals("1"))
             {
-                string URL = $"https://localhost:44323/api/Pedidos/"+ Session["userID"] + "/"+ id.ToString() + "/4/";
+                string URL = $"https://localhost:44323/api/Pedidos/"+ Session["userID"] + "/"+ id.ToString() + "/6/";
                 string urlParameters = "";
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(URL);
