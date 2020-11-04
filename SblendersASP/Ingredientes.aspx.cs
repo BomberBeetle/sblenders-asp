@@ -24,7 +24,7 @@ namespace TCC
         protected void Page_Load(object sender, EventArgs e)
         {                      
 
-            string URL = $"https://localhost:44323/api/Produtos/17";
+            string URL = $"https://localhost:44323/api/Produtos/18";
             string urlParameters = "";
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(URL);
@@ -449,15 +449,25 @@ namespace TCC
             Control div = divIngredientesCliente.FindControl(nomeDiv);
             divIngredientesCliente.Controls.Remove(div);
             ppi.RemoveAt(indice);
+            decimal ingPrec = 0;
+            int ppId = 0;
+            foreach (PedidoProdutoIngrediente p in ppi)
+            {
+                ppId = p.ProdutoIngredienteID;
+                int ind = pi.FindIndex(a => a.PIngredientID.Equals(ppId));
+                ingPrec += p.Quantidade * pi[ind].Price;
+            }
+            lblTotalIngredientes.Text = "R$ " + ingPrec;
         }
 
         protected void Button6_Click(object sender, EventArgs e)
         {
-            PedidoProduto ppc = new PedidoProduto(1, 17, ppi.ToArray());
+            PedidoProduto ppc = new PedidoProduto(1, 18, ppi.ToArray());
             ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
             ppl.Add(ppc);
             ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
             Response.Redirect("Carrinho.aspx");
         }
+
     }
 }

@@ -302,6 +302,81 @@ namespace TCC
             Control div = divItensCarrinhos.FindControl(idDiv);
             divItensCarrinhos.Controls.Remove(div);
             ppl.RemoveAt(id);
+
+            int itens = 0;
+            decimal total = 0;
+            int i = 0;
+            foreach (PedidoProduto pp in ppl)
+            {
+                List<PedidoProdutoIngrediente> d = pp.ingredientes.ToList();
+                int tam = d.Count - 1;
+                decimal ingPrec = 0;
+                i = pp.produtoID;
+                if (tam >= 0)
+                {
+                    int ppId = 0;
+                    List<ProdutoIngrediente> pi = new List<ProdutoIngrediente>();
+                    string URL2 = $"https://localhost:44323/api/Produtos/{i}/";
+                    string urlParameters2 = "";
+                    HttpClient client2 = new HttpClient();
+                    client2.BaseAddress = new Uri(URL2);
+
+                    //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+                    // Add an Accept header for JSON format.
+                    client2.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    // List data response.
+                    JavaScriptSerializer serializer2 = new System.Web.Script.Serialization.JavaScriptSerializer();
+                    HttpResponseMessage response2 = client2.GetAsync(urlParameters2).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                    Produto resultado2 = (Produto)serializer2.Deserialize<Produto>(response2.Content.ReadAsStringAsync().Result);
+
+                    if (response2.IsSuccessStatusCode)
+                    {
+                        pi = resultado2.ingredientes.ToList();
+                        foreach (PedidoProdutoIngrediente p in d)
+                        {
+                            ppId = p.ProdutoIngredienteID;
+                            int ind = pi.FindIndex(a => a.PIngredientID.Equals(ppId));
+                            ingPrec += p.Quantidade * pi[ind].Price;
+                        }
+                    }
+                    else
+                    {
+
+                    }
+                    total += ingPrec * pp.pedidoProdutoQtde;
+                    itens += pp.pedidoProdutoQtde;
+
+                }
+                else
+                {
+                    string URL3 = $"https://localhost:44323/api/Produtos/{i}/";
+                    string urlParameters3 = "";
+                    HttpClient client3 = new HttpClient();
+                    client3.BaseAddress = new Uri(URL3);
+
+                    //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+                    // Add an Accept header for JSON format.
+                    client3.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    // List data response.
+                    JavaScriptSerializer serializer3 = new System.Web.Script.Serialization.JavaScriptSerializer();
+                    HttpResponseMessage response3 = client3.GetAsync(urlParameters3).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                    Produto resultado3 = (Produto)serializer3.Deserialize<Produto>(response3.Content.ReadAsStringAsync().Result);
+                    if (response3.IsSuccessStatusCode)
+                    {
+                        itens += pp.pedidoProdutoQtde;
+                        total += resultado3.Cost * pp.pedidoProdutoQtde;
+                    }
+
+                }
+
+            }
+            lblItens.Text = "Itens: " + itens;
+            lblTotal.Text = "Total: " + total;
+
             ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
         }
 
@@ -314,6 +389,8 @@ namespace TCC
             List<PedidoProduto> ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
             List<PedidoProdutoIngrediente> pp = ppl[id].ingredientes.ToList();
             ing.setIngredientes(pp);
+            ppl.RemoveAt(id);
+            ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
             Response.Redirect("Ingredientes.aspx");
         }
 
