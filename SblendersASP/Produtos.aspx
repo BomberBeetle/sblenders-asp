@@ -35,9 +35,7 @@
                             <img src="Imagens/burguer2.png" class="imgDivImgBurger"/>
                         </div>
                     </a>
-                
                 </div>
-
                 <div class="divBurguer2">
                     <a href="" class="aBurg">
                         <div class="divTxtBurguer2">
@@ -48,7 +46,6 @@
                         </div>
                     </a>
                 </div>
-
                 <div class="divBurguer3">
                     <a href="" class="aBurg">
                         <div class="divTxtBurguer2">
@@ -59,7 +56,6 @@
                         </div>
                     </a>
                 </div>
-
                 <div class="divBurguer" id="divBurguer2" >
                     <a href="">
                         <div class="divTxtBurguer">
@@ -69,10 +65,8 @@
                         <img src="Imagens/churros.png" class="imgDivImgBurger"/>
                     </div>
                     </a>
-                
                 </div>
-            </div>           
-            
+            </div>
         </div>
 
         <div class="divProdutosCustomizaveis">

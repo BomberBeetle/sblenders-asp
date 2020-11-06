@@ -30,7 +30,7 @@
                 </a>
             </div>
             <div class="col-6 CabEsq">
-                <a class="aProjSblenders" href="Q" id="quemSomos">Quem Somos</a>
+                <a class="aProjSblenders" href="Quem_somos.aspx" id="quemSomos">Quem Somos</a>
                 <a class="aProjSblenders" href="A" id="faleConosco">Fale Conosco</a>
                 <a class="aProjSblenders" href="V" id="maisInformacoes">Mais Informações</a>
             </div>
@@ -278,6 +278,11 @@
             </div>
             <div class="carousel-item" id="itemCarro3">
               <img class="d-block w-100 imgCarrouselBanner" src="Imagens/carroBurguer2.jpeg" alt="Terceiro Slide"/>
+            </div>
+            <div class="carousel-item" id="itemCarro4">
+                <a href="Produtos.aspx" >
+                    <img class="d-block w-100 imgCarrouselBanner" src="Imagens/faca-seu-pedido.png" alt="Quarto Slide"/>
+                </a>
             </div>
           </div>
           <a class="carousel-control-prev aNeg" href="#carouselBanner" role="button" data-slide="prev" >

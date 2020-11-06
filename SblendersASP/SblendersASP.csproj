@@ -100,8 +100,11 @@
     <Content Include="AreaCliente.aspx" />
     <Content Include="Audio\teste.mp3" />
     <Content Include="Carrinho.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="CSS\Quem_somos.css" />
     <Content Include="CSS\AreaCliente.css" />
     <Content Include="CSS\Carrinho.css" />
+    <Content Include="CSS\Contact.css" />
     <Content Include="CSS\ImagensCSS\carrinhoCompras.png" />
     <Content Include="CSS\ImagensCSS\fundoIngredientes.png" />
     <Content Include="CSS\ImagensCSS\ImagensRestaurantes\restauranteSblenders3.png" />
@@ -163,6 +166,7 @@
     </Content>
     <Content Include="Produtos.aspx" />
     <Content Include="CSS\Produtos.css" />
+    <Content Include="Quem_somos.aspx" />
     <Content Include="scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="scripts\jquery-3.0.0.min.map" />
     <Content Include="Fontes\Borg.ttf" />
@@ -265,6 +269,13 @@
       <DependentUpon>Carrinho.aspx</DependentUpon>
     </Compile>
     <Compile Include="ClienteOnline.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -320,6 +331,13 @@
       <DependentUpon>Produtos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quem_somos.aspx.cs">
+      <DependentUpon>Quem_somos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quem_somos.aspx.designer.cs">
+      <DependentUpon>Quem_somos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Restaurante.cs" />
   </ItemGroup>
   <ItemGroup>
