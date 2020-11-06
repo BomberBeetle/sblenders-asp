@@ -62,6 +62,14 @@ body {
     cursor:pointer;
 }
 
+    .lblSair:hover {
+        color: #d13e36 !important;
+    }
+
+    .lblSair a:hover {
+        color: #d13e36 !important;
+    }
+
 .divFotoUsuario {
     height: 100%;
     width: 40%;
