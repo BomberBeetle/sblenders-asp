@@ -360,3 +360,26 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
+
+window.onresize = function () {
+    var elements = document.getElementById("divProds").querySelectorAll('divProduto');
+    var count = elements.length;
+    var windowW = window.innerWidth;
+    var windowH = window.innerHeight;    
+    if (windowH <= 1080 && windowW <= 1920) {
+        if (windowH <= 720 && windowW <= 1280) {
+            if (windowH <= 720 && windowW <= 1280) {               
+                var divHeight = 1200 * Math.trunc(count / 2) + 50 * Math.trunc(count / 2);
+                document.getElementById("divProds").style.height = divHeight;
+            }
+            var divHeight = 900 * Math.trunc(count / 3) + 100 * Math.trunc(count / 3);
+            document.getElementById("divProds").style.height = divHeight;
+        }
+        var divHeight = 600 * Math.trunc(count / 3) + 100 * Math.trunc(2 * count / 3);
+        document.getElementById("divProds").style.height = divHeight;
+    }
+    /*for (var i = 0; i < elements.length; i++) {
+        elements[i].style.width = window.innerWidth + "px";
+        elements[i].style.height = window.innerHeight + "px";        
+    }*/
+}

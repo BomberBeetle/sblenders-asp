@@ -41,11 +41,11 @@
             <div class="col-4 CabEsq" id="divConectado" runat="server">
                 <div class="divUsuario">
                     <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
-                    <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="linkSair_Click" >Sair</asp:LinkButton>
+                    <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="linkSair_Click">Sair</asp:LinkButton>
                     <!--<asp:Label ID="vvv" runat="server" Text="Sair" CssClass="lblSair" OnServerClick="lblSair_Click"></asp:Label>-->
                 </div>
                 <div class="divFotoUsuario">
-                    <a href="" class="aFotoUsuario">
+                    <a href="AreaCliente.aspx" class="aFotoUsuario">
                         <img src="Imagens/usuario.png" class="imgUsuario" />
                     </a>
                     

@@ -15,26 +15,10 @@ namespace TCC
 {
     public partial class Produtos : System.Web.UI.Page
     {
-        //int pagina = 1;
-        //int paginas = 0;
+        
         public static ProdutoParcial[] produtos;        
         public static List<PedidoProduto> ppl = new List<PedidoProduto>();
         PedidoProduto pedido;
-
-        //int indiceProduto = 1;
-
-        /*void ComputeTotal()
-        {
-            Session["Carrinho"] = new SblendersAPI.Models.Pedido(0, 0, 0, DateTime.Now, "", new PedidoProduto[0]);
-            decimal total = 0;
-            foreach (PedidoProduto pedidoProduto in ((Pedido)Session["Carrinho"]).produtos)
-            {
-                total += pedidoProduto.computatedPrice;
-            }
-            materialLabel1.Text = "Total: R$ " + total;
-            materialRaisedButton2.Text = $"Carrinho ({((Pedido)Session["Carrinho"]).produtos.Length})";
-        }
-        */
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -65,6 +49,7 @@ namespace TCC
                     produtos = resultado;
                     if (x == 1)
                     {
+                        Response.Headers.Add("produtos-count", qtdeProd.ToString());
                         while (i > 0)
                         {
                             /*string URL2 = $"https://localhost:44323/api/ProdutoFoto/{Uri.EscapeUriString(i.ToString())}";
