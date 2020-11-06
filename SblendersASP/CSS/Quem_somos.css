@@ -1,0 +1,23 @@
+﻿body {
+}
+
+.divBodyAreaCliente{
+    height:auto;
+    width:100%;
+    float:left;
+}
+
+.divNomePagina {
+    width: 100%;
+}
+
+.principal {
+    margin: auto;
+    text-align: center;
+    height: 100%;
+    width: 70%;
+}
+
+.principal p {
+    text-align: justify;
+}
