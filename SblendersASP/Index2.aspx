@@ -30,7 +30,7 @@
                 </a>
             </div>
             <div class="col-6 CabEsq">
-                <a class="aProjSblenders" href="Q" id="quemSomos">Quem Somos</a>
+                <a class="aProjSblenders" href="Quem_somos.aspx" id="quemSomos">Quem Somos</a>
                 <a class="aProjSblenders" href="A" id="faleConosco">Fale Conosco</a>
                 <a class="aProjSblenders" href="V" id="maisInformacoes">Mais Informações</a>
             </div>
