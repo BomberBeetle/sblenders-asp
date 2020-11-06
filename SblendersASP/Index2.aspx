@@ -279,6 +279,11 @@
             <div class="carousel-item" id="itemCarro3">
               <img class="d-block w-100 imgCarrouselBanner" src="Imagens/carroBurguer2.jpeg" alt="Terceiro Slide"/>
             </div>
+            <div class="carousel-item" id="itemCarro4">
+                <a href="Produtos.aspx" >
+                    <img class="d-block w-100 imgCarrouselBanner" src="Imagens/faca-seu-pedido.png" alt="Quarto Slide"/>
+                </a>
+            </div>
           </div>
           <a class="carousel-control-prev aNeg" href="#carouselBanner" role="button" data-slide="prev" >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

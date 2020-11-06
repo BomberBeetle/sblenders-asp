@@ -30,6 +30,11 @@
         color: #FFF;
         font-size: 48px;
         text-shadow: 2px 2px 2px #989898;
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
     }
 
 .divItensCarrinhos {
@@ -46,7 +51,7 @@
 .divCaixaItens{
     height:auto;
     width:80%;
-    margin-top:100px;
+    margin-top:50px;
     margin-bottom:100px;
 }
 
@@ -92,9 +97,19 @@
 
 .h1Campo{
     font-size:30px;
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 .h1Campo2{
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
     font-size:44px;
     margin-left:15px;
 }

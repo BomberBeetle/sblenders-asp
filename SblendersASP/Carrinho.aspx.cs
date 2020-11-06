@@ -551,5 +551,10 @@ namespace TCC
         {
             Response.Redirect("LocalEntrega.aspx");
         }
+
+        protected void Voltar(object sender, EventArgs e)
+        {
+            Response.Redirect("Produtos.aspx");
+        }
     }
 }

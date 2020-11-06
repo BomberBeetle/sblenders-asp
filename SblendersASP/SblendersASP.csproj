@@ -100,8 +100,10 @@
     <Content Include="AreaCliente.aspx" />
     <Content Include="Audio\teste.mp3" />
     <Content Include="Carrinho.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="CSS\AreaCliente.css" />
     <Content Include="CSS\Carrinho.css" />
+    <Content Include="CSS\Contact.css" />
     <Content Include="CSS\ImagensCSS\carrinhoCompras.png" />
     <Content Include="CSS\ImagensCSS\fundoIngredientes.png" />
     <Content Include="CSS\ImagensCSS\ImagensRestaurantes\restauranteSblenders3.png" />
@@ -265,6 +267,13 @@
       <DependentUpon>Carrinho.aspx</DependentUpon>
     </Compile>
     <Compile Include="ClienteOnline.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
