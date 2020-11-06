@@ -97,10 +97,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdicaoCarrinho.aspx" />
     <Content Include="AreaCliente.aspx" />
     <Content Include="Audio\teste.mp3" />
     <Content Include="Carrinho.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="CSS\AdicaoCarrinho.css" />
     <Content Include="CSS\Quem_somos.css" />
     <Content Include="CSS\AreaCliente.css" />
     <Content Include="CSS\Carrinho.css" />
@@ -141,7 +143,9 @@
     <Content Include="Imagens\burguer2.png" />
     <Content Include="Imagens\burguer3.jpg" />
     <Content Include="Imagens\burguerk2.png" />
+    <Content Include="Imagens\carrinho.png" />
     <Content Include="Imagens\carroBurguer2.jpeg" />
+    <Content Include="Imagens\check.png" />
     <Content Include="Imagens\churros.png" />
     <Content Include="Imagens\hotDog.png" />
     <Content Include="Imagens\iconX.png" />
@@ -153,6 +157,7 @@
     <Content Include="Imagens\sblendersBlack.png" />
     <Content Include="Imagens\sblendersWhite.png" />
     <Content Include="Imagens\carroBurguer.jpeg" />
+    <Content Include="Imagens\seta.png" />
     <Content Include="Imagens\usuario.png" />
     <Content Include="Index2.aspx" />
     <Content Include="Ingredientes.aspx" />
@@ -253,6 +258,13 @@
     <Content Include="scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdicaoCarrinho.aspx.cs">
+      <DependentUpon>AdicaoCarrinho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdicaoCarrinho.aspx.designer.cs">
+      <DependentUpon>AdicaoCarrinho.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Agente.cs" />
     <Compile Include="AreaCliente.aspx.cs">
       <DependentUpon>AreaCliente.aspx</DependentUpon>

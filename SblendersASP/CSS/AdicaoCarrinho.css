@@ -1,0 +1,45 @@
+﻿body {
+}
+
+.principal {
+    margin: auto;
+    text-align: center;
+    height: 100%;
+    width: 70%;
+}
+
+.principal h1 {
+    font-size: 2vw;
+    margin-top: 4vh;
+}
+
+.message {
+    text-align: center;
+    margin-top:2.5vh;
+}
+
+.buttons {
+    margin-top: 10vh;
+}
+
+.corpo {
+    font-size:1.25vw;
+    color:green;
+    float:left;
+    font-weight:700;
+}
+
+.check {
+    height: 25px;
+    float: left;
+    margin-left: 19vw;
+}
+
+.continuar {
+    height: 30px;
+}
+
+.avancar {
+    height: 30px;
+    margin-left: 20px;
+}
