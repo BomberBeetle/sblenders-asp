@@ -31,8 +31,9 @@
             </div>
             <div class="col-6 CabEsq">
                 <a class="aProjSblenders" href="Quem_somos.aspx" id="quemSomos">Quem Somos</a>
-                <a class="aProjSblenders" href="A" id="faleConosco">Fale Conosco</a>
+                <a class="aProjSblenders" href="Contact.aspx" id="faleConosco">Fale Conosco</a>
                 <a class="aProjSblenders" href="V" id="maisInformacoes">Mais Informações</a>
+                <a class="aProjSblenders" href="Produtos.aspx">Faça seu pedido</a>
             </div>
             <div class="col-4 CabEsq" id="divDesconectado" runat="server">
                 <a class="aCad" onclick="Login()" id="textoLogin">Login</a>

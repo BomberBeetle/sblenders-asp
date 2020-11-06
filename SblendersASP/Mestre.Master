@@ -87,8 +87,9 @@
             </div>
             <div class="col-6 CabEsq">
                 <a class="aProjSblenders" href="Quem_somos.aspx">Quem Somos</a>
-                <a class="aProjSblenders" href="A">Fale Conosco</a>
+                <a class="aProjSblenders" href="Contact.aspx">Fale Conosco</a>
                 <a class="aProjSblenders" href="V">Mais Informações</a>
+                <a class="aProjSblenders" href="Produtos.aspx">Faça seu pedido</a>
             </div>
             <div class="col-4 CabEsq">
                 <a class="aCad" onclick="Login()">Login</a>
