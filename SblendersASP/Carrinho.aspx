@@ -58,7 +58,7 @@
                     <asp:label ID="lblTotal" runat="server" text="Total:" CssClass="lblTotal"></asp:label>
                 </div>
 
-                <div class="divBtnAvancar">
+                <div class="divBtnAvancar">                    
                     <asp:button runat="server" text="Voltar para os produtos" CssClass="btnVoltarCarrinho" OnClick="Voltar"/>
                     <asp:button runat="server" text="Avançar para o local de entrega" CssClass="btnAvancarCarrinho" OnClick="Avancar"/>
                 </div>

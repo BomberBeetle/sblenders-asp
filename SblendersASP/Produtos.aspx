@@ -173,7 +173,7 @@
             <button class="btnIrCarrinho" id="btnIrCarrinho" runat="server" onserverclick="btnIrCarrinho_ServerClick">
                 <div class="divTextoBtnCarrinho">
                     <p>Ir Para o Carrinho</p>
-                    <img src="CSS/ImagensCSS/carrinhoCompras.png" />
+                    <img src="Imagens/seta2.png" />
                 </div>                
             </button>
         </div>

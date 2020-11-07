@@ -158,6 +158,7 @@
     <Content Include="Imagens\sblendersWhite.png" />
     <Content Include="Imagens\carroBurguer.jpeg" />
     <Content Include="Imagens\seta.png" />
+    <Content Include="Imagens\seta2.png" />
     <Content Include="Imagens\usuario.png" />
     <Content Include="Index2.aspx" />
     <Content Include="Ingredientes.aspx" />

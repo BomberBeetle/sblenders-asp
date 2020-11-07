@@ -63,11 +63,7 @@ body {
 }
 
     .lblSair:hover {
-        color: #d13e36 !important;
-    }
-
-    .lblSair a:hover {
-        color: #d13e36 !important;
+        color: #323232 !important;
     }
 
 .divFotoUsuario {
