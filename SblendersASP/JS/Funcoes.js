@@ -383,3 +383,17 @@ window.onresize = function () {
         elements[i].style.height = window.innerHeight + "px";        
     }*/
 }
+
+var visibilidadeNutri = true;
+function fecharInfoNutri() {
+    var divNutri = document.getElementById("secProd1");
+    if (visibilidadeNutri == false) {
+        divNutri.style.display = "flex";
+        visibilidadeNutri = true;
+    }
+    else if (visibilidadeNutri == true) {
+        divNutri.style.display = "none";
+        visibilidadeNutri = false;
+    }
+    event.preventDefault();
+}

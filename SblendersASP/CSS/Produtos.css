@@ -462,7 +462,7 @@ h1 {
         z-index: 999;
         position: fixed;
         align-items: initial;
-        display: none;
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
@@ -473,42 +473,42 @@ h1 {
     width:30%;
     background-color:#e8e7e7;
     margin-top:5vh;
-    border-radius:5px 5px;
+    border-radius:15px;
 }
 
 .divDescricaoProdutoTitulo {
     height: 15%;
     width: 100%;
     float: left;
-    background-color: #f7b036;   
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #f7b036;
     border-bottom: 1px inset #e8a13c;
-}
-
-.divSubDescricaoProdutoTitulo1 {
-    height: 100%;
-    width: 80%;
-    float: left;
-    display:flex;
-    align-items:center;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .h1InfoNutri {
     color: #FFF;
-    font-size: 30px;
+    font-size: 32px;
+    font-weight:bold;
 }
 
-.divSubDescricaoProdutoTitulo2{
-    height:100%;
-    width:20%;
-    float:left;
+.divDescricaoProdutoTitulo a {
+    height: 100%;
+    float: right;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left:60px;
+    cursor:pointer;
 }
 
 .imgIconX{
-    height:30px;
-    width:30px;
+    height:80%;
     float:right;
-    margin-top:10px;
-    margin-right:10px;
 }
 
 .divDescricaoProdutoCorpo {

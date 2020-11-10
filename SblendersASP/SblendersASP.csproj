@@ -148,6 +148,7 @@
     <Content Include="Imagens\check.png" />
     <Content Include="Imagens\churros.png" />
     <Content Include="Imagens\hotDog.png" />
+    <Content Include="Imagens\iconeX.png" />
     <Content Include="Imagens\iconX.png" />
     <Content Include="CSS\ImagensCSS\orangeTexture.jpg" />
     <Content Include="Imagens\novoSblenders.png" />
