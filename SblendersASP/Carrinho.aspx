@@ -52,17 +52,32 @@
                         <asp:Label ID="Label1" runat="server" Text="R$: 45,56" CssClass="lblPrecoItem"></asp:Label>
                     </div>
                 </div>
+                
+            </div>
 
+            <div class="divCaixaItens2">
                 <div class="divTotal">
                     <asp:label ID="lblItens" runat="server" text="Itens:" CssClass="lblItens"></asp:label>
                     <asp:label ID="lblTotal" runat="server" text="Total:" CssClass="lblTotal"></asp:label>
                 </div>
 
-                <div class="divBtnAvancar">                    
-                    <asp:button runat="server" text="Voltar para os produtos" CssClass="btnVoltarCarrinho" OnClick="Voltar"/>
-                    <asp:button runat="server" text="Avançar para o local de entrega" CssClass="btnAvancarCarrinho" OnClick="Avancar"/>
+                <div class="divBtnAvancar">
+                    <button class="btnIrCarrinho3" id="btnIrCarrinho" runat="server" onserverclick="Voltar">
+                        <div class="divTextoBtnCarrinho3">
+                            <img src="Imagens/seta2.png" />
+                            <p>Voltar aos produtos</p>                            
+                        </div>                
+                    </button>
+
+                    <button class="btnIrCarrinho2" id="Button3" runat="server" onserverclick="Avancar">
+                        <div class="divTextoBtnCarrinho2">
+                            <p>Avançar ao local de entrega </p>
+                            <img src="Imagens/seta2.png" />
+                        </div>                
+                    </button>
                 </div>
             </div>
+
         </div>
     </div>
 </asp:Content>

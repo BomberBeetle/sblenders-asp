@@ -65,6 +65,11 @@
         </div>
     </div>
     <div class="divBtnOpcoesPagLanches">
-            <asp:Button ID="Button6" runat="server" Text="Ir para o carrinho"  CssClass="btnIrCarrinho" OnClick="Button6_Click"/>
+        <button class="btnIrCarrinho" id="btnIrCarrinho" runat="server" onserverclick="avancarCarrinho">
+                <div class="divTextoBtnCarrinho">
+                    <p>Ir Para o Carrinho</p>
+                    <img src="Imagens/seta2.png" />
+                </div>                
+            </button>
     </div>
 </asp:Content>

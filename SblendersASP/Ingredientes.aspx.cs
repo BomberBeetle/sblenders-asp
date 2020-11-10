@@ -460,7 +460,7 @@ namespace TCC
             lblTotalIngredientes.Text = "R$ " + ingPrec;
         }
 
-        protected void Button6_Click(object sender, EventArgs e)
+        protected void avancarCarrinho(object sender, EventArgs e)
         {
             PedidoProduto ppc = new PedidoProduto(1, 18, ppi.ToArray());
             ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);

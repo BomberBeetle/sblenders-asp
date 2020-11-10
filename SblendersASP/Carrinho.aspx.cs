@@ -174,7 +174,7 @@ namespace TCC
                                 int ind = pi.FindIndex(a => a.PIngredientID.Equals(ppId));
                                 ingPrec += p.Quantidade * pi[ind].Price;
                             }
-                            lblPreco1.Text = (ingPrec * ppl[indice].pedidoProdutoQtde).ToString();
+                            lblPreco1.Text = "R$ " + (ingPrec * ppl[indice].pedidoProdutoQtde).ToString();
                         }
                         else
                         {
@@ -183,7 +183,7 @@ namespace TCC
                     }
                     else
                     {
-                        lblPreco1.Text = (resultado.Cost * ppl[indice].pedidoProdutoQtde).ToString();
+                        lblPreco1.Text = "R$ " + (resultado.Cost * ppl[indice].pedidoProdutoQtde).ToString();
                     }
 
                     if (ppl[indice].pedidoProdutoQtde == 1)
@@ -289,7 +289,7 @@ namespace TCC
 
             }
             lblItens.Text = "Itens: " + itens;
-            lblTotal.Text = "Total: " + total;
+            lblTotal.Text = "Total: R$ " + total;
         }
 
         protected void ExcluirProduto(object sender, EventArgs e)
@@ -375,7 +375,7 @@ namespace TCC
 
             }
             lblItens.Text = "Itens: " + itens;
-            lblTotal.Text = "Total: " + total;
+            lblTotal.Text = "Total: R$ " + total;
 
             ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
         }
@@ -477,7 +477,7 @@ namespace TCC
                                
             }
             lblItens.Text = "Itens: " + itens;
-            lblTotal.Text = "Total: " + total;
+            lblTotal.Text = "Total: R$ " + total;
 
             if(en >= 0)
             {
@@ -509,7 +509,7 @@ namespace TCC
                         int ind = pi.FindIndex(a => a.PIngredientID.Equals(ppId));
                         ingPrec += p.Quantidade * pi[ind].Price;
                     }
-                    x.Text = (ingPrec * qtde).ToString();
+                    x.Text = "R$ " + (ingPrec * qtde).ToString();
                 }
                 else
                 {
@@ -536,7 +536,7 @@ namespace TCC
 
                 if (response.IsSuccessStatusCode)
                 {
-                    x.Text = (resultado.Cost * qtde).ToString();
+                    x.Text = "R$ " + (resultado.Cost * qtde).ToString();
                 }
                 else
                 {

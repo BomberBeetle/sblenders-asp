@@ -112,12 +112,12 @@ namespace TCC {
         protected global::System.Web.UI.WebControls.Label lblTotalIngredientes;
         
         /// <summary>
-        /// Controle Button6.
+        /// Controle btnIrCarrinho.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button6;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnIrCarrinho;
     }
 }
