@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: darkorange;
+    background-color: rgb(218, 218, 218);
 }
 
 .divNomePagina {
@@ -9,14 +9,16 @@
 }
 
 .divTituloPagina {
+    margin-top: 25px;
+    border-radius: 0px 30px 30px 0px;
     height: 85px;
     width: 22.5%;
     background-color: #ed4218;
 }
-
     .divTituloPagina h1 {
         color: #FFF;
         font-size: 35px;
+        padding-top: 5px;
         text-shadow: 2px 2px 2px #989898;
         -webkit-touch-callout: none; /* iOS Safari */
         -webkit-user-select: none; /* Safari */
@@ -25,3 +27,11 @@
         -ms-user-select: none; /* Internet Explorer/Edge */
         user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
     }
+
+.divContent {
+    background-color: #FFF;
+    width: 50%;
+    height: 75vh;
+    margin-top: 10px;
+    border-radius: 5px;
+}

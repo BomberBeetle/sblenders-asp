@@ -50,8 +50,8 @@ body {
 
 .imgLogo {
     margin-top: 2.5px;
-    height: 95%;
-    width: 60%;
+    height: auto;
+    width: 45%;
 }
 
 .CabEsq p {
