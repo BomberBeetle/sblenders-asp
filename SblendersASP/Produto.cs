@@ -33,6 +33,11 @@ namespace SblendersAPI.Models
                 this.val = val;
                 this.descricao = descricao;
             }
+
+            public InformacaoNutricional()
+            {
+                
+            }
         }
     }
 }

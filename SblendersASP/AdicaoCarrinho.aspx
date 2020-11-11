@@ -10,11 +10,19 @@
                 <img src="Imagens/check.png" class="check"/>
                 <p class="corpo"> O Item foi adicionado ao carrinho com sucesso! </p>
             </div>
-            <div class="buttons">  
-                <img src="Imagens/carrinho.png" class="continuar"/>
-                <asp:Button ID="btnVoltar" runat="server" Text="Continuar comprando" />
-                <img src="Imagens/seta.png" class="avancar"/>
-                <asp:Button ID="btnContinuar" runat="server" Text="Ir para o carrinho" />
+            <div class="buttons">
+                <button class="btnVoltar" id="btnVoltar" runat="server" onserverclick="Voltar">
+                    <div class="divTextoBtnVoltar">
+                        <img src="Imagens/seta2.png" />
+                        <p>Voltar aos produtos</p>                            
+                    </div>
+                </button>
+                <button class="btnAvancar" id="btnAvancar" runat="server" onserverclick="Avancar">
+                    <div class="divTextoBtnAvancar">
+                        <p>Ir para o carrinho</p>
+                        <img src="Imagens/seta2.png" />
+                    </div>                
+                </button>
             </div>
         </div>
     </div>

@@ -21,15 +21,15 @@ namespace TCC
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVoltar;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnVoltar;
 
         /// <summary>
-        /// btnContinuar control.
+        /// btnAvancar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnContinuar;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnAvancar;
     }
 }

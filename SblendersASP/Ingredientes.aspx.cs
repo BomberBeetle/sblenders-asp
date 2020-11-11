@@ -62,7 +62,7 @@ namespace TCC
 
                         HtmlGenericControl imgSubProduto = new HtmlGenericControl("IMG");
                         imgSubProduto.Attributes.Add("class", "imgSubProduto");
-                        imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/ProdutoFoto/" + p.IngredientID + "/");
+                        imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/IngredienteFoto/" + p.IngredientID + "/");
                         divSubProduto1.Controls.Add(imgSubProduto);
 
                         HtmlGenericControl divSubProduto2 = new HtmlGenericControl("DIV");
@@ -108,7 +108,7 @@ namespace TCC
 
                         HtmlGenericControl imgSubProduto = new HtmlGenericControl("IMG");
                         imgSubProduto.Attributes.Add("class", "imgSubProduto");
-                        imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/ProdutoFoto/" + p.IngredientID + "/");
+                        imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/IngredienteFoto/" + p.IngredientID + "/");
                         divSubProduto1.Controls.Add(imgSubProduto);
 
                         HtmlGenericControl divSubProduto2 = new HtmlGenericControl("DIV");
@@ -154,7 +154,7 @@ namespace TCC
 
                         HtmlGenericControl imgSubProduto = new HtmlGenericControl("IMG");
                         imgSubProduto.Attributes.Add("class", "imgSubProduto");
-                        imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/ProdutoFoto/" + p.IngredientID + "/");
+                        imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/IngredienteFoto/" + p.IngredientID + "/");
                         divSubProduto1.Controls.Add(imgSubProduto);
 
                         HtmlGenericControl divSubProduto2 = new HtmlGenericControl("DIV");
@@ -200,7 +200,7 @@ namespace TCC
 
                         HtmlGenericControl imgSubProduto = new HtmlGenericControl("IMG");
                         imgSubProduto.Attributes.Add("class", "imgSubProduto");
-                        imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/ProdutoFoto/" + p.IngredientID + "/");
+                        imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/IngredienteFoto/" + p.IngredientID + "/");
                         divSubProduto1.Controls.Add(imgSubProduto);
 
                         HtmlGenericControl divSubProduto2 = new HtmlGenericControl("DIV");
@@ -246,7 +246,7 @@ namespace TCC
 
                         HtmlGenericControl imgSubProduto = new HtmlGenericControl("IMG");
                         imgSubProduto.Attributes.Add("class", "imgSubProduto");
-                        imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/ProdutoFoto/" + p.IngredientID + "/");
+                        imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/IngredienteFoto/" + p.IngredientID + "/");
                         divSubProduto1.Controls.Add(imgSubProduto);
 
                         HtmlGenericControl divSubProduto2 = new HtmlGenericControl("DIV");
@@ -292,7 +292,7 @@ namespace TCC
 
                         HtmlGenericControl imgSubProduto = new HtmlGenericControl("IMG");
                         imgSubProduto.Attributes.Add("class", "imgSubProduto");
-                        imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/ProdutoFoto/" + p.IngredientID + "/");
+                        imgSubProduto.Attributes.Add("src", "https://localhost:44323/api/IngredienteFoto/" + p.IngredientID + "/");
                         divSubProduto1.Controls.Add(imgSubProduto);
 
                         HtmlGenericControl divSubProduto2 = new HtmlGenericControl("DIV");

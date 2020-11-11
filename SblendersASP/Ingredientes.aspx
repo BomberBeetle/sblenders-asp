@@ -14,10 +14,9 @@
             <select id="select1" name="select1" class="selectCategoria ls-select" onchange="mostrarCategoriaSelecao()">
                 <option class="optionCategoria" value="paes">Pães</option>
                 <option class="optionCategoria" value="carnes" >Carnes</option>
-                <option class="optionCategoria" value="verduras">Verduras</option>
-                <option class="optionCategoria" value="legumes">Legumes</option>
-                <option class="optionCategoria" value="queijos">Queijos</option>
-                <option class="optionCategoria" value="molhos">Molhos</option>
+                <option class="optionCategoria" value="verduras">Vegetais</option>
+                <option class="optionCategoria" value="legumes">Queijos</option>
+                <option class="optionCategoria" value="queijos">Molhos</option>
             </select>
         </div>
         <div class="divMostrarIngredientes">

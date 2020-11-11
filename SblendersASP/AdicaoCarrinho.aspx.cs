@@ -13,5 +13,15 @@ namespace TCC
         {
 
         }
+
+        protected void Avancar(object sender, EventArgs e)
+        {
+            Response.Redirect("Carrinho.aspx");
+        }
+
+        protected void Voltar(object sender, EventArgs e)
+        {
+            Response.Redirect("Produtos.aspx");
+        }
     }
 }

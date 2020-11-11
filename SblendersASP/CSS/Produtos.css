@@ -458,11 +458,11 @@ h1 {
         width: 100%;
         float: left;
         background-color: transparent;
-        display: none;
         z-index: 999;
         position: fixed;
         align-items: initial;
         display: flex;
+        display: none;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
