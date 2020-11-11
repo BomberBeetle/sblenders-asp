@@ -16,7 +16,7 @@ namespace TCC
     public partial class Produtos : System.Web.UI.Page
     {
         
-        public static ProdutoParcial[] produtos;        
+        public static Produto[] produtos;        
         public static List<PedidoProduto> ppl = new List<PedidoProduto>();
         PedidoProduto pedido;
 
@@ -39,7 +39,7 @@ namespace TCC
                 // List data response.
                 JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
                 HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-                ProdutoParcial[] resultado = (ProdutoParcial[])serializer.Deserialize<List<ProdutoParcial>>(response.Content.ReadAsStringAsync().Result).ToArray();
+                Produto[] resultado = serializer.Deserialize<List<Produto>>(response.Content.ReadAsStringAsync().Result).ToArray();
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -52,27 +52,14 @@ namespace TCC
                         Response.Headers.Add("produtos-count", qtdeProd.ToString());
                         while (i > 0)
                         {
-                            /*string URL2 = $"https://localhost:44323/api/ProdutoFoto/{Uri.EscapeUriString(i.ToString())}";
-                            HttpClient client2 = new HttpClient();
-                            client2.BaseAddress = new Uri(URL2);
-
-                            JavaScriptSerializer serializer2 = new System.Web.Script.Serialization.JavaScriptSerializer();
-                            HttpResponseMessage response2 = client2.GetAsync(urlParameters).Result;  
-                            Image resultado2 = (Image)serializer2.Deserialize<Image>(response2.Content.ReadAsStringAsync().Result);
-
-                            imgProd[i - 1] = resultado2;*/
-
 
                             HtmlGenericControl divProduto = new HtmlGenericControl("DIV");
-
-                            //Adicionando propriedades
-                            //divProduto.ID = "divPro";
                             divProduto.Attributes.Add("class", "divProduto");
                             divProds.Controls.Add(divProduto);
 
                             HtmlGenericControl a = new HtmlGenericControl("A");
                             a.Attributes.Add("href", "javascript:void(0)");
-                            a.Attributes.Add("onclick", "popupProduto()");
+                            a.Attributes.Add("onclick", "document.getElementById('secProd')");
                             divProduto.Controls.Add(a);
 
                             HtmlGenericControl divSubProduto1 = new HtmlGenericControl("DIV");
@@ -111,6 +98,53 @@ namespace TCC
                             btnAdicionarCarrinho1.Text = "Adicionar ao Carrinho";
                             divSubProduto3.Controls.Add(btnAdicionarCarrinho1);
                             btnAdicionarCarrinho1.Click += new EventHandler(AdicionarProduto);
+
+                            //Informações Nutricionais
+                            HtmlGenericControl divNutri = new HtmlGenericControl("DIV");
+                            divNutri.ID = "sectionProd" + produtos[i - 1].ID;
+                            divNutri.Attributes.Add("class", "sectionProd");
+                            Controls.Add(divNutri);
+
+                            HtmlGenericControl divDescricaoProduto = new HtmlGenericControl("DIV");
+                            divDescricaoProduto.Attributes.Add("class", "divDescricaoProduto");
+                            divNutri.Controls.Add(divDescricaoProduto);
+
+                            HtmlGenericControl divDescricaoProdutoTitulo = new HtmlGenericControl("DIV");
+                            divDescricaoProdutoTitulo.Attributes.Add("class", "divDescricaoProdutoTitulo");
+                            divDescricaoProduto.Controls.Add(divDescricaoProdutoTitulo);
+
+                            HtmlGenericControl h1InfoNutri = new HtmlGenericControl("H1");
+                            h1InfoNutri.Attributes.Add("class", "h1InfoNutri");
+                            h1InfoNutri.InnerText = "Informações Nutricionais";
+                            divDescricaoProdutoTitulo.Controls.Add(h1InfoNutri);
+
+                            HtmlGenericControl aNutri = new HtmlGenericControl("A");
+                            aNutri.Attributes.Add("onclick", "fecharInfoNutri()");
+                            divDescricaoProdutoTitulo.Controls.Add(aNutri);
+
+                            HtmlGenericControl imgIconX = new HtmlGenericControl("IMG");
+                            imgIconX.Attributes.Add("class", "imgIconX");
+                            imgIconX.Attributes.Add("src", "Imagens/iconeX.png");
+                            aNutri.Controls.Add(imgIconX);
+
+                            HtmlGenericControl divDescricaoProdutoCorpo = new HtmlGenericControl("DIV");
+                            divDescricaoProdutoCorpo.Attributes.Add("class", "divDescricaoProdutoCorpo");
+                            divDescricaoProduto.Controls.Add(divDescricaoProdutoCorpo);
+
+                            foreach(Produto.InformacaoNutricional pin in produtos[i - 1].infoNutr)
+                            {
+                                Label lblDescNutri = new Label();
+                                lblDescNutri.ID = "lblDescNutri" + produtos[i - 1].ID;
+                                lblDescNutri.CssClass = "lblDescNutri";
+                                lblDescNutri.Text = pin.descricao + ":";
+                                divDescricaoProdutoCorpo.Controls.Add(lblDescNutri);
+
+                                Label lblDescValor = new Label();
+                                lblDescValor.ID = "lblDescValor" + produtos[i - 1].ID;
+                                lblDescValor.CssClass = "lblDescValor";
+                                lblDescValor.Text = pin.val.ToString();
+                                divDescricaoProdutoCorpo.Controls.Add(lblDescValor);
+                            }
                             i--;
 
                         }

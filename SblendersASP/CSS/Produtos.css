@@ -516,3 +516,17 @@ h1 {
     width: 100%;
     float: left;
 }
+
+.lblDescNutri{
+    font-size:20px;
+    float:left;
+    margin:15px;
+    display:inline-block;
+}
+
+.lblDescValor {
+    font-size: 20px;
+    float: left;
+    margin: 15px;
+    display: inline-block;
+}

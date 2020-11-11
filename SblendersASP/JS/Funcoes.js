@@ -397,3 +397,8 @@ function fecharInfoNutri() {
     }
     event.preventDefault();
 }
+
+function exibirInfoNutri() {
+    var i = this.id;
+    var res = i.substring();
+}
