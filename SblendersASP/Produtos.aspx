@@ -170,14 +170,35 @@
     <div id="secProd1" class="sectionProd">
         <div class="divDescricaoProduto">
             <div class="divDescricaoProdutoTitulo">
-                    <h1 class="h1InfoNutri">Informações Nutricionais</h1>
-                    <a onclick="fecharInfoNutri()">
-                        <img src="Imagens/iconeX.png" class="imgIconX" />
-                    </a>
-                    
+                <h1 class="h1InfoNutri">Informações Nutricionais</h1>
+                <a onclick="fecharInfoNutri()">
+                    <img src="Imagens/iconeX.png" class="imgIconX" />
+                </a>
             </div>
             <div class="divDescricaoProdutoCorpo">
 
+            </div>
+        </div>
+    </div>
+    <div id="secProd2" class="sectionProd2">
+        <div class="divDescricaoProduto">
+            <div class="divDescricaoProdutoTitulo">
+                <h1 class="adicionado">Item adicionado ao carrinho</h1>
+                <a onclick="fecharInfoNutri()">
+                    <img src="Imagens/iconeX.png" class="imgIconX" />
+                </a>
+            </div>
+            <div class="divAdicaoProdutoCorpo">
+                <img src="Imagens/check.png" class="check"/>
+                <p class="corpo"> O Item foi adicionado ao carrinho com sucesso! </p>
+                <div class="buttons">
+                <button class="btnAvancar" id="btnAvancar" runat="server" onserverclick="btnIrCarrinho_ServerClick">
+                    <div class="divTextoBtnAvancar">
+                        <p>Ir para o carrinho</p>
+                        <img src="Imagens/seta2.png" />
+                    </div>                
+                </button>
+            </div>
             </div>
         </div>
     </div>

@@ -99,7 +99,7 @@ namespace TCC
                             divSubProduto3.Controls.Add(btnAdicionarCarrinho1);
                             btnAdicionarCarrinho1.Click += new EventHandler(AdicionarProduto);
 
-                            //Informações Nutricionais
+                            /*//Informações Nutricionais
                             HtmlGenericControl divNutri = new HtmlGenericControl("DIV");
                             divNutri.ID = "sectionProd" + produtos[i - 1].ID;
                             divNutri.Attributes.Add("class", "sectionProd");
@@ -144,7 +144,7 @@ namespace TCC
                                 lblDescValor.CssClass = "lblDescValor";
                                 lblDescValor.Text = pin.val.ToString();
                                 divDescricaoProdutoCorpo.Controls.Add(lblDescValor);
-                            }
+                            }*/
                             i--;
 
                         }

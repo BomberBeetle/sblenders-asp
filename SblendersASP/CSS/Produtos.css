@@ -514,7 +514,6 @@ h1 {
 .divDescricaoProdutoCorpo {
     height: 85%;
     width: 100%;
-    float: left;
 }
 
 .lblDescNutri{
@@ -530,3 +529,82 @@ h1 {
     margin: 15px;
     display: inline-block;
 }
+
+/*Popup Css2*/
+.sectionProd2 {
+    height: 100vh;
+    width: 100%;
+    float: left;
+    background-color: transparent;
+    z-index: 999;
+    position: fixed;
+    align-items: initial;
+    display: flex;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.adicionado {
+    color: #FFF;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.divAdicaoProdutoCorpo {
+    height: 85%;
+    width: 100%;
+    margin-top: 22vh;
+}
+
+.check {
+    height: 1vw;
+    float: left;
+    margin-left: .25vw;
+    margin-top: 0.9vh
+}
+
+.corpo {
+    font-size: 1.2vw;
+    color: green;
+    font-weight: 700;
+    margin-left: 1.35vw;
+}
+
+.btnAvancar {
+    height: 70px;
+    width: 50%;
+    background-image: linear-gradient(135deg, rgba(39, 131, 219) 0%, rgba(27, 119, 207) 50%, rgba(15, 103, 186) 100%);
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-right: 0px;
+    border-radius: 30px 30px;
+    border: 0px;
+    color: #DEDEDE;
+    box-shadow: 6px 6px 6px #656565;
+    padding-left: 20px;
+    margin-left: 7.4vw;
+}
+
+.divTextoBtnAvancar {
+    height: 7vh;
+    width: 100%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+    .divTextoBtnAvancar p {
+        margin-bottom: 0;
+        font-size: 1vw;
+    }
+
+
+    .divTextoBtnAvancar img {
+        height: 90%;
+        float: left;
+    }

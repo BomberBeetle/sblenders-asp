@@ -21,20 +21,7 @@
         </div>
         <div class="divMostrarIngredientes">
             <div class="divPaes" id="divPaes" runat="server">
-                <div class="divProduto">
-                        <a href="javascript:void(0)" onclick="popupProduto()"> 
-                            <div class="divSubProduto1">
-                                <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
-                            </div>
-                            <div class="divSubProduto2">
-                                <asp:Label ID="Label25" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
-                                <asp:Label ID="Label26" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
-                            </div>
-                        </a>
-                        <div class="divSubProduto3">
-                            <asp:Button ID="Button12" runat="server" Text="Adicionar Ingrediente" CssClass="btnAdicionarCarrinho"/>
-                        </div>
-                </div>
+                
             </div>
 
             <div class="divPaes" id="divCarnes" runat="server">
