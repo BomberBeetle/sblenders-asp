@@ -384,14 +384,10 @@ window.onresize = function () {
     }*/
 }
 
-var visibilidadeNutri = true;
+var visibilidadeNutri = false;
 function fecharInfoNutri() {
-    var divNutri = document.getElementById("secProd1");
-    if (visibilidadeNutri == false) {
-        divNutri.style.display = "flex";
-        visibilidadeNutri = true;
-    }
-    else if (visibilidadeNutri == true) {
+    var divNutri = document.querySelectorAll('sectionProd');
+    if (visibilidadeNutri == true) {
         divNutri.style.display = "none";
         visibilidadeNutri = false;
     }
@@ -400,5 +396,32 @@ function fecharInfoNutri() {
 
 function exibirInfoNutri() {
     var i = this.id;
-    var res = i.substring();
+    var res = i.substring(1, i.length - 1);
+    var element = document.getElementById("secProd1");
+    url = "https://localhost:44323/api/Produtos/" + res;
+    fetch(url, { cors: "anonymous" }).then((res) => {
+        res.json().then((dados) => {
+            var d = dados[0].infoNutr;
+            var dCount = d.length - 1;
+            while (dCount >= 0) {
+                let HTMLLabelElement lblDes = new HTMLLabelElement();
+                lblDes.value = d[dCount].descricao;
+                lblDes.className = "lblDescNutri";
+                let HTMLLabelElement lblVal = new HTMLLabelElement();
+                lblVal.value = d[dCount].val;
+                lblVal.className = "lblDescValor";                
+                dCount--;
+            }
+        }).catch((err) => {
+            alert("Erro: " + err);
+        })
+    });    
+    element.style.display = "flex";
+    visibilidadeNutri = true;
+    event.preventDefault();
+}
+
+function iniciar() {
+    var s = document.getElementsByClassName('ASS');
+    s.forEach((e) => e.onclick = exibirInfoNutri);
 }

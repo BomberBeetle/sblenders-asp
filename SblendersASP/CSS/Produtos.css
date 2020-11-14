@@ -461,7 +461,7 @@ h1 {
         z-index: 999;
         position: fixed;
         align-items: initial;
-        display: flex;
+        display: none;
         display: none;
         flex-direction: row;
         flex-wrap: wrap;

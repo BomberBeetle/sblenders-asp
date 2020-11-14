@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="divCorpoProdutos" onload="testeConexao()">
+    <div class="divCorpoProdutos">
 
         <div class="divNomePagina">
                 <div class="divTituloPagina">
