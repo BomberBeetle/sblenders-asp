@@ -22,15 +22,7 @@ namespace TCC
 
         public void excluirList()
         {
-            int tam = pedPI.Count - 1;
-            if(tam >= 0)
-            {
-                pedPI.RemoveRange(0, pedPI.Count - 1);
-            }
-            else
-            {
-
-            }
+             pedPI.Clear();
         }
     }
 }

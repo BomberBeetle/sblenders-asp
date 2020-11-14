@@ -1,10 +1,46 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mestre.Master" AutoEventWireup="true" CodeBehind="Produtos.aspx.cs" Inherits="TCC.Produtos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" type="text/css" href="CSS/Produtos.css" />    
+    <script src="JS/Funcoes.js" type="text/javascript"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script>
+        function exibirInfoNutri() {
+            var i = this.id;
+            var res = i.substring(1, i.length - 1);
+            var element = document.getElementById("secProd1");
+            url = "https://localhost:44323/api/Produtos/" + res;
+            fetch(url, { cors: "anonymous" }).then((res) => {
+                res.json().then((dados) => {
+                    var d = dados[0].infoNutr;
+                    var dCount = d.length - 1;
+                    while (dCount >= 0) {
+                        let HTMLLabelElement lblDes = new HTMLLabelElement();
+                        lblDes.value = d[dCount].descricao;
+                        lblDes.className = "lblDescNutri";
+                        let HTMLLabelElement lblVal = new HTMLLabelElement();
+                        lblVal.value = d[dCount].val;
+                        lblVal.className = "lblDescValor";                
+                        dCount--;
+                    }
+                }).catch((err) => {
+                    alert("Erro: " + err);
+                })
+            });    
+            element.style.display = "flex";
+            visibilidadeNutri = true;
+            event.preventDefault();
+        }
 
-    <div class="divCorpoProdutos">
+        function iniciar() {
+            var s = document.getElementsByClassName('ASS');
+            var i;
+            for (i = 0; i < s.length; i++) {
+                s[i].onclick = exibirInfoNutri;
+            }             
+        }
+    </script>
+    <div class="divCorpoProdutos" onclick="iniciar()">
 
         <div class="divNomePagina">
                 <div class="divTituloPagina">

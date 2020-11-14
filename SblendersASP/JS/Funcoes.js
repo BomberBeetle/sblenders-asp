@@ -394,7 +394,7 @@ function fecharInfoNutri() {
     event.preventDefault();
 }
 
-function exibirInfoNutri() {
+/*function exibirInfoNutri() {
     var i = this.id;
     var res = i.substring(1, i.length - 1);
     var element = document.getElementById("secProd1");
@@ -419,9 +419,13 @@ function exibirInfoNutri() {
     element.style.display = "flex";
     visibilidadeNutri = true;
     event.preventDefault();
-}
+}*/
 
-function iniciar() {
+/*function iniciar() {
     var s = document.getElementsByClassName('ASS');
+    var i;
+    for (i = 0; i < x.length; i++) {
+        s[i].onclick = exibirInfoNutri;
+    } 
     s.forEach((e) => e.onclick = exibirInfoNutri);
-}
+}*/

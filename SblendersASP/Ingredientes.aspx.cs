@@ -332,7 +332,7 @@ namespace TCC
             if(ppi.Count-1 < 0)
             {
                 ingredient = new Ingredientes();
-                ppi = ingredient.getIngredientes();
+                ppi = ingredient.getIngredientes().ToList();
                 ingredient.excluirList();
             }
             
@@ -466,6 +466,7 @@ namespace TCC
             ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
             ppl.Add(ppc);
             ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
+            ppi.Clear();
             Response.Redirect("Carrinho.aspx");
         }
 

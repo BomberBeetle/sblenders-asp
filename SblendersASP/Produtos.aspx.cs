@@ -58,8 +58,10 @@ namespace TCC
                             divProds.Controls.Add(divProduto);
 
                             HtmlGenericControl a = new HtmlGenericControl("A");
+                            a.ID = "a" + produtos[i - 1].ID;
+                            a.ClientIDMode = ClientIDMode.Static;
                             a.Attributes.Add("href", "javascript:void(0)");
-                            a.Attributes.Add("onclick", "document.getElementById('secProd')");
+                            //a.Attributes.Add("onclick","exibirInfoNutri");
                             divProduto.Controls.Add(a);
 
                             HtmlGenericControl divSubProduto1 = new HtmlGenericControl("DIV");
