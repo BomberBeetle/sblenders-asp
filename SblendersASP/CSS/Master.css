@@ -407,6 +407,18 @@ body {
 }
 
 #divRodape {
-    height: 250px;
-    background-color: #E374A1;
+    height: 350px;
+    background-color: #ff7300;
+    width: 100%;
+    padding: 0;
+}
+
+#RodinhaPe {
+    background-color:  rgb(255, 173, 21);
+    height: 50px;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.1);
+}
+
+.leGames {
+    padding: 0px;
 }
