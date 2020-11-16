@@ -4,6 +4,16 @@
     <script src="JS/Funcoes.js" type="text/javascript"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script>       
+        function iniciar() {
+            var s = document.getElementsByClassName('ASS');
+            var i;
+            for (i = 0; i < s.length; i++) {
+                s[i].onclick = exibirInfoNutri;
+            }             
+        }
+    </script>
+
     <script>
         function exibirInfoNutri() {
             var i = this.id;
@@ -15,32 +25,28 @@
                     var d = dados[0].infoNutr;
                     var dCount = d.length - 1;
                     while (dCount >= 0) {
-                        let HTMLLabelElement lblDes = new HTMLLabelElement();
+                        let lblDes = document.createElement("span");
                         lblDes.value = d[dCount].descricao;
                         lblDes.className = "lblDescNutri";
-                        let HTMLLabelElement lblVal = new HTMLLabelElement();
+                        document.getElementById("divDescricaoProdutoCorpo1").appendChild(lblDes);
+                        let lblVal = document.createElement("span");
                         lblVal.value = d[dCount].val;
-                        lblVal.className = "lblDescValor";                
+                        lblVal.className = "lblDescValor";
+                        document.getElementById("divDescricaoProdutoCorpo1").appendChild(lblVal);
                         dCount--;
                     }
                 }).catch((err) => {
                     alert("Erro: " + err);
                 })
-            });    
-            element.style.display = "flex";
-            visibilidadeNutri = true;
+            });
+            if (visibilidadeNutri == "false") {
+                element.style.display = "flex";
+                visibilidadeNutri = true;
+            }            
             event.preventDefault();
         }
-
-        function iniciar() {
-            var s = document.getElementsByClassName('ASS');
-            var i;
-            for (i = 0; i < s.length; i++) {
-                s[i].onclick = exibirInfoNutri;
-            }             
-        }
     </script>
-    <div class="divCorpoProdutos" onclick="iniciar()">
+    <div class="divCorpoProdutos">
 
         <div class="divNomePagina">
                 <div class="divTituloPagina">
@@ -211,7 +217,7 @@
                     <img src="Imagens/iconeX.png" class="imgIconX" />
                 </a>
             </div>
-            <div class="divDescricaoProdutoCorpo">
+            <div class="divDescricaoProdutoCorpo" id="divDescricaoProdutoCorpo1">
 
             </div>
         </div>

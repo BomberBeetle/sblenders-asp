@@ -81,6 +81,31 @@ namespace TCC
                         lblValorProduto.Text = p.Price.ToString();
                         divSubProduto2.Controls.Add(lblValorProduto);
 
+                        HtmlGenericControl divSubProduto4 = new HtmlGenericControl("DIV");
+                        divSubProduto4.Attributes.Add("class", "divSubProduto4");
+                        a.Controls.Add(divSubProduto4);
+
+                        Button btnDiminuir = new Button();
+                        btnDiminuir.ID = "btnDiminuir" + p.IngredientID.ToString();
+                        btnDiminuir.CssClass = "btnAumentar";
+                        btnDiminuir.Text = "-";
+                        divSubProduto4.Controls.Add(btnDiminuir);
+                        btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
+
+                        TextBox txtQuantidade = new TextBox();
+                        txtQuantidade.ID = "txtQuantidade" + p.IngredientID.ToString();
+                        txtQuantidade.CssClass = "txtQuantidade";
+                        txtQuantidade.Text = "1";
+                        txtQuantidade.ReadOnly = true;
+                        divSubProduto4.Controls.Add(txtQuantidade);
+
+                        Button btnAumentar = new Button();
+                        btnAumentar.ID = "btnAumentar" + p.IngredientID.ToString();
+                        btnAumentar.CssClass = "btnAumentar";
+                        btnAumentar.Text = "+";
+                        divSubProduto4.Controls.Add(btnAumentar);
+                        btnAumentar.Click += new EventHandler(AumentarQuantidade);
+
                         HtmlGenericControl divSubProduto3 = new HtmlGenericControl("DIV");
                         divSubProduto3.Attributes.Add("class", "divSubProduto3");
                         a.Controls.Add(divSubProduto3);
@@ -126,6 +151,31 @@ namespace TCC
                         lblValorProduto.CssClass = "lblValorProduto";
                         lblValorProduto.Text = p.Price.ToString();
                         divSubProduto2.Controls.Add(lblValorProduto);
+
+                        HtmlGenericControl divSubProduto4 = new HtmlGenericControl("DIV");
+                        divSubProduto4.Attributes.Add("class", "divSubProduto4");
+                        a.Controls.Add(divSubProduto4);
+
+                        Button btnDiminuir = new Button();
+                        btnDiminuir.ID = "btnDiminuir" + p.IngredientID.ToString();
+                        btnDiminuir.CssClass = "btnAumentar";
+                        btnDiminuir.Text = "-";
+                        divSubProduto4.Controls.Add(btnDiminuir);
+                        btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
+
+                        TextBox txtQuantidade = new TextBox();
+                        txtQuantidade.ID = "txtQuantidade" + p.IngredientID.ToString();
+                        txtQuantidade.CssClass = "txtQuantidade";
+                        txtQuantidade.Text = "1";
+                        txtQuantidade.ReadOnly = true;
+                        divSubProduto4.Controls.Add(txtQuantidade);
+
+                        Button btnAumentar = new Button();
+                        btnAumentar.ID = "btnAumentar" + p.IngredientID.ToString();
+                        btnAumentar.CssClass = "btnAumentar";
+                        btnAumentar.Text = "+";
+                        divSubProduto4.Controls.Add(btnAumentar);
+                        btnAumentar.Click += new EventHandler(AumentarQuantidade);
 
                         HtmlGenericControl divSubProduto3 = new HtmlGenericControl("DIV");
                         divSubProduto3.Attributes.Add("class", "divSubProduto3");
@@ -173,6 +223,31 @@ namespace TCC
                         lblValorProduto.Text = p.Price.ToString();
                         divSubProduto2.Controls.Add(lblValorProduto);
 
+                        HtmlGenericControl divSubProduto4 = new HtmlGenericControl("DIV");
+                        divSubProduto4.Attributes.Add("class", "divSubProduto4");
+                        a.Controls.Add(divSubProduto4);
+
+                        Button btnDiminuir = new Button();
+                        btnDiminuir.ID = "btnDiminuir" + p.IngredientID.ToString();
+                        btnDiminuir.CssClass = "btnAumentar";
+                        btnDiminuir.Text = "-";
+                        divSubProduto4.Controls.Add(btnDiminuir);
+                        btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
+
+                        TextBox txtQuantidade = new TextBox();
+                        txtQuantidade.ID = "txtQuantidade" + p.IngredientID.ToString();
+                        txtQuantidade.CssClass = "txtQuantidade";
+                        txtQuantidade.Text = "1";
+                        txtQuantidade.ReadOnly = true;
+                        divSubProduto4.Controls.Add(txtQuantidade);
+
+                        Button btnAumentar = new Button();
+                        btnAumentar.ID = "btnAumentar" + p.IngredientID.ToString();
+                        btnAumentar.CssClass = "btnAumentar";
+                        btnAumentar.Text = "+";
+                        divSubProduto4.Controls.Add(btnAumentar);
+                        btnAumentar.Click += new EventHandler(AumentarQuantidade);
+
                         HtmlGenericControl divSubProduto3 = new HtmlGenericControl("DIV");
                         divSubProduto3.Attributes.Add("class", "divSubProduto3");
                         a.Controls.Add(divSubProduto3);
@@ -218,6 +293,31 @@ namespace TCC
                         lblValorProduto.CssClass = "lblValorProduto";
                         lblValorProduto.Text = p.Price.ToString();
                         divSubProduto2.Controls.Add(lblValorProduto);
+
+                        HtmlGenericControl divSubProduto4 = new HtmlGenericControl("DIV");
+                        divSubProduto4.Attributes.Add("class", "divSubProduto4");
+                        a.Controls.Add(divSubProduto4);
+
+                        Button btnDiminuir = new Button();
+                        btnDiminuir.ID = "btnDiminuir" + p.IngredientID.ToString();
+                        btnDiminuir.CssClass = "btnAumentar";
+                        btnDiminuir.Text = "-";
+                        divSubProduto4.Controls.Add(btnDiminuir);
+                        btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
+
+                        TextBox txtQuantidade = new TextBox();
+                        txtQuantidade.ID = "txtQuantidade" + p.IngredientID.ToString();
+                        txtQuantidade.CssClass = "txtQuantidade";
+                        txtQuantidade.Text = "1";
+                        txtQuantidade.ReadOnly = true;
+                        divSubProduto4.Controls.Add(txtQuantidade);
+
+                        Button btnAumentar = new Button();
+                        btnAumentar.ID = "btnAumentar" + p.IngredientID.ToString();
+                        btnAumentar.CssClass = "btnAumentar";
+                        btnAumentar.Text = "+";
+                        divSubProduto4.Controls.Add(btnAumentar);
+                        btnAumentar.Click += new EventHandler(AumentarQuantidade);
 
                         HtmlGenericControl divSubProduto3 = new HtmlGenericControl("DIV");
                         divSubProduto3.Attributes.Add("class", "divSubProduto3");
@@ -265,6 +365,31 @@ namespace TCC
                         lblValorProduto.Text = p.Price.ToString();
                         divSubProduto2.Controls.Add(lblValorProduto);
 
+                        HtmlGenericControl divSubProduto4 = new HtmlGenericControl("DIV");
+                        divSubProduto4.Attributes.Add("class", "divSubProduto4");
+                        a.Controls.Add(divSubProduto4);
+
+                        Button btnDiminuir = new Button();
+                        btnDiminuir.ID = "btnDiminuir" + p.IngredientID.ToString();
+                        btnDiminuir.CssClass = "btnAumentar";
+                        btnDiminuir.Text = "-";
+                        divSubProduto4.Controls.Add(btnDiminuir);
+                        btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
+
+                        TextBox txtQuantidade = new TextBox();
+                        txtQuantidade.ID = "txtQuantidade" + p.IngredientID.ToString();
+                        txtQuantidade.CssClass = "txtQuantidade";
+                        txtQuantidade.Text = "1";
+                        txtQuantidade.ReadOnly = true;
+                        divSubProduto4.Controls.Add(txtQuantidade);
+
+                        Button btnAumentar = new Button();
+                        btnAumentar.ID = "btnAumentar" + p.IngredientID.ToString();
+                        btnAumentar.CssClass = "btnAumentar";
+                        btnAumentar.Text = "+";
+                        divSubProduto4.Controls.Add(btnAumentar);
+                        btnAumentar.Click += new EventHandler(AumentarQuantidade);
+
                         HtmlGenericControl divSubProduto3 = new HtmlGenericControl("DIV");
                         divSubProduto3.Attributes.Add("class", "divSubProduto3");
                         a.Controls.Add(divSubProduto3);
@@ -311,6 +436,31 @@ namespace TCC
                         lblValorProduto.Text = p.Price.ToString();
                         divSubProduto2.Controls.Add(lblValorProduto);
 
+                        HtmlGenericControl divSubProduto4 = new HtmlGenericControl("DIV");
+                        divSubProduto4.Attributes.Add("class", "divSubProduto4");
+                        a.Controls.Add(divSubProduto4);
+
+                        Button btnDiminuir = new Button();
+                        btnDiminuir.ID = "btnDiminuir" + p.IngredientID.ToString();
+                        btnDiminuir.CssClass = "btnAumentar";
+                        btnDiminuir.Text = "-";
+                        divSubProduto4.Controls.Add(btnDiminuir);
+                        btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
+
+                        TextBox txtQuantidade = new TextBox();
+                        txtQuantidade.ID = "txtQuantidade" + p.IngredientID.ToString();
+                        txtQuantidade.CssClass = "txtQuantidade";
+                        txtQuantidade.Text = "1";
+                        txtQuantidade.ReadOnly = true;
+                        divSubProduto4.Controls.Add(txtQuantidade);
+
+                        Button btnAumentar = new Button();
+                        btnAumentar.ID = "btnAumentar" + p.IngredientID.ToString();
+                        btnAumentar.CssClass = "btnAumentar";
+                        btnAumentar.Text = "+";
+                        divSubProduto4.Controls.Add(btnAumentar);
+                        btnAumentar.Click += new EventHandler(AumentarQuantidade);
+
                         HtmlGenericControl divSubProduto3 = new HtmlGenericControl("DIV");
                         divSubProduto3.Attributes.Add("class", "divSubProduto3");
                         a.Controls.Add(divSubProduto3);
@@ -340,12 +490,15 @@ namespace TCC
             for(i=0; i <= ppi.Count-1; i++)
             {
                 int produtoIngredienteID = ppi[i].ProdutoIngredienteID;
+                int quantIngrediente = ppi[i].Quantidade;
+                Decimal valIngrediente = 0;
                 String nomeIngrediente = "";
                 foreach(ProdutoIngrediente p in pi)
                 {
                     if(p.PIngredientID == produtoIngredienteID)
                     {
                         nomeIngrediente = p.Name;
+                        valIngrediente = p.Price;
                     }
                 }
                 HtmlGenericControl divIngredienteCliente = new HtmlGenericControl("DIV");
@@ -353,18 +506,61 @@ namespace TCC
                 divIngredienteCliente.ID = "divIngredienteCliente" + i;
                 divIngredientesCliente.Controls.Add(divIngredienteCliente);
 
+                HtmlGenericControl divIngredienteFoto = new HtmlGenericControl("DIV");
+                divIngredienteFoto.Attributes.Add("class", "divIngredienteFoto");
+                divIngredienteFoto.ID = "divIngredienteFoto" + i;
+                divIngredienteCliente.Controls.Add(divIngredienteFoto);
+
+                HtmlGenericControl imgIngrediente = new HtmlGenericControl("IMG");
+                imgIngrediente.Attributes.Add("class", "imgIngrediente");
+                imgIngrediente.Attributes.Add("src", "https://localhost:44323/api/IngredienteFoto/" + produtoIngredienteID + "/");
+                divIngredienteFoto.Controls.Add(imgIngrediente);
+
+                HtmlGenericControl divIngredienteInfo = new HtmlGenericControl("DIV");
+                divIngredienteInfo.Attributes.Add("class", "divIngredienteInfo");
+                divIngredienteInfo.ID = "divIngredienteInfo" + i;
+                divIngredienteCliente.Controls.Add(divIngredienteInfo);
+
+                HtmlGenericControl divSubIngredienteInfo1 = new HtmlGenericControl("DIV");
+                divSubIngredienteInfo1.Attributes.Add("class", "divSubIngredienteInfo1");
+                divSubIngredienteInfo1.ID = "divSubIngredienteInfo1" + i;
+                divIngredienteInfo.Controls.Add(divSubIngredienteInfo1);
+
                 Label lblNomeIngredienteCliente = new Label();
                 lblNomeIngredienteCliente.ID = "lblNomeIngredienteCliente" + i;
                 lblNomeIngredienteCliente.CssClass = "lblNomeIngredienteCliente";
                 lblNomeIngredienteCliente.Text = nomeIngrediente;
-                divIngredienteCliente.Controls.Add(lblNomeIngredienteCliente);
+                divSubIngredienteInfo1.Controls.Add(lblNomeIngredienteCliente);
+
+                HtmlGenericControl divSubIngredienteInfo2 = new HtmlGenericControl("DIV");
+                divSubIngredienteInfo2.Attributes.Add("class", "divSubIngredienteInfo2");
+                divSubIngredienteInfo2.ID = "divSubIngredienteInfo2" + i;
+                divIngredienteInfo.Controls.Add(divSubIngredienteInfo2);
+
+                Label lblQuantidadeIngredienteCliente = new Label();
+                lblQuantidadeIngredienteCliente.ID = "lblQuantidadeIngredienteCliente" + i;
+                lblQuantidadeIngredienteCliente.CssClass = "lblQuantidadeIngredienteCliente";
+                lblQuantidadeIngredienteCliente.Text = "Quantidade: " + quantIngrediente;
+                divSubIngredienteInfo2.Controls.Add(lblQuantidadeIngredienteCliente);
+
+                Label lblValorIngredienteCliente = new Label();
+                lblValorIngredienteCliente.ID = "lblValorIngredienteCliente" + i;
+                lblValorIngredienteCliente.CssClass = "lblValorIngredienteCliente";
+                lblValorIngredienteCliente.Text = "Valor: " + quantIngrediente * valIngrediente;
+                divSubIngredienteInfo2.Controls.Add(lblValorIngredienteCliente);
+
+                HtmlGenericControl divIngredienteExcluir = new HtmlGenericControl("DIV");
+                divIngredienteExcluir.Attributes.Add("class", "divIngredienteExcluir");
+                divIngredienteExcluir.ID = "divIngredienteExcluir" + i;
+                divIngredienteCliente.Controls.Add(divIngredienteExcluir);
 
                 Button btnExcluirIngrediente = new Button();
                 btnExcluirIngrediente.ID = "btnExcluirIngrediente" + i;
                 btnExcluirIngrediente.CssClass = "btnExcluirIngrediente";
                 btnExcluirIngrediente.Text = "Excluir Ingrediente";
-                divIngredienteCliente.Controls.Add(btnExcluirIngrediente);
+                divIngredienteExcluir.Controls.Add(btnExcluirIngrediente);
                 btnExcluirIngrediente.Click += new EventHandler(ExcluirIngrediente);
+                          
             }
 
             decimal ingPrec = 0;
@@ -375,20 +571,53 @@ namespace TCC
                 int ind = pi.FindIndex(a => a.PIngredientID.Equals(ppId));
                 ingPrec += p.Quantidade * pi[ind].Price;
             }
-            lblTotalIngredientes.Text = "R$ " + ingPrec;
+            lblTotalIngredientes.Text = "Total: R$ " + ingPrec;
+        }
+
+        protected void DiminuirQuantidade(object sender, EventArgs e)
+        {
+            Button iButton = (Button)sender;
+            string buttonID = iButton.ID;
+            int id = Convert.ToInt32(buttonID.Substring(11, buttonID.Length - 11));
+            String textID = "txtQuantidade" + id;
+            TextBox x = (TextBox)divMostrarIngredientes.FindControl(textID);
+            int quant = Convert.ToInt32(x.Text) - 1;       
+            if(quant < 0)
+            {
+                x.Text = "0";
+            }
+            else
+            {
+                x.Text = quant.ToString();
+            }
+        }
+
+        protected void AumentarQuantidade(object sender, EventArgs e)
+        {
+            Button iButton = (Button)sender;
+            string buttonID = iButton.ID;
+            int id = Convert.ToInt32(buttonID.Substring(11, buttonID.Length - 11));
+            String textID = "txtQuantidade" + id;
+            TextBox x = (TextBox)divMostrarIngredientes.FindControl(textID);
+            int quant = Convert.ToInt32(x.Text) + 1;
+            x.Text = quant.ToString();
         }
 
         protected void AdicionarIngrediente(object sender, EventArgs e)
         {
             Button iButton = (Button)sender;
             int id = Convert.ToInt32(iButton.ID);
+            String textID = "txtQuantidade" + id;
+            TextBox x = (TextBox)divMostrarIngredientes.FindControl(textID);
             int pid = 0;
+            Decimal valIngrediente = 0;
             iButton.Text = "Ingrediente Adicionado";
             foreach (ProdutoIngrediente p in pi)
             {
                 if (p.IngredientID == id)
                 {
                     pid = p.PIngredientID;
+                    valIngrediente = p.Price;
                 }
                 else
                 {
@@ -396,7 +625,7 @@ namespace TCC
                 }
             }            
 
-            PedidoProdutoIngrediente ppa = new PedidoProdutoIngrediente(pid,1,0);
+            PedidoProdutoIngrediente ppa = new PedidoProdutoIngrediente(pid,Convert.ToInt32(x.Text),0);
             ppi.Add(ppa);
             int indice = ppi.Count - 1;
 
@@ -415,17 +644,59 @@ namespace TCC
             divIngredienteCliente.ID = "divIngredienteCliente" + indice;
             divIngredientesCliente.Controls.Add(divIngredienteCliente);
 
+            HtmlGenericControl divIngredienteFoto = new HtmlGenericControl("DIV");
+            divIngredienteFoto.Attributes.Add("class", "divIngredienteFoto");
+            divIngredienteFoto.ID = "divIngredienteFoto" + indice;
+            divIngredienteCliente.Controls.Add(divIngredienteFoto);
+
+            HtmlGenericControl imgIngrediente = new HtmlGenericControl("IMG");
+            imgIngrediente.Attributes.Add("class", "imgIngrediente");
+            imgIngrediente.Attributes.Add("src", "https://localhost:44323/api/IngredienteFoto/" + produtoIngredienteID + "/");
+            divIngredienteFoto.Controls.Add(imgIngrediente);
+
+            HtmlGenericControl divIngredienteInfo = new HtmlGenericControl("DIV");
+            divIngredienteInfo.Attributes.Add("class", "divIngredienteInfo");
+            divIngredienteInfo.ID = "divIngredienteInfo" + indice;
+            divIngredienteCliente.Controls.Add(divIngredienteInfo);
+
+            HtmlGenericControl divSubIngredienteInfo1 = new HtmlGenericControl("DIV");
+            divSubIngredienteInfo1.Attributes.Add("class", "divSubIngredienteInfo1");
+            divSubIngredienteInfo1.ID = "divSubIngredienteInfo1" + indice;
+            divIngredienteInfo.Controls.Add(divSubIngredienteInfo1);
+
             Label lblNomeIngredienteCliente = new Label();
             lblNomeIngredienteCliente.ID = "lblNomeIngredienteCliente" + indice;
             lblNomeIngredienteCliente.CssClass = "lblNomeIngredienteCliente";
             lblNomeIngredienteCliente.Text = nomeIngrediente;
-            divIngredienteCliente.Controls.Add(lblNomeIngredienteCliente);
+            divSubIngredienteInfo1.Controls.Add(lblNomeIngredienteCliente);
+
+            HtmlGenericControl divSubIngredienteInfo2 = new HtmlGenericControl("DIV");
+            divSubIngredienteInfo2.Attributes.Add("class", "divSubIngredienteInfo2");
+            divSubIngredienteInfo2.ID = "divSubIngredienteInfo2" + indice;
+            divIngredienteInfo.Controls.Add(divSubIngredienteInfo2);
+
+            Label lblQuantidadeIngredienteCliente = new Label();
+            lblQuantidadeIngredienteCliente.ID = "lblQuantidadeIngredienteCliente" + indice;
+            lblQuantidadeIngredienteCliente.CssClass = "lblQuantidadeIngredienteCliente";
+            lblQuantidadeIngredienteCliente.Text = "Quantidade: " + x.Text;
+            divSubIngredienteInfo2.Controls.Add(lblQuantidadeIngredienteCliente);
+
+            Label lblValorIngredienteCliente = new Label();
+            lblValorIngredienteCliente.ID = "lblValorIngredienteCliente" + indice;
+            lblValorIngredienteCliente.CssClass = "lblValorIngredienteCliente";
+            lblValorIngredienteCliente.Text = "Valor: " + Convert.ToInt32(x.Text) * valIngrediente;
+            divSubIngredienteInfo2.Controls.Add(lblValorIngredienteCliente);
+
+            HtmlGenericControl divIngredienteExcluir = new HtmlGenericControl("DIV");
+            divIngredienteExcluir.Attributes.Add("class", "divIngredienteExcluir");
+            divIngredienteExcluir.ID = "divIngredienteExcluir" + indice;
+            divIngredienteCliente.Controls.Add(divIngredienteExcluir);
 
             Button btnExcluirIngrediente = new Button();
-            btnExcluirIngrediente.ID = "btnExcluirIngrediente"+indice;
+            btnExcluirIngrediente.ID = "btnExcluirIngrediente" + indice;
             btnExcluirIngrediente.CssClass = "btnExcluirIngrediente";
             btnExcluirIngrediente.Text = "Excluir Ingrediente";
-            divIngredienteCliente.Controls.Add(btnExcluirIngrediente);
+            divIngredienteExcluir.Controls.Add(btnExcluirIngrediente);
             btnExcluirIngrediente.Click += new EventHandler(ExcluirIngrediente);
 
             decimal ingPrec = 0;
@@ -436,7 +707,7 @@ namespace TCC
                 int ind = pi.FindIndex(a => a.PIngredientID.Equals(ppId));
                 ingPrec += p.Quantidade * pi[ind].Price;
             }
-            lblTotalIngredientes.Text = "R$ " + ingPrec;
+            lblTotalIngredientes.Text = "Total: R$ " + ingPrec;
 
         }
 
@@ -457,7 +728,7 @@ namespace TCC
                 int ind = pi.FindIndex(a => a.PIngredientID.Equals(ppId));
                 ingPrec += p.Quantidade * pi[ind].Price;
             }
-            lblTotalIngredientes.Text = "R$ " + ingPrec;
+            lblTotalIngredientes.Text = "Total: R$ " + ingPrec;
         }
 
         protected void avancarCarrinho(object sender, EventArgs e)

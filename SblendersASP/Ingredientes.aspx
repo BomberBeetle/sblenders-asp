@@ -19,7 +19,7 @@
                 <option class="optionCategoria" value="queijos">Molhos</option>
             </select>
         </div>
-        <div class="divMostrarIngredientes">
+        <div class="divMostrarIngredientes" id="divMostrarIngredientes" runat="server">
             <div class="divPaes" id="divPaes" runat="server">
                 
             </div>

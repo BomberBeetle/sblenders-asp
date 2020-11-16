@@ -361,7 +361,7 @@ function closeAllSelect(elmnt) {
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
-window.onresize = function () {
+/*window.onresize = function () {
     var elements = document.getElementById("divProds").querySelectorAll('divProduto');
     var count = elements.length;
     var windowW = window.innerWidth;
@@ -381,10 +381,10 @@ window.onresize = function () {
     /*for (var i = 0; i < elements.length; i++) {
         elements[i].style.width = window.innerWidth + "px";
         elements[i].style.height = window.innerHeight + "px";        
-    }*/
-}
+    }*//*
+}*/
 
-var visibilidadeNutri = false;
+visibilidadeNutri = false;
 function fecharInfoNutri() {
     var divNutri = document.querySelectorAll('sectionProd');
     if (visibilidadeNutri == true) {

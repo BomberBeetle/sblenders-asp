@@ -61,7 +61,7 @@ namespace TCC
                             a.ID = "a" + produtos[i - 1].ID;
                             a.ClientIDMode = ClientIDMode.Static;
                             a.Attributes.Add("href", "javascript:void(0)");
-                            //a.Attributes.Add("onclick","exibirInfoNutri");
+                            a.Attributes.Add("onclick","exibirInfoNutri");
                             divProduto.Controls.Add(a);
 
                             HtmlGenericControl divSubProduto1 = new HtmlGenericControl("DIV");

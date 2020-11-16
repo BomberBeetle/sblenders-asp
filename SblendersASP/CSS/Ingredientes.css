@@ -150,7 +150,7 @@
 }
 
 .divProduto {
-    height: 500px;
+    height: 600px;
     width: 45%;
     border-radius: 40px;
     background-color: #FFF;
@@ -232,6 +232,38 @@
     transition: 0.7s;
 }
 
+.divSubProduto4 {
+    height: 100px;
+    width: 100%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.btnAumentar {
+    height: 35px;
+    width: 10%;
+    background-color: #fa4120;
+    font-size: 26px;
+    font-weight: bold;
+    color: #FFF;
+    border-radius: 10px 10px;
+    border: 0px;
+    box-shadow: 1px 1px #545454;
+    padding: 0;
+    text-align: center;
+}
+
+.txtQuantidade{
+    height:40px;
+    width:45%;
+    font-size:20px;
+    text-align:center;
+}
+
 .divIngredientesCliente {
     height: auto;
     width: 45%;
@@ -246,24 +278,94 @@
 .divIngredienteCliente {
     height: 300px;
     width: 80%;
-    float:left;
-    background-color:#37c418;
+    float: left;
+    background-color: #f7f7f7;
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    border: 1px solid black;
+    border-radius: 20px 20px;
+    box-shadow: 2px 2px #989898;
+    margin-bottom: 50px;
 }
 
-.lblNomeIngredienteCliente{
-    font-size:24px;
-    color:aqua;
+.divIngredienteFoto {
+    height: 220px;
+    width: 30%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgIngrediente{
+    height:180px;
+    width:80%;
+}
+
+.divIngredienteInfo {
+    height: 220px;
+    width: 70%;
+    float: left;    
+}
+
+.divSubIngredienteInfo1 {
+    height: 110px;
+    width: 100%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+}
+
+.lblNomeIngredienteCliente {
+    font-size: 26px;
+    color: #323232;
+}
+
+.divSubIngredienteInfo2 {
+    height: 110px;
+    width: 100%;
+    float: left;
+    align-items:center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.lblQuantidadeIngredienteCliente {
+    font-size: 20px;
+}
+
+.lblValorIngredienteCliente {
+    font-size: 20px;
+}
+
+.divIngredienteExcluir {
+    height: 80px;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .btnExcluirIngrediente {
-    height: 50px;
-    width: 50%;
+    height: 45px;
+    width: 40%;
+    border:0px;
+    border-radius:10px 10px;
+    background-color:#fa4120;
+    color:white;
+    font-size:20px;
 }
 
 #lblTotalIngredientes {
