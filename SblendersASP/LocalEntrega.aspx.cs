@@ -28,12 +28,19 @@ namespace TCC
             lblCustoFrete.Text = val.ToString();
             if (val)
             {
-                ((Pedido)Session["Carrinho"]).endereco = txtEndMaps.Text;
-                ((Pedido)Session["Carrinho"]).agenteID = (int)Session["userID"];
-                ((Pedido)Session["Carrinho"]).restauranteID = Convert.ToInt32(hiddenRID.Value);
-                ((Pedido)Session["Carrinho"]).instrucoes = "";
-                EnviarPedido();
-                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "traçar rota", "tracarRotaReverso()", true);
+                if(Session["userID"] != null)
+                {
+                    ((Pedido)Session["Carrinho"]).endereco = txtEndMaps.Text;
+                    ((Pedido)Session["Carrinho"]).agenteID = (int)Session["userID"];
+                    ((Pedido)Session["Carrinho"]).restauranteID = Convert.ToInt32(hiddenRID.Value);
+                    ((Pedido)Session["Carrinho"]).instrucoes = "";
+                    EnviarPedido();
+                    ScriptManager.RegisterStartupScript(Page, Page.GetType(), "traçar rota", "tracarRotaReverso()", true);
+                }
+                else
+                {
+
+                }
             }
                        
         }

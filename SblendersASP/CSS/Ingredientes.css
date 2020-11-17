@@ -368,6 +368,30 @@
     font-size:20px;
 }
 
+.divTot{
+    height:80px;
+    width:100%;
+    float:left;
+    margin-bottom:30px;
+}
+
+.divSubTot1{
+    height:80px;
+    width:50%;
+    float:left;
+}
+
+.divSubTot2 {
+    height: 80px;
+    width: 50%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 #lblTotalIngredientes {
-    font-size:24px;
+    font-size: 30px;
 }

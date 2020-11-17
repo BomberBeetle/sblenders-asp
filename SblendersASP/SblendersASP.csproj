@@ -193,6 +193,7 @@
     <Content Include="Fontes\Roboto-ThinItalic.ttf" />
     <Content Include="manifest.json" />
     <Content Include="Diagrama_de_classe.cd" />
+    <Content Include="LandingVerification.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -344,6 +345,13 @@
       <DependentUpon>Quem_somos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Restaurante.cs" />
+    <Compile Include="LandingVerification.aspx.cs">
+      <DependentUpon>LandingVerification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LandingVerification.aspx.designer.cs">
+      <DependentUpon>LandingVerification.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

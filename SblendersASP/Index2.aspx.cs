@@ -207,30 +207,7 @@ namespace TCC
 
                 if (response.IsSuccessStatusCode)
                 {
-                    string URL2 = $"https://localhost:44323/api/AgenteToken/{Uri.EscapeUriString(txtEmailCadastro.Text)}/{Uri.EscapeUriString(txtSenhaCadastro.Text)}";
-                    string urlParameters2 = "";
-                    HttpClient client2 = new HttpClient();
-                    client2.BaseAddress = new Uri(URL2);
-
-                    // Add an Accept header for JSON format.
-                    client2.DefaultRequestHeaders.Accept.Add(
-                    new MediaTypeWithQualityHeaderValue("application/json"));
-
-                    JavaScriptSerializer serializer2 = new System.Web.Script.Serialization.JavaScriptSerializer();
-                    HttpResponseMessage response2 = client2.GetAsync(urlParameters2).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-                    Dictionary<string, Object> resultado2 = (Dictionary<string, Object>)serializer2.DeserializeObject(response2.Content.ReadAsStringAsync().Result);
-                    lblSenhaAvisoCadastro.Text = "Batata";
-                    Session["userID"] = int.Parse((string)resultado2["id"]);
-                    Session["userToken"] = (string)resultado2["token"];
-                    if (GetUserDetails())
-                    {
-                        Response.Redirect("Ingredientes.aspx");
-                    }
-                    else
-                    {
-                        lblSenhaAvisoLogin.Text = "Usuário ou senha incorreto";
-                    }
-                    //lblNomeAvisoCadastro.Text = resultado.ToString();
+                    Response.Redirect("LandingVerification.aspx?landing=bigfloppa");
                 }
                 else
                 {
