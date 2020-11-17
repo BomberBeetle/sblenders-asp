@@ -243,13 +243,13 @@
 
                     <div class="divEsqSenhaEmail">
                          <div class="divSubLoginEmail1">
-                             <asp:Label ID="Label1" runat="server" Text="Email" CssClass="lblDivLogin"></asp:Label>
+                             <asp:Label ID="Label1" runat="server" Text="Email" CssClass="lblEsqS"></asp:Label>
                          </div>
                          <div class="divSubLoginEmail2">
-                             <asp:TextBox ID="TextBox1" runat="server" CssClass="txtDivLogin" TextMode="Password"></asp:TextBox>
+                             <asp:TextBox ID="TextBox1" runat="server" CssClass="txtEsqS" TextMode="Password"></asp:TextBox>
                          </div>
                          <div class="divSubLoginEmail3">
-                             <asp:Label ID="Label2" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
+                             <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEsqS"></asp:Label>
                          </div>
                      </div>
                      <div class="divEsqSenhaEntrar">
@@ -258,7 +258,7 @@
                              <a onclick="Login()" class="aEsqueceuSenha">Voltar ao Login</a>
                          </div>
                          <div class="divBtnSubLogin2">
-                             <asp:Button ID="Button1" runat="server" Text="Entrar" CssClass="btnLogin" OnClick="btnLogin_Click"/>
+                             <asp:Button ID="btnRecuperarSenha" runat="server" Text="Entrar" CssClass="btnLogin" OnClick="btnRecuperarSenha_Click"/>
                          </div>
                      </div>
                 </div>

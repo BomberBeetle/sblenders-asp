@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="CSS/Master.css" />
-    <link rel="stylesheet" type="text/css" href="CSS/Index.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/Index2.css" />
     <link rel="stylesheet" type="text/css" href="CSS/MapsSblenders.css" />
     <link rel="stylesheet" type="text/css" href="CSS/Produtos.css" />
 
@@ -81,6 +81,34 @@
     <div id="oDiv">
         <section class="container-fluid" id="divCabecalho">
             <div class="col-2 CabEsq">
+                <a href="Index2.aspx" >
+                    <img src="Imagens/novoSblenders.png" class="imgLogo" />
+                </a>
+            </div>
+            <div class="col-6 CabEsq">
+                <a class="aProjSblenders" href="Quem_somos.aspx" id="quemSomos">Quem Somos</a>
+                <a class="aProjSblenders" href="Contact.aspx" id="faleConosco">Fale Conosco</a>
+                <a class="aProjSblenders" href="V" id="maisInformacoes">Mais Informações</a>
+                <a class="aProjSblenders" href="Produtos.aspx">Faça seu pedido</a>
+            </div>
+            <div class="col-4 CabEsq" id="divDesconectado" runat="server">
+                <a class="aCad" onclick="Login()" id="textoLogin">Login</a>
+                <a class="aCad" onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
+            </div>
+            <div class="col-4 CabEsq" id="divConectado" runat="server">
+                <div class="divUsuario">
+                    <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
+                    <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="Sair">Sair</asp:LinkButton>
+                    <!--<asp:Label ID="vvv" runat="server" Text="Sair" CssClass="lblSair" OnServerClick="lblSair_Click"></asp:Label>-->
+                </div>
+                <div class="divFotoUsuario">
+                    <a href="AreaCliente.aspx" class="aFotoUsuario">
+                        <img src="Imagens/usuario.png" class="imgUsuario" />
+                    </a>
+                    
+                </div>
+            </div>
+            <!--<div class="col-2 CabEsq">
                 <a href="Index2.aspx">
                     <img src="Imagens/novoSblenders.png" class="imgLogo" />
                 </a>
@@ -94,10 +122,10 @@
             <div class="col-4 CabEsq">
                 <a class="aCad" onclick="Login()">Login</a>
                 <a class="aCad" onclick="Cadastro()">Cadastre-se</a>
-            </div>
+            </div>-->
         </section>
         
-        <section class="container-fluid" id="divCad">
+        <section class="container-fluid" id="divCad" runat="server">
                 <div class="col-3 divFG">
 
                 </div>
@@ -121,16 +149,33 @@
 
                         </div>
 
-                        <div class="divCadastroItem">
-                            <div class="divSubLoginEmail1">
-                                <asp:Label ID="lblNomeCadastro" runat="server" Text="Nome" CssClass="lblDivCadastro"></asp:Label>
+                        <div class="divCadastroItem2">
+                            <div class="divNomeSobrenome">
+                                <div class="divNomeCadastro">
+                                    <div class="divSubLoginEmail1">
+                                        <asp:Label ID="lblNomeCadastro" runat="server" Text="Nome" CssClass="lblDivCadastro2"></asp:Label>
+                                    </div>
+                                    <div class="divSubLoginEmail2">
+                                        <asp:TextBox ID="txtNomeCadastro" runat="server" CssClass="txtDivCadastro2"></asp:TextBox>
+                                    </div>
+                                    <div class="divSubLoginEmail3">
+                                        <asp:Label ID="lblNomeAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
+                                    </div>
+                                </div>
+                                
+                                <div class="divSobrenomeCadastro">
+                                    <div class="divSubLoginEmail1">
+                                        <asp:Label ID="lblSobrenomeCadastro" runat="server" Text="Sobrenome" CssClass="lblDivCadastro2"></asp:Label>
+                                    </div>
+                                    <div class="divSubLoginEmail2">
+                                        <asp:TextBox ID="txtSobrenomeCadastro" runat="server" CssClass="txtDivCadastro2"></asp:TextBox>
+                                    </div>
+                                    <div class="divSubLoginEmail3">
+                                        <asp:Label ID="lblSobrenomeAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="divSubLoginEmail2">
-                                <asp:TextBox ID="txtNomeCadastro" runat="server" CssClass="txtDivCadastro"></asp:TextBox>
-                            </div>
-                            <div class="divSubLoginEmail3">
-                                <asp:Label ID="lblNomeAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
-                            </div>
+                            
                         </div>
                         <div class="divCadastroItem">
                             <div class="divSubLoginEmail1">
@@ -140,7 +185,7 @@
                                 <asp:TextBox ID="txtEmailCadastro" runat="server" CssClass="txtDivCadastro"></asp:TextBox>
                             </div>
                             <div class="divSubLoginEmail3">
-                                <asp:Label ID="txtEmailAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
+                                <asp:Label ID="lblEmailAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
                             </div>
                         </div>
                         <div class="divCadastroItem">
@@ -151,7 +196,7 @@
                                 <asp:TextBox ID="txtSenhaCadastro" runat="server" CssClass="txtDivCadastro" TextMode="Password"></asp:TextBox>
                             </div>
                             <div class="divSubLoginEmail3">
-                                <asp:Label ID="lblAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
+                                <asp:Label ID="lblSenhaAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
                             </div>
                         </div>
 
@@ -168,7 +213,7 @@
                         </div>
 
                         <div class="divCadastroBtn">
-                                <asp:Button ID="btnCadastro" runat="server" Text="Entrar" CssClass="btnDivCadastro"/>                            
+                            <asp:Button ID="btnCadastro" runat="server" Text="Entrar" CssClass="btnDivCadastro" OnClientClick="verificarCamposCadastro()" OnClick="Cadastro"/>                            
                         </div>
                     </div>
 
@@ -178,7 +223,7 @@
                 </div>
             </section>      
 
-        <section class="container-fluid" id="divLog">
+        <section class="container-fluid" id="divLog" runat="server">
                 <div class="col-3 divFG">
 
                 </div>
@@ -228,10 +273,10 @@
                         <div class="divLoginEntrar">
                             <div class="divBtnEspacoVazio"></div>
                             <div class="divBtnSubLogin1">
-                                <a onclick="" class="aEsqueceuSenha">Esqueceu sua Senha?</a>
+                                <a onclick="esqueceuSenha()" class="aEsqueceuSenha">Esqueceu sua Senha?</a>
                             </div>
                             <div class="divBtnSubLogin2">
-                                <asp:Button ID="btnLogin" runat="server" Text="Entrar" CssClass="btnLogin"/>
+                                <asp:Button ID="btnLogin" runat="server" Text="Entrar" CssClass="btnLogin" OnClick="Login"/>
                             </div>
                         </div>
                     </div>
@@ -240,7 +285,60 @@
                 <div class="col-3 divFG">
 
                 </div>
-            </section>      
+            </section> 
+        
+        <section class="container-fluid" id="divEsqSenha" runat="server">
+            <div class="col-3 divFG">
+
+            </div>
+
+            <div class="col-6 divFG">
+                <div class="divEsqueceuSenha">
+                    <div class="divSubEsqSenhaSair">
+                         <a class="aDivSubEsqSenhaSair" onclick="esqueceuSenha()">
+                             <img src="Imagens/iconX.png" class="imgDivSubEsqSenhaSair" />
+                         </a>
+                     </div>
+
+                     <div class="divSubEsqSenhaLogo">
+                         <img src="Imagens/novoSblenders.png" class="imgDivSubEsqSenhaLogo" />
+                     </div>
+
+                     <div class="divSubEsqSenhaTitulo">
+                         <h1 class="h1EsqSenhaTitulo">Esqueceu a Senha?</h1>
+                     </div>
+
+                     <div class="divEspacoLogin">
+
+                     </div>
+
+                    <div class="divEsqSenhaEmail">
+                         <div class="divSubLoginEmail1">
+                             <asp:Label ID="Label1" runat="server" Text="Email" CssClass="lblEsqS"></asp:Label>
+                         </div>
+                         <div class="divSubLoginEmail2">
+                             <asp:TextBox ID="TextBox1" runat="server" CssClass="txtEsqS" TextMode="Password"></asp:TextBox>
+                         </div>
+                         <div class="divSubLoginEmail3">
+                             <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEsqS"></asp:Label>
+                         </div>
+                     </div>
+                     <div class="divEsqSenhaEntrar">
+                         <div class="divBtnEspacoVazio"></div>
+                         <div class="divBtnSubLogin1">
+                             <a onclick="Login()" class="aEsqueceuSenha">Voltar ao Login</a>
+                         </div>
+                         <div class="divBtnSubLogin2">
+                             <asp:Button ID="btnRecSenha" runat="server" Text="Entrar" CssClass="btnLogin" OnClick="RecuperarSenha"/>
+                         </div>
+                     </div>
+                </div>
+            </div>
+
+            <div class="col-3 divFG">
+
+            </div>
+        </section>             
 
         <section id="divCorpo">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">        

@@ -229,5 +229,10 @@ namespace TCC
             divConectado.Attributes.CssStyle.Add("display", "none");
             divDesconectado.Attributes.CssStyle.Add("display", "block");
         }
+
+        protected void btnRecuperarSenha_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
