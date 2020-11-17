@@ -42,6 +42,38 @@ body {
     background-color: #ff7300;
 }
 
+.divNomePagina {
+    height: 200px;
+    width: 100%;
+    float: left;
+}
+
+.divTituloPagina {
+    margin-top: 25px;
+    border-radius: 0px 30px 30px 0px;
+    height: 85px;
+    width: 22.5%;
+    background-color: #ed4218;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+    .divTituloPagina h1 {
+        color: #FFF;
+        font-size: 35px;
+        padding-top: 5px;
+        text-shadow: 2px 2px 2px #989898;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    }
+
 .CabEsq {
     height: 15vh;
     float: left;
@@ -407,6 +439,18 @@ body {
 }
 
 #divRodape {
-    height: 250px;
-    background-color: #E374A1;
+    height: 350px;
+    background-color: #ff7300;
+    width: 100%;
+    padding: 0;
+}
+
+#RodinhaPe {
+    background-color:  rgb(255, 173, 21);
+    height: 50px;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.1);
+}
+
+.leGames {
+    padding: 0px;
 }

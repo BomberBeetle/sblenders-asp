@@ -47,7 +47,15 @@
     </div>
     <div class="divIngredientesCliente" id="divIngredientesCliente" runat="server">
         <div class="divIngredientesCategoria">
-            <asp:Label ID="lblTotalIngredientes" runat="server" Text="R$ 0"></asp:Label>
+            <h1>Seu Sblurger:</h1>           
+        </div>
+    </div>
+    <div class="divTot">
+        <div class="divSubTot1">
+
+        </div>
+        <div class="divSubTot2">
+            <asp:Label ID="lblTotalIngredientes" runat="server" Text="R$ 0" CssClass="lblTotalIngredientes" ClientIDMode="Static"></asp:Label>
         </div>
     </div>
     <div class="divBtnOpcoesPagLanches">
