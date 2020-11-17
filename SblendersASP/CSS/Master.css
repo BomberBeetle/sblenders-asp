@@ -43,18 +43,19 @@ body {
 }
 
 .divNomePagina {
-    height: 200px;
     width: 100%;
-    float: left;
+    position: absolute;
+    z-index: 5;
 }
 
 .divTituloPagina {
-    margin-top: 25px;
+    margin-top: -25px;
     border-radius: 0px 30px 30px 0px;
+    margin-left: 0px;
     height: 85px;
     width: 22.5%;
     background-color: #ed4218;
-    float: left;
+    box-shadow: 0px 7px 0px rgb(255, 173, 21);
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -65,7 +66,7 @@ body {
         color: #FFF;
         font-size: 35px;
         padding-top: 5px;
-        text-shadow: 2px 2px 2px #989898;
+        text-shadow: 2px 2px 2px rgb(255, 173, 21);
         -webkit-touch-callout: none; /* iOS Safari */
         -webkit-user-select: none; /* Safari */
         -khtml-user-select: none; /* Konqueror HTML */
@@ -443,14 +444,11 @@ body {
     background-color: #ff7300;
     width: 100%;
     padding: 0;
+    margin-top: 60px;
 }
 
 #RodinhaPe {
     background-color:  rgb(255, 173, 21);
     height: 50px;
     box-shadow: 0px 7px 10px rgba(0,0,0,0.1);
-}
-
-.leGames {
-    padding: 0px;
 }
