@@ -86,7 +86,8 @@ namespace TCC
                             }
                             tam--;
                         }
-                        Label1.Text = result[0]["pedidoID"].ToString();
+
+                        if(tam!=-1)Label1.Text = result[0]["pedidoID"].ToString();
                         
                     }
                     else
