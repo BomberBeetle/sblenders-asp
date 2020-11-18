@@ -20,6 +20,8 @@
                 <asp:Label ID="lblCustoFrete" runat="server" Text="Custo do Frete:" CssClass="lblCustoFrete"></asp:Label>     
                 <asp:HiddenField ID="hiddenOk" runat="server" Value="bt" ClientIDMode="Static"/>
                 <asp:HiddenField ID="hiddenRID" Value="" runat="server" ClientIDMode="Static"/>
+                <asp:TextBox ID="txtInstrucoes" runat="server" MaxLength="300"></asp:TextBox>
+                <asp:Button ID="btnFinalizarPedido" runat="server" Text="Finalizar Pedido" />
             </div>
             
         </div>

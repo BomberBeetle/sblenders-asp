@@ -17,6 +17,8 @@ namespace TCC
 {
     public partial class LocalEntrega : System.Web.UI.Page
     {
+        private static int RID;
+        private static String endereco;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -28,19 +30,9 @@ namespace TCC
             lblCustoFrete.Text = val.ToString();
             if (val)
             {
-                if(Session["userID"] != null)
-                {
-                    ((Pedido)Session["Carrinho"]).endereco = txtEndMaps.Text;
-                    ((Pedido)Session["Carrinho"]).agenteID = (int)Session["userID"];
-                    ((Pedido)Session["Carrinho"]).restauranteID = Convert.ToInt32(hiddenRID.Value);
-                    ((Pedido)Session["Carrinho"]).instrucoes = "";
-                    EnviarPedido();
-                    ScriptManager.RegisterStartupScript(Page, Page.GetType(), "traçar rota", "tracarRotaReverso()", true);
-                }
-                else
-                {
-
-                }
+                RID = Convert.ToInt32(hiddenRID.Value);
+                endereco = txtEndMaps.Text;                                
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "traçar rota", "tracarRotaReverso()", true);
             }
                        
         }
@@ -72,5 +64,27 @@ namespace TCC
             }
         }
 
+        public void FinalizarPedido(object sender, EventArgs e)
+        {
+            if(Session["userID"] != null)
+            {
+                if (String.IsNullOrEmpty(endereco))
+                {
+                    ((Pedido)Session["Carrinho"]).endereco = endereco;
+                    ((Pedido)Session["Carrinho"]).agenteID = (int)Session["userID"];
+                    ((Pedido)Session["Carrinho"]).restauranteID = RID;
+                    ((Pedido)Session["Carrinho"]).instrucoes = txtInstrucoes.Text;
+                    EnviarPedido();
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "login", "Login()", true);
+            }
+        }
     }
 }
