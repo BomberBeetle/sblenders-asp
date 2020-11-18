@@ -345,11 +345,11 @@
             </asp:ContentPlaceHolder>
         </section>
     </div>
-    <div id="divRodape">
+    <!--<div id="divRodape">
         <div id="RodinhaPe">
 
         </div>
-    </div>
+    </div>-->
     </form>
 </body>
 </html>
