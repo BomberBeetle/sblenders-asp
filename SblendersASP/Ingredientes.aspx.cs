@@ -85,26 +85,31 @@ namespace TCC
                         divSubProduto4.Attributes.Add("class", "divSubProduto4");
                         a.Controls.Add(divSubProduto4);
 
-                        Button btnDiminuir = new Button();
+                        HtmlGenericControl btnDiminuir = new HtmlGenericControl("button");
                         btnDiminuir.ID = "btnDiminuir" + p.IngredientID.ToString();
-                        btnDiminuir.CssClass = "btnAumentar";
-                        btnDiminuir.Text = "-";
+                        btnDiminuir.Attributes.Add("class", "btnAumentar");
+                        btnDiminuir.InnerText = "-";
+                        btnDiminuir.Attributes.Add("onclick", "subtrair(this.id)");
+                        btnDiminuir.ClientIDMode = ClientIDMode.Static;
                         divSubProduto4.Controls.Add(btnDiminuir);
-                        btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
+                        //btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
 
                         TextBox txtQuantidade = new TextBox();
                         txtQuantidade.ID = "txtQuantidade" + p.IngredientID.ToString();
                         txtQuantidade.CssClass = "txtQuantidade";
                         txtQuantidade.Text = "1";
+                        txtQuantidade.ClientIDMode = ClientIDMode.Static;
                         txtQuantidade.ReadOnly = true;
                         divSubProduto4.Controls.Add(txtQuantidade);
 
-                        Button btnAumentar = new Button();
+                        HtmlGenericControl btnAumentar = new HtmlGenericControl("button");
                         btnAumentar.ID = "btnAumentar" + p.IngredientID.ToString();
-                        btnAumentar.CssClass = "btnAumentar";
-                        btnAumentar.Text = "+";
+                        btnAumentar.Attributes.Add("class", "btnAumentar");
+                        btnAumentar.InnerText = "+";
+                        btnAumentar.Attributes.Add("onclick", "somar(this.id)");
+                        btnAumentar.ClientIDMode = ClientIDMode.Static;
                         divSubProduto4.Controls.Add(btnAumentar);
-                        btnAumentar.Click += new EventHandler(AumentarQuantidade);
+                        //btnAumentar.Click += new EventHandler(AumentarQuantidade);
 
                         HtmlGenericControl divSubProduto3 = new HtmlGenericControl("DIV");
                         divSubProduto3.Attributes.Add("class", "divSubProduto3");
@@ -156,26 +161,31 @@ namespace TCC
                         divSubProduto4.Attributes.Add("class", "divSubProduto4");
                         a.Controls.Add(divSubProduto4);
 
-                        Button btnDiminuir = new Button();
+                        HtmlGenericControl btnDiminuir = new HtmlGenericControl("button");
                         btnDiminuir.ID = "btnDiminuir" + p.IngredientID.ToString();
-                        btnDiminuir.CssClass = "btnAumentar";
-                        btnDiminuir.Text = "-";
+                        btnDiminuir.Attributes.Add("class", "btnAumentar");
+                        btnDiminuir.InnerText = "-";
+                        btnDiminuir.Attributes.Add("onclick", "subtrair(this.id)");
+                        btnDiminuir.ClientIDMode = ClientIDMode.Static;
                         divSubProduto4.Controls.Add(btnDiminuir);
-                        btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
+                        //btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
 
                         TextBox txtQuantidade = new TextBox();
                         txtQuantidade.ID = "txtQuantidade" + p.IngredientID.ToString();
                         txtQuantidade.CssClass = "txtQuantidade";
                         txtQuantidade.Text = "1";
+                        txtQuantidade.ClientIDMode = ClientIDMode.Static;
                         txtQuantidade.ReadOnly = true;
                         divSubProduto4.Controls.Add(txtQuantidade);
 
-                        Button btnAumentar = new Button();
+                        HtmlGenericControl btnAumentar = new HtmlGenericControl("button");
                         btnAumentar.ID = "btnAumentar" + p.IngredientID.ToString();
-                        btnAumentar.CssClass = "btnAumentar";
-                        btnAumentar.Text = "+";
+                        btnAumentar.Attributes.Add("class", "btnAumentar");
+                        btnAumentar.InnerText = "+";
+                        btnAumentar.Attributes.Add("onclick", "somar(this.id)");
+                        btnAumentar.ClientIDMode = ClientIDMode.Static;
                         divSubProduto4.Controls.Add(btnAumentar);
-                        btnAumentar.Click += new EventHandler(AumentarQuantidade);
+                        //btnAumentar.Click += new EventHandler(AumentarQuantidade);
 
                         HtmlGenericControl divSubProduto3 = new HtmlGenericControl("DIV");
                         divSubProduto3.Attributes.Add("class", "divSubProduto3");
@@ -227,26 +237,31 @@ namespace TCC
                         divSubProduto4.Attributes.Add("class", "divSubProduto4");
                         a.Controls.Add(divSubProduto4);
 
-                        Button btnDiminuir = new Button();
+                        HtmlGenericControl btnDiminuir = new HtmlGenericControl("button");
                         btnDiminuir.ID = "btnDiminuir" + p.IngredientID.ToString();
-                        btnDiminuir.CssClass = "btnAumentar";
-                        btnDiminuir.Text = "-";
+                        btnDiminuir.Attributes.Add("class", "btnAumentar");
+                        btnDiminuir.InnerText = "-";
+                        btnDiminuir.Attributes.Add("onclick", "subtrair(this.id)");
+                        btnDiminuir.ClientIDMode = ClientIDMode.Static;
                         divSubProduto4.Controls.Add(btnDiminuir);
-                        btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
+                        //btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
 
                         TextBox txtQuantidade = new TextBox();
                         txtQuantidade.ID = "txtQuantidade" + p.IngredientID.ToString();
                         txtQuantidade.CssClass = "txtQuantidade";
                         txtQuantidade.Text = "1";
+                        txtQuantidade.ClientIDMode = ClientIDMode.Static;
                         txtQuantidade.ReadOnly = true;
                         divSubProduto4.Controls.Add(txtQuantidade);
 
-                        Button btnAumentar = new Button();
+                        HtmlGenericControl btnAumentar = new HtmlGenericControl("button");
                         btnAumentar.ID = "btnAumentar" + p.IngredientID.ToString();
-                        btnAumentar.CssClass = "btnAumentar";
-                        btnAumentar.Text = "+";
+                        btnAumentar.Attributes.Add("class", "btnAumentar");
+                        btnAumentar.InnerText = "+";
+                        btnAumentar.Attributes.Add("onclick", "somar(this.id)");
+                        btnAumentar.ClientIDMode = ClientIDMode.Static;
                         divSubProduto4.Controls.Add(btnAumentar);
-                        btnAumentar.Click += new EventHandler(AumentarQuantidade);
+                        //btnAumentar.Click += new EventHandler(AumentarQuantidade);
 
                         HtmlGenericControl divSubProduto3 = new HtmlGenericControl("DIV");
                         divSubProduto3.Attributes.Add("class", "divSubProduto3");
@@ -298,26 +313,31 @@ namespace TCC
                         divSubProduto4.Attributes.Add("class", "divSubProduto4");
                         a.Controls.Add(divSubProduto4);
 
-                        Button btnDiminuir = new Button();
+                        HtmlGenericControl btnDiminuir = new HtmlGenericControl("button");
                         btnDiminuir.ID = "btnDiminuir" + p.IngredientID.ToString();
-                        btnDiminuir.CssClass = "btnAumentar";
-                        btnDiminuir.Text = "-";
+                        btnDiminuir.Attributes.Add("class", "btnAumentar");
+                        btnDiminuir.InnerText = "-";
+                        btnDiminuir.Attributes.Add("onclick", "subtrair(this.id)");
+                        btnDiminuir.ClientIDMode = ClientIDMode.Static;
                         divSubProduto4.Controls.Add(btnDiminuir);
-                        btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
+                        //btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
 
                         TextBox txtQuantidade = new TextBox();
                         txtQuantidade.ID = "txtQuantidade" + p.IngredientID.ToString();
                         txtQuantidade.CssClass = "txtQuantidade";
                         txtQuantidade.Text = "1";
+                        txtQuantidade.ClientIDMode = ClientIDMode.Static;
                         txtQuantidade.ReadOnly = true;
                         divSubProduto4.Controls.Add(txtQuantidade);
 
-                        Button btnAumentar = new Button();
+                        HtmlGenericControl btnAumentar = new HtmlGenericControl("button");
                         btnAumentar.ID = "btnAumentar" + p.IngredientID.ToString();
-                        btnAumentar.CssClass = "btnAumentar";
-                        btnAumentar.Text = "+";
+                        btnAumentar.Attributes.Add("class", "btnAumentar");
+                        btnAumentar.InnerText = "+";
+                        btnAumentar.Attributes.Add("onclick", "somar(this.id)");
+                        btnAumentar.ClientIDMode = ClientIDMode.Static;
                         divSubProduto4.Controls.Add(btnAumentar);
-                        btnAumentar.Click += new EventHandler(AumentarQuantidade);
+                        //btnAumentar.Click += new EventHandler(AumentarQuantidade);
 
                         HtmlGenericControl divSubProduto3 = new HtmlGenericControl("DIV");
                         divSubProduto3.Attributes.Add("class", "divSubProduto3");
@@ -369,26 +389,31 @@ namespace TCC
                         divSubProduto4.Attributes.Add("class", "divSubProduto4");
                         a.Controls.Add(divSubProduto4);
 
-                        Button btnDiminuir = new Button();
+                        HtmlGenericControl btnDiminuir = new HtmlGenericControl("button");
                         btnDiminuir.ID = "btnDiminuir" + p.IngredientID.ToString();
-                        btnDiminuir.CssClass = "btnAumentar";
-                        btnDiminuir.Text = "-";
+                        btnDiminuir.Attributes.Add("class", "btnAumentar");
+                        btnDiminuir.InnerText = "-";
+                        btnDiminuir.Attributes.Add("onclick", "subtrair(this.id)");
+                        btnDiminuir.ClientIDMode = ClientIDMode.Static;
                         divSubProduto4.Controls.Add(btnDiminuir);
-                        btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
+                        //btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
 
                         TextBox txtQuantidade = new TextBox();
                         txtQuantidade.ID = "txtQuantidade" + p.IngredientID.ToString();
                         txtQuantidade.CssClass = "txtQuantidade";
                         txtQuantidade.Text = "1";
+                        txtQuantidade.ClientIDMode = ClientIDMode.Static;
                         txtQuantidade.ReadOnly = true;
                         divSubProduto4.Controls.Add(txtQuantidade);
 
-                        Button btnAumentar = new Button();
+                        HtmlGenericControl btnAumentar = new HtmlGenericControl("button");
                         btnAumentar.ID = "btnAumentar" + p.IngredientID.ToString();
-                        btnAumentar.CssClass = "btnAumentar";
-                        btnAumentar.Text = "+";
+                        btnAumentar.Attributes.Add("class", "btnAumentar");
+                        btnAumentar.InnerText = "+";
+                        btnAumentar.Attributes.Add("onclick", "somar(this.id)");
+                        btnAumentar.ClientIDMode = ClientIDMode.Static;
                         divSubProduto4.Controls.Add(btnAumentar);
-                        btnAumentar.Click += new EventHandler(AumentarQuantidade);
+                        //btnAumentar.Click += new EventHandler(AumentarQuantidade);
 
                         HtmlGenericControl divSubProduto3 = new HtmlGenericControl("DIV");
                         divSubProduto3.Attributes.Add("class", "divSubProduto3");
@@ -440,26 +465,31 @@ namespace TCC
                         divSubProduto4.Attributes.Add("class", "divSubProduto4");
                         a.Controls.Add(divSubProduto4);
 
-                        Button btnDiminuir = new Button();
+                        HtmlGenericControl btnDiminuir = new HtmlGenericControl("button");
                         btnDiminuir.ID = "btnDiminuir" + p.IngredientID.ToString();
-                        btnDiminuir.CssClass = "btnAumentar";
-                        btnDiminuir.Text = "-";
+                        btnDiminuir.Attributes.Add("class", "btnAumentar");
+                        btnDiminuir.InnerText = "-";
+                        btnDiminuir.Attributes.Add("onclick", "subtrair(this.id)");
+                        btnDiminuir.ClientIDMode = ClientIDMode.Static;
                         divSubProduto4.Controls.Add(btnDiminuir);
-                        btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
+                        //btnDiminuir.Click += new EventHandler(DiminuirQuantidade);
 
                         TextBox txtQuantidade = new TextBox();
                         txtQuantidade.ID = "txtQuantidade" + p.IngredientID.ToString();
                         txtQuantidade.CssClass = "txtQuantidade";
                         txtQuantidade.Text = "1";
+                        txtQuantidade.ClientIDMode = ClientIDMode.Static;
                         txtQuantidade.ReadOnly = true;
                         divSubProduto4.Controls.Add(txtQuantidade);
 
-                        Button btnAumentar = new Button();
+                        HtmlGenericControl btnAumentar = new HtmlGenericControl("button");
                         btnAumentar.ID = "btnAumentar" + p.IngredientID.ToString();
-                        btnAumentar.CssClass = "btnAumentar";
-                        btnAumentar.Text = "+";
+                        btnAumentar.Attributes.Add("class", "btnAumentar");
+                        btnAumentar.InnerText = "+";
+                        btnAumentar.Attributes.Add("onclick", "somar(this.id)");
+                        btnAumentar.ClientIDMode = ClientIDMode.Static;
                         divSubProduto4.Controls.Add(btnAumentar);
-                        btnAumentar.Click += new EventHandler(AumentarQuantidade);
+                        //btnAumentar.Click += new EventHandler(AumentarQuantidade);
 
                         HtmlGenericControl divSubProduto3 = new HtmlGenericControl("DIV");
                         divSubProduto3.Attributes.Add("class", "divSubProduto3");

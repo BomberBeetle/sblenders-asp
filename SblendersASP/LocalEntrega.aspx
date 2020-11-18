@@ -6,25 +6,42 @@
     <div class="divCorpoEntrega">
         <div class="divNomeEntrega">
             <div class="divTituloEntrega">
-                    <h1> Local de Entrega </h1>
+                    <h1> Finalizar Pedido </h1>
                 </div>
         </div>
 
         <div class="divEnderecoEntrega">
             <div class="divSubEndereco">
-                <asp:Label ID="Label1" runat="server" Text="Endereço de Entrega:" CssClass="lblEnderecoMaps"></asp:Label>
-                <asp:TextBox ID="txtEndMaps" runat="server" ClientIDMode="Static" CssClass="txtEnderecoMaps"></asp:TextBox>
-                <asp:Label ID="lblOculto" runat="server" Text="" CssClass="hidden" ClientIDMode="Static"></asp:Label>
-                <button id="btnCalcularRota" type="button" class="btnEnderecoMaps" onclick="tracarRota()">Calcular Frete</button>
-                <asp:Button ID="hiddenFuncButton" runat="server" OnClick="Button1_Click" ClientIDMode="Static" CssClass="hidden"/>
-                <asp:Label ID="lblCustoFrete" runat="server" Text="Custo do Frete:" CssClass="lblCustoFrete"></asp:Label>     
-                <asp:HiddenField ID="hiddenOk" runat="server" Value="bt" ClientIDMode="Static"/>
-                <asp:HiddenField ID="hiddenRID" Value="" runat="server" ClientIDMode="Static"/>
-                <asp:TextBox ID="txtInstrucoes" runat="server" MaxLength="300"></asp:TextBox>
-                <asp:Button ID="btnFinalizarPedido" runat="server" Text="Finalizar Pedido" />
+                <div class="divLblEntrega">
+                    <asp:Label ID="Label1" runat="server" Text="Endereço de Entrega:" CssClass="lblEnderecoMaps"></asp:Label>
+                </div>
+                <div class="divTxtEntrega">
+                    <asp:TextBox ID="txtEndMaps" runat="server" ClientIDMode="Static" CssClass="txtEnderecoMaps"></asp:TextBox>
+                </div>
+                <div class="divLblAvisoEntrega">
+                    <asp:Label ID="lblOculto" runat="server" Text="" CssClass="hidden" ClientIDMode="Static"></asp:Label>
+                </div>
+                <div class="divBtnEntrega">
+                    <button id="btnCalcularRota" type="button" class="btnEnderecoMaps" onclick="tracarRota()">Calcular Frete</button>
+                    <asp:Button ID="hiddenFuncButton" runat="server" OnClick="Button1_Click" ClientIDMode="Static" CssClass="hidden"/>
+                    <!--<asp:Label ID="lblCustoFrete" runat="server" Text="Custo do Frete:" CssClass="lblCustoFrete"></asp:Label>-->     
+                    <asp:HiddenField ID="hiddenOk" runat="server" Value="bt" ClientIDMode="Static"/>
+                    <asp:HiddenField ID="hiddenRID" Value="" runat="server" ClientIDMode="Static"/>
+                </div>
+                                                
             </div>
             
+            <div class="divInstrucoes">
+                <div class="divSubInstrucoes1">
+                    <p> Instruções do Pedido </p>
+                </div>
+                <div class="divSubInstrucoes2">
+                    <asp:TextBox ID="txtInstrucoes" runat="server" MaxLength="200" CssClass="txtInstrucoes" TextMode="MultiLine" Wrap="True"></asp:TextBox>
+                </div>
+                
+            </div>
         </div>
+        
         <div class="divMapsEntrega">
             <div class="divMapsE" id ="mapa" onload="InicializaMapa()">
 
@@ -116,7 +133,7 @@
                                 cont--;
                             }
                         }).catch((err) => {
-                            alert("Erro: " + err);
+                            //alert("Erro: " + err);
                         })
                     });
 
@@ -168,18 +185,18 @@
                                             tempo = response.routes[0].legs[0].duration.text;
                                             directionsDisplay.setOptions({ preserveViewport: true });
                                             directionsDisplay.setDirections(response);
-                                            alert(distancia);
-                                            alert(tempo);
+                                            //alert(distancia);
+                                            //alert(tempo);
                                             tracarRotaCallbackFinished(true);
                                         }
                                         else {
-                                            alert('Directions request failed due to ' + status);
+                                            //alert('Directions request failed due to ' + status);
                                             tracarRotaCallbackFinished(false);
                                         }
                                     });     
                                 })
                             }).catch((err) => {
-                                alert("Não foi possivel obter localização: " + err);
+                                //alert("Não foi possivel obter localização: " + err);
                                 tracarRotaCallbackFinished(false);
                             })
 
@@ -187,7 +204,7 @@
                           
                         }
                         else {
-                            alert("Não foi possivel obter localização: BATATA " + status);
+                            //alert("Não foi possivel obter localização: BATATA " + status);
                             tracarRotaCallbackFinished(false);
                         }
                         
@@ -252,6 +269,15 @@
                                         
                 </script>
             </div>
+        </div>
+
+        <div class="divBtnFinalizar">
+            <button class="btnFinalizarPedido" id="btnFinalizarPedido" runat="server" onserverclick="FinalizarPedido">
+                    <div class="divTextoBtnFinalizar">
+                        <p>Finalizar Pedido</p>
+                        <img src="Imagens/seta2.png" />
+                    </div>                
+                </button>
         </div>
     </div>
 </asp:Content>
