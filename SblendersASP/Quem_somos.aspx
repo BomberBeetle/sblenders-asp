@@ -1,16 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mestre.Master" AutoEventWireup="true" CodeBehind="Quem_somos.aspx.cs" Inherits="TCC.Quem_somos" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" type="text/css" href="CSS/Quem_somos.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="divTituloPagina">
+        <h1>Quem somos </h1>
+    </div>
     <div class="divCorpoQuemSomos">
-        <div class="divNomePagina">
-            <div class="divTituloPagina">
-                <h1> Quem somos </h1>
-            </div>
-        </div> 
         <div class="principal">
-            <h1 class="titulo"> Conheça um pouco sobre nós </h1>
+            <h1 class="titulo">Conheça um pouco sobre nós </h1>
             <p class="somos">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget est quis neque posuere pellentesque. Aenean tortor magna, placerat quis tincidunt nec, fermentum ut ipsum. Cras erat mi, bibendum id gravida non, rhoncus in ligula. Phasellus ultrices metus euismod, interdum arcu quis, tempus metus. Donec sodales est placerat nunc rutrum, vitae commodo dui rutrum. Integer quis ullamcorper magna. Cras sed sem volutpat, pharetra ipsum non, vehicula odio.
 
@@ -22,11 +21,6 @@ Praesent euismod metus eu nisi lacinia dignissim. Donec nec consectetur nibh. Mo
 
 Etiam hendrerit lorem eu tempor aliquam. Curabitur consequat tristique risus, nec euismod orci rhoncus eget. Mauris auctor fringilla urna a luctus. Mauris ac finibus turpis. Nam in commodo lacus, a fermentum massa. Donec at ultricies mauris. Etiam volutpat dignissim nisi, quis volutpat lectus ornare in.
             </p>
-        </div>
-    </div>
-    <div id="divRodape">
-        <div id="RodinhaPe">
-
         </div>
     </div>
 </asp:Content>

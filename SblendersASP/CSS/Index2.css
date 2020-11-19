@@ -27,12 +27,12 @@ body {
     float: left;
 }
 
-#divDesconectado{
-    display:block;
+#divDesconectado {
+    display: block;
 }
 
-#divConectado{
-    display:none;
+#divConectado {
+    display: none;
 }
 
 .divUsuario {
@@ -56,10 +56,10 @@ body {
     width: 100%;
     text-align: right;
     font-size: 20px;
-    text-decoration:underline;
+    text-decoration: underline;
     display: block;
     color: white;
-    cursor:pointer;
+    cursor: pointer;
 }
 
     .lblSair:hover {
@@ -78,9 +78,9 @@ body {
 }
 
 .aFotoUsuario {
-    height:100%;
-    width:100%;
-    float:left;
+    height: 100%;
+    width: 100%;
+    float: left;
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -88,9 +88,9 @@ body {
     justify-content: center;
 }
 
-.imgUsuario{
-    height:80%;
-    width:50%;
+.imgUsuario {
+    height: 80%;
+    width: 50%;
 }
 
 .imgLogo {
@@ -209,7 +209,7 @@ body {
     display: none;
     background-color: rgba(255,255,255,0);
     z-index: 3;
-    position: fixed;    
+    position: fixed;
 }
 
 #divEsqSenha {
@@ -245,10 +245,10 @@ body {
     box-shadow: 1px 1px 1px #656565;
 }
 
-.divSubLoginSair{
-    width:100%;
-    position:absolute;
-    z-index:10;
+.divSubLoginSair {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
 }
 
 .aDivSubLoginSair {
@@ -263,21 +263,20 @@ body {
     height: 30px;
 }
 
-.divSubLoginLogo{
-    height:15%;
-    width:100%;
-    position:absolute;
-    z-index:2;
+.divSubLoginLogo {
+    height: 15%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
     /*float:left;*/
 }
 
-.imgDivSubLoginLogo{
-    height:100%;
-    width:16%;
-    align-items:center;
-    margin-top:10px;
-    margin-left:20px;
-
+.imgDivSubLoginLogo {
+    height: 100%;
+    width: 16%;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
 .divSubLoginTitulo {
@@ -285,7 +284,7 @@ body {
     width: 100%;
     /*float:left;*/
     z-index: 5;
-    align-items:flex-end;
+    align-items: flex-end;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -294,13 +293,13 @@ body {
 
 .h1LoginTitulo {
     font-size: calc(1.2rem + 1vw);
-    font-weight:bold;
+    font-weight: bold;
 }
 
-.divEspacoLogin{
-    height:12%;
-    float:left;
-    width:100%;
+.divEspacoLogin {
+    height: 12%;
+    float: left;
+    width: 100%;
 }
 
 .divLoginEmail, .divLoginSenha {
@@ -309,10 +308,10 @@ body {
     float: left;
 }
 
-.divLoginEntrar{
-    height:22%;
-    width:100%;
-    float:left;
+.divLoginEntrar {
+    height: 22%;
+    width: 100%;
+    float: left;
 }
 
 .divSubLoginEmail1, .divSubLoginEmail2, .divSubLoginEmail3 {
@@ -320,10 +319,10 @@ body {
     text-align: center;
 }
 
-.divSubLoginEmail1{
-    height:30%;
-    float:left;
-    text-align:left !important;
+.divSubLoginEmail1 {
+    height: 30%;
+    float: left;
+    text-align: left !important;
 }
 
 .divSubEmailLogin2 {
@@ -335,14 +334,14 @@ body {
     justify-content: center;
 }
 
-.divSubEmailLogin3{
-    height:20%;
-    float:left;
+.divSubEmailLogin3 {
+    height: 20%;
+    float: left;
 }
 
 .lblDivLogin {
     font-size: calc(0.15rem + 1vw);
-    margin-left:17.5%;
+    margin-left: 17.5%;
 }
 
 .txtDivLogin {
@@ -353,7 +352,6 @@ body {
     padding-right: 10px;
     font-size: calc(0.09rem + 1vw);
     border-radius: 20px 4px;
-
 }
 
 .lblDivAvisoLogin {
@@ -383,7 +381,7 @@ body {
 
 .aEsqueceuSenha {
     font-size: calc(0.2rem + 1vw);
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .divBtnSubLogin2 {
@@ -401,7 +399,7 @@ body {
     border-radius: 15px 15px;
     font-size: calc(0.3rem + 1vw);
     border: none;
-} 
+}
 
 /*Div Cadastro*/
 .divCadastro {
@@ -424,17 +422,17 @@ body {
     z-index: 10;
 }
 
-.divSubCadastroSair a {
-    float: right;
-    margin-right: 50px;
-    margin-top: 20px;
-    cursor: pointer;
-}
+    .divSubCadastroSair a {
+        float: right;
+        margin-right: 50px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
 
-.divSubCadastroSair img {
-    width: 30px;
-    height: 30px;
-}
+    .divSubCadastroSair img {
+        width: 30px;
+        height: 30px;
+    }
 
 .divSubCadastroLogo {
     height: 12%;
@@ -444,13 +442,13 @@ body {
     /*float:left;*/
 }
 
-.divSubCadastroLogo img {
-    height: 100%;
-    width: 15%;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 20px;
-}
+    .divSubCadastroLogo img {
+        height: 100%;
+        width: 15%;
+        align-items: center;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
 
 .divSubCadastroTitulo {
     height: 16%;
@@ -464,21 +462,21 @@ body {
     justify-content: center;
 }
 
-.divSubCadastroTitulo h1 {
-    font-size: calc(1.2rem + 1vw);
-    font-weight: bold;
+    .divSubCadastroTitulo h1 {
+        font-size: calc(1.2rem + 1vw);
+        font-weight: bold;
+    }
+
+.divEspacoCadastro {
+    height: 5%;
+    float: left;
+    width: 100%;
 }
 
-.divEspacoCadastro{
-    height:5%;
-    float:left;
-    width:100%;
-}
-
-.divCadastroItem{
-    height:16%;
-    width:100%;
-    float:left;
+.divCadastroItem {
+    height: 16%;
+    width: 100%;
+    float: left;
 }
 
 .lblDivCadastro {
@@ -507,10 +505,10 @@ body {
     justify-content: center;
 }
 
-.divNomeCadastro{
-    height:100%;
-    width:35%;
-    float:left;
+.divNomeCadastro {
+    height: 100%;
+    width: 35%;
+    float: left;
 }
 
 .divSobrenomeCadastro {
@@ -749,9 +747,9 @@ body {
     cursor: pointer;
 }
 
-.aEsqueceuSenha:hover{
-    text-decoration:underline !important;
-}
+    .aEsqueceuSenha:hover {
+        text-decoration: underline !important;
+    }
 
 .divBtnSubLogin2 {
     height: 60%;
@@ -769,4 +767,3 @@ body {
     font-size: calc(0.05rem + 1vw);
     border: none;
 }
-

@@ -1,10 +1,10 @@
 ﻿body {
 }
 
-.divCorpoCarrinho{
-    height:auto;
-    width:100%;
-    float:left;
+.divCorpoCarrinho {
+    height: auto;
+    width: 100%;
+    float: left;
 }
 
 .divNomeCarrinho {
@@ -48,18 +48,18 @@
     justify-content: center;
 }
 
-.divCaixaItens{
-    height:auto;
-    width:80%;
-    margin-top:50px;
+.divCaixaItens {
+    height: auto;
+    width: 80%;
+    margin-top: 50px;
     /*margin-bottom:100px;*/
 }
 
-.divNomeCampos{
-    height:70px;
-    width:100%;
-    float:left;
-    border-bottom:1px solid #454545;
+.divNomeCampos {
+    height: 70px;
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #454545;
 }
 
 .divSubCampo1 {
@@ -95,8 +95,8 @@
     justify-content: center;
 }
 
-.h1Campo{
-    font-size:30px;
+.h1Campo {
+    font-size: 30px;
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Old versions of Firefox */
@@ -104,14 +104,14 @@
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
-.h1Campo2{
+.h1Campo2 {
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-    font-size:44px;
-    margin-left:15px;
+    font-size: 44px;
+    margin-left: 15px;
 }
 
 .divItemCarrinho {
@@ -132,9 +132,9 @@
     justify-content: center;
 }
 
-.imgItem{
-    height:250px;
-    width:80%;
+.imgItem {
+    height: 250px;
+    width: 80%;
 }
 
 .divInfoItem {
@@ -148,12 +148,12 @@
     width: 100%;
 }
 
-.divSubInfoItem1::before{
-    height: 100%;
-    content:'';
-    display: inline-block;
-    vertical-align: middle;
-}
+    .divSubInfoItem1::before {
+        height: 100%;
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+    }
 
 .lblNomeItem {
     font-size: 32px;
@@ -174,11 +174,11 @@
     height: 40px;
     width: 20%;
     background-color: #ff4524;
-    border:none;
-    border-radius:5px 5px;
-    box-shadow:1px 1px 1px #454545;
-    font-size:18px;
-    color:#FFF;
+    border: none;
+    border-radius: 5px 5px;
+    box-shadow: 1px 1px 1px #454545;
+    font-size: 18px;
+    color: #FFF;
 }
 
 .btnAlterarItem {
@@ -221,28 +221,28 @@
     justify-content: center;
 }
 
-.lblPrecoItem{
-    font-size:28px;
+.lblPrecoItem {
+    font-size: 28px;
 }
 
 .divTotal {
     height: 70px;
     width: 100%;
     float: left;
-    margin-top:20px;
+    margin-top: 20px;
     display: inline-block;
     vertical-align: middle;
     line-height: 1.5;
 }
 
-.lblItens{
-    float:left;
-    font-size:24px;
+.lblItens {
+    float: left;
+    font-size: 24px;
 }
 
 .lblTotal {
     float: right;
-    font-size: 24px;   
+    font-size: 24px;
 }
 
 .divBtnAvancar {
@@ -324,7 +324,7 @@
     .divTextoBtnCarrinho3 img {
         height: 90%;
         float: left;
-        transform:rotate(180deg);
+        transform: rotate(180deg);
     }
 
 .divCaixaItens2 {

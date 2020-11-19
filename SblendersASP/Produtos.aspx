@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mestre.Master" AutoEventWireup="true" CodeBehind="Produtos.aspx.cs" Inherits="TCC.Produtos" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" type="text/css" href="CSS/Produtos.css" />    
+    <link rel="stylesheet" type="text/css" href="CSS/Produtos.css" />
     <script src="JS/Funcoes.js" type="text/javascript"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -10,7 +11,7 @@
             var i;
             for (i = 0; i < s.length; i++) {
                 s[i].onclick = exibirInfoNutri;
-            }             
+            }
         }
     </script>
 
@@ -42,58 +43,56 @@
             if (visibilidadeNutri == "false") {
                 element.style.display = "flex";
                 visibilidadeNutri = true;
-            }            
+            }
             event.preventDefault();
         }
     </script>
     <div class="divCorpoProdutos">
 
-        <div class="divNomePagina">
-                <div class="divTituloPagina">
-                    <h1> Monte seu Pedido </h1>
-                </div>
+        <div class="divTituloPagina">
+            <h1>Monte seu Pedido </h1>
         </div>
 
         <div class="divAdicionarLanches">
             <div class="divCustomizarLanches">
-                <div class="divBurguer" id="divBurguer1" >
+                <div class="divBurguer" id="divBurguer1">
                     <a href="Ingredientes.aspx">
                         <div class="divTxtBurguer">
-                            <h1> Monte seu Sblurger </h1>
+                            <h1>Monte seu Sblurger </h1>
                         </div>
                         <div class="divImgBurguer">
-                            <img src="Imagens/burguer2.png" class="imgDivImgBurger"/>
+                            <img src="Imagens/burguer2.png" class="imgDivImgBurger" />
                         </div>
                     </a>
                 </div>
                 <div class="divBurguer2">
                     <a href="" class="aBurg">
                         <div class="divTxtBurguer2">
-                            <h1> Personalize sua Batata Frita</h1>
+                            <h1>Personalize sua Batata Frita</h1>
                         </div>
                         <div class="divImgBurguer2">
-                            <img src="Imagens/batataFrita.png" class="imgDivImgBurger"/>
+                            <img src="Imagens/batataFrita.png" class="imgDivImgBurger" />
                         </div>
                     </a>
                 </div>
                 <div class="divBurguer3">
                     <a href="" class="aBurg">
                         <div class="divTxtBurguer2">
-                            <h1> Personalize seu Hot Dog </h1>
+                            <h1>Personalize seu Hot Dog </h1>
                         </div>
                         <div class="divImgBurguer2">
-                            <img src="Imagens/hotDog.png" class="imgDivImgBurger"/>
+                            <img src="Imagens/hotDog.png" class="imgDivImgBurger" />
                         </div>
                     </a>
                 </div>
-                <div class="divBurguer" id="divBurguer2" >
+                <div class="divBurguer" id="divBurguer2">
                     <a href="">
                         <div class="divTxtBurguer">
-                        <h1> Personalize seu Churros </h1>
-                    </div>
-                    <div class="divImgBurguer">
-                        <img src="Imagens/churros.png" class="imgDivImgBurger"/>
-                    </div>
+                            <h1>Personalize seu Churros </h1>
+                        </div>
+                        <div class="divImgBurguer">
+                            <img src="Imagens/churros.png" class="imgDivImgBurger" />
+                        </div>
                     </a>
                 </div>
             </div>
@@ -108,8 +107,8 @@
 
             <div class="divBebidas">
                 <div class="divSubBebidas">
-                    <p> <b> Acompanhamentos </b></p>
-                </div>                
+                    <p><b>Acompanhamentos </b></p>
+                </div>
             </div>
 
             <div class="divSubProdutosCustomizaveis" id="divAcompanhamento">
@@ -137,18 +136,17 @@
                 <div class="divSubBotaoExpandir">
                     <button class="btnExpandir" onclick="expandirAcompanhamentos()" id="btnExpandirAcompanhamento"></button>
                 </div>
-                
+
             </div>
 
             <div class="divBebidas">
                 <div class="divSubBebidas">
-                    <p> <b> Bebidas </b></p>
-                </div>                
+                    <p><b>Bebidas </b></p>
+                </div>
             </div>
 
             <div class="divSubProdutosCustomizaveis" id="divBebida">
                 <div class="divProdCustom" id="divProds2" runat="server">
-                    
                 </div>
             </div>
 
@@ -156,18 +154,17 @@
                 <div class="divSubBotaoExpandir">
                     <button class="btnExpandir" onclick="expandirBebidas()" id="btnExpandirBebida"></button>
                 </div>
-                
+
             </div>
 
             <div class="divBebidas">
                 <div class="divSubBebidas">
-                    <p> <b> Sobremesas </b></p>
-                </div>                
+                    <p><b>Sobremesas </b></p>
+                </div>
             </div>
 
             <div class="divSubProdutosCustomizaveis" id="divSobremesa">
                 <div class="divProdCustom" id="divProds3" runat="server">
-                    
                 </div>
             </div>
 
@@ -175,18 +172,17 @@
                 <div class="divSubBotaoExpandir">
                     <button class="btnExpandir" onclick="expandirSobremesas()" id="btnExpandirSobremesa"></button>
                 </div>
-                
+
             </div>
 
             <div class="divBebidas">
                 <div class="divSubBebidas">
-                    <p> <b> Molhos </b></p>
-                </div>                
+                    <p><b>Molhos </b></p>
+                </div>
             </div>
 
             <div class="divSubProdutosCustomizaveis" id="divMolho">
                 <div class="divProdCustom" id="divProds4" runat="server">
-                    
                 </div>
             </div>
 
@@ -194,7 +190,7 @@
                 <div class="divSubBotaoExpandir">
                     <button class="btnExpandir" onclick="expandirMolhos()" id="btnExpandirMolho"></button>
                 </div>
-                
+
             </div>
 
         </div>
@@ -204,7 +200,7 @@
                 <div class="divTextoBtnCarrinho">
                     <p>Ir Para o Carrinho</p>
                     <img src="Imagens/seta2.png" />
-                </div>                
+                </div>
             </button>
         </div>
     </div>
@@ -218,7 +214,6 @@
                 </a>
             </div>
             <div class="divDescricaoProdutoCorpo" id="divDescricaoProdutoCorpo1">
-
             </div>
         </div>
     </div>
@@ -231,16 +226,16 @@
                 </a>
             </div>
             <div class="divAdicaoProdutoCorpo">
-                <img src="Imagens/check.png" class="check"/>
-                <p class="corpo"> O Item foi adicionado ao carrinho com sucesso! </p>
+                <img src="Imagens/check.png" class="check" />
+                <p class="corpo">O Item foi adicionado ao carrinho com sucesso! </p>
                 <div class="buttons">
-                <button class="btnAvancar" id="btnAvancar" runat="server" onserverclick="btnIrCarrinho_ServerClick">
-                    <div class="divTextoBtnAvancar">
-                        <p>Ir para o carrinho</p>
-                        <img src="Imagens/seta2.png" />
-                    </div>                
-                </button>
-            </div>
+                    <button class="btnAvancar" id="btnAvancar" runat="server" onserverclick="btnIrCarrinho_ServerClick">
+                        <div class="divTextoBtnAvancar">
+                            <p>Ir para o carrinho</p>
+                            <img src="Imagens/seta2.png" />
+                        </div>
+                    </button>
+                </div>
             </div>
         </div>
     </div>

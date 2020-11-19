@@ -1,7 +1,7 @@
 ﻿
 body {
-    background-image: url(Imagens/background.png);
-    background-size: cover;  
+    background-image: url(../Imagens/background.png);
+    background-size: cover;
 }
 
 /*
@@ -47,7 +47,7 @@ h1 {
     height: 900px;
     width: 100%;
     margin-top: 80px;
-    margin-bottom:60px;
+    margin-bottom: 60px;
     float: left;
     display: flex;
     flex-direction: row;
@@ -56,9 +56,9 @@ h1 {
     /*background-color:#245676;*/
 }
 
-.divCustomizarLanches{
-    height:1000px;
-    width:75%;
+.divCustomizarLanches {
+    height: 1000px;
+    width: 75%;
 }
 
 .divBurguer {
@@ -72,12 +72,12 @@ h1 {
     box-shadow: 7px 7px 7px #878787;
 }
 
-.divBurguer a{
-    text-decoration:none;
-    width:100%;
-    height:100%;
-    float:left;
-}
+    .divBurguer a {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        float: left;
+    }
 
 .divTxtBurguer {
     height: inherit;
@@ -90,12 +90,12 @@ h1 {
     align-items: center;
 }
 
-.divTxtBurguer h1{
-    text-transform:uppercase;
-    font-size:56px;
-    text-shadow:2px 2px 2px #454545;
-    color:#FEFEFE;
-}
+    .divTxtBurguer h1 {
+        text-transform: uppercase;
+        font-size: 56px;
+        text-shadow: 2px 2px 2px #454545;
+        color: #FEFEFE;
+    }
 
 .divImgBurguer {
     height: inherit;
@@ -105,7 +105,7 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 }
 
 .imgDivImgBurger {
@@ -133,7 +133,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    text-align:center;
+    text-align: center;
 }
 
     .divTxtBurguer2 h1 {
@@ -173,12 +173,12 @@ h1 {
     box-shadow: 4px 4px 4px #878787;
 }
 
-.divBurguer3 a {
-    text-decoration: none;
-    width: 100%;
-    height: 100%;
-    float: left;
-}
+    .divBurguer3 a {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        float: left;
+    }
 
 #divBurguer2 {
     background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
@@ -209,10 +209,10 @@ h1 {
     justify-content: center;
 }
 
-.divTituloComplemento h1{
-    color:#FFF;
-    font-size:48px;
-}
+    .divTituloComplemento h1 {
+        color: #FFF;
+        font-size: 48px;
+    }
 
 .divBebidas {
     height: 300px;
@@ -235,11 +235,11 @@ h1 {
     justify-content: center;
 }
 
-.divSubBebidas b{
-    font-size:72px;
-    text-transform:uppercase full-width;
-    text-shadow:2px 2px 2px #e33d00;
-}
+    .divSubBebidas b {
+        font-size: 72px;
+        text-transform: uppercase full-width;
+        text-shadow: 2px 2px 2px #e33d00;
+    }
 
 .divSubProdutosCustomizaveis {
     height: 700px;
@@ -250,8 +250,7 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .divProdCustom {
@@ -273,10 +272,10 @@ h1 {
     filter: drop-shadow(12px 12px 12px #656565);
 }
 
-.divProduto a{
-    text-decoration:none;
-    color:black;
-}
+    .divProduto a {
+        text-decoration: none;
+        color: black;
+    }
 
 .divSubProduto1 {
     height: 300px;
@@ -287,7 +286,6 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    
 }
 
 .imgSubProduto {
@@ -304,17 +302,17 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    text-align:center;
+    text-align: center;
 }
 
-.lblDescricaoProduto{
-    width:100%;
-    height:80px;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    font-size:24px;
-    margin-left:15px;
-    margin-right:15px;
+.lblDescricaoProduto {
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 24px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .lblValorProduto {
@@ -322,7 +320,7 @@ h1 {
     font-size: 40px;
     margin-left: 15px;
     margin-right: 15px;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .divSubProduto3 {
@@ -405,7 +403,7 @@ h1 {
     border: 0px;
     color: #DEDEDE;
     box-shadow: 6px 6px 6px #656565;
-    padding-left:20px;
+    padding-left: 20px;
 }
 
 .divTextoBtnCarrinho {
@@ -415,40 +413,40 @@ h1 {
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content:center;
+    justify-content: center;
 }
 
-    .divTextoBtnCarrinho p{
-        margin-bottom:0;
+    .divTextoBtnCarrinho p {
+        margin-bottom: 0;
     }
 
 
     .divTextoBtnCarrinho img {
-        height:90%;
-        float:left;
-    }
-    /*Popup Css*/
-    .sectionProd {
-        height: 100vh;
-        width: 100%;
+        height: 90%;
         float: left;
-        background-color: transparent;
-        z-index: 999;
-        position: fixed;
-        align-items: initial;
-        display: none;
-        display: none;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
     }
+/*Popup Css*/
+.sectionProd {
+    height: 100vh;
+    width: 100%;
+    float: left;
+    background-color: transparent;
+    z-index: 999;
+    position: fixed;
+    align-items: initial;
+    display: none;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-.divDescricaoProduto{
-    height:50vh;
-    width:30%;
-    background-color:#e8e7e7;
-    margin-top:5vh;
-    border-radius:15px;
+.divDescricaoProduto {
+    height: 50vh;
+    width: 30%;
+    background-color: #e8e7e7;
+    margin-top: 5vh;
+    border-radius: 15px;
 }
 
 .divDescricaoProdutoTitulo {
@@ -467,7 +465,7 @@ h1 {
 .h1InfoNutri {
     color: #FFF;
     font-size: 32px;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .divDescricaoProdutoTitulo a {
@@ -477,13 +475,13 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left:60px;
-    cursor:pointer;
+    margin-left: 60px;
+    cursor: pointer;
 }
 
-.imgIconX{
-    height:80%;
-    float:right;
+.imgIconX {
+    height: 80%;
+    float: right;
 }
 
 .divDescricaoProdutoCorpo {
@@ -491,11 +489,11 @@ h1 {
     width: 100%;
 }
 
-.lblDescNutri{
-    font-size:20px;
-    float:left;
-    margin:15px;
-    display:inline-block;
+.lblDescNutri {
+    font-size: 20px;
+    float: left;
+    margin: 15px;
+    display: inline-block;
 }
 
 .lblDescValor {

@@ -1,17 +1,17 @@
 ﻿body {
 }
 
-.divCorpoEntrega{
-    height:auto;
-    width:100%;
-    float:left;
+.divCorpoEntrega {
+    height: auto;
+    width: 100%;
+    float: left;
 }
 
 .divNomeEntrega {
     height: 90px;
     width: 100%;
     float: left;
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
 
 .divTituloEntrega {
@@ -39,13 +39,13 @@
     float: left;
     display: flex;
     align-items: center;
-    flex-wrap:wrap;
-    flex-direction:row;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .divSubEndereco {
     height: 250px;
-    width: 90%;   
+    width: 90%;
 }
 
 .divLblEntrega {
@@ -72,7 +72,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 .txtEnderecoMaps {
@@ -118,21 +118,22 @@
     font-size: 18px;
     color: #FFF;
 }
-.hidden, .false, .true{
-    display:none;
+
+.hidden, .false, .true {
+    display: none;
 }
 
-.lblCustoFrete{
-    width:100%;
-    margin-top:15px;
-    float:left;
-    font-size:24px;
+.lblCustoFrete {
+    width: 100%;
+    margin-top: 15px;
+    float: left;
+    font-size: 24px;
 }
 
-.divInstrucoes{
-    height:250px;
-    width:90%;
-    float:left;
+.divInstrucoes {
+    height: 250px;
+    width: 90%;
+    float: left;
 }
 
 .divSubInstrucoes1 {
@@ -161,11 +162,11 @@
     align-items: center;
 }
 
-.txtInstrucoes{
-    height:140px;
-    width:80%;
-    padding:5px;
-    overflow:hidden;
+.txtInstrucoes {
+    height: 140px;
+    width: 80%;
+    padding: 5px;
+    overflow: hidden;
 }
 
 .divMapsEntrega {
@@ -176,20 +177,20 @@
     align-items: center;
 }
 
-.divMapsE{
-    height:650px;
-    width:90%;
+.divMapsE {
+    height: 650px;
+    width: 90%;
 }
 
-.divBtnFinalizar{
-    height:300px;
-    width:100%;
-    float:left;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-wrap:wrap;
-    flex-direction:row;
+.divBtnFinalizar {
+    height: 300px;
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .btnFinalizarPedido {

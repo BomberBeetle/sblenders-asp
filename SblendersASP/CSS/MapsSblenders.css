@@ -1,28 +1,27 @@
 ﻿body {
 }
 
-.divCorpoMaps{
-    height:800px;
+.divCorpoMaps {
+    height: 800px;
     /*background-color:#FFF;*/
-    background-image:url("ImagensCSS/whiteTexture2.jpg");
-    background-repeat:round;
-    padding-top:20px;
+    background-image: url("ImagensCSS/whiteTexture2.jpg");
+    background-repeat: round;
+    padding-top: 20px;
 }
 
-.divTitMapa{
-    height:800px;
-    float:left;
-    
+.divTitMapa {
+    height: 800px;
+    float: left;
 }
 
-.divTitMapaChild{
-    height:790px;
-    width:90%;
-    border-radius:20px 20px 0px 0px;
+.divTitMapaChild {
+    height: 790px;
+    width: 90%;
+    border-radius: 20px 20px 0px 0px;
     /*background-color:rgb(255,183,0);*/
-    background-image:url("ImagensCSS/yellowTexture2.jpg");
-    background-repeat:round;
-    float:left;
+    background-image: url("ImagensCSS/yellowTexture2.jpg");
+    background-repeat: round;
+    float: left;
     /*overflow-y:auto;
     overflow-x:hidden;*/
 }
@@ -39,35 +38,33 @@
     text-align: center;
 }
 
-.divSubTitMapChild1 h1 {
-    
-    font-size:42px;
-    font-weight:bold;
+    .divSubTitMapChild1 h1 {
+        font-size: 42px;
+        font-weight: bold;
+    }
+
+.divSubTitMapChild2 {
+    height: 80px;
+    width: 100%;
+    float: left;
+    align-items: center;
+    display: flex;
 }
 
-.divSubTitMapChild2{
-    height:80px;
-    width:100%;
-    float:left;
-    align-items:center;
-    display:flex;
+.txtPesquisarMapa {
+    margin-left: 5%;
+    height: 35px;
+    width: 75%;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-.txtPesquisarMapa{
-    margin-left:5%;
-    height:35px;
-    width:75%;
-    padding-left:5px;
-    padding-right:5px;
-
-}
-
-.btnPesquisarMapa{
-    height:37px;
-    width:8%;
-    background-image:url("ImagensCSS/lupa.png");
-    background-size:37px;
-    background-repeat:no-repeat;
+.btnPesquisarMapa {
+    height: 37px;
+    width: 8%;
+    background-image: url("ImagensCSS/lupa.png");
+    background-size: 37px;
+    background-repeat: no-repeat;
 }
 
 .divSubTitMapChild3 {
@@ -89,7 +86,7 @@
     margin-top: 30px;
     white-space: pre-line;
     cursor: pointer;
-    color:rgb(33, 37, 41) ;
+    color: rgb(33, 37, 41);
 }
 
 .divSubTitMapChild3::-webkit-scrollbar {
@@ -117,11 +114,9 @@
 }
 
 .divTitMapaChild::-webkit-scrollbar-corner {
-
 }
 
-.divTitMapaChild::-webkit-resizer { 
-
+.divTitMapaChild::-webkit-resizer {
 }
 /* personalizar a barra em geral, aqui estou definindo 10px de largura para a barra vertical
 e 10px de altura para a barra horizontal 
@@ -142,10 +137,10 @@ estou colocando uma cor azul clara nela
 
 
 
-.divMapsSblenders{
-    height:790px;
-    float:left;
-    border-radius:20px 20px;
+.divMapsSblenders {
+    height: 790px;
+    float: left;
+    border-radius: 20px 20px;
 }
 
 #divInfobox1 {

@@ -6,11 +6,9 @@
 <head runat="server">
     <title></title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="CSS/Master2.css" />
     <link rel="stylesheet" type="text/css" href="CSS/Index2.css" />
-    <link rel="stylesheet" type="text/css" href="CSS/MapsSblenders.css" />
     <link rel="manifest" href="manifest.json">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -19,44 +17,43 @@
     <script src="JS/Funcoes.js" type="text/javascript"></script>
     <script src="JS/conexaoApi.js" type="text/javascript"></script>
 </head>
-<body  onload="repetidor()"> <!--onpagehide/onmouseover="indexDinamico()"-->
-    <form id="form1" runat="server">  
-        
-    <div id="divCorpoIndex"> 
-        <nav class="container-fluid" id="divCabecalho">
-            <div class="col-2 CabEsq">
-                <a href="Index2.aspx" >
-                    <img src="Imagens/novoSblenders.png" class="imgLogo" />
-                </a>
-            </div>
-            <div class="col-6 CabEsq">
-                <a class="aProjSblenders" href="Quem_somos.aspx" id="quemSomos">Quem Somos</a>
-                <a class="aProjSblenders" href="Contact.aspx" id="faleConosco">Fale Conosco</a>
-                <a class="aProjSblenders" href="V" id="maisInformacoes">Mais Informações</a>
-                <a class="aProjSblenders" href="Produtos.aspx">Faça seu pedido</a>
-            </div>
-            <div class="col-4 CabEsq" id="divDesconectado" runat="server">
-                <a class="aCad" onclick="Login()" id="textoLogin">Login</a>
-                <a class="aCad" onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
-            </div>
-            <div class="col-4 CabEsq" id="divConectado" runat="server">
-                <div class="divUsuario">
-                    <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
-                    <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="linkSair_Click">Sair</asp:LinkButton>
-                    <!--<asp:Label ID="vvv" runat="server" Text="Sair" CssClass="lblSair" OnServerClick="lblSair_Click"></asp:Label>-->
-                </div>
-                <div class="divFotoUsuario">
-                    <a href="AreaCliente.aspx" class="aFotoUsuario">
-                        <img src="Imagens/usuario.png" class="imgUsuario" />
+<body onload="repetidor()">
+    <!--onpagehide/onmouseover="indexDinamico()"-->
+    <form id="form1" runat="server">
+
+        <div id="divCorpoIndex">
+            <nav class="container-fluid" id="divCabecalho">
+                <div class="col-2 CabEsq">
+                    <a href="Index2.aspx">
+                        <img src="Imagens/novoSblenders.png" class="imgLogo" />
                     </a>
-                    
                 </div>
-            </div>
-        </nav>
+                <div class="col-6 CabEsq">
+                    <a class="aProjSblenders" href="Quem_somos.aspx" id="quemSomos">Quem Somos</a>
+                    <a class="aProjSblenders" href="Contact.aspx" id="faleConosco">Fale Conosco</a>
+                    <a class="aProjSblenders" href="Produtos.aspx">Faça seu pedido</a>
+                </div>
+                <div class="col-4 CabEsq" id="divDesconectado" runat="server">
+                    <a class="aCad" onclick="Login()" id="textoLogin">Login</a>
+                    <a class="aCad" onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
+                </div>
+                <div class="col-4 CabEsq" id="divConectado" runat="server">
+                    <div class="divUsuario">
+                        <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
+                        <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="linkSair_Click">Sair</asp:LinkButton>
+                        <!--<asp:Label ID="vvv" runat="server" Text="Sair" CssClass="lblSair" OnServerClick="lblSair_Click"></asp:Label>-->
+                    </div>
+                    <div class="divFotoUsuario">
+                        <a href="AreaCliente.aspx" class="aFotoUsuario">
+                            <img src="Imagens/usuario.png" class="imgUsuario" />
+                        </a>
 
-        <section class="container-fluid" id="divCad" runat="server">
+                    </div>
+                </div>
+            </nav>
+
+            <section class="container-fluid" id="divCad" runat="server">
                 <div class="col-3 divFG">
-
                 </div>
                 <div class="col-6 divFacaLogin">
                     <div class="divCadastro">
@@ -75,7 +72,6 @@
                         </div>
 
                         <div class="divEspacoCadastro">
-
                         </div>
 
                         <div class="divCadastroItem2">
@@ -91,7 +87,7 @@
                                         <asp:Label ID="lblNomeAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
                                     </div>
                                 </div>
-                                
+
                                 <div class="divSobrenomeCadastro">
                                     <div class="divSubLoginEmail1">
                                         <asp:Label ID="lblSobrenomeCadastro" runat="server" Text="Sobrenome" CssClass="lblDivCadastro2"></asp:Label>
@@ -104,7 +100,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="divCadastroItem">
                             <div class="divSubLoginEmail1">
@@ -142,19 +138,17 @@
                         </div>
 
                         <div class="divCadastroBtn">
-                            <asp:Button ID="btnCadastro" runat="server" Text="Entrar" CssClass="btnDivCadastro" OnClientClick="verificarCamposCadastro()" OnClick="btnCadastro_Click"/>                            
+                            <asp:Button ID="btnCadastro" runat="server" Text="Entrar" CssClass="btnDivCadastro" OnClientClick="verificarCamposCadastro()" OnClick="btnCadastro_Click" />
                         </div>
                     </div>
 
                 </div>
                 <div class="col-3 divFG">
-
                 </div>
-            </section>      
+            </section>
 
-        <section class="container-fluid" id="divLog" runat="server">
+            <section class="container-fluid" id="divLog" runat="server">
                 <div class="col-3 divFG">
-
                 </div>
                 <div class="col-6 divFacaLogin">
                     <div class="divLogin">
@@ -173,7 +167,6 @@
                         </div>
 
                         <div class="divEspacoLogin">
-
                         </div>
 
                         <div class="divLoginEmail">
@@ -205,92 +198,88 @@
                                 <a onclick="esqueceuSenha()" class="aEsqueceuSenha">Esqueceu sua Senha?</a>
                             </div>
                             <div class="divBtnSubLogin2">
-                                <asp:Button ID="btnLogin" runat="server" Text="Entrar" CssClass="btnLogin" OnClick="btnLogin_Click"/>
+                                <asp:Button ID="btnLogin" runat="server" Text="Entrar" CssClass="btnLogin" OnClick="btnLogin_Click" />
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="col-3 divFG">
-
                 </div>
-            </section> 
-        
-        <section class="container-fluid" id="divEsqSenha" runat="server">
-            <div class="col-3 divFG">
+            </section>
 
-            </div>
-
-            <div class="col-6 divFG">
-                <div class="divEsqueceuSenha">
-                    <div class="divSubEsqSenhaSair">
-                         <a class="aDivSubEsqSenhaSair" onclick="esqueceuSenha()">
-                             <img src="Imagens/iconX.png" class="imgDivSubEsqSenhaSair" />
-                         </a>
-                     </div>
-
-                     <div class="divSubEsqSenhaLogo">
-                         <img src="Imagens/novoSblenders.png" class="imgDivSubEsqSenhaLogo" />
-                     </div>
-
-                     <div class="divSubEsqSenhaTitulo">
-                         <h1 class="h1EsqSenhaTitulo">Esqueceu a Senha?</h1>
-                     </div>
-
-                     <div class="divEspacoLogin">
-
-                     </div>
-
-                    <div class="divEsqSenhaEmail">
-                         <div class="divSubLoginEmail1">
-                             <asp:Label ID="Label1" runat="server" Text="Email" CssClass="lblEsqS"></asp:Label>
-                         </div>
-                         <div class="divSubLoginEmail2">
-                             <asp:TextBox ID="TextBox1" runat="server" CssClass="txtEsqS" TextMode="Password"></asp:TextBox>
-                         </div>
-                         <div class="divSubLoginEmail3">
-                             <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEsqS"></asp:Label>
-                         </div>
-                     </div>
-                     <div class="divEsqSenhaEntrar">
-                         <div class="divBtnEspacoVazio"></div>
-                         <div class="divBtnSubLogin1">
-                             <a onclick="Login()" class="aEsqueceuSenha">Voltar ao Login</a>
-                         </div>
-                         <div class="divBtnSubLogin2">
-                             <asp:Button ID="btnRecuperarSenha" runat="server" Text="Entrar" CssClass="btnLogin" OnClick="btnRecuperarSenha_Click"/>
-                         </div>
-                     </div>
+            <section class="container-fluid" id="divEsqSenha" runat="server">
+                <div class="col-3 divFG">
                 </div>
-            </div>
 
-            <div class="col-3 divFG">
+                <div class="col-6 divFG">
+                    <div class="divEsqueceuSenha">
+                        <div class="divSubEsqSenhaSair">
+                            <a class="aDivSubEsqSenhaSair" onclick="esqueceuSenha()">
+                                <img src="Imagens/iconX.png" class="imgDivSubEsqSenhaSair" />
+                            </a>
+                        </div>
 
-            </div>
-        </section>
+                        <div class="divSubEsqSenhaLogo">
+                            <img src="Imagens/novoSblenders.png" class="imgDivSubEsqSenhaLogo" />
+                        </div>
 
-        <nav id="carouselBanner" class="carousel slide carousel-fade" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" id="itemCarro1" >
-              <img class="d-block w-100 imgCarrouselBanner" src="Imagens/carroBurguer.jpeg" alt="Primeiro Slide"/>
-            </div>
-            <div class="carousel-item" id="itemCarro2">
-              <img class="d-block w-100 imgCarrouselBanner" src="Imagens/bannerBurger.jpg" alt="Segundo Slide"/>
-            </div>
-            <div class="carousel-item" id="itemCarro3">
-              <img class="d-block w-100 imgCarrouselBanner" src="Imagens/carroBurguer2.jpeg" alt="Terceiro Slide"/>
-            </div>
-          </div>
-          <a class="carousel-control-prev aNeg" href="#carouselBanner" role="button" data-slide="prev" >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-          </a>
-          <a class="carousel-control-next aNeg" href="#carouselBanner" role="button" data-slide="next">
-            <b><span class="carousel-control-next-icon" aria-hidden="true"></span></b>
-            <span class="sr-only">Próximo</span>
-          </a>
-        </nav>
-    </div>
+                        <div class="divSubEsqSenhaTitulo">
+                            <h1 class="h1EsqSenhaTitulo">Esqueceu a Senha?</h1>
+                        </div>
+
+                        <div class="divEspacoLogin">
+                        </div>
+
+                        <div class="divEsqSenhaEmail">
+                            <div class="divSubLoginEmail1">
+                                <asp:Label ID="Label1" runat="server" Text="Email" CssClass="lblEsqS"></asp:Label>
+                            </div>
+                            <div class="divSubLoginEmail2">
+                                <asp:TextBox ID="TextBox1" runat="server" CssClass="txtEsqS" TextMode="Password"></asp:TextBox>
+                            </div>
+                            <div class="divSubLoginEmail3">
+                                <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEsqS"></asp:Label>
+                            </div>
+                        </div>
+                        <div class="divEsqSenhaEntrar">
+                            <div class="divBtnEspacoVazio"></div>
+                            <div class="divBtnSubLogin1">
+                                <a onclick="Login()" class="aEsqueceuSenha">Voltar ao Login</a>
+                            </div>
+                            <div class="divBtnSubLogin2">
+                                <asp:Button ID="btnRecuperarSenha" runat="server" Text="Entrar" CssClass="btnLogin" OnClick="btnRecuperarSenha_Click" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 divFG">
+                </div>
+            </section>
+
+            <nav id="carouselBanner" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" id="itemCarro1">
+                        <img class="d-block w-100 imgCarrouselBanner" src="Imagens/carroBurguer.jpeg" alt="Primeiro Slide" />
+                    </div>
+                    <div class="carousel-item" id="itemCarro2">
+                        <img class="d-block w-100 imgCarrouselBanner" src="Imagens/bannerBurger.jpg" alt="Segundo Slide" />
+                    </div>
+                    <div class="carousel-item" id="itemCarro3">
+                        <img class="d-block w-100 imgCarrouselBanner" src="Imagens/carroBurguer2.jpeg" alt="Terceiro Slide" />
+                    </div>
+                </div>
+                <a class="carousel-control-prev aNeg" href="#carouselBanner" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next aNeg" href="#carouselBanner" role="button" data-slide="next">
+                    <b><span class="carousel-control-next-icon" aria-hidden="true"></span></b>
+                    <span class="sr-only">Próximo</span>
+                </a>
+            </nav>
+        </div>
     </form>
 </body>
 </html>

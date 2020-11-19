@@ -17,9 +17,9 @@ namespace TCC
         static int pedidoID;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["userID"] != null)
+            if (Session["userID"] != null)
             {
-                string URL = $"https://localhost:44323/api/Agente/"+Session["userID"];
+                string URL = $"https://localhost:44323/api/Agente/" + Session["userID"];
                 string urlParameters = "";
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(URL);
@@ -39,7 +39,7 @@ namespace TCC
                     TextBox1.Text = (string)resultado["client_name"];
                     TextBox2.Text = (string)resultado["client_surname"];
 
-                    string URL2 = $"https://localhost:44323/api/Pedidos/"+Session["userID"];
+                    string URL2 = $"https://localhost:44323/api/Pedidos/" + Session["userID"];
                     HttpClient client2 = new HttpClient();
                     client2.BaseAddress = new Uri(URL2);
 
@@ -52,14 +52,14 @@ namespace TCC
                     JavaScriptSerializer serializer2 = new System.Web.Script.Serialization.JavaScriptSerializer();
                     HttpResponseMessage response2 = client2.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
                     String resultado2 = response2.Content.ReadAsStringAsync().Result;
-                    Dictionary<string, string>[] result = serializer2.Deserialize<Dictionary<string, string>[]>(resultado2);                    
+                    Dictionary<string, string>[] result = serializer2.Deserialize<Dictionary<string, string>[]>(resultado2);
 
                     if (response2.IsSuccessStatusCode)
                     {
-                        int tam = result.Length-1;
-                        while(tam >= 0)
+                        int tam = result.Length - 1;
+                        while (tam >= 0)
                         {
-                            string URL3 = $"https://localhost:44323/api/Pedidos/" + Session["userID"] + "/"+ result[tam]["pedidoID"];
+                            string URL3 = $"https://localhost:44323/api/Pedidos/" + Session["userID"] + "/" + result[tam]["pedidoID"];
                             HttpClient client3 = new HttpClient();
                             client3.BaseAddress = new Uri(URL3);
 
@@ -76,7 +76,7 @@ namespace TCC
                             {
                                 Button btnA = new Button();
                                 btnA.ID = "btnEstado" + result[tam]["pedidoID"];
-                                btnA.Text = resultado3.estadoID.ToString();                                
+                                btnA.Text = resultado3.estadoID.ToString();
                                 divBodyAreaCliente.Controls.Add(btnA);
                                 btnA.Click += new EventHandler(alterarEstadoPedido);
                             }
@@ -87,8 +87,8 @@ namespace TCC
                             tam--;
                         }
 
-                        if(tam!=-1)Label1.Text = result[0]["pedidoID"].ToString();
-                        
+                        if (tam != -1) Label1.Text = result[0]["pedidoID"].ToString();
+
                     }
                     else
                     {
@@ -104,12 +104,12 @@ namespace TCC
             {
                 Response.Redirect("Index2.aspx");
             }
-            
+
         }
 
         protected void alterarDados(object sender, EventArgs e)
         {
-            if(Session["userID"] != null)
+            if (Session["userID"] != null)
             {
                 string URL = $"https://localhost:44323/api/ClienteOnline/" + Session["userID"];
                 string urlParameters = "";
@@ -138,12 +138,12 @@ namespace TCC
             {
                 Response.Redirect("Index2.aspx");
             }
-            
+
         }
 
         protected void alterarEstadoPedido(object sender, EventArgs e)
         {
-            if(Session["userID"] != null)
+            if (Session["userID"] != null)
             {
                 Button iButton = (Button)sender;
                 String textId = iButton.ID;
@@ -178,13 +178,13 @@ namespace TCC
             else
             {
                 Response.Redirect("Index2.aspx");
-            }           
-            
+            }
+
         }
 
         protected void alterarSenha(object sender, EventArgs e)
         {
-            if(Session["userID"] != null)
+            if (Session["userID"] != null)
             {
                 string URL = $"https://localhost:44323/api/ClienteOnline/" + Session["userID"];
                 string urlParameters = "";
@@ -214,12 +214,12 @@ namespace TCC
             {
                 Response.Redirect("Index2.aspx");
             }
-           
+
         }
 
         protected void Timer1_Tick(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

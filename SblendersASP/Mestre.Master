@@ -6,12 +6,9 @@
 <head runat="server">
     <title></title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="CSS/Master.css" />
-    <link rel="stylesheet" type="text/css" href="CSS/Index2.css" />
-    <link rel="stylesheet" type="text/css" href="CSS/MapsSblenders.css" />
-    <link rel="stylesheet" type="text/css" href="CSS/Produtos.css" />
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -78,37 +75,36 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div id="oDiv">
-        <section class="container-fluid" id="divCabecalho">
-            <div class="col-2 CabEsq">
-                <a href="Index2.aspx" >
-                    <img src="Imagens/novoSblenders.png" class="imgLogo" />
-                </a>
-            </div>
-            <div class="col-6 CabEsq">
-                <a class="aProjSblenders" href="Quem_somos.aspx" id="quemSomos">Quem Somos</a>
-                <a class="aProjSblenders" href="Contact.aspx" id="faleConosco">Fale Conosco</a>
-                <a class="aProjSblenders" href="V" id="maisInformacoes">Mais Informações</a>
-                <a class="aProjSblenders" href="Produtos.aspx">Faça seu pedido</a>
-            </div>
-            <div class="col-4 CabEsq" id="divDesconectado" runat="server">
-                <a class="aCad" onclick="Login()" id="textoLogin">Login</a>
-                <a class="aCad" onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
-            </div>
-            <div class="col-4 CabEsq" id="divConectado" runat="server">
-                <div class="divUsuario">
-                    <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
-                    <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="Sair">Sair</asp:LinkButton>
-                    <!--<asp:Label ID="vvv" runat="server" Text="Sair" CssClass="lblSair" OnServerClick="lblSair_Click"></asp:Label>-->
-                </div>
-                <div class="divFotoUsuario">
-                    <a href="AreaCliente.aspx" class="aFotoUsuario">
-                        <img src="Imagens/usuario.png" class="imgUsuario" />
+        <div id="oDiv">
+            <section class="container-fluid" id="divCabecalho">
+                <div class="col-2 CabEsq">
+                    <a href="Index2.aspx">
+                        <img src="Imagens/novoSblenders.png" class="imgLogo" />
                     </a>
-                    
                 </div>
-            </div>
-            <!--<div class="col-2 CabEsq">
+                <div class="col-6 CabEsq">
+                    <a class="aProjSblenders" href="Quem_somos.aspx" id="quemSomos">Quem Somos</a>
+                    <a class="aProjSblenders" href="Contact.aspx" id="faleConosco">Fale Conosco</a>
+                    <a class="aProjSblenders" href="Produtos.aspx">Faça seu pedido</a>
+                </div>
+                <div class="col-4 CabEsq" id="divDesconectado" runat="server">
+                    <a class="aCad" onclick="Login()" id="textoLogin">Login</a>
+                    <a class="aCad" onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
+                </div>
+                <div class="col-4 CabEsq" id="divConectado" runat="server">
+                    <div class="divUsuario">
+                        <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
+                        <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="Sair">Sair</asp:LinkButton>
+                        <!--<asp:Label ID="vvv" runat="server" Text="Sair" CssClass="lblSair" OnServerClick="lblSair_Click"></asp:Label>-->
+                    </div>
+                    <div class="divFotoUsuario">
+                        <a href="AreaCliente.aspx" class="aFotoUsuario">
+                            <img src="Imagens/usuario.png" class="imgUsuario" />
+                        </a>
+
+                    </div>
+                </div>
+                <!--<div class="col-2 CabEsq">
                 <a href="Index2.aspx">
                     <img src="Imagens/novoSblenders.png" class="imgLogo" />
                 </a>
@@ -123,11 +119,10 @@
                 <a class="aCad" onclick="Login()">Login</a>
                 <a class="aCad" onclick="Cadastro()">Cadastre-se</a>
             </div>-->
-        </section>
-        
-        <section class="container-fluid" id="divCad" runat="server">
-                <div class="col-3 divFG">
+            </section>
 
+            <section class="container-fluid" id="divCad" runat="server">
+                <div class="col-3 divFG">
                 </div>
                 <div class="col-6 divFacaLogin">
                     <div class="divCadastro">
@@ -146,7 +141,6 @@
                         </div>
 
                         <div class="divEspacoCadastro">
-
                         </div>
 
                         <div class="divCadastroItem2">
@@ -162,7 +156,7 @@
                                         <asp:Label ID="lblNomeAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
                                     </div>
                                 </div>
-                                
+
                                 <div class="divSobrenomeCadastro">
                                     <div class="divSubLoginEmail1">
                                         <asp:Label ID="lblSobrenomeCadastro" runat="server" Text="Sobrenome" CssClass="lblDivCadastro2"></asp:Label>
@@ -175,7 +169,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="divCadastroItem">
                             <div class="divSubLoginEmail1">
@@ -213,19 +207,17 @@
                         </div>
 
                         <div class="divCadastroBtn">
-                            <asp:Button ID="btnCadastro" runat="server" Text="Entrar" CssClass="btnDivCadastro" OnClientClick="verificarCamposCadastro()" OnClick="Cadastro"/>                            
+                            <asp:Button ID="btnCadastro" runat="server" Text="Entrar" CssClass="btnDivCadastro" OnClientClick="verificarCamposCadastro()" OnClick="Cadastro" />
                         </div>
                     </div>
 
                 </div>
                 <div class="col-3 divFG">
-
                 </div>
-            </section>      
+            </section>
 
-        <section class="container-fluid" id="divLog" runat="server">
+            <section class="container-fluid" id="divLog" runat="server">
                 <div class="col-3 divFG">
-
                 </div>
                 <div class="col-6 divFacaLogin">
                     <div class="divLogin">
@@ -244,7 +236,6 @@
                         </div>
 
                         <div class="divEspacoLogin">
-
                         </div>
 
                         <div class="divLoginEmail">
@@ -276,129 +267,129 @@
                                 <a onclick="esqueceuSenha()" class="aEsqueceuSenha">Esqueceu sua Senha?</a>
                             </div>
                             <div class="divBtnSubLogin2">
-                                <asp:Button ID="btnLogin" runat="server" Text="Entrar" CssClass="btnLogin" OnClick="Login"/>
+                                <asp:Button ID="btnLogin" runat="server" Text="Entrar" CssClass="btnLogin" OnClick="Login" />
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="col-3 divFG">
-
                 </div>
-            </section> 
-        
-        <section class="container-fluid" id="divEsqSenha" runat="server">
-            <div class="col-3 divFG">
+            </section>
 
-            </div>
-
-            <div class="col-6 divFG">
-                <div class="divEsqueceuSenha">
-                    <div class="divSubEsqSenhaSair">
-                         <a class="aDivSubEsqSenhaSair" onclick="esqueceuSenha()">
-                             <img src="Imagens/iconX.png" class="imgDivSubEsqSenhaSair" />
-                         </a>
-                     </div>
-
-                     <div class="divSubEsqSenhaLogo">
-                         <img src="Imagens/novoSblenders.png" class="imgDivSubEsqSenhaLogo" />
-                     </div>
-
-                     <div class="divSubEsqSenhaTitulo">
-                         <h1 class="h1EsqSenhaTitulo">Esqueceu a Senha?</h1>
-                     </div>
-
-                     <div class="divEspacoLogin">
-
-                     </div>
-
-                    <div class="divEsqSenhaEmail">
-                         <div class="divSubLoginEmail1">
-                             <asp:Label ID="Label1" runat="server" Text="Email" CssClass="lblEsqS"></asp:Label>
-                         </div>
-                         <div class="divSubLoginEmail2">
-                             <asp:TextBox ID="TextBox1" runat="server" CssClass="txtEsqS" TextMode="Password"></asp:TextBox>
-                         </div>
-                         <div class="divSubLoginEmail3">
-                             <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEsqS"></asp:Label>
-                         </div>
-                     </div>
-                     <div class="divEsqSenhaEntrar">
-                         <div class="divBtnEspacoVazio"></div>
-                         <div class="divBtnSubLogin1">
-                             <a onclick="Login()" class="aEsqueceuSenha">Voltar ao Login</a>
-                         </div>
-                         <div class="divBtnSubLogin2">
-                             <asp:Button ID="btnRecSenha" runat="server" Text="Entrar" CssClass="btnLogin" OnClick="RecuperarSenha"/>
-                         </div>
-                     </div>
+            <section class="container-fluid" id="divEsqSenha" runat="server">
+                <div class="col-3 divFG">
                 </div>
-            </div>
 
-            <div class="col-3 divFG">
-
-            </div>
-        </section>             
-
-        <section id="divCorpo">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">        
-            </asp:ContentPlaceHolder>
-        </section>
-    </div>
-    <div class="divFooter">
-
-        <div class="MainFooter">
-
-            <div class="imgFooter">
-                <a href=""><img src="Imagens/Sblons.png" class="imgfooter"/></a>
-            </div>
-
-            <div class="Nav">
-                <ul class="Footrow">
-                    <li class="footer-Navigation">
-                        <h2 class="FootTitles">Navegação</h2>
-                        <div class="contentFooter">
-                            <ul class="FooterLinks">
-                                <li><a href="">Home</a></li>
-                                <li><a href="">Quem Somos</a></li>
-                                <li><a href="">Fale Conosco</a></li>
-                            </ul>
+                <div class="col-6 divFG">
+                    <div class="divEsqueceuSenha">
+                        <div class="divSubEsqSenhaSair">
+                            <a class="aDivSubEsqSenhaSair" onclick="esqueceuSenha()">
+                                <img src="Imagens/iconX.png" class="imgDivSubEsqSenhaSair" />
+                            </a>
                         </div>
-                    </li>
-                    <li class="footer-SblurgeMaker">
-                        <h2 class="FootTitles">Faça seu pedido</h2>
-                        <div class="contentFooter">
-                            <ul class="FooterLinks">
-                                <li><a href="">Sblurger</a></li>
-                                <li><a href="">Batata</a></li>
-                                <li><a href="">Salada</a></li>
-                                <li><a href="">Churros</a></li>
-                            </ul>
+
+                        <div class="divSubEsqSenhaLogo">
+                            <img src="Imagens/novoSblenders.png" class="imgDivSubEsqSenhaLogo" />
                         </div>
-                    </li>
-                    <li class="footer-Follow">
-                        <h2 class="FootTitles">Siga-nos:</h2>
-                        <div class="contentFooter">
-                            <ul class="FooterLinks">
-                                <li><a href="">Instagram</a></li>
-                                <li><a href="">Twitter</a></li>
-                                <li><a href="">Facebook</a></li>
-                            </ul>
+
+                        <div class="divSubEsqSenhaTitulo">
+                            <h1 class="h1EsqSenhaTitulo">Esqueceu a Senha?</h1>
                         </div>
-                    </li>
-                </ul>
+
+                        <div class="divEspacoLogin">
+                        </div>
+
+                        <div class="divEsqSenhaEmail">
+                            <div class="divSubLoginEmail1">
+                                <asp:Label ID="Label1" runat="server" Text="Email" CssClass="lblEsqS"></asp:Label>
+                            </div>
+                            <div class="divSubLoginEmail2">
+                                <asp:TextBox ID="TextBox1" runat="server" CssClass="txtEsqS" TextMode="Password"></asp:TextBox>
+                            </div>
+                            <div class="divSubLoginEmail3">
+                                <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEsqS"></asp:Label>
+                            </div>
+                        </div>
+                        <div class="divEsqSenhaEntrar">
+                            <div class="divBtnEspacoVazio"></div>
+                            <div class="divBtnSubLogin1">
+                                <a onclick="Login()" class="aEsqueceuSenha">Voltar ao Login</a>
+                            </div>
+                            <div class="divBtnSubLogin2">
+                                <asp:Button ID="btnRecSenha" runat="server" Text="Entrar" CssClass="btnLogin" OnClick="RecuperarSenha" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3 divFG">
+                </div>
+            </section>
+
+            <section id="divCorpo">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </section>
+        </div>
+        <div class="divFooter">
+
+            <div class="MainFooter">
+
+                <div class="imgFooter">
+                    <a href="">
+                        <img src="Imagens/Sblons.png" class="imgfooter" /></a>
+                </div>
+
+                <div class="Nav">
+                    <ul class="Footrow">
+                        <li class="footer-Navigation">
+                            <h2 class="FootTitles">Navegação</h2>
+                            <div class="contentFooter">
+                                <ul class="FooterLinks">
+                                    <li><a href="">Home</a></li>
+                                    <li><a href="">Quem Somos</a></li>
+                                    <li><a href="">Fale Conosco</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="footer-SblurgeMaker">
+                            <h2 class="FootTitles">Faça seu pedido</h2>
+                            <div class="contentFooter">
+                                <ul class="FooterLinks">
+                                    <li><a href="">Sblurger</a></li>
+                                    <li><a href="">Batata</a></li>
+                                    <li><a href="">Salada</a></li>
+                                    <li><a href="">Churros</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="footer-Follow">
+                            <h2 class="FootTitles">Siga-nos:</h2>
+                            <div class="contentFooter">
+                                <ul class="FooterLinks">
+                                    <li><a href="">Instagram</a></li>
+                                    <li><a href="">Twitter</a></li>
+                                    <li><a href="">Facebook</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
 
         </div>
-
-    </div>
-    <div class="BottomFooter">
-        <div class="BottomFooterRow">
-            <div class="BottomFooterColunm">
-                <p>Copyright Sblenders 2019 - 2020<br>Website criado pelo <a href="">Grupo Sblendermen</a></p>
+        <div class="BottomFooter">
+            <div class="BottomFooterRow">
+                <div class="BottomFooterColunm">
+                    <p>
+                        Copyright Sblenders 2019 - 2020<br>
+                        Website criado pelo <a href="">Grupo Sblendermen</a>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
     </form>
 </body>
 </html>
