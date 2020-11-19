@@ -15,7 +15,7 @@
     </script>
 
     <script>
-        function exibirInfoNutri() {
+        async function exibirInfoNutri() {
             var i = this.id;
             var res = i.substring(1, i.length - 1);
             var element = document.getElementById("secProd1");

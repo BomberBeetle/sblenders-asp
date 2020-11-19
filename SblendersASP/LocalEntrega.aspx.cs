@@ -60,7 +60,7 @@ namespace TCC
             }
             else
             {
-
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "traçar rota", "tracarRotaReverso()", true);
             }
         }
 
@@ -68,7 +68,7 @@ namespace TCC
         {
             if(Session["userID"] != null)
             {
-                if (String.IsNullOrEmpty(endereco))
+                if (!String.IsNullOrEmpty(endereco))
                 {
                     ((Pedido)Session["Carrinho"]).endereco = endereco;
                     ((Pedido)Session["Carrinho"]).agenteID = (int)Session["userID"];
@@ -78,11 +78,11 @@ namespace TCC
                 }
                 else
                 {
-
+                    ScriptManager.RegisterStartupScript(Page, Page.GetType(), "traçar rota", "tracarRotaReverso()", true);
                 }
             }
             else
-            {
+            {                
                 ScriptManager.RegisterStartupScript(Page, Page.GetType(), "login", "Login()", true);
             }
         }

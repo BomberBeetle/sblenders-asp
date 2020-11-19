@@ -39,36 +39,73 @@
     float: left;
     display: flex;
     align-items: center;
+    flex-wrap:wrap;
+    flex-direction:row;
 }
 
 .divSubEndereco {
-    height: 500px;
-    width: 90%;
-    display:flex;
-    flex-direction:column;
-    flex-wrap:wrap;
-    justify-content:flex-start;
-    align-items:flex-start;
+    height: 250px;
+    width: 90%;   
 }
 
-.lblEnderecoMaps{
-    width:100%;
-    float:left;
-    font-size:30px;
+.divLblEntrega {
+    height: 40px;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.txtEnderecoMaps{
-    height:40px;
-    width:70%;
-    float:left;
+.lblEnderecoMaps {
+    font-size: 30px;
+}
+
+.divTxtEntrega {
+    height: 70px;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin-top:20px;
-    margin-bottom:20px;
 }
 
-.lblAvisoEnderecoMaps{
-    width:100%;
-    float:left;
-    margin-bottom:20px;
+.txtEnderecoMaps {
+    height: 40px;
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.divLblAvisoEntrega {
+    height: 30px;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.lblAvisoEnderecoMaps {
+    margin-bottom: 20px;
+}
+
+.divBtnEntrega {
+    height: 70px;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .btnEnderecoMaps {
@@ -92,6 +129,45 @@
     font-size:24px;
 }
 
+.divInstrucoes{
+    height:250px;
+    width:90%;
+    float:left;
+}
+
+.divSubInstrucoes1 {
+    height: 60px;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+    .divSubInstrucoes1 p {
+        font-size: 30px;
+    }
+
+.divSubInstrucoes2 {
+    height: 190px;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.txtInstrucoes{
+    height:140px;
+    width:80%;
+    padding:5px;
+    overflow:hidden;
+}
+
 .divMapsEntrega {
     height: 700px;
     width: 65%;
@@ -104,3 +180,49 @@
     height:650px;
     width:90%;
 }
+
+.divBtnFinalizar{
+    height:300px;
+    width:100%;
+    float:left;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    flex-direction:row;
+}
+
+.btnFinalizarPedido {
+    height: 80px;
+    width: 24%;
+    background-image: linear-gradient(135deg, rgba(39, 131, 219) 0%, rgba(27, 119, 207) 50%, rgba(15, 103, 186) 100%);
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 30px 30px;
+    border: 0px;
+    color: #DEDEDE;
+    box-shadow: 6px 6px 6px #656565;
+    padding-left: 20px;
+}
+
+.divTextoBtnFinalizar {
+    height: 80px;
+    width: 100%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+    .divTextoBtnFinalizar p {
+        margin-bottom: 0;
+    }
+
+    .divTextoBtnFinalizar img {
+        height: 90%;
+        float: left;
+    }

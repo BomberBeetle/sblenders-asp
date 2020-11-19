@@ -429,3 +429,33 @@ function fecharInfoNutri() {
     } 
     s.forEach((e) => e.onclick = exibirInfoNutri);
 }*/
+
+function somar(e) {
+    var i = e;
+    var res = i.substring(11, i.length - 11); 
+    console.log(i);
+    console.log(res);
+    //var element = document.getElementById("divMostrarIngredientes");
+    var text = document.getElementById("txtQuantidade" + res);
+    var quant = text.value;
+    text.value = quant++;
+    event.preventDefault();
+}
+
+function subtrair(e) {
+    var i = e;
+    var res = i.substring(11, i.length - 11);
+    console.log(i);
+    console.log(res);
+    //var element = document.getElementById("divMostrarIngredientes");
+    var text = document.getElementById("txtQuantidade" + res);
+    var quant = text.value;
+    var e = quant--;
+    if (e <= 1) {
+        text.value = 1;
+    }
+    else {
+        text.value = e;
+    }
+    event.preventDefault();
+}
