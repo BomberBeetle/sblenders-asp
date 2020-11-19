@@ -46,6 +46,7 @@
     </div>
     <div class="divTot">
         <div class="divSubTot1">
+
         </div>
         <div class="divSubTot2">
             <asp:Label ID="lblTotalIngredientes" runat="server" Text="R$ 0" CssClass="lblTotalIngredientes" ClientIDMode="Static"></asp:Label>

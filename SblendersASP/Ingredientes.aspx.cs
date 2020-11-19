@@ -121,6 +121,11 @@ namespace TCC
                         btnAdicionarCarrinho.Text = "Adicionar Ingrediente";
                         divSubProduto3.Controls.Add(btnAdicionarCarrinho);
                         btnAdicionarCarrinho.Click += new EventHandler(AdicionarIngrediente);
+
+                        HiddenField hiddenTxt = new HiddenField();
+                        hiddenTxt.ID = "hTxt" + p.IngredientID.ToString();
+                        hiddenTxt.ClientIDMode = ClientIDMode.Static;
+                        divProduto.Controls.Add(hiddenTxt);
                     }
                     else if(p.CategoriaIngredienteID == 2)
                     {
@@ -197,6 +202,10 @@ namespace TCC
                         btnAdicionarCarrinho.Text = "Adicionar Ingrediente";
                         divSubProduto3.Controls.Add(btnAdicionarCarrinho);
                         btnAdicionarCarrinho.Click += new EventHandler(AdicionarIngrediente);
+                        HiddenField hiddenTxt = new HiddenField();
+                        hiddenTxt.ID = "hTxt" + p.IngredientID.ToString();
+                        hiddenTxt.ClientIDMode = ClientIDMode.Static;
+                        divProduto.Controls.Add(hiddenTxt);
                     }
                     else if (p.CategoriaIngredienteID == 3)
                     {
@@ -273,6 +282,11 @@ namespace TCC
                         btnAdicionarCarrinho.Text = "Adicionar Ingrediente";
                         divSubProduto3.Controls.Add(btnAdicionarCarrinho);
                         btnAdicionarCarrinho.Click += new EventHandler(AdicionarIngrediente);
+
+                        HiddenField hiddenTxt = new HiddenField();
+                        hiddenTxt.ID = "hTxt" + p.IngredientID.ToString();
+                        hiddenTxt.ClientIDMode = ClientIDMode.Static;
+                        divProduto.Controls.Add(hiddenTxt);
                     }
                     else if (p.CategoriaIngredienteID == 4)
                     {
@@ -349,6 +363,11 @@ namespace TCC
                         btnAdicionarCarrinho.Text = "Adicionar Ingrediente";
                         divSubProduto3.Controls.Add(btnAdicionarCarrinho);
                         btnAdicionarCarrinho.Click += new EventHandler(AdicionarIngrediente);
+
+                        HiddenField hiddenTxt = new HiddenField();
+                        hiddenTxt.ID = "hTxt" + p.IngredientID.ToString();
+                        hiddenTxt.ClientIDMode = ClientIDMode.Static;
+                        divProduto.Controls.Add(hiddenTxt);
                     }
                     else if (p.CategoriaIngredienteID == 5)
                     {
@@ -425,6 +444,11 @@ namespace TCC
                         btnAdicionarCarrinho.Text = "Adicionar Ingrediente";
                         divSubProduto3.Controls.Add(btnAdicionarCarrinho);
                         btnAdicionarCarrinho.Click += new EventHandler(AdicionarIngrediente);
+
+                        HiddenField hiddenTxt = new HiddenField();
+                        hiddenTxt.ID = "hTxt" + p.IngredientID.ToString();
+                        hiddenTxt.ClientIDMode = ClientIDMode.Static;
+                        divProduto.Controls.Add(hiddenTxt);
                     }
                     else if (p.CategoriaIngredienteID == 6)
                     {
@@ -501,6 +525,11 @@ namespace TCC
                         btnAdicionarCarrinho.Text = "Adicionar Ingrediente";
                         divSubProduto3.Controls.Add(btnAdicionarCarrinho);
                         btnAdicionarCarrinho.Click += new EventHandler(AdicionarIngrediente);
+
+                        HiddenField hiddenTxt = new HiddenField();
+                        hiddenTxt.ID = "hTxt" + p.IngredientID.ToString();
+                        hiddenTxt.ClientIDMode = ClientIDMode.Static;
+                        divProduto.Controls.Add(hiddenTxt);
                     }
                 }
             }
@@ -638,7 +667,9 @@ namespace TCC
             Button iButton = (Button)sender;
             int id = Convert.ToInt32(iButton.ID);
             String textID = "txtQuantidade" + id;
+            String hiddenID = "hTxt" + id;
             TextBox x = (TextBox)divMostrarIngredientes.FindControl(textID);
+            HiddenField hidden = (HiddenField)divMostrarIngredientes.FindControl(hiddenID);
             int pid = 0;
             Decimal valIngrediente = 0;
             iButton.Text = "Ingrediente Adicionado";
@@ -655,8 +686,8 @@ namespace TCC
                 }
             }            
 
-            PedidoProdutoIngrediente ppa = new PedidoProdutoIngrediente(pid,Convert.ToInt32(x.Text),0);
-            ppi.Add(ppa);
+            PedidoProdutoIngrediente ppa = new PedidoProdutoIngrediente(pid,Convert.ToInt32(hidden.Value),0);
+            ppi.Add(ppa);           
             int indice = ppi.Count - 1;
 
             int produtoIngredienteID = ppi[indice].ProdutoIngredienteID;
@@ -708,13 +739,13 @@ namespace TCC
             Label lblQuantidadeIngredienteCliente = new Label();
             lblQuantidadeIngredienteCliente.ID = "lblQuantidadeIngredienteCliente" + indice;
             lblQuantidadeIngredienteCliente.CssClass = "lblQuantidadeIngredienteCliente";
-            lblQuantidadeIngredienteCliente.Text = "Quantidade: " + x.Text;
+            lblQuantidadeIngredienteCliente.Text = "Quantidade: " + hidden.Value;
             divSubIngredienteInfo2.Controls.Add(lblQuantidadeIngredienteCliente);
 
             Label lblValorIngredienteCliente = new Label();
             lblValorIngredienteCliente.ID = "lblValorIngredienteCliente" + indice;
             lblValorIngredienteCliente.CssClass = "lblValorIngredienteCliente";
-            lblValorIngredienteCliente.Text = "Valor: " + Convert.ToInt32(x.Text) * valIngrediente;
+            lblValorIngredienteCliente.Text = "Valor: " + Convert.ToInt32(hidden.Value) * valIngrediente;
             divSubIngredienteInfo2.Controls.Add(lblValorIngredienteCliente);
 
             HtmlGenericControl divIngredienteExcluir = new HtmlGenericControl("DIV");
@@ -738,6 +769,7 @@ namespace TCC
                 ingPrec += p.Quantidade * pi[ind].Price;
             }
             lblTotalIngredientes.Text = "Total: R$ " + ingPrec;
+            hidden.Value = "1";
 
         }
 
