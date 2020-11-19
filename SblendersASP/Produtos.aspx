@@ -5,49 +5,8 @@
     <script src="JS/Funcoes.js" type="text/javascript"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <script>       
-        function iniciar() {
-            var s = document.getElementsByClassName('ASS');
-            var i;
-            for (i = 0; i < s.length; i++) {
-                s[i].onclick = exibirInfoNutri;
-            }
-        }
-    </script>
 
-    <script>
-        async function exibirInfoNutri() {
-            var i = this.id;
-            var res = i.substring(1, i.length - 1);
-            var element = document.getElementById("secProd1");
-            url = "https://localhost:44323/api/Produtos/" + res;
-            fetch(url, { cors: "anonymous" }).then((res) => {
-                res.json().then((dados) => {
-                    var d = dados[0].infoNutr;
-                    var dCount = d.length - 1;
-                    while (dCount >= 0) {
-                        let lblDes = document.createElement("span");
-                        lblDes.value = d[dCount].descricao;
-                        lblDes.className = "lblDescNutri";
-                        document.getElementById("divDescricaoProdutoCorpo1").appendChild(lblDes);
-                        let lblVal = document.createElement("span");
-                        lblVal.value = d[dCount].val;
-                        lblVal.className = "lblDescValor";
-                        document.getElementById("divDescricaoProdutoCorpo1").appendChild(lblVal);
-                        dCount--;
-                    }
-                }).catch((err) => {
-                    alert("Erro: " + err);
-                })
-            });
-            if (visibilidadeNutri == "false") {
-                element.style.display = "flex";
-                visibilidadeNutri = true;
-            }
-            event.preventDefault();
-        }
-    </script>
-    <div class="divCorpoProdutos">
+    <div class="divCorpoProdutos" id="divCorpoProd">
 
         <div class="divTituloPagina">
             <h1>Monte seu Pedido </h1>

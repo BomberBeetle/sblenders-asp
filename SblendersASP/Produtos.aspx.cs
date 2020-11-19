@@ -61,7 +61,7 @@ namespace TCC
                             a.ID = "a" + produtos[i - 1].ID;
                             a.ClientIDMode = ClientIDMode.Static;
                             a.Attributes.Add("href", "javascript:void(0)");
-                            a.Attributes.Add("onclick","exibirInfoNutri");
+                            a.Attributes.Add("onclick", "exibirInfoNutri(this.id)");
                             divProduto.Controls.Add(a);
 
                             HtmlGenericControl divSubProduto1 = new HtmlGenericControl("DIV");
@@ -165,8 +165,10 @@ namespace TCC
                             divProds2.Controls.Add(divProduto);
 
                             HtmlGenericControl a = new HtmlGenericControl("A");
+                            a.ID = "a" + produtos[i - 1].ID;
+                            a.ClientIDMode = ClientIDMode.Static;
                             a.Attributes.Add("href", "javascript:void(0)");
-                            a.Attributes.Add("onclick", "popupProduto()");
+                            a.Attributes.Add("onclick", "exibirInfoNutri(this.id)");
                             divProduto.Controls.Add(a);
 
                             HtmlGenericControl divSubProduto1 = new HtmlGenericControl("DIV");
@@ -224,8 +226,10 @@ namespace TCC
                             divProds3.Controls.Add(divProduto);
 
                             HtmlGenericControl a = new HtmlGenericControl("A");
+                            a.ID = "a" + produtos[i - 1].ID;
+                            a.ClientIDMode = ClientIDMode.Static;
                             a.Attributes.Add("href", "javascript:void(0)");
-                            a.Attributes.Add("onclick", "popupProduto()");
+                            a.Attributes.Add("onclick", "exibirInfoNutri(this.id)");
                             divProduto.Controls.Add(a);
 
                             HtmlGenericControl divSubProduto1 = new HtmlGenericControl("DIV");
@@ -283,8 +287,10 @@ namespace TCC
                             divProds4.Controls.Add(divProduto);
 
                             HtmlGenericControl a = new HtmlGenericControl("A");
+                            a.ID = "a" + produtos[i - 1].ID;
+                            a.ClientIDMode = ClientIDMode.Static;
                             a.Attributes.Add("href", "javascript:void(0)");
-                            a.Attributes.Add("onclick", "popupProduto()");
+                            a.Attributes.Add("onclick", "exibirInfoNutri(this.id)");
                             divProduto.Controls.Add(a);
 
                             HtmlGenericControl divSubProduto1 = new HtmlGenericControl("DIV");
