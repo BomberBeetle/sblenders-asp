@@ -10,7 +10,6 @@
 
 body {
     overflow: initial !important;
-    min-height: 100vh;
 }
 
 * {
@@ -520,58 +519,63 @@ body {
     width: 100%;
     padding: 0px 48px;
     margin-top: 60px;
-    margin-left: auto;
-    margin-left: auto;
     justify-content: flex-end;
 }
 
 .MainFooter {
-    padding: 30px 0 0;
-    width: 80rem;
     display: flex;
+    max-width: 70rem;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .imgFooter {
     margin: 0;
     height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 563px;
 }
 
 .imgfooter {
-    max-width: 563.8px;
+    max-width: 100%;
+    height: auto;
 }
 
 .Nav {
     user-select: none;
+    padding: 30px 0 30px 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .Footrow {
     display: flex;
-    width: 950px;
-    justify-content:space-between;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-Navigation {
-    width: 33.33333%;
+    padding: 0 20px;
+    padding-left: 0;
 }
 
 .footer-SblurgeMaker {
-    padding-left: 0;
-    width: 33.33333%;
-}
-
-.footer {
     padding: 0 20px;
 }
-
 .footer-Follow {
+    padding: 0 20px;
     padding-right: 0;
-    width: 33.33333%;
 }
 
 .FootTitles {
-    margin-bottom: 15px;
-    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-size: 1.1em;
     color:#FFF;
+    font-weight: bold;
 }
 
 .contentFooter {
@@ -579,17 +583,26 @@ body {
 }
 
 .FooterLinks {
-    padding-bottom: 1.875rem;
+    padding: 0 0 0 10px;
 }
 
     .FooterLinks li {
-        margin-bottom: 1.125rem;
+        font-size: 1em;
+        margin-bottom: 0;
     }
-
+    .FooterLinks a {
+        color: #fff;
+    }
+    .FooterLinks a:hover {
+        color: rgba(255, 193, 24, 0.795);
+        text-decoration: none;
+        transition: 0.6s;
+    }
 .BottomFooter {
     background-color: rgb(255, 173, 21);
     width: 100%;
-    padding: 15px 0;
+    padding: 10px 0;
+    box-shadow: 0px -7px 20px rgba(0, 0, 0, 0.15);;
 }
 
 .BottomFooterRow {
@@ -605,11 +618,87 @@ body {
 
     .BottomFooterColunm p {
         text-align: center;
-        color: #585858;
-        font-size: 0.6em;
+        color: #444;
+        font-size: 0.8em;
         margin: 0;
+        user-select: none;
+    }
+    .BottomFooterColunm a {
+        color: #c70000e3;
+    }
+    .BottomFooterColunm a:hover {
+        text-decoration: none;
     }
 
 .divFooter li, ul {
     list-style: none;
+}
+.borderleft {
+    border-right: #ffa053 solid 1px;
+}
+.bordermid {
+    border-right: #ffa053 solid 1px;
+}
+@media screen and (max-width: 1205px) {
+    .imgFooter {
+        margin: 0;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 45vw;
+        min-width: 236px;
+    }
+    .MainFooter *{
+        max-width: auto;
+    }
+    .divFooter {
+        padding: 0 24px;
+    }
+}
+@media screen and (max-width: 883px) {
+    .MainFooter {
+        padding: 30px 0 0 0;
+    }
+}
+@media screen and (max-width: 675px) {
+    .MainFooter *{
+        padding: 0;
+        margin: 0;
+    }
+    .Nav {
+        padding: 30px 0 30px 0;
+    }
+    .FooterLinks {
+        padding: 0 0 0 5px;
+    }
+    .footer-Navigation {
+        padding: 0 10px;
+        padding-left: 0;
+    }
+    
+    .footer-SblurgeMaker {
+        padding: 0 10px;
+    }
+    .footer-Follow {
+        padding: 0 10px;
+        padding-right: 0;
+    }
+
+    .BottomFooterColunm p {
+        text-align: center;
+        color: #444;
+        font-size: 0.6em;
+        margin: 0;
+    }
+    .FooterLinks li {
+        font-size: 0.8em;
+        margin-bottom: 0;
+    }
+    .FootTitles {
+        margin-bottom: 10px;
+        font-size: 0.9em;
+        color:#FFF;
+        font-weight: bold;
+    }
 }

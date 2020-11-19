@@ -15,7 +15,7 @@ namespace TCC
                     return "Em Andamento";
                     break;
                 case 2:
-                    return "Em Andamento";
+                    return "Pronto";
                     break;
                 case 3:
                     return "A Caminho";

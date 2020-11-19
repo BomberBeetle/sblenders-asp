@@ -338,13 +338,15 @@
 
                 <div class="imgFooter">
                     <a href="">
-                        <img src="Imagens/Sblons.png" class="imgfooter" /></a>
+                        <img src="Imagens/Sblons.png" class="imgfooter" />
+                    </a>
                 </div>
 
                 <div class="Nav">
                     <ul class="Footrow">
+                        <div class="borderleft">
                         <li class="footer-Navigation">
-                            <h2 class="FootTitles">Navegação</h2>
+                            <h2 class="FootTitles">Navegação:</h2>
                             <div class="contentFooter">
                                 <ul class="FooterLinks">
                                     <li><a href="Index2.aspx">Home</a></li>
@@ -353,8 +355,10 @@
                                 </ul>
                             </div>
                         </li>
+                        </div>
+                        <div class="bordermid">
                         <li class="footer-SblurgeMaker">
-                            <h2 class="FootTitles">Faça seu pedido</h2>
+                            <h2 class="FootTitles">Faça seu pedido:</h2>
                             <div class="contentFooter">
                                 <ul class="FooterLinks">
                                     <li><a href="Ingredientes.aspx">Sblurger</a></li>
@@ -364,6 +368,8 @@
                                 </ul>
                             </div>
                         </li>
+                        </div>
+                        <div>
                         <li class="footer-Follow">
                             <h2 class="FootTitles">Siga-nos:</h2>
                             <div class="contentFooter">
@@ -374,6 +380,7 @@
                                 </ul>
                             </div>
                         </li>
+                        </div>
                     </ul>
                 </div>
 
@@ -384,7 +391,7 @@
             <div class="BottomFooterRow">
                 <div class="BottomFooterColunm">
                     <p>
-                        Copyright Sblenders 2019 - 2020<br>
+                        Copyright © Sblenders 2019 - 2020<br>
                         Website criado pelo <a href="Quem_somos.aspx">Grupo Sblendermen</a>
                     </p>
                 </div>
