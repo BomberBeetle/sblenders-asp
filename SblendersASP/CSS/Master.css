@@ -153,7 +153,6 @@ body {
 
 .imgLogo {
     margin-top: 2.5px;
-    height: auto;
     width: 45%;
 }
 
@@ -166,7 +165,7 @@ body {
 .aProjSblenders {
     font-size: 22px;
     color: #FFF;
-    line-height: 15vh;
+    margin-top: 52px;
     margin-right: 40px;
     float: left;
 }

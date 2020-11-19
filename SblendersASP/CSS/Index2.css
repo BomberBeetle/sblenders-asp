@@ -98,9 +98,8 @@ body {
     width:75%;
     float:left;
     margin-top:1vh;*/
-    margin-top: 6px;
-    height: 100%;
-    width: 60%;
+    margin-top: 2.5px;
+    width: 45%;
 }
 
 .CabEsq p {
@@ -112,7 +111,7 @@ body {
 .aProjSblenders {
     font-size: 22px;
     color: #FFF;
-    line-height: 15vh;
+    margin-top: 52px;
     margin-right: 40px;
     float: left;
 }
