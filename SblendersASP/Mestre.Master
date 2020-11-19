@@ -345,11 +345,60 @@
             </asp:ContentPlaceHolder>
         </section>
     </div>
-    <!--<div id="divRodape">
-        <div id="RodinhaPe">
+    <div class="divFooter">
+
+        <div class="MainFooter">
+
+            <div class="imgFooter">
+                <a href=""><img src="Imagens/Sblons.png" class="imgfooter"/></a>
+            </div>
+
+            <div class="Nav">
+                <ul class="Footrow">
+                    <li class="footer-Navigation">
+                        <h2 class="FootTitles">Navegação</h2>
+                        <div class="contentFooter">
+                            <ul class="FooterLinks">
+                                <li><a href="">Home</a></li>
+                                <li><a href="">Quem Somos</a></li>
+                                <li><a href="">Fale Conosco</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="footer-SblurgeMaker">
+                        <h2 class="FootTitles">Faça seu pedido</h2>
+                        <div class="contentFooter">
+                            <ul class="FooterLinks">
+                                <li><a href="">Sblurger</a></li>
+                                <li><a href="">Batata</a></li>
+                                <li><a href="">Salada</a></li>
+                                <li><a href="">Churros</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="footer-Follow">
+                        <h2 class="FootTitles">Siga-nos:</h2>
+                        <div class="contentFooter">
+                            <ul class="FooterLinks">
+                                <li><a href="">Instagram</a></li>
+                                <li><a href="">Twitter</a></li>
+                                <li><a href="">Facebook</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
         </div>
-    </div>-->
+
+    </div>
+    <div class="BottomFooter">
+        <div class="BottomFooterRow">
+            <div class="BottomFooterColunm">
+                <p>Copyright Sblenders 2019 - 2020<br>Website criado pelo <a href="">Grupo Sblendermen</a></p>
+            </div>
+        </div>
+    </div>
     </form>
 </body>
 </html>

@@ -452,16 +452,74 @@ body {
     margin: 0 auto;
 }
 
-#divRodape {
-    height: 350px;
+.divFooter {
     background-color: #ff7300;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.1);
     width: 100%;
-    padding: 0;
+    padding: 0px 48px;
     margin-top: 60px;
+    margin-left: auto;
+    margin-left: auto;
 }
-
-#RodinhaPe {
+.MainFooter {
+    padding: 30px 0 0;
+    width: 80rem;
+    display: flex;
+}
+.imgFooter {
+    margin: 0;
+    height: auto;
+}
+.imgfooter {
+    max-width: 563.8px;
+}
+.Nav {
+    user-select: none;
+}
+.Footrow {
+    display: flex;
+}
+.footer-SblurgeMaker {
+    padding-left: 0;
+}
+.footer {
+    padding: 0 20px;
+}
+.footer-Follow {
+    padding-right: 0;
+}
+.FootTitles {
+    margin-bottom: 15px;
+}
+.contentFooter {
+    padding: 0 0 18px;
+}
+.FooterLinks {
+    padding-bottom: 1.875rem;
+}
+.FooterLinks li {
+    margin-bottom: 1.125rem;
+}
+.BottomFooter {
     background-color:  rgb(255, 173, 21);
-    height: 50px;
-    box-shadow: 0px 7px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    padding: 15px 0;
+}
+.BottomFooterRow {
+    max-width: 75rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.BottomFooterColunm {
+    padding-right: .9375rem;
+    padding-left: .9375rem;
+}
+.BottomFooterColunm p{
+    text-align: center;
+    color: #585858;
+    font-size: 0.6em;
+    margin: 0;
+}
+.divFooter li, ul {
+    list-style: none;
 }
