@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SblendersAPI.Models
 {
-    public class ClienteOnline:Agente
+    public class ClienteOnline : Agente
     {
         public string Nome;
         public string Sobrenome;

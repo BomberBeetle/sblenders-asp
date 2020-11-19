@@ -96,7 +96,7 @@ function indexDinamico() {
         textoLogin.style.color = "#FFF";
     }
     else if (itemCarro2.className === "carousel-item active") {
-        textoLogin.style.color = "aqua";
+        textoLogin.style.color = "#FFF";
     }
     else if (itemCarro3.className === "carousel-item active") {
         textoLogin.style.color = "#FFF";

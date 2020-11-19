@@ -210,6 +210,7 @@ namespace TCC
             divDesconectado.Visible = true;
             divConectado.Attributes.CssStyle.Add("display", "none");
             divDesconectado.Attributes.CssStyle.Add("display", "block");
+            Response.Redirect("Index2.aspx");
         }
 
         protected void RecuperarSenha(object sender, EventArgs e)

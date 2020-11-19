@@ -2,29 +2,23 @@
 }
 
 .divBodyAreaCliente {
-    height: 35vh;
+    height: auto;
     width: 70%;
     display: flex;
+    flex-direction: row;
     margin-top: 60px;
+    padding: 60px;
     box-shadow: 5px 5px 19px rgba(0,0,0,0.3);
-    /*margin-left: 25vw;*/
 }
 
 .inputs {
     display: flex;
     flex-direction: column;
-    width: 15%;
-    height: 150px;
+    align-self: center;
+    gap: 5px;
+    width: 276px;
+    height: 225px;
     justify-content: space-between;
-    margin-top: 1.5vh;
-    margin-bottom: 1.5vh;
-}
-
-.alterar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 74px;
 }
 
 .txtNome, .txtSobrenome {
@@ -41,7 +35,7 @@
     border: 1px solid #e1e1e1;
 }
 
-.btnNome, .btnSenha {
+.btnSalvar {
     width: 276px;
     height: 50px;
     display: inline-block;
@@ -54,5 +48,19 @@
     border: 1px solid #18a180;
 }
 
+.pedidos * {
+    margin: 0;
+}
+
 .pedidos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.listapedidos-produto {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 5px;
 }

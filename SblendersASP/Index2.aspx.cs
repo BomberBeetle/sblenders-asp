@@ -17,10 +17,10 @@ namespace TCC
         public static int userID;
         public static string userToken;
         public static int userRID;
-        
+
 
         private bool GetUserDetails()
-        {           
+        {
             string URL = $"https://localhost:44323/api/Agente/{Session["userID"]}";
             string urlParameters = "";
             HttpClient client = new HttpClient();
@@ -55,13 +55,13 @@ namespace TCC
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["userID"] != null)
+            if (Session["userID"] != null)
             {
                 divConectado.Visible = true;
                 divDesconectado.Visible = false;
                 divConectado.Attributes.CssStyle.Add("display", "block");
                 divDesconectado.Attributes.CssStyle.Add("display", "none");
-                string URL = $"https://localhost:44323/api/Agente/"+Session["userID"];
+                string URL = $"https://localhost:44323/api/Agente/" + Session["userID"];
                 string urlParameters = "";
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(URL);
@@ -82,14 +82,14 @@ namespace TCC
                     {
                         lblBemVindo.Text = "Bem vindo " + resultado["client_name"];
                     }
-                    
+
                 }
-                
+
             }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
-        {            
+        {
             lblEmailAvisoLogin.Text = "";
             lblSenhaAvisoLogin.Text = "";
             bool camposPreenchidos = true;
@@ -97,11 +97,13 @@ namespace TCC
             {
                 lblEmailAvisoLogin.Text = "Insira um email para efetuar o login";
                 camposPreenchidos = false;
+                divLog.Attributes.CssStyle.Add("display", "block");
             }
             if (String.IsNullOrWhiteSpace(txtSenhaLogin.Text))
             {
                 lblSenhaAvisoLogin.Text = "Insira uma senha para efetuar o login";
                 camposPreenchidos = false;
+                divLog.Attributes.CssStyle.Add("display", "block");
             }
             if (camposPreenchidos)
             {
@@ -123,15 +125,35 @@ namespace TCC
                 {
                     Session["userID"] = int.Parse((string)resultado["id"]);
                     Session["userToken"] = (string)resultado["token"];
-                    Response.Redirect("AreaCliente.aspx");
-                    /*if (GetUserDetails())
+                    divLog.Attributes.CssStyle.Add("display", "none");
+
+                    divConectado.Visible = true;
+                    divDesconectado.Visible = false;
+                    divConectado.Attributes.CssStyle.Add("display", "block");
+                    divDesconectado.Attributes.CssStyle.Add("display", "none");
+                    string URL2 = $"https://localhost:44323/api/Agente/" + Session["userID"];
+                    string urlParameters2 = "";
+                    HttpClient client2 = new HttpClient();
+                    client2.BaseAddress = new Uri(URL2);
+
+                    client2.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+                    // Add an Accept header for JSON format.
+                    client2.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+
+                    // List data response.
+                    JavaScriptSerializer serializer2 = new System.Web.Script.Serialization.JavaScriptSerializer();
+                    HttpResponseMessage response2 = client2.GetAsync(urlParameters2).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                    Dictionary<string, Object> resultado2 = (Dictionary<string, Object>)serializer2.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+
+                    if (response2.IsSuccessStatusCode)
                     {
-                        Response.Redirect("Ingredientes.aspx");
+                        if (resultado2.ContainsKey("client_name"))
+                        {
+                            lblBemVindo.Text = "Bem vindo " + resultado2["client_name"];
+                        }
+
                     }
-                    else
-                    {
-                        lblSenhaAvisoLogin.Text = "Usuário ou senha incorreto";
-                    }*/
                 }
                 else
                 {
@@ -139,13 +161,12 @@ namespace TCC
                     {
                         lblSenhaAvisoLogin.Text = "Usuário ou senha incorreto";
                     }
+                    divLog.Attributes.CssStyle.Add("display", "block");
                 }
 
                 client.Dispose();
-
                 lblEmailAvisoLogin.Text = "Beleza";
             }
-            divLog.Attributes.CssStyle.Add("display", "block");
         }
 
         protected void btnCadastro_Click(object sender, EventArgs e)
@@ -181,7 +202,7 @@ namespace TCC
                 lblAvisoConfirmarSenhaCadastro.Text = "Confirme a Senha";
                 camposPreenchidos = false;
             }
-            if(txtSenhaCadastro.Text != txtConfirmarSenhaCadastro.Text)
+            if (txtSenhaCadastro.Text != txtConfirmarSenhaCadastro.Text)
             {
                 lblAvisoConfirmarSenhaCadastro.Text = "Corfirme a senha corretamente";
                 camposPreenchidos = false;
@@ -216,7 +237,7 @@ namespace TCC
                 }
             }
 
-            divCad.Attributes.CssStyle.Add("display","block");
+            divCad.Attributes.CssStyle.Add("display", "block");
         }
 
         protected void linkSair_Click(object sender, EventArgs e)

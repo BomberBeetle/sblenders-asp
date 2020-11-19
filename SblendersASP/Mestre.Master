@@ -347,9 +347,9 @@
                             <h2 class="FootTitles">Navegação</h2>
                             <div class="contentFooter">
                                 <ul class="FooterLinks">
-                                    <li><a href="">Home</a></li>
-                                    <li><a href="">Quem Somos</a></li>
-                                    <li><a href="">Fale Conosco</a></li>
+                                    <li><a href="Index2.aspx">Home</a></li>
+                                    <li><a href="Quem_Somos.apsx">Quem Somos</a></li>
+                                    <li><a href="Contact.aspx">Fale Conosco</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -357,7 +357,7 @@
                             <h2 class="FootTitles">Faça seu pedido</h2>
                             <div class="contentFooter">
                                 <ul class="FooterLinks">
-                                    <li><a href="">Sblurger</a></li>
+                                    <li><a href="Ingredientes.aspx">Sblurger</a></li>
                                     <li><a href="">Batata</a></li>
                                     <li><a href="">Salada</a></li>
                                     <li><a href="">Churros</a></li>
@@ -385,7 +385,7 @@
                 <div class="BottomFooterColunm">
                     <p>
                         Copyright Sblenders 2019 - 2020<br>
-                        Website criado pelo <a href="">Grupo Sblendermen</a>
+                        Website criado pelo <a href="Quem_somos.aspx">Grupo Sblendermen</a>
                     </p>
                 </div>
             </div>

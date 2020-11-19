@@ -546,10 +546,17 @@ body {
 
 .Footrow {
     display: flex;
+    width: 950px;
+    justify-content:space-between;
+}
+
+.footer-Navigation {
+    width: 33.33333%;
 }
 
 .footer-SblurgeMaker {
     padding-left: 0;
+    width: 33.33333%;
 }
 
 .footer {
@@ -558,10 +565,13 @@ body {
 
 .footer-Follow {
     padding-right: 0;
+    width: 33.33333%;
 }
 
 .FootTitles {
     margin-bottom: 15px;
+    font-size: 1.5rem;
+    color:#FFF;
 }
 
 .contentFooter {

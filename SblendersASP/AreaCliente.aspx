@@ -15,13 +15,11 @@
             <asp:TextBox ID="TextBox2" runat="server" Text="" class="txtSobrenome" placeholder="Sobrenome"></asp:TextBox>
             <asp:TextBox ID="txtSenha" runat="server" Text="" TextMode="Password" class="txtSenha" placeholder="Nova senha"></asp:TextBox>
             <asp:TextBox ID="txtConfirmarSenha" runat="server" Text="" TextMode="Password" class="txtConfirmarSenha" placeholder="Confirme a Senha"></asp:TextBox>
-        </div>
-        <div class="alterar">
             <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-            <asp:Button class="btnNome" ID="Button1" runat="server" Text="Alterar Nome" OnClick="alterarDados" />
-            <asp:Button class="btnSenha" ID="Button2" runat="server" Text="Alterar Senha" OnClick="alterarSenha" />
+            <asp:Button class="btnSalvar" ID="Button1" runat="server" Text="Salvar alterações" OnClick="alterarDados" />
         </div>
         <div class="pedidos">
+            <asp:PlaceHolder ID="PedidosPlaceholder" runat="server"></asp:PlaceHolder>
         </div>
     </div>
 </asp:Content>

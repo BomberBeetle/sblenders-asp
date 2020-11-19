@@ -12,22 +12,10 @@
 }
 
 .divTituloPagina {
-    height: 110px;
-    width: 35%;
+    height: 85px;
+    width: 30%;
     background-color: #ed4218;
 }
-
-    .divTituloPagina h1 {
-        color: #FFF;
-        font-size: 48px;
-        text-shadow: 2px 2px 2px #989898;
-        -webkit-touch-callout: none; /* iOS Safari */
-        -webkit-user-select: none; /* Safari */
-        -khtml-user-select: none; /* Konqueror HTML */
-        -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-        user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-    }
 
 .divBtnOpcoesPagLanches {
     height: 200px;
