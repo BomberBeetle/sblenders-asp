@@ -1,7 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Mestre.master.cs" Inherits="TCC.Mestre" %>
-
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
@@ -39,7 +37,7 @@
                             <li class="divLinksRow LinksRight">
                                 <a class="adivLinks" href="Produtos.aspx">Faça seu pedido</a>
                             </li>
-                        <ul>
+                        </ul>
                     </div>
                     <div class="col-4 CabEsq" id="divDesconectado" runat="server">
                         <a class="aCad" onclick="Login()" id="textoLogin">Login</a>
