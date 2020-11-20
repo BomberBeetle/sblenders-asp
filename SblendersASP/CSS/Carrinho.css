@@ -4,43 +4,11 @@
 .divCorpoCarrinho {
     height: auto;
     width: 100%;
-    float: left;
 }
-
-.divNomeCarrinho {
-    height: 90px;
-    width: 100%;
-    float: left;
-}
-
-.divTituloCarrinho {
-    height: 90px;
-    width: 20%;
-    float: left;
-    background-color: #ed4218;
-    border-radius: 0px 0px 30px 0px;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-    .divTituloCarrinho h1 {
-        color: #FFF;
-        font-size: 48px;
-        text-shadow: 2px 2px 2px #989898;
-        -webkit-user-select: none; /* Safari */
-        -khtml-user-select: none; /* Konqueror HTML */
-        -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-        user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-    }
 
 .divItensCarrinhos {
     height: auto;
     width: 100%;
-    float: left;
     align-items: center;
     display: flex;
     flex-direction: row;

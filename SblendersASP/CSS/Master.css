@@ -8,13 +8,81 @@
     src: url('Fontes/Roboto-Black.ttf');
 }
 
-body {
-    overflow: initial !important;
-}
-
 * {
     margin: 0 auto;
     font-family: 'Century Gothic';
+}
+
+body {
+    margin: 0;
+}
+
+.divHeader {
+    padding: 15px 0;
+    background-color: #ff7300;
+}
+
+.divHeaderRow {
+    margin: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.imgHeader {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100px;
+}
+
+.imgLogo {
+    max-width: 100%;
+    height: auto;
+}
+
+.divLinks {
+    margin: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divLinksColunm {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.divLinksRow {
+    margin: 0px 20px;
+    display: inline-block;
+}
+
+.LinksLeft {
+    margin-right: 0;
+}
+
+.LinksRight {
+    margin-left: 0;
+}
+
+.adivLinks {
+    font-size: 22px;
+    color: #FFF;
+    margin: 0;
+}
+
+.adivLinks:hover {
+    color: #00000000;
+    transition: 0.5s;
 }
 
 #divConectado {
@@ -39,18 +107,18 @@ body {
 
 .lblSair {
     height: 50%;
-    width: 100%;
+    width: 50px;
     text-align: right;
     font-size: 20px;
     text-decoration: underline;
     display: block;
-    color: white;
+    color: white !important;
     cursor: pointer;
 }
 
-    .lblSair:hover {
-        color: #323232 !important;
-    }
+.lblSair:hover {
+    color: #323232 !important;
+}
 
 .divFotoUsuario {
     height: 100%;
@@ -79,36 +147,9 @@ body {
     width: 50%;
 }
 
-#oDiv section:first-child {
-    position: relative;
-    z-index: 1;
-}
 
-#oDiv section:nth-child(2) {
-    position: fixed;
-    z-index: 2;
-}
+/* Atenção Admin pf deleta isso depois se for desnecessário */
 
-#oDiv section:nth-child(3) {
-    position: fixed;
-    z-index: 2;
-}
-
-#oDiv section:nth-child(4) {
-    position: fixed;
-    z-index: 2;
-}
-
-#oDiv section:last-child {
-    position: relative;
-    z-index: 1;
-}
-
-#divCabecalho {
-    height: 15vh;
-    /*background-color:rgba(255,115,0,1);*/
-    background-color: #ff7300 !important;
-}
 
 /*.divNomePagina {
     width: 100%;
@@ -131,18 +172,30 @@ body {
     justify-content: center;
 }
 
-    .divTituloPagina h1 {
-        color: #FFF;
-        font-size: 35px;
-        padding-top: 5px;
-        text-shadow: 2px 2px 2px rgb(255, 173, 21);
-        -webkit-touch-callout: none; /* iOS Safari */
-        -webkit-user-select: none; /* Safari */
-        -khtml-user-select: none; /* Konqueror HTML */
-        -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-        user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-    }
+.divTituloPagina h1 {
+    color: #FFF;
+    font-size: 35px;
+    padding-top: 5px;
+    text-shadow: 2px 2px 2px rgb(255, 173, 21);
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+/* WIP */
+
+
+/* Corno do CabEsq maldito pior coisa do mundo */
 
 .CabEsq {
     height: 15vh;
@@ -150,30 +203,17 @@ body {
     color: #ff7300;
 }
 
-.imgLogo {
-    margin-top: 2.5px;
-    width: 45%;
-}
+
+/* Corno do CabEsq maldito pior coisa do mundo */
+
+
+/* WIP */
 
 .CabEsq p {
     font-size: 40px;
     margin-top: 30px;
     margin-left: 10px;
 }
-
-.aProjSblenders {
-    font-size: 22px;
-    color: #FFF;
-    margin-top: 52px;
-    margin-right: 40px;
-    float: left;
-}
-
-    .aProjSblenders:hover {
-        color: #434343;
-        text-decoration: none;
-        transition: 0.5s;
-    }
 
 .aCad {
     color: #fff !important;
@@ -188,28 +228,28 @@ body {
     cursor: pointer;
 }
 
-    .aCad:hover {
-        color: #6e6a5c !important;
-        background-color: #ffa200;
-        transition: 0.75s;
-    }
+.aCad:hover {
+    color: #6e6a5c !important;
+    background-color: #ffa200;
+    transition: 0.75s;
+}
 
 #divCad {
     height: 100vh;
     display: none;
-    background-color: rgba(255,255,255,0);
+    background-color: rgba(255, 255, 255, 0);
 }
 
 #divLog {
     height: 100vh;
     display: none;
-    background-color: rgba(255,255,255,0);
+    background-color: rgba(255, 255, 255, 0);
 }
 
 #divEsqSenha {
     height: 100vh;
     display: none;
-    background-color: rgba(255,255,255,0);
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .divFG {
@@ -222,9 +262,12 @@ body {
     float: left;
 }
 
+
 /*Novo div Login*/
+
 .divLogin {
-    height: 60vh; /*70vh*/
+    height: 60vh;
+    /*70vh*/
     width: 65%;
     /*background-color: rgba(255,115,0,1);*/
     background-image: url("ImagensCSS/orangeTexture.jpg");
@@ -232,7 +275,8 @@ body {
     border-radius: 45px 45px;
     color: #FEFEFE;
     align-items: center;
-    margin-top: 3vh; /*8vh*/
+    margin-top: 3vh;
+    /*8vh*/
     position: relative;
 }
 
@@ -293,7 +337,8 @@ body {
     width: 100%;
 }
 
-.divLoginEmail, .divLoginSenha {
+.divLoginEmail,
+.divLoginSenha {
     height: 23%;
     width: 100%;
     float: left;
@@ -305,7 +350,9 @@ body {
     float: left;
 }
 
-.divSubLoginEmail1, .divSubLoginEmail2, .divSubLoginEmail3 {
+.divSubLoginEmail1,
+.divSubLoginEmail2,
+.divSubLoginEmail3 {
     width: 100%;
     text-align: center;
 }
@@ -392,9 +439,12 @@ body {
     border: none;
 }
 
+
 /*Div Cadastro*/
+
 .divCadastro {
-    height: 75vh; /*70vh*/
+    height: 75vh;
+    /*70vh*/
     width: 75%;
     /*background-color: rgba(255,115,0,1);*/
     background-image: url("ImagensCSS/orangeTexture.jpg");
@@ -402,7 +452,8 @@ body {
     border-radius: 45px 45px;
     color: #FEFEFE;
     align-items: center;
-    margin-top: 3vh; /*8vh*/
+    margin-top: 3vh;
+    /*8vh*/
     position: relative;
 }
 
@@ -412,17 +463,17 @@ body {
     z-index: 10;
 }
 
-    .divSubCadastroSair a {
-        float: right;
-        margin-right: 50px;
-        margin-top: 20px;
-        cursor: pointer;
-    }
+.divSubCadastroSair a {
+    float: right;
+    margin-right: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+}
 
-    .divSubCadastroSair img {
-        width: 30px;
-        height: 30px;
-    }
+.divSubCadastroSair img {
+    width: 30px;
+    height: 30px;
+}
 
 .divSubCadastroLogo {
     height: 12%;
@@ -432,13 +483,13 @@ body {
     /*float:left;*/
 }
 
-    .divSubCadastroLogo img {
-        height: 100%;
-        width: 15%;
-        align-items: center;
-        margin-top: 10px;
-        margin-left: 20px;
-    }
+.divSubCadastroLogo img {
+    height: 100%;
+    width: 15%;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+}
 
 .divSubCadastroTitulo {
     height: 16%;
@@ -452,10 +503,10 @@ body {
     justify-content: center;
 }
 
-    .divSubCadastroTitulo h1 {
-        font-size: calc(1.2rem + 1vw);
-        font-weight: bold;
-    }
+.divSubCadastroTitulo h1 {
+    font-size: calc(1.2rem + 1vw);
+    font-weight: bold;
+}
 
 .divEspacoCadastro {
     height: 5%;
@@ -506,16 +557,229 @@ body {
     /*margin-top: calc(0.3rem + 1vw);*/
 }
 
-
 #divCorpo {
     height: auto;
     width: 100%;
     margin: 0 auto;
 }
 
+
+/*Div EsqueceuSenha*/
+
+.divEsqueceuSenha {
+    height: 40vh;
+    /*70vh*/
+    width: 50%;
+    /*background-color: rgba(255,115,0,1);*/
+    background-image: url("ImagensCSS/orangeTexture.jpg");
+    background-repeat: round;
+    border-radius: 45px 45px;
+    color: #FEFEFE;
+    align-items: center;
+    margin-top: 3vh;
+    /*8vh*/
+    position: relative;
+    box-shadow: 1px 1px 1px #656565;
+}
+
+.divSubEsqSenhaSair {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.aDivSubEsqSenhaSair {
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.imgDivSubEsqSenhaSair {
+    width: 20px;
+    height: 20px;
+}
+
+.divSubEsqSenhaLogo {
+    height: 15%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    /*float:left;*/
+}
+
+.imgDivSubEsqSenhaLogo {
+    height: 100%;
+    width: 15%;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.divSubEsqSenhaTitulo {
+    height: 30%;
+    width: 100%;
+    /*float:left;*/
+    z-index: 5;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.h1EsqSenhaTitulo {
+    font-size: calc(0.5rem + 1vw);
+    font-weight: bold;
+}
+
+.divEspacoLogin {
+    height: 12%;
+    float: left;
+    width: 100%;
+}
+
+.divEsqSenhaEmail {
+    height: 28%;
+    width: 100%;
+    float: left;
+}
+
+.divEsqSenhaEntrar {
+    height: 30%;
+    width: 100%;
+    float: left;
+}
+
+.divSubLoginEmail1,
+.divSubLoginEmail2,
+.divSubLoginEmail3 {
+    width: 100%;
+    text-align: center;
+}
+
+.divSubLoginEmail1 {
+    height: 30%;
+    float: left;
+    text-align: left !important;
+}
+
+.divSubEmailLogin2 {
+    height: 50%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divSubEmailLogin3 {
+    height: 20%;
+    float: left;
+}
+
+.lblDivLogin {
+    font-size: calc(0.10rem + 1vw);
+    margin-left: 17.5%;
+}
+
+.txtDivLogin {
+    height: 65%;
+    width: 65%;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: calc(0.04rem + 1vw);
+    border-radius: 20px 4px;
+}
+
+.txtDivLogin2 {
+    height: 50%;
+    width: 65%;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: calc(0.04rem + 1vw);
+    border-radius: 20px 4px;
+}
+
+.lblDivAvisoLogin {
+    height: 50%;
+    width: 100%;
+    margin-top: 5px;
+    float: left;
+    font-size: calc(0.04rem + 1vw);
+}
+
+.lblEsqS {
+    font-size: calc(0.03rem + 1vw);
+    margin-left: 17.5%;
+}
+
+.txtEsqS {
+    height: 30%;
+    width: 65%;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: calc(0.04rem + 1vw);
+    border-radius: 20px 4px;
+}
+
+.lblAvisoEsqS {
+    height: 50%;
+    width: 100%;
+    margin-top: 5px;
+    float: left;
+    font-size: calc(0.02rem + 1vw);
+}
+
+.divBtnLogin {
+    height: 24%;
+    margin-top: 20px;
+}
+
+.divBtnEspacoVazio {
+    height: 5%;
+}
+
+.divBtnSubLogin1 {
+    height: 35%;
+    width: 100%;
+    float: left;
+    text-align: center !important;
+    padding-top: 5px;
+}
+
+.aEsqueceuSenha {
+    font-size: calc(0.05rem + 1vw);
+    cursor: pointer;
+}
+
+.aEsqueceuSenha:hover {
+    text-decoration: underline !important;
+}
+
+.divBtnSubLogin2 {
+    height: 60%;
+    width: 100%;
+    float: left;
+}
+
+.btnLogin {
+    height: 70%;
+    color: #fff;
+    width: 30%;
+    margin-left: 34%;
+    background-color: #ffb300;
+    border-radius: 15px 15px;
+    font-size: calc(0.05rem + 1vw);
+    border: none;
+}
+
 .divFooter {
     background-color: #ff7300;
-    box-shadow: 0px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
     width: 100%;
     padding: 0px 48px;
     margin-top: 60px;
@@ -566,6 +830,7 @@ body {
 .footer-SblurgeMaker {
     padding: 0 20px;
 }
+
 .footer-Follow {
     padding: 0 20px;
     padding-right: 0;
@@ -574,7 +839,7 @@ body {
 .FootTitles {
     margin-bottom: 10px;
     font-size: 1.1em;
-    color:#FFF;
+    color: #FFF;
     font-weight: bold;
 }
 
@@ -586,23 +851,25 @@ body {
     padding: 0 0 0 10px;
 }
 
-    .FooterLinks li {
-        font-size: 1em;
-        margin-bottom: 0;
-    }
-    .FooterLinks a {
-        color: #fff;
-    }
-    .FooterLinks a:hover {
-        color: rgba(255, 193, 24, 0.795);
-        text-decoration: none;
-        transition: 0.6s;
-    }
+.FooterLinks li {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.FooterLinks a {
+    color: #fff;
+}
+
+.FooterLinks a:hover {
+    color: rgba(255, 193, 24, 0.795);
+    transition: 0.6s;
+}
+
 .BottomFooter {
     background-color: rgb(255, 173, 21);
     width: 100%;
     padding: 10px 0;
-    box-shadow: 0px -7px 20px rgba(0, 0, 0, 0.15);;
+    box-shadow: 0px -7px 20px rgba(0, 0, 0, 0.1);
 }
 
 .BottomFooterRow {
@@ -616,29 +883,30 @@ body {
     padding-left: .9375rem;
 }
 
-    .BottomFooterColunm p {
-        text-align: center;
-        color: #444;
-        font-size: 0.8em;
-        margin: 0;
-        user-select: none;
-    }
-    .BottomFooterColunm a {
-        color: #c70000e3;
-    }
-    .BottomFooterColunm a:hover {
-        text-decoration: none;
-    }
-
-.divFooter li, ul {
-    list-style: none;
+.BottomFooterColunm p {
+    text-align: center;
+    color: #444;
+    font-size: 0.8em;
+    margin: 0;
+    user-select: none;
 }
+
+.BottomFooterColunm a {
+    color: #c70000e3;
+}
+
+.BottomFooterColunm a:hover {
+    text-decoration: none;
+}
+
 .borderleft {
     border-right: #ffa053 solid 1px;
 }
+
 .bordermid {
     border-right: #ffa053 solid 1px;
 }
+
 @media screen and (max-width: 1205px) {
     .imgFooter {
         margin: 0;
@@ -649,20 +917,22 @@ body {
         width: 45vw;
         min-width: 236px;
     }
-    .MainFooter *{
+    .MainFooter * {
         max-width: auto;
     }
     .divFooter {
         padding: 0 24px;
     }
 }
+
 @media screen and (max-width: 883px) {
     .MainFooter {
         padding: 30px 0 0 0;
     }
 }
+
 @media screen and (max-width: 675px) {
-    .MainFooter *{
+    .MainFooter * {
         padding: 0;
         margin: 0;
     }
@@ -676,7 +946,6 @@ body {
         padding: 0 10px;
         padding-left: 0;
     }
-    
     .footer-SblurgeMaker {
         padding: 0 10px;
     }
@@ -684,7 +953,6 @@ body {
         padding: 0 10px;
         padding-right: 0;
     }
-
     .BottomFooterColunm p {
         text-align: center;
         color: #444;
@@ -698,7 +966,18 @@ body {
     .FootTitles {
         margin-bottom: 10px;
         font-size: 0.9em;
-        color:#FFF;
+        color: #FFF;
         font-weight: bold;
     }
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a,
+li,
+ul {
+    list-style: none;
+    text-decoration: none;
 }

@@ -139,7 +139,7 @@ namespace TCC
         {
             if (txtSenha.Text != txtConfirmarSenha.Text)
             {
-                Label1.Text = "Por favor, cê poderia ter monitor? Obrigado, a direção!";
+                Label1.Text = "A senha e confirmação de senha não conferem";
                 return;
             }
             if (Session["userID"] != null)

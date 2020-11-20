@@ -5,33 +5,19 @@
     background-color: #fff;
 }
 
-.divNomePagina {
-    height: 200px;
-    width: 100%;
-    float: left;
-}
-
-.divTituloPagina {
-    height: 85px;
-    width: 30%;
-    background-color: #ed4218;
-}
-
-.divBtnOpcoesPagLanches {
-    height: 200px;
-    width: 100%;
-    float: left;
-    align-items: initial;
+.geral {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+}
+
+.bigboy {
+    display: flex;
+    width: 100%;
 }
 
 .divIngredientes {
     height: auto;
     width: 55%;
-    float: left;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -42,11 +28,15 @@
 .divIngredientesCategoria {
     height: 150px;
     width: 100%;
-    float: left;
+    display: flex;
+    justify-content: space-between;
 }
+
+
 /*.divIngredientesCategoria select {
     display: none; hide original SELECT element:
 }*/
+
 .select-selected:after {
     position: absolute;
     content: "";
@@ -63,7 +53,8 @@
     top: 7px;
 }
 
-.select-items div:hover, .same-as-selected {
+.select-items div:hover,
+.same-as-selected {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -72,14 +63,14 @@
 }
 
 .divIngredientesCategoria h1 {
-    float: left;
     font-size: 42px;
-    margin-left: 50px;
     user-select: none;
+    margin: auto;
+    margin-right: 0;
 }
 
 .selectCategoria {
-    float: left;
+    height: 60px;
     font-size: 42px;
     background-color: #ed4218;
     text-align: center;
@@ -87,7 +78,7 @@
     color: #FFF;
     text-shadow: 2px 2px 2px #989898;
     display: flex;
-    justify-content: flex-start;
+    margin: auto;
     margin-left: 20px;
 }
 
@@ -106,9 +97,9 @@
     font-size: 30px;
 }
 
-    .optionCategoria:hover {
-        background-color: #e3e3e3;
-    }
+.optionCategoria:hover {
+    background-color: #e3e3e3;
+}
 
 .divMostrarIngredientes {
     height: auto;
@@ -117,14 +108,13 @@
 }
 
 .divPaes {
-    height: 1700px;
+    height: auto;
     width: 100%;
     float: left;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
-    margin-bottom: 100px;
 }
 
 #ContentPlaceHolder1_divPaes {
@@ -157,12 +147,13 @@
     border-radius: 40px;
     background-color: #FFF;
     filter: drop-shadow(8px 8px 10px #656565);
+    margin-bottom: 50px;
 }
 
-    .divProduto a {
-        text-decoration: none;
-        color: black;
-    }
+.divProduto a {
+    text-decoration: none;
+    color: black;
+}
 
 .divSubProduto1 {
     height: 250px;
@@ -230,10 +221,10 @@
     border-radius: 10px 10px;
 }
 
-    .btnAdicionarCarrinho:hover {
-        background-color: #15b62a;
-        transition: 0.7s;
-    }
+.btnAdicionarCarrinho:hover {
+    background-color: #15b62a;
+    transition: 0.7s;
+}
 
 .divSubProduto4 {
     height: 100px;
@@ -267,30 +258,20 @@
     text-align: center;
 }
 
-.divIngredientesCliente {
-    height: auto;
+.smallboy {
     width: 45%;
-    float: left;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
-.divIngredienteCliente {
-    height: 300px;
-    width: 80%;
-    float: left;
-    background-color: #f7f7f7;
-    align-items: center;
+.divIngredientesCliente {
+    height: auto;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    border-radius: 20px 20px;
-    box-shadow: 2px 2px #989898;
-    margin-bottom: 50px;
+    align-items: center;
 }
 
 .divIngredienteFoto {
@@ -374,7 +355,6 @@
 .divTot {
     height: 80px;
     width: 100%;
-    float: left;
     margin-bottom: 30px;
 }
 
@@ -399,9 +379,18 @@
     font-size: 30px;
 }
 
-.btnIrCarrinho {
+.divBtnOpcoesPagLanches {
     height: 80px;
-    width: 24%;
+    width: 457px;
+    align-items: initial;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btnIrCarrinho {
+    width: 100%;
     background-image: linear-gradient(135deg, rgba(39, 131, 219) 0%, rgba(27, 119, 207) 50%, rgba(15, 103, 186) 100%);
     font-size: 30px;
     font-weight: bold;
@@ -425,12 +414,11 @@
     justify-content: center;
 }
 
-    .divTextoBtnCarrinho p {
-        margin-bottom: 0;
-    }
+.divTextoBtnCarrinho p {
+    margin-bottom: 0;
+}
 
-
-    .divTextoBtnCarrinho img {
-        height: 90%;
-        float: left;
-    }
+.divTextoBtnCarrinho img {
+    height: 90%;
+    float: left;
+}
