@@ -5,13 +5,10 @@
     <script src="JS/Funcoes.js" type="text/javascript"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <div class="divCorpoProdutos" id="divCorpoProd">
-
         <div class="divTituloPagina">
             <h1>Monte seu Pedido </h1>
         </div>
-
         <div class="divAdicionarLanches">
             <div class="divCustomizarLanches">
                 <div class="divBurguer" id="divBurguer1">
@@ -56,20 +53,17 @@
                 </div>
             </div>
         </div>
-
         <div class="divProdutosCustomizaveis">
             <!--<div class="divNomeComplemento">
                 <div class="divTituloComplemento">
                     <h1> Adicione Complementos </h1>
                 </div>
             </div>-->
-
             <div class="divBebidas">
                 <div class="divSubBebidas">
                     <p><b>Acompanhamentos </b></p>
                 </div>
             </div>
-
             <div class="divSubProdutosCustomizaveis" id="divAcompanhamento">
                 <div class="divProdCustom" id="divProds" runat="server">
                     <!--<div class="divProduto" id="divPro">
@@ -77,43 +71,35 @@
                             <div class="divSubProduto1">
                                 <img src="Imagens/ProdutosComplementares/cocacola.png" class="imgSubProduto" />
                             </div>
-
                             <div class="divSubProduto2">
                                 <asp:Label ID="lblNome17987987" runat="server" Text="Refrigerante Coca-Cola em lata, 350ml" CssClass="lblDescricaoProduto"></asp:Label>
                                 <asp:Label ID="lblValor189799797" runat="server" Text="R$ 5,45" CssClass="lblValorProduto"></asp:Label>
                             </div>
                         </a>
-                        
                         <div class="divSubProduto3">
                             <asp:Button ID="btnAdicionarCarrinho179879787" runat="server" Text="Adicionar ao Carrinho" CssClass="btnAdicionarCarrinho"/>
                         </div>
                     </div>-->
                 </div>
             </div>
-
             <div class="divBotaoExpandir">
                 <div class="divSubBotaoExpandir">
                     <button class="btnExpandir" onclick="expandirAcompanhamentos()" id="btnExpandirAcompanhamento"></button>
                 </div>
-
             </div>
-
             <div class="divBebidas">
                 <div class="divSubBebidas">
                     <p><b>Bebidas </b></p>
                 </div>
             </div>
-
             <div class="divSubProdutosCustomizaveis" id="divBebida">
                 <div class="divProdCustom" id="divProds2" runat="server">
                 </div>
             </div>
-
             <div class="divBotaoExpandir">
                 <div class="divSubBotaoExpandir">
                     <button class="btnExpandir" onclick="expandirBebidas()" id="btnExpandirBebida"></button>
                 </div>
-
             </div>
 
             <div class="divBebidas">

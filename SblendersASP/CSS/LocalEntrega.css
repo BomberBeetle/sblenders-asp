@@ -1,42 +1,22 @@
-﻿body {
-}
+﻿body {}
 
 .divCorpoEntrega {
     height: auto;
     width: 100%;
-    float: left;
 }
 
-.divNomeEntrega {
-    height: 90px;
-    width: 100%;
-    float: left;
-    margin-bottom: 30px;
-}
-
-.divTituloEntrega {
-    height: 90px;
-    width: 30%;
-    float: left;
-    background-color: #ed4218;
-    border-radius: 0px 0px 30px 0px;
-    align-items: center;
+.geral {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
 }
 
-    .divTituloEntrega h1 {
-        color: #FFF;
-        font-size: 48px;
-        text-shadow: 2px 2px 2px #989898;
-    }
+.geral2 {
+    display: flex;
+}
 
 .divEnderecoEntrega {
     height: 700px;
     width: 35%;
-    float: left;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -72,12 +52,11 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
 }
 
 .txtEnderecoMaps {
     height: 40px;
-    width: 70%;
+    width: 90%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -119,7 +98,9 @@
     color: #FFF;
 }
 
-.hidden, .false, .true {
+.hidden,
+.false,
+.true {
     display: none;
 }
 
@@ -147,9 +128,9 @@
     align-items: center;
 }
 
-    .divSubInstrucoes1 p {
-        font-size: 30px;
-    }
+.divSubInstrucoes1 p {
+    font-size: 30px;
+}
 
 .divSubInstrucoes2 {
     height: 190px;
@@ -164,7 +145,7 @@
 
 .txtInstrucoes {
     height: 140px;
-    width: 80%;
+    width: 90%;
     padding: 5px;
     overflow: hidden;
 }
@@ -172,7 +153,6 @@
 .divMapsEntrega {
     height: 700px;
     width: 65%;
-    float: left;
     display: flex;
     align-items: center;
 }
@@ -183,14 +163,14 @@
 }
 
 .divBtnFinalizar {
-    height: 300px;
+    height: auto;
     width: 100%;
-    float: left;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-top: 10px;
 }
 
 .btnFinalizarPedido {
@@ -219,11 +199,11 @@
     justify-content: center;
 }
 
-    .divTextoBtnFinalizar p {
-        margin-bottom: 0;
-    }
+.divTextoBtnFinalizar p {
+    margin-bottom: 0;
+}
 
-    .divTextoBtnFinalizar img {
-        height: 90%;
-        float: left;
-    }
+.divTextoBtnFinalizar img {
+    height: 90%;
+    float: left;
+}

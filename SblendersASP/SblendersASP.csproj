@@ -101,6 +101,7 @@
     <Content Include="Audio\teste.mp3" />
     <Content Include="Carrinho.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="CSS\LandingVerification.css" />
     <Content Include="CSS\Quem_somos.css" />
     <Content Include="CSS\AreaCliente.css" />
     <Content Include="CSS\Carrinho.css" />
@@ -151,6 +152,7 @@
     <Content Include="CSS\ImagensCSS\orangeTexture.jpg" />
     <Content Include="Imagens\novoSblenders.png" />
     <Content Include="Imagens\novoSblendersIcon.png" />
+    <Content Include="Imagens\NovoSblendersLogo.png" />
     <Content Include="Imagens\paoHamburguerSuperior.png" />
     <Content Include="Imagens\ProdutosComplementares\cocacola.png" />
     <Content Include="Imagens\sblendersBlack.png" />

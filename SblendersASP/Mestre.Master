@@ -9,117 +9,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="CSS/Master.css" />
-    <link rel="stylesheet" type="text/css" href="CSS/Index2.css" />
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="JS/Funcoes.js" type="text/javascript"></script>
     <script src="JS/conexaoApi.js" type="text/javascript"></script>
-    <!--<link rel="stylesheet" type="text/css" href="Content/bootstrap-grid.css" />
-    <!--<link rel="stylesheet" type="text/css" href="Content/bootstrap-grid.css.map" />
-    <link rel="stylesheet" type="text/css" href="Content/bootstrap-grid.min.css" />
-    <link rel="stylesheet" type="text/css" href="Content/bootstrap-grid.min.css.map" />-->
-    <!--<link rel="stylesheet" type="text/css" href="Content/bootstrap-reboot.css" />
-    <!--<link rel="stylesheet" type="text/css" href="Content/bootstrap-reboot.min.css" />
-    <link rel="stylesheet" type="text/css" href="Content/bootstrap-reboot.css.map" />
-    <link rel="stylesheet" type="text/css" href="Content/bootstrap-reboot.min.css.map" />-->
-    <!--<link rel="stylesheet" type="text/css" href="Content/bootstrap.css" />
-    <!--<link rel="stylesheet" type="text/css" href="Content/bootstrap.css.map" />
-    <link rel="stylesheet" type="text/css" href="Content/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="Content/bootstrap.min.css.map" />-->
-
-    <!--scripts-->
-    <!--<script type="text/javascript" src="scripts/ai.0.22.9-build00167.js"></script>
-    <!--<script type="text/javascript" src="scripts/ai.0.22.9-build00167.min.js"></script>
-    <script type="text/javascript" src="scripts/bootstrap.bundle.js"></script>
-    <script type="text/javascript" src="scripts/bootstrap.bundle.js.map"></script>
-    <script type="text/javascript" src="scripts/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="scripts/bootstrap.bundle.min.js.map"></script>-->
-    <!--<script type="text/javascript" src="scripts/bootstrap.js"></script>
-    <!--<script type="text/javascript" src="scripts/bootstrap.js.map"></script>
-    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="scripts/bootstrap.min.js.map"></script>
-    <script type="text/javascript" src="scripts/index.d.ts"></script>-->
-    <!--<script type="text/javascript" src="scripts/jquery-3.0.0-vsdoc.js"></script>
-    <script type="text/javascript" src="scripts/jquery-3.0.0.js"></script>
-    <!--<script type="text/javascript" src="scripts/jquery-3.0.0.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery-3.0.0.min.map"></script>
-    <script type="text/javascript" src="scripts/jquery-3.0.0.slim.js"></script>
-    <script type="text/javascript" src="scripts/jquery-3.0.0.slim.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery-3.0.0.slim.min.map"></script>
-    <script type="text/javascript" src="scripts/popper-utils.js"></script>-->
-    <!--<script type="text/javascript" src="scripts/popper-utils.js.map"></script>
-    <script type="text/javascript" src="scripts/popper-utils.min.js"></script>
-    <script type="text/javascript" src="scripts/popper-utils.min.js.map"></script>-->
-    <!--<script type="text/javascript" src="scripts/popper.js"></script>
-    <!--<script type="text/javascript" src="scripts/popper.js.map"></script>
-    <script type="text/javascript" src="scripts/popper.min.js"></script>
-    <script type="text/javascript" src="scripts/popper.min.js.map"></script>
-    <script type="text/javascript" src="scripts/esm/popper-utils.js"></script>
-    <script type="text/javascript" src="scripts/esm/popper-utils.js.map"></script>
-    <script type="text/javascript" src="scripts/esm/popper-utils.min.js"></script>
-    <script type="text/javascript" src="scripts/esm/popper.js"></script>
-    <script type="text/javascript" src="scripts/esm/popper.js.map"></script>
-    <script type="text/javascript" src="scripts/esm/popper.min.js"></script>
-    <script type="text/javascript" src="scripts/esm/popper.min.js.map"></script>
-    <script type="text/javascript" src="scripts/umd/popper-utils.js"></script>
-    <script type="text/javascript" src="scripts/umd/popper-utils.js.map"></script>
-    <script type="text/javascript" src="scripts/umd/popper-utils.min.js"></script>
-    <script type="text/javascript" src="scripts/umd/popper-utils.min.js.map"></script>
-    <script type="text/javascript" src="scripts/umd/popper.js"></script>
-    <script type="text/javascript" src="scripts/umd/popper.js.map"></script>
-    <script type="text/javascript" src="scripts/umd/popper.min.js"></script>
-    <script type="text/javascript" src="scripts/umd/popper.min.js.map"></script>-->
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="oDiv">
-            <section class="container-fluid" id="divCabecalho">
-                <div class="col-2 CabEsq">
-                    <a href="Index2.aspx">
-                        <img src="Imagens/novoSblenders.png" class="imgLogo" />
-                    </a>
-                </div>
-                <div class="col-6 CabEsq">
-                    <a class="aProjSblenders" href="Quem_somos.aspx" id="quemSomos">Quem Somos</a>
-                    <a class="aProjSblenders" href="Contact.aspx" id="faleConosco">Fale Conosco</a>
-                    <a class="aProjSblenders" href="Produtos.aspx">Faça seu pedido</a>
-                </div>
-                <div class="col-4 CabEsq" id="divDesconectado" runat="server">
-                    <a class="aCad" onclick="Login()" id="textoLogin">Login</a>
-                    <a class="aCad" onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
-                </div>
-                <div class="col-4 CabEsq" id="divConectado" runat="server">
-                    <div class="divUsuario">
-                        <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
-                        <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="Sair">Sair</asp:LinkButton>
-                        <!--<asp:Label ID="vvv" runat="server" Text="Sair" CssClass="lblSair" OnServerClick="lblSair_Click"></asp:Label>-->
-                    </div>
-                    <div class="divFotoUsuario">
-                        <a href="AreaCliente.aspx" class="aFotoUsuario">
-                            <img src="Imagens/usuario.png" class="imgUsuario" />
+            <section class="divHeader">
+                <div class="divHeaderRow">
+                    <div class="imgHeader">
+                        <a href="Index2.aspx">
+                            <img src="Imagens/NovoSblendersLogo.png" class="imgLogo"/>
                         </a>
+                    </div>
 
+                    <div class="divLinks">
+                        <ul class="divLinksColunm">
+                            <li class="divLinksRow LinksLeft">
+                                <a class="adivLinks" href="Quem_somos.aspx">Quem Somos</a>
+                            </li>
+                            <li class="divLinksRow">
+                                <a class="adivLinks" href="Contact.aspx">Fale Conosco</a>
+                            </li>
+                            <li class="divLinksRow LinksRight">
+                                <a class="adivLinks" href="Produtos.aspx">Faça seu pedido</a>
+                            </li>
+                        <ul>
+                    </div>
+                    <div class="col-4 CabEsq" id="divDesconectado" runat="server">
+                        <a class="aCad" onclick="Login()" id="textoLogin">Login</a>
+                        <a class="aCad" onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
+                    </div>
+                    <div class="col-4 CabEsq" id="divConectado" runat="server">
+                        <div class="divUsuario">
+                            <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
+                            <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="Sair">Sair</asp:LinkButton>
+                        </div>
+                        <div class="divFotoUsuario">
+                            <a href="AreaCliente.aspx" class="aFotoUsuario">
+                                <img src="Imagens/usuario.png" class="imgUsuario" />
+                            </a>
+
+                        </div>
                     </div>
                 </div>
-                <!--<div class="col-2 CabEsq">
-                <a href="Index2.aspx">
-                    <img src="Imagens/novoSblenders.png" class="imgLogo" />
-                </a>
-            </div>
-            <div class="col-6 CabEsq">
-                <a class="aProjSblenders" href="Quem_somos.aspx">Quem Somos</a>
-                <a class="aProjSblenders" href="Contact.aspx">Fale Conosco</a>
-                <a class="aProjSblenders" href="V">Mais Informações</a>
-                <a class="aProjSblenders" href="Produtos.aspx">Faça seu pedido</a>
-            </div>
-            <div class="col-4 CabEsq">
-                <a class="aCad" onclick="Login()">Login</a>
-                <a class="aCad" onclick="Cadastro()">Cadastre-se</a>
-            </div>-->
             </section>
 
             <section class="container-fluid" id="divCad" runat="server">
@@ -216,6 +154,11 @@
                 <div class="col-3 divFG">
                 </div>
             </section>
+
+
+
+
+
 
             <section class="container-fluid" id="divLog" runat="server">
                 <div class="col-3 divFG">
@@ -325,7 +268,6 @@
                 </div>
 
                 <div class="col-3 divFG">
-                </div>
             </section>
 
             <section id="divCorpo">

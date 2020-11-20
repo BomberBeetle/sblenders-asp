@@ -25,7 +25,7 @@
             <nav class="container-fluid" id="divCabecalho">
                 <div class="col-2 CabEsq">
                     <a href="Index2.aspx">
-                        <img src="Imagens/novoSblenders.png" class="imgLogo" />
+                        <img src="Imagens/NovoSblendersLogo.png" class="imgLogo" />
                     </a>
                 </div>
                 <div class="col-6 CabEsq">

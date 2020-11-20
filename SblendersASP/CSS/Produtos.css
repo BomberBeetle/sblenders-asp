@@ -1,8 +1,7 @@
-﻿
-body {
-    background-image: url(../Imagens/background.png);
+﻿body {
     background-size: cover;
 }
+
 
 /*
 #divlista {
@@ -36,7 +35,6 @@ h1 {
 .divCorpoProdutos {
     height: auto;
     width: 100%;
-    float: left;
     /*background-image:url(ImagensCSS/texturaRepetitiva.png);
     background-repeat:repeat;
     background-color:#EEE;*/
@@ -48,7 +46,6 @@ h1 {
     width: 100%;
     margin-top: 80px;
     margin-bottom: 60px;
-    float: left;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -72,12 +69,12 @@ h1 {
     box-shadow: 7px 7px 7px #878787;
 }
 
-    .divBurguer a {
-        text-decoration: none;
-        width: 100%;
-        height: 100%;
-        float: left;
-    }
+.divBurguer a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
 
 .divTxtBurguer {
     height: inherit;
@@ -90,12 +87,12 @@ h1 {
     align-items: center;
 }
 
-    .divTxtBurguer h1 {
-        text-transform: uppercase;
-        font-size: 56px;
-        text-shadow: 2px 2px 2px #454545;
-        color: #FEFEFE;
-    }
+.divTxtBurguer h1 {
+    text-transform: uppercase;
+    font-size: 56px;
+    text-shadow: 2px 2px 2px #454545;
+    color: #FEFEFE;
+}
 
 .divImgBurguer {
     height: inherit;
@@ -136,12 +133,12 @@ h1 {
     text-align: center;
 }
 
-    .divTxtBurguer2 h1 {
-        text-transform: uppercase;
-        font-size: 36px;
-        text-shadow: 2px 2px 2px #454545;
-        color: #FEFEFE;
-    }
+.divTxtBurguer2 h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    text-shadow: 2px 2px 2px #454545;
+    color: #FEFEFE;
+}
 
 .divImgBurguer2 {
     height: inherit;
@@ -173,12 +170,12 @@ h1 {
     box-shadow: 4px 4px 4px #878787;
 }
 
-    .divBurguer3 a {
-        text-decoration: none;
-        width: 100%;
-        height: 100%;
-        float: left;
-    }
+.divBurguer3 a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
 
 #divBurguer2 {
     background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
@@ -187,7 +184,6 @@ h1 {
 .divProdutosCustomizaveis {
     height: auto;
     width: 100%;
-    float: left;
 }
 
 .divNomeComplemento {
@@ -209,10 +205,10 @@ h1 {
     justify-content: center;
 }
 
-    .divTituloComplemento h1 {
-        color: #FFF;
-        font-size: 48px;
-    }
+.divTituloComplemento h1 {
+    color: #FFF;
+    font-size: 48px;
+}
 
 .divBebidas {
     height: 300px;
@@ -235,11 +231,11 @@ h1 {
     justify-content: center;
 }
 
-    .divSubBebidas b {
-        font-size: 72px;
-        text-transform: uppercase full-width;
-        text-shadow: 2px 2px 2px #e33d00;
-    }
+.divSubBebidas b {
+    font-size: 72px;
+    text-transform: uppercase full-width;
+    text-shadow: 2px 2px 2px #e33d00;
+}
 
 .divSubProdutosCustomizaveis {
     height: 700px;
@@ -272,10 +268,10 @@ h1 {
     filter: drop-shadow(12px 12px 12px #656565);
 }
 
-    .divProduto a {
-        text-decoration: none;
-        color: black;
-    }
+.divProduto a {
+    text-decoration: none;
+    color: black;
+}
 
 .divSubProduto1 {
     height: 300px;
@@ -382,7 +378,6 @@ h1 {
 .divBtnOpcoesPagLanches {
     height: 200px;
     width: 100%;
-    float: left;
     align-items: initial;
     display: flex;
     flex-direction: row;
@@ -416,16 +411,18 @@ h1 {
     justify-content: center;
 }
 
-    .divTextoBtnCarrinho p {
-        margin-bottom: 0;
-    }
+.divTextoBtnCarrinho p {
+    margin-bottom: 0;
+}
+
+.divTextoBtnCarrinho img {
+    height: 90%;
+    float: left;
+}
 
 
-    .divTextoBtnCarrinho img {
-        height: 90%;
-        float: left;
-    }
 /*Popup Css*/
+
 .sectionProd {
     height: 100vh;
     width: 100%;
@@ -503,7 +500,9 @@ h1 {
     display: inline-block;
 }
 
+
 /*Popup Css2*/
+
 .sectionProd2 {
     height: 100vh;
     width: 100%;
@@ -571,13 +570,12 @@ h1 {
     justify-content: center;
 }
 
-    .divTextoBtnAvancar p {
-        margin-bottom: 0;
-        font-size: 1vw;
-    }
+.divTextoBtnAvancar p {
+    margin-bottom: 0;
+    font-size: 1vw;
+}
 
-
-    .divTextoBtnAvancar img {
-        height: 90%;
-        float: left;
-    }
+.divTextoBtnAvancar img {
+    height: 90%;
+    float: left;
+}
