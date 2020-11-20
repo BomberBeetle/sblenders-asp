@@ -361,8 +361,8 @@ function closeAllSelect(elmnt) {
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
-/*window.onresize = function () {
-    var elements = document.getElementById("divProds").querySelectorAll('divProduto');
+window.onresize = function () {
+    var elements = document.getElementById("ContentPlaceHolder1_divProds").getElementsByClassName('divProduto');
     var count = elements.length;
     var windowW = window.innerWidth;
     var windowH = window.innerHeight;    
@@ -370,56 +370,60 @@ document.addEventListener("click", closeAllSelect);
         if (windowH <= 720 && windowW <= 1280) {
             if (windowH <= 720 && windowW <= 1280) {               
                 var divHeight = 1200 * Math.trunc(count / 2) + 50 * Math.trunc(count / 2);
-                document.getElementById("divProds").style.height = divHeight;
+                document.getElementById("ContentPlaceHolder1_divProds").style.height = divHeight + "px";              
             }
             var divHeight = 900 * Math.trunc(count / 3) + 100 * Math.trunc(count / 3);
-            document.getElementById("divProds").style.height = divHeight;
+            document.getElementById("ContentPlaceHolder1_divProds").style.height = divHeight + "px";
         }
-        var divHeight = 600 * Math.trunc(count / 3) + 100 * Math.trunc(2 * count / 3);
-        document.getElementById("divProds").style.height = divHeight;
+        var divHeight2 = 2000 * Math.trunc(count / 3) + 100 * Math.trunc(2 * count / 3);
+        var divHeight = 1500 * Math.trunc(count / 3) + 100 * Math.trunc(2 * count / 3);
+        document.getElementById("ContentPlaceHolder1_divProds").style.height = divHeight + "px";
+        document.getElementById("divAcompanhamento").style.height = divHeight2 + "px";
     }
-    /*for (var i = 0; i < elements.length; i++) {
-        elements[i].style.width = window.innerWidth + "px";
-        elements[i].style.height = window.innerHeight + "px";        
-    }*//*
-}*/
+}
 
-visibilidadeNutri = false;
+var visibilidadeNutri = false;
 function fecharInfoNutri() {
-    var divNutri = document.querySelectorAll('sectionProd');
+    var divNutri = document.getElementById("secProd1");
     if (visibilidadeNutri == true) {
         divNutri.style.display = "none";
         visibilidadeNutri = false;
+        document.getElementById("divDescricaoProdutoCorpo1").innerHTML = "";
     }
     event.preventDefault();
 }
 
-/*function exibirInfoNutri() {
-    var i = this.id;
-    var res = i.substring(1, i.length - 1);
+function exibirInfoNutri(o) {
+    var i = o;
+    var rest = i.substring(1, i.length);
     var element = document.getElementById("secProd1");
-    url = "https://localhost:44323/api/Produtos/" + res;
+    document.getElementById("divDescricaoProdutoCorpo1").innerHTML = "";
+    url = "https://localhost:44323/api/Produtos/" + rest;
     fetch(url, { cors: "anonymous" }).then((res) => {
         res.json().then((dados) => {
-            var d = dados[0].infoNutr;
+            var d = dados.infoNutr;
             var dCount = d.length - 1;
             while (dCount >= 0) {
-                let HTMLLabelElement lblDes = new HTMLLabelElement();
-                lblDes.value = d[dCount].descricao;
+                let lblDes = document.createElement("span");
+                lblDes.innerText = d[dCount].descricao;
                 lblDes.className = "lblDescNutri";
-                let HTMLLabelElement lblVal = new HTMLLabelElement();
-                lblVal.value = d[dCount].val;
-                lblVal.className = "lblDescValor";                
+                document.getElementById("divDescricaoProdutoCorpo1").appendChild(lblDes);
+                let lblVal = document.createElement("span");
+                lblVal.innerText = d[dCount].val;
+                lblVal.className = "lblDescValor";
+                document.getElementById("divDescricaoProdutoCorpo1").appendChild(lblVal);
                 dCount--;
             }
         }).catch((err) => {
-            alert("Erro: " + err);
+            //alert("Erro: " + err);
         })
-    });    
-    element.style.display = "flex";
-    visibilidadeNutri = true;
+    });
+    if (visibilidadeNutri == false) {
+        element.style.display = "flex";
+        visibilidadeNutri = true;
+    }
     event.preventDefault();
-}*/
+}
 
 /*function iniciar() {
     var s = document.getElementsByClassName('ASS');
@@ -430,32 +434,38 @@ function fecharInfoNutri() {
     s.forEach((e) => e.onclick = exibirInfoNutri);
 }*/
 
-function somar(e) {
-    var i = e;
-    var res = i.substring(11, i.length - 11);
+function somar(o) {
+    var i = o;
+    var res = i.substring(11, i.length);
     console.log(i);
     console.log(res);
     //var element = document.getElementById("divMostrarIngredientes");
     var text = document.getElementById("txtQuantidade" + res);
-    var quant = text.value;
-    text.value = quant++;
+    var hidden = document.getElementById("hTxt" + res);
+    var quant = parseInt(text.value);
+    alert(hidden);
+    text.value = quant + 1;
+    hidden.value = quant + 1;
     event.preventDefault();
 }
 
-function subtrair(e) {
-    var i = e;
-    var res = i.substring(11, i.length - 11);
+function subtrair(o) {
+    var i = o;
+    var res = i.substring(11, i.length);
     console.log(i);
     console.log(res);
     //var element = document.getElementById("divMostrarIngredientes");
     var text = document.getElementById("txtQuantidade" + res);
-    var quant = text.value;
-    var e = quant--;
+    var hidden = document.getElementById("hTxt" + res);
+    var quant = parseInt(text.value);
+    var e = quant - 1;
     if (e <= 1) {
         text.value = 1;
+        hidden.value = 1;
     }
     else {
         text.value = e;
+        hidden.value = e;
     }
     event.preventDefault();
 }
