@@ -9,7 +9,6 @@
 }
 
 * {
-    margin: 0 auto;
     font-family: 'Century Gothic';
 }
 
@@ -18,20 +17,21 @@ body {
 }
 
 .divHeader {
-    padding: 15px 0;
     background-color: #ff7300;
+    padding: 15px 0;
 }
 
 .divHeaderRow {
-    margin: 0 30px;
+    margin: 0 auto;
+    width: 1289px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 .imgHeader {
     margin: 0;
-    padding: 0;
     height: auto;
     display: flex;
     align-items: center;
@@ -49,50 +49,89 @@ body {
     margin: 0;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
 .divLinksColunm {
     display: flex;
-    align-items: center;
-    margin: 0;
+    align-self: stretch;
+    flex-direction: row;
+    align-items: stretch;
     padding: 0;
+    margin: 20px;
+    gap: 10px;
 }
 
 .divLinksRow {
-    margin: 0px 20px;
-    display: inline-block;
-}
-
-.LinksLeft {
-    margin-right: 0;
-}
-
-.LinksRight {
-    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    transition: 0.5s;
+    padding: 0;
 }
 
 .adivLinks {
     font-size: 22px;
     color: #FFF;
     margin: 0;
-}
-
-.adivLinks:hover {
-    color: #00000000;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 0.5s;
 }
 
-#divConectado {
-    display: none;
+.adivLinks:hover {
+    color: #fff;
 }
 
-.divUsuario {
-    height: 100%;
-    width: 60%;
-    float: left;
+.divLinksRow:hover {
+    background-color: #ffad15;
+    border-radius: 20rem;
+}
+
+.divLogBtns {
+    display: flex;
+    flex-direction: row;
+}
+
+.divbtn {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.abtn {
+    color: #ffffff !important;
+    background-color: #ffad15;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-size: 24px;
+}
+
+.abtn:hover {
+    color: #ff7300 !important;
+    background-color: #ffffff;
+    transition: 0.5s;
+}
+
+.divHeaderUser {}
+
+.divUser {}
+
+.divUserPhoto {}
+
+.aUserPhoto {}
+
+.imgUser {}
+
+#divConectado {
+    display: none;
 }
 
 .lblBemVindo {
@@ -118,33 +157,6 @@ body {
 
 .lblSair:hover {
     color: #323232 !important;
-}
-
-.divFotoUsuario {
-    height: 100%;
-    width: 40%;
-    float: left;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.aFotoUsuario {
-    height: 100%;
-    width: 100%;
-    float: left;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.imgUsuario {
-    height: 80%;
-    width: 50%;
 }
 
 
@@ -213,25 +225,6 @@ body {
     font-size: 40px;
     margin-top: 30px;
     margin-left: 10px;
-}
-
-.aCad {
-    color: #fff !important;
-    font-size: 24px;
-    background-color: #ffad15;
-    padding: 15px 25px;
-    line-height: 15vh;
-    margin-left: 10px;
-    margin-right: 30px;
-    border-radius: 15px 15px;
-    /*box-shadow:#545454 1px 1px 1px;*/
-    cursor: pointer;
-}
-
-.aCad:hover {
-    color: #6e6a5c !important;
-    background-color: #ffa200;
-    transition: 0.75s;
 }
 
 #divCad {
@@ -866,7 +859,7 @@ body {
 }
 
 .BottomFooter {
-    background-color: rgb(255, 173, 21);
+    background-color: #ffad15;
     width: 100%;
     padding: 10px 0;
     box-shadow: 0px -7px 20px rgba(0, 0, 0, 0.1);
