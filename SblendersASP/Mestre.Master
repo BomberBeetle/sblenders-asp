@@ -28,31 +28,35 @@
 
                     <div class="divLinks">
                         <ul class="divLinksColunm">
-                            <li class="divLinksRow LinksLeft">
+                            <li class="divLinksRow">
                                 <a class="adivLinks" href="Quem_somos.aspx">Quem Somos</a>
                             </li>
                             <li class="divLinksRow">
                                 <a class="adivLinks" href="Contact.aspx">Fale Conosco</a>
                             </li>
-                            <li class="divLinksRow LinksRight">
+                            <li class="divLinksRow">
                                 <a class="adivLinks" href="Produtos.aspx">Faça seu pedido</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-4 CabEsq" id="divDesconectado" runat="server">
-                        <a class="aCad" onclick="Login()" id="textoLogin">Login</a>
-                        <a class="aCad" onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
+                    <div class="divLogBtns" id="divDesconectado" runat="server">
+                        <div class="divbtn">
+                            <a class="abtn " onclick="Login()" id="textoLogin">Login</a>
+                        </div>
+                        <div class="divbtn">
+                            <a class="abtn " onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
+                        </div>
                     </div>
-                    <div class="col-4 CabEsq" id="divConectado" runat="server">
-                        <div class="divUsuario">
+
+                    <div class="divHeaderUser" id="divConectado" runat="server">
+                        <div class="divUser">
                             <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
                             <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="Sair">Sair</asp:LinkButton>
                         </div>
-                        <div class="divFotoUsuario">
-                            <a href="AreaCliente.aspx" class="aFotoUsuario">
+                        <div class="divUserPhoto">
+                            <a href="AreaCliente.aspx" class="aUserPhoto">
                                 <img src="Imagens/usuario.png" class="imgUsuario" />
                             </a>
-
                         </div>
                     </div>
                 </div>

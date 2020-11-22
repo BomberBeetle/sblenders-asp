@@ -150,6 +150,7 @@
     <Content Include="Imagens\iconeX.png" />
     <Content Include="Imagens\iconX.png" />
     <Content Include="CSS\ImagensCSS\orangeTexture.jpg" />
+    <Content Include="Imagens\mail.png" />
     <Content Include="Imagens\novoSblenders.png" />
     <Content Include="Imagens\novoSblendersIcon.png" />
     <Content Include="Imagens\NovoSblendersLogo.png" />
@@ -162,6 +163,7 @@
     <Content Include="Imagens\seta.png" />
     <Content Include="Imagens\seta2.png" />
     <Content Include="Imagens\usuario.png" />
+    <Content Include="Imagens\zap.png" />
     <Content Include="Index2.aspx" />
     <Content Include="Ingredientes.aspx" />
     <Content Include="JS\conexaoApi.js" />
