@@ -264,10 +264,10 @@
                         <img class="d-block w-100 imgCarrouselBanner" src="Imagens/sblenders1.jpg" alt="Primeiro Slide" />
                     </div>
                     <div class="carousel-item" id="itemCarro2">
-                        <img class="d-block w-100 imgCarrouselBanner" src="Imagens/bannerBurger.jpg" alt="Segundo Slide" />
+                        <img class="d-block w-100 imgCarrouselBanner" src="Imagens/carroBurguer2.jpeg" alt="Segundo Slide" />
                     </div>
                     <div class="carousel-item" id="itemCarro3">
-                        <img class="d-block w-100 imgCarrouselBanner" src="Imagens/carroBurguer2.jpeg" alt="Terceiro Slide" />
+                        <img class="d-block w-100 imgCarrouselBanner" src="Imagens/sblenders2.jpg" alt="Terceiro Slide" />
                     </div>
                 </div>
                 <a class="carousel-control-prev aNeg" href="#carouselBanner" role="button" data-slide="prev">
