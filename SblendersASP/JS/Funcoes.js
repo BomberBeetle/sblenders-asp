@@ -21,8 +21,7 @@ function Login() {
         visibilidadeCad = false;
         visiblidadeEsqSenha = false;
         visibilidadeLogin = true;
-    }
-    else if (visibilidadeLogin == true) {
+    } else if (visibilidadeLogin == true) {
         divLog.style.display = "none";
         divEsqSenha.style.display = "none";
         visibilidadeLogin = false;
@@ -41,8 +40,7 @@ function Cadastro() {
         visibilidadeLogin = false;
         visiblidadeEsqSenha = false;
         visibilidadeCad = true;
-    }
-    else if (visibilidadeCad == true) {
+    } else if (visibilidadeCad == true) {
         divCad.style.display = "none";
         divEsqSenha.style.display = "none";
         visibilidadeCad = false;
@@ -60,8 +58,7 @@ function esqueceuSenha() {
         visibilidadeLogin = false;
         visibilidadeCad = false;
         visiblidadeEsqSenha = true;
-    }
-    else if (visiblidadeEsqSenha == true) {
+    } else if (visiblidadeEsqSenha == true) {
         divCad.style.display = "none";
         divLog.style.display = "none";
         divEsqSenha.style.display = "none";
@@ -94,14 +91,13 @@ function indexDinamico() {
 
     if (itemCarro1.className === "carousel-item active") {
         textoLogin.style.color = "#FFF";
-    }
-    else if (itemCarro2.className === "carousel-item active") {
+    } else if (itemCarro2.className === "carousel-item active") {
         textoLogin.style.color = "#FFF";
-    }
-    else if (itemCarro3.className === "carousel-item active") {
+    } else if (itemCarro3.className === "carousel-item active") {
         textoLogin.style.color = "#FFF";
     }
 }
+
 function repetidor() {
     setInterval(indexDinamico, 100);
 }
@@ -118,12 +114,11 @@ function expandirAcompanhamentos() {
 
         divAcompanhamento.style.height = "1300px";
         divAcompanhamento.style.transitionDuration = "2s";
-        setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
+        setTimeout(function() { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         acompanhamentoAberto = true;
-    }
-    else if (acompanhamentoAberto === true) {
+    } else if (acompanhamentoAberto === true) {
         divAcompanhamento.style.overflow = "hidden";
         divAcompanhamento.style.height = "700px";
         divAcompanhamento.style.transitionDuration = "2s";
@@ -140,12 +135,11 @@ function expandirBebidas() {
     if (bebidaAberto === false) {
         divAcompanhamento.style.height = "1300px";
         divAcompanhamento.style.transitionDuration = "2s";
-        setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
+        setTimeout(function() { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         bebidaAberto = true;
-    }
-    else if (bebidaAberto === true) {
+    } else if (bebidaAberto === true) {
         divAcompanhamento.style.overflow = "hidden";
         divAcompanhamento.style.height = "700px";
         divAcompanhamento.style.transitionDuration = "2s";
@@ -162,12 +156,11 @@ function expandirSobremesas() {
     if (sobremesaAberto === false) {
         divAcompanhamento.style.height = "1300px";
         divAcompanhamento.style.transitionDuration = "2s";
-        setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
+        setTimeout(function() { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         sobremesaAberto = true;
-    }
-    else if (sobremesaAberto === true) {
+    } else if (sobremesaAberto === true) {
         divAcompanhamento.style.overflow = "hidden";
         divAcompanhamento.style.height = "700px";
         divAcompanhamento.style.transitionDuration = "2s";
@@ -184,12 +177,11 @@ function expandirMolhos() {
     if (molhoAberto === false) {
         divAcompanhamento.style.height = "1300px";
         divAcompanhamento.style.transitionDuration = "2s";
-        setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
+        setTimeout(function() { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         molhoAberto = true;
-    }
-    else if (molhoAberto === true) {
+    } else if (molhoAberto === true) {
         divAcompanhamento.style.overflow = "hidden";
         divAcompanhamento.style.height = "700px";
         divAcompanhamento.style.transitionDuration = "2s";
@@ -231,40 +223,35 @@ function mostrarCategoriaSelecao() {
         legumes.style.display = "none";
         queijos.style.display = "none";
         molhos.style.display = "none";
-    }
-    else if (value === "paes") {
+    } else if (value === "paes") {
         paes.style.display = "flex";
         carnes.style.display = "none";
         verduras.style.display = "none";
         legumes.style.display = "none";
         queijos.style.display = "none";
         molhos.style.display = "none";
-    }
-    else if (value === "verduras") {
+    } else if (value === "verduras") {
         paes.style.display = "none";
         carnes.style.display = "none";
         verduras.style.display = "flex";
         legumes.style.display = "none";
         queijos.style.display = "none";
         molhos.style.display = "none";
-    }
-    else if (value === "legumes") {
+    } else if (value === "legumes") {
         paes.style.display = "none";
         carnes.style.display = "none";
         verduras.style.display = "none";
         legumes.style.display = "flex";
         queijos.style.display = "none";
         molhos.style.display = "none";
-    }
-    else if (value === "queijos") {
+    } else if (value === "queijos") {
         paes.style.display = "none";
         carnes.style.display = "none";
         verduras.style.display = "none";
         legumes.style.display = "none";
         queijos.style.display = "flex";
         molhos.style.display = "none";
-    }
-    else if (value === "molhos") {
+    } else if (value === "molhos") {
         paes.style.display = "none";
         carnes.style.display = "none";
         verduras.style.display = "none";
@@ -274,7 +261,7 @@ function mostrarCategoriaSelecao() {
     }
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     /* $("#divAcompanhamento").click(function () {
          $("#divPro").clone().appendTo("#divProds");
@@ -302,7 +289,7 @@ for (i = 0; i < l; i++) {
         create a new DIV that will act as an option item:*/
         c = document.createElement("DIV");
         c.innerHTML = selElmnt.options[j].innerHTML;
-        c.addEventListener("click", function (e) {
+        c.addEventListener("click", function(e) {
             /*when an item is clicked, update the original select box,
             and the selected item:*/
             var y, i, k, s, h, sl, yl;
@@ -327,7 +314,7 @@ for (i = 0; i < l; i++) {
         b.appendChild(c);
     }
     x[i].appendChild(b);
-    a.addEventListener("click", function (e) {
+    a.addEventListener("click", function(e) {
         /*when the select box is clicked, close any other select boxes,
         and open/close the current select box:*/
         e.stopPropagation();
@@ -336,6 +323,7 @@ for (i = 0; i < l; i++) {
         this.classList.toggle("select-arrow-active");
     });
 }
+
 function closeAllSelect(elmnt) {
     /*a function that will close all select boxes in the document,
     except the current select box:*/
@@ -361,16 +349,16 @@ function closeAllSelect(elmnt) {
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
-window.onresize = function () {
+window.onresize = function() {
     var elements = document.getElementById("ContentPlaceHolder1_divProds").getElementsByClassName('divProduto');
     var count = elements.length;
     var windowW = window.innerWidth;
-    var windowH = window.innerHeight;    
+    var windowH = window.innerHeight;
     if (windowH <= 1080 && windowW <= 1920) {
         if (windowH <= 720 && windowW <= 1280) {
-            if (windowH <= 720 && windowW <= 1280) {               
+            if (windowH <= 720 && windowW <= 1280) {
                 var divHeight = 1200 * Math.trunc(count / 2) + 50 * Math.trunc(count / 2);
-                document.getElementById("ContentPlaceHolder1_divProds").style.height = divHeight + "px";              
+                document.getElementById("ContentPlaceHolder1_divProds").style.height = divHeight + "px";
             }
             var divHeight = 900 * Math.trunc(count / 3) + 100 * Math.trunc(count / 3);
             document.getElementById("ContentPlaceHolder1_divProds").style.height = divHeight + "px";
@@ -383,6 +371,7 @@ window.onresize = function () {
 }
 
 var visibilidadeNutri = false;
+
 function fecharInfoNutri() {
     var divNutri = document.getElementById("secProd1");
     if (visibilidadeNutri == true) {
@@ -462,10 +451,21 @@ function subtrair(o) {
     if (e <= 1) {
         text.value = 1;
         hidden.value = 1;
-    }
-    else {
+    } else {
         text.value = e;
         hidden.value = e;
     }
     event.preventDefault();
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
 }

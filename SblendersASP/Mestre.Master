@@ -28,10 +28,10 @@
 
                     <div class="divLinks">
                         <ul class="divLinksColunm">
-                            <li class="divLinksRow">
+                            <li class="divLinksRow divLinksHidden">
                                 <a class="adivLinks" href="Quem_somos.aspx">Quem Somos</a>
                             </li>
-                            <li class="divLinksRow">
+                            <li class="divLinksRow divLinksHidden">
                                 <a class="adivLinks" href="Contact.aspx">Fale Conosco</a>
                             </li>
                             <li class="divLinksRow">
@@ -57,6 +57,31 @@
                             <a href="AreaCliente.aspx" class="aUserPhoto">
                                 <img src="Imagens/usuario.png" class="imgUsuario" />
                             </a>
+                        </div>
+                    </div>
+                    <div class="divOpenMenu">
+                        <span class="opmenu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                    </div>
+                    <div id="mySidenav" class="sidenav">
+                        <div class="SidenavCol">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <li class="divasidenav divasidenavfirst">
+                                <a class="asidenav" href="Quem_somos.aspx">Quem Somos</a>
+                            </li>
+                            <li class="divasidenav">
+                                <a class="asidenav" href="Contact.aspx">Fale Conosco</a>
+                            </li>
+                            <li class="divasidenav">
+                                <a class="asidenav" href="Produtos.aspx">Faça seu Pedido</a>
+                            </li>
+                            <div class="divbtnsidenav">
+                                <div class="divbtn">
+                                    <a class="abtn " onclick="Login()" id="textoLogin">Login</a>
+                                </div>
+                                <div class="divbtn">
+                                    <a class="abtn " onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

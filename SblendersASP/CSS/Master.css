@@ -13,18 +13,18 @@
 }
 
 body {
-    margin: 0;
+    transition: background-color .5s;
 }
 
 .divHeader {
     background-color: #ff7300;
-    padding: 15px 0;
+    padding: 15px;
 }
 
 .divHeaderRow {
     margin: 0 auto;
-    width: 1289px;
     display: flex;
+    flex: 90%;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
@@ -118,6 +118,165 @@ body {
     color: #ff7300 !important;
     background-color: #ffffff;
     transition: 0.5s;
+}
+
+.divOpenMenu {
+    display: none;
+}
+
+.opmenu {
+    display: none;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidenav {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .abtn {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+    .adivLinks {
+        font-size: 18px;
+        padding: 0 15px;
+    }
+    .divLinksColunm {
+        margin: 15px;
+        gap: 5px;
+    }
+    .divbtn {
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .abtn {
+        padding: 5px 10px;
+    }
+    .adivLinks {
+        padding: 0 5px;
+    }
+    .divLinksColunm {
+        margin: 5px;
+        gap: 2px;
+    }
+    .divbtn {
+        padding: 0 3px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .adivLinks {
+        font-size: 14px;
+    }
+    .divHeaderRow {
+        justify-content: space-between;
+    }
+    .imgHeader {
+        max-width: 80px;
+    }
+    .divLogBtns {
+        display: none;
+    }
+    .divLinks {
+        justify-content: flex-end;
+        flex-grow: 1;
+        margin-right: 15px;
+        border-right: #ffa053 1px solid;
+    }
+    .divLinksHidden {
+        display: none;
+    }
+    .divHeaderUser {
+        display: none;
+    }
+    .divOpenMenu {
+        display: flex;
+    }
+    .divProd {
+        display: block;
+    }
+    .opmenu {
+        display: flex;
+        user-select: none;
+    }
+    .sidenav {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        border: 15px 0 0 15px;
+        background-color: #ff790a;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        transition: 0.5s;
+    }
+    .SidenavCol {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .sidenav a {
+        text-decoration: none;
+        color: #ffffff;
+        transition: 0.5s;
+    }
+    .asidenav .abtn {
+        font-size: 18px;
+    }
+    .asidenav {
+        padding: 10px 5px;
+        display: flex;
+        align-items: stretch;
+    }
+    .divasidenavfirst {
+        border-radius: 5px 5px 0 0;
+    }
+    .divasidenav {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        transition: 0.5s;
+        padding: 0;
+        background-color: #ff5e00;
+        border-bottom: 1px solid #ffffff;
+    }
+    .divbtnsidenav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+    .abtn {
+        padding: 10px 10px;
+    }
+    .divbtn {
+        padding: 0;
+    }
+    .sidenav {
+        position: absolute;
+        font-size: 18px;
+        margin-left: 50px;
+    }
+    .closebtn {
+        display: flex;
+        justify-self: flex-end;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .divLinks {
+        display: none;
+    }
 }
 
 .divHeaderUser {}
