@@ -349,7 +349,7 @@ function closeAllSelect(elmnt) {
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
-window.onresize = function() {
+/*window.onresize = function() {
     var elements = document.getElementById("ContentPlaceHolder1_divProds").getElementsByClassName('divProduto');
     var count = elements.length;
     var windowW = window.innerWidth;
@@ -368,8 +368,121 @@ window.onresize = function() {
         document.getElementById("ContentPlaceHolder1_divProds").style.height = divHeight + "px";
         document.getElementById("divAcompanhamento").style.height = divHeight2 + "px";
     }
+}*/
+
+function tamanhoDivProdutos() {
+    var elements = document.getElementById("ContentPlaceHolder1_divProds").getElementsByClassName('divProduto');
+    var count = elements.length;
+    var elements2 = document.getElementById("ContentPlaceHolder2_divProds").getElementsByClassName('divProduto');
+    var count2 = elements2.length;
+    var elements3 = document.getElementById("ContentPlaceHolder3_divProds").getElementsByClassName('divProduto');
+    var count3 = elements3.length;
+    var elements4 = document.getElementById("ContentPlaceHolder4_divProds").getElementsByClassName('divProduto');
+    var count4 = elements4.length;
+    var windowW = window.innerWidth;
+    var windowH = window.innerHeight;
+    if (windowH <= 1080 && windowW <= 1920) {
+        if (windowH <= 720 && windowW <= 1280) {
+            var divHeight = 1200 * Math.trunc(count / 2) + 50 * Math.trunc(count / 2);
+            var divHeightC = 1700 * Math.trunc(count / 2) + 50 * Math.trunc(count / 2);
+            document.getElementById("ContentPlaceHolder1_divProds").style.height = divHeight + "px";
+            document.getElementById("divAcompanhamento").style.height = divHeightC + "px";
+
+            var divHeight2 = 1200 * Math.trunc(count2 / 2) + 50 * Math.trunc(count2 / 2);
+            var divHeightC2 = 1700 * Math.trunc(count2 / 2) + 50 * Math.trunc(count2 / 2);
+            document.getElementById("ContentPlaceHolder2_divProds").style.height = divHeight2 + "px";
+            document.getElementById("divBebida").style.height = divHeightC2 + "px";
+
+            var divHeight3 = 1200 * Math.trunc(count3 / 2) + 50 * Math.trunc(count3 / 2);
+            var divHeightC3 = 1700 * Math.trunc(count3 / 2) + 50 * Math.trunc(count3 / 2);
+            document.getElementById("ContentPlaceHolder3_divProds").style.height = divHeight3 + "px";
+            document.getElementById("divSobremesa").style.height = divHeightC3 + "px";
+
+            var divHeight4 = 1200 * Math.trunc(count4 / 2) + 50 * Math.trunc(count4 / 2);
+            var divHeightC4 = 1700 * Math.trunc(count4 / 2) + 50 * Math.trunc(count4 / 2);
+            document.getElementById("ContentPlaceHolder4_divProds").style.height = divHeight4 + "px";
+            document.getElementById("divMolho").style.height = divHeightC4 + "px";
+        }           
+        var divHeight = 1500 * Math.trunc(count / 3) + 100 * Math.trunc(2 * count / 3);
+        var divHeightC = 2000 * Math.trunc(count / 3) + 100 * Math.trunc(2 * count / 3);
+        document.getElementById("ContentPlaceHolder1_divProds").style.height = divHeight + "px";
+        document.getElementById("divAcompanhamento").style.height = divHeightC + "px";
+
+        var divHeight2 = 1500 * Math.trunc(count2 / 3) + 100 * Math.trunc(2 * count2 / 3);
+        var divHeightC2 = 2000 * Math.trunc(count2 / 3) + 100 * Math.trunc(2 * count2 / 3);
+        document.getElementById("ContentPlaceHolder2_divProds").style.height = divHeight2 + "px";
+        document.getElementById("divBebida").style.height = divHeightC2 + "px";
+
+        var divHeight3 = 1500 * Math.trunc(count3 / 3) + 100 * Math.trunc(2 * count3 / 3);
+        var divHeightC3 = 2000 * Math.trunc(count3 / 3) + 100 * Math.trunc(2 * count3 / 3);
+        document.getElementById("ContentPlaceHolder3_divProds").style.height = divHeight3 + "px";
+        document.getElementById("divSobremesa").style.height = divHeightC3 + "px";
+
+        var divHeight4 = 1500 * Math.trunc(count4 / 3) + 100 * Math.trunc(2 * count4 / 3);
+        var divHeightC4 = 2000 * Math.trunc(count4 / 3) + 100 * Math.trunc(2 * count4 / 3);
+        document.getElementById("ContentPlaceHolder4_divProds").style.height = divHeight4 + "px";
+        document.getElementById("divMolho").style.height = divHeightC4 + "px";
+    }
 }
 
+window.onresize = tamanhoDivProdutos;
+
+function tamDivIngredientes() {
+    var elements = document.getElementById("ContentPlaceHolder1_divPaes").getElementsByClassName('divProduto');
+    var count = elements.length;
+    var elements2 = document.getElementById("ContentPlaceHolder1_divCarnes").getElementsByClassName('divProduto');
+    var count2 = elements2.length;
+    var elements3 = document.getElementById("ContentPlaceHolder1_divVerduras").getElementsByClassName('divProduto');
+    var count3 = elements3.length;
+    var elements4 = document.getElementById("ContentPlaceHolder1_divLegumes").getElementsByClassName('divProduto');
+    var count4 = elements4.length;
+    var elements5 = document.getElementById("ContentPlaceHolder1_divQueijos").getElementsByClassName('divProduto');
+    var count5 = elements5.length;
+    var elements6 = document.getElementById("ContentPlaceHolder1_divMolhos").getElementsByClassName('divProduto');
+    var count6 = elements6.length;
+    var windowW = window.innerWidth;
+    var windowH = window.innerHeight;
+    if (windowH <= 1080 && windowW <= 1920) {
+        if (windowH <= 720 && windowW <= 1280) {
+            var divHeight = 600 * Math.trunc(count) + 50 * Math.trunc(count);
+            document.getElementById("ContentPlaceHolder1_divPaes").style.height = divHeight + "px";
+
+            var divHeight2 = 600 * Math.trunc(count2) + 50 * Math.trunc(count2);
+            document.getElementById("ContentPlaceHolder1_divCarnes").style.height = divHeight2 + "px";
+
+            var divHeight3 = 600 * Math.trunc(count3) + 50 * Math.trunc(count3);
+            document.getElementById("ContentPlaceHolder1_divVerduras").style.height = divHeight3 + "px";
+
+            var divHeight4 = 600 * Math.trunc(count4) + 50 * Math.trunc(count4);
+            document.getElementById("ContentPlaceHolder1_divLegumes").style.height = divHeight4 + "px";
+
+            var divHeight5 = 600 * Math.trunc(count5) + 50 * Math.trunc(count5);
+            document.getElementById("ContentPlaceHolder1_divQueijos").style.height = divHeight5 + "px";
+
+            var divHeight6 = 600 * Math.trunc(count6) + 50 * Math.trunc(count6);
+            document.getElementById("ContentPlaceHolder1_divMolhos").style.height = divHeight6 + "px";
+        }
+        var divHeight = 1200 * Math.trunc(count / 2) + 70 * Math.trunc(count / 2);
+        document.getElementById("ContentPlaceHolder1_divPaes").style.height = divHeight + "px";
+
+        var divHeight2 = 1200 * Math.trunc(count2 / 2) + 70 * Math.trunc(count2 / 2);
+        document.getElementById("ContentPlaceHolder1_divCarnes").style.height = divHeight2 + "px";
+
+        var divHeight3 = 1200 * Math.trunc(count3 / 2) + 70 * Math.trunc(count3 / 2);
+        document.getElementById("ContentPlaceHolder1_divVerduras").style.height = divHeight3 + "px";
+
+        var divHeight4 = 1200 * Math.trunc(count4 / 2) + 70 * Math.trunc(count4 / 2);
+        document.getElementById("ContentPlaceHolder1_divLegumes").style.height = divHeight4 + "px";
+
+        var divHeight5 = 1200 * Math.trunc(count5 / 2) + 70 * Math.trunc(count5 / 2);
+        document.getElementById("ContentPlaceHolder1_divQueijos").style.height = divHeight5 + "px";
+
+        var divHeight6 = 1200 * Math.trunc(count6 / 2) + 70 * Math.trunc(count6 / 2);
+        document.getElementById("ContentPlaceHolder1_divMolhos").style.height = divHeight6 + "px";
+    }
+}
+
+window.onresize = tamDivIngredientes;
 var visibilidadeNutri = false;
 
 function fecharInfoNutri() {
@@ -426,13 +539,9 @@ function exibirInfoNutri(o) {
 function somar(o) {
     var i = o;
     var res = i.substring(11, i.length);
-    console.log(i);
-    console.log(res);
-    //var element = document.getElementById("divMostrarIngredientes");
     var text = document.getElementById("txtQuantidade" + res);
     var hidden = document.getElementById("hTxt" + res);
     var quant = parseInt(text.value);
-    alert(hidden);
     text.value = quant + 1;
     hidden.value = quant + 1;
     event.preventDefault();
@@ -441,9 +550,6 @@ function somar(o) {
 function subtrair(o) {
     var i = o;
     var res = i.substring(11, i.length);
-    console.log(i);
-    console.log(res);
-    //var element = document.getElementById("divMostrarIngredientes");
     var text = document.getElementById("txtQuantidade" + res);
     var hidden = document.getElementById("hTxt" + res);
     var quant = parseInt(text.value);

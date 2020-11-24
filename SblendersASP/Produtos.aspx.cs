@@ -346,7 +346,7 @@ namespace TCC
                 }
                 x--;
             }
-            
+            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "traçar rota", "tamanhoDivProdutos()", true);
         }
 
         protected void AdicionarProduto(object sender, EventArgs e)

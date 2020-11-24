@@ -97,7 +97,7 @@ namespace TCC
                         TextBox txtQuantidade = new TextBox();
                         txtQuantidade.ID = "txtQuantidade" + p.IngredientID.ToString();
                         txtQuantidade.CssClass = "txtQuantidade";
-                        txtQuantidade.Text = "0";
+                        txtQuantidade.Text = "1";
                         txtQuantidade.ClientIDMode = ClientIDMode.Static;
                         txtQuantidade.ReadOnly = true;
                         divSubProduto4.Controls.Add(txtQuantidade);
@@ -770,7 +770,7 @@ namespace TCC
             }
             lblTotalIngredientes.Text = "Total: R$ " + ingPrec;
             hidden.Value = "1";
-
+            x.Text = "1";
         }
 
         protected void ExcluirIngrediente(object sender, EventArgs e)

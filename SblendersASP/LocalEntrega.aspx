@@ -173,7 +173,6 @@
                                                 lat2 = dados[0].restauranteLat;
                                                 lng2 = dados[0].restauranteLong;
                                                 rid = dados[0].restauranteID;
-                                                console.log(dados);
                                                 directionsService.route({
                                                     origin: { lat: lat2, lng: lng2 },
                                                     destination: { lat: lat, lng: lng },
