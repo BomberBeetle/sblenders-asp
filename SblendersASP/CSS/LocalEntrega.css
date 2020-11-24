@@ -1,4 +1,5 @@
-﻿body {}
+﻿body {
+}
 
 .divCorpoEntrega {
     height: auto;
@@ -8,6 +9,7 @@
 .geral {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .geral2 {
@@ -18,7 +20,7 @@
     height: 700px;
     width: 35%;
     display: flex;
-    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
 }
@@ -128,9 +130,9 @@
     align-items: center;
 }
 
-.divSubInstrucoes1 p {
-    font-size: 30px;
-}
+    .divSubInstrucoes1 p {
+        font-size: 30px;
+    }
 
 .divSubInstrucoes2 {
     height: 190px;
@@ -154,7 +156,7 @@
     height: 700px;
     width: 65%;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 .divMapsE {
@@ -199,11 +201,11 @@
     justify-content: center;
 }
 
-.divTextoBtnFinalizar p {
-    margin-bottom: 0;
-}
+    .divTextoBtnFinalizar p {
+        margin-bottom: 0;
+    }
 
-.divTextoBtnFinalizar img {
-    height: 90%;
-    float: left;
-}
+    .divTextoBtnFinalizar img {
+        height: 90%;
+        float: left;
+    }

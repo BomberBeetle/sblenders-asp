@@ -1,13 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mestre.Master" AutoEventWireup="true" CodeBehind="LocalEntrega.aspx.cs" Inherits="TCC.LocalEntrega" %>
+﻿<%@ Page Title="Local de Entrega" Language="C#" MasterPageFile="~/Mestre.Master" AutoEventWireup="true" CodeBehind="LocalEntrega.aspx.cs" Inherits="TCC.LocalEntrega" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" type="text/css" href="CSS/LocalEntrega.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="divTituloPagina">
+        <h1>Finalizar Pedido </h1>
+    </div>
     <div class="divCorpoEntrega">
-        <div class="divTituloPagina">
-            <h1>Finalizar Pedido </h1>
-        </div>
         <div class="geral">
             <div class="geral2">
                 <div class="divEnderecoEntrega">

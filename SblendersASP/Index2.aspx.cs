@@ -59,7 +59,7 @@ namespace TCC
             {
                 divConectado.Visible = true;
                 divDesconectado.Visible = false;
-                divConectado.Attributes.CssStyle.Add("display", "block");
+                divConectado.Attributes.CssStyle.Add("display", "flex");
                 divDesconectado.Attributes.CssStyle.Add("display", "none");
                 string URL = $"https://localhost:44323/api/Agente/" + Session["userID"];
                 string urlParameters = "";
@@ -129,7 +129,7 @@ namespace TCC
 
                     divConectado.Visible = true;
                     divDesconectado.Visible = false;
-                    divConectado.Attributes.CssStyle.Add("display", "block");
+                    divConectado.Attributes.CssStyle.Add("display", "flex");
                     divDesconectado.Attributes.CssStyle.Add("display", "none");
                     string URL2 = $"https://localhost:44323/api/Agente/" + Session["userID"];
                     string urlParameters2 = "";
@@ -165,7 +165,7 @@ namespace TCC
                 }
 
                 client.Dispose();
-                lblEmailAvisoLogin.Text = "Beleza";
+                //lblEmailAvisoLogin.Text = "Beleza";
             }
         }
 

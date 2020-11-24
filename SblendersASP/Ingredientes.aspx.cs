@@ -24,7 +24,7 @@ namespace TCC
         protected void Page_Load(object sender, EventArgs e)
         {                      
 
-            string URL = $"https://localhost:44323/api/Produtos/18";
+            string URL = $"https://localhost:44323/api/Produtos/23";
             string urlParameters = "";
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(URL);
@@ -97,7 +97,7 @@ namespace TCC
                         TextBox txtQuantidade = new TextBox();
                         txtQuantidade.ID = "txtQuantidade" + p.IngredientID.ToString();
                         txtQuantidade.CssClass = "txtQuantidade";
-                        txtQuantidade.Text = "1";
+                        txtQuantidade.Text = "0";
                         txtQuantidade.ClientIDMode = ClientIDMode.Static;
                         txtQuantidade.ReadOnly = true;
                         divSubProduto4.Controls.Add(txtQuantidade);
@@ -795,7 +795,7 @@ namespace TCC
 
         protected void avancarCarrinho(object sender, EventArgs e)
         {
-            PedidoProduto ppc = new PedidoProduto(1, 18, ppi.ToArray());
+            PedidoProduto ppc = new PedidoProduto(1, 23, ppi.ToArray());
             ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
             ppl.Add(ppc);
             ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();

@@ -226,12 +226,14 @@ body {
 
 .divFacaLogin {
     height: 100vh;
-    float: left;
+    display: flex;
+    justify-content: center;
 }
 
 /*Novo div Login*/
+
 .divLogin {
-    height: 60vh; /*70vh*/
+    height: 60vh;
     width: 65%;
     /*background-color: rgba(255,115,0,1);*/
     background-image: url("ImagensCSS/orangeTexture.jpg");
@@ -239,7 +241,7 @@ body {
     border-radius: 45px 45px;
     color: #FEFEFE;
     align-items: center;
-    margin-top: 3vh; /*8vh*/
+    margin-top: 3vh;
     position: relative;
     box-shadow: 1px 1px 1px #656565;
 }

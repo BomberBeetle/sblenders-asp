@@ -16,7 +16,7 @@ function Login() {
     var divEsqSenha = document.getElementById("divEsqSenha");
     if (visibilidadeLogin == false) {
         divCad.style.display = "none";
-        divLog.style.display = "block";
+        divLog.style.display = "flex";
         divEsqSenha.style.display = "none";
         visibilidadeCad = false;
         visiblidadeEsqSenha = false;
@@ -36,7 +36,7 @@ function Cadastro() {
     if (visibilidadeCad == false) {
         divLog.style.display = "none";
         divEsqSenha.style.display = "none";
-        divCad.style.display = "block";
+        divCad.style.display = "flex";
         visibilidadeLogin = false;
         visiblidadeEsqSenha = false;
         visibilidadeCad = true;
@@ -54,7 +54,7 @@ function esqueceuSenha() {
     if (visiblidadeEsqSenha == false) {
         divLog.style.display = "none";
         divCad.style.display = "none";
-        divEsqSenha.style.display = "block";
+        divEsqSenha.style.display = "flex";
         visibilidadeLogin = false;
         visibilidadeCad = false;
         visiblidadeEsqSenha = true;

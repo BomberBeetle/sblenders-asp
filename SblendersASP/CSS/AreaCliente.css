@@ -1,5 +1,4 @@
-﻿body {
-}
+﻿body {}
 
 .divBodyAreaCliente {
     height: auto;
@@ -8,7 +7,7 @@
     flex-direction: row;
     margin-top: 60px;
     padding: 60px;
-    box-shadow: 5px 5px 19px rgba(0,0,0,0.3);
+    box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.3);
 }
 
 .inputs {
@@ -21,16 +20,21 @@
     justify-content: space-between;
 }
 
-.txtNome, .txtSobrenome {
+.txtNome,
+.txtSobrenome {
     outline: none;
     border: 1px solid #e1e1e1;
 }
 
-    .txtNome:focus, .txtSobrenome:focus, .txtSenha:focus, .txtConfirmarSenha:focus {
-        outline: none;
-    }
+.txtNome:focus,
+.txtSobrenome:focus,
+.txtSenha:focus,
+.txtConfirmarSenha:focus {
+    outline: none;
+}
 
-.txtSenha, .txtConfirmarSenha {
+.txtSenha,
+.txtConfirmarSenha {
     background: #dcdcdc;
     border: 1px solid #e1e1e1;
 }

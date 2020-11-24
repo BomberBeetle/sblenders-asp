@@ -42,7 +42,7 @@ h1 {
 }
 
 .divAdicionarLanches {
-    height: 900px;
+    height: auto;
     width: 100%;
     margin-top: 80px;
     margin-bottom: 60px;
@@ -54,7 +54,7 @@ h1 {
 }
 
 .divCustomizarLanches {
-    height: 1000px;
+    height: auto;
     width: 75%;
 }
 

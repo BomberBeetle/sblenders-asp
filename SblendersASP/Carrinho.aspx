@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mestre.Master" AutoEventWireup="true" CodeBehind="Carrinho.aspx.cs" Inherits="TCC.Carrinho" %>
+﻿<%@ Page Title="Seu Carrinho" Language="C#" MasterPageFile="~/Mestre.Master" AutoEventWireup="true" CodeBehind="Carrinho.aspx.cs" Inherits="TCC.Carrinho" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" type="text/css" href="CSS/Carrinho.css" />

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mestre.Master" AutoEventWireup="true" CodeBehind="AreaCliente.aspx.cs" Inherits="TCC.AreaCliente" %>
+﻿<%@ Page Title="Área do Cliente" Language="C#" MasterPageFile="~/Mestre.Master" AutoEventWireup="true" CodeBehind="AreaCliente.aspx.cs" Inherits="TCC.AreaCliente" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="CSS/AreaCliente.css" />

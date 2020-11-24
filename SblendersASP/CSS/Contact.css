@@ -6,7 +6,7 @@
     background-color: #FFF;
     border-radius: .50rem;
     box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
-    margin-top: 60px;
+    margin-top: 10px !important;
     width: 1200px;
     padding-right: .9375rem;
     padding-left: .9375rem;

@@ -206,14 +206,13 @@ body {
     }
     .sidenav {
         display: block;
+        position: fixed !important;
         height: 100%;
         width: 0;
-        position: fixed;
-        z-index: 1;
+        z-index: 50;
         top: 0;
         right: 0;
-        border: 15px 0 0 15px;
-        background-color: #ff790a;
+        background-color: #ff7a0e;
         overflow-x: hidden;
         overflow-y: scroll;
         transition: 0.5s;
@@ -233,17 +232,23 @@ body {
         font-size: 18px;
     }
     .asidenav {
-        padding: 10px 5px;
-        display: flex;
-        align-items: stretch;
+        width: 100%;
+        padding: 5px 10px;
+        transition: 0.5s;
+        display: block;
+    }
+    .asidenav:hover,
+    .closebtn:hover {
+        color: #ffad15;
     }
     .divasidenavfirst {
         border-radius: 5px 5px 0 0;
     }
+    .divdivasidenav {
+        padding: 0;
+        margin: 0;
+    }
     .divasidenav {
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
         transition: 0.5s;
         padding: 0;
         background-color: #ff5e00;
@@ -262,14 +267,13 @@ body {
         padding: 0;
     }
     .sidenav {
-        position: absolute;
         font-size: 18px;
-        margin-left: 50px;
     }
     .closebtn {
         display: flex;
-        justify-self: flex-end;
-        padding: 0;
+        justify-content: flex-end;
+        padding: 0 15px 0 0;
+        font-size: 40px !important;
     }
 }
 
@@ -281,16 +285,40 @@ body {
 
 .divHeaderUser {}
 
-.divUser {}
+.divUser {
+    margin-right: 10px;
+    display:flex;
+    flex-direction:column;
+}
 
-.divUserPhoto {}
+.divUserPhoto {
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-.aUserPhoto {}
+.aUserPhoto {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-.imgUser {}
+.imgUsuario {
+    height: 123px;
+    width: 123px;
+}
 
 #divConectado {
+    height: 123px;
+    display: flex;
     display: none;
+    width: 350px;
 }
 
 .lblBemVindo {
@@ -299,13 +327,12 @@ body {
     text-align: right;
     font-size: 22px;
     line-height: 10vh;
-    display: block;
     color: white;
 }
 
 .lblSair {
     height: 50%;
-    width: 50px;
+    margin-left: auto;
     text-align: right;
     font-size: 20px;
     text-decoration: underline;
@@ -390,18 +417,27 @@ body {
     height: 100vh;
     display: none;
     background-color: rgba(255, 255, 255, 0);
+    z-index: 3;
+    position: fixed;
+    justify-content: center;
 }
 
 #divLog {
     height: 100vh;
     display: none;
     background-color: rgba(255, 255, 255, 0);
+    z-index: 3;
+    position: fixed;
+    justify-content: center;
 }
 
 #divEsqSenha {
     height: 100vh;
     display: none;
     background-color: rgba(255, 255, 255, 0);
+    z-index: 3;
+    position: fixed;
+    justify-content: center;
 }
 
 .divFG {
@@ -411,7 +447,8 @@ body {
 
 .divFacaLogin {
     height: 100vh;
-    float: left;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -419,7 +456,6 @@ body {
 
 .divLogin {
     height: 60vh;
-    /*70vh*/
     width: 65%;
     /*background-color: rgba(255,115,0,1);*/
     background-image: url("ImagensCSS/orangeTexture.jpg");
@@ -428,8 +464,8 @@ body {
     color: #FEFEFE;
     align-items: center;
     margin-top: 3vh;
-    /*8vh*/
     position: relative;
+    box-shadow: 1px 1px 1px #656565;
 }
 
 .divSubLoginSair {
@@ -607,6 +643,7 @@ body {
     margin-top: 3vh;
     /*8vh*/
     position: relative;
+    box-shadow: 1px 1px 1px #656565;
 }
 
 .divSubCadastroSair {
@@ -674,12 +711,55 @@ body {
 
 .lblDivCadastro {
     font-size: calc(0.15rem + 1vw);
-    margin-left: 20%;
+    margin-left: 15%;
 }
 
 .txtDivCadastro {
     height: 85%;
-    width: 60%;
+    width: 70%;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: calc(0.09rem + 1vw);
+    border-radius: 20px 4px;
+}
+
+.divCadastroItem2 {
+    height: 16%;
+    width: 100%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divNomeCadastro {
+    height: 100%;
+    width: 35%;
+    float: left;
+}
+
+.divSobrenomeCadastro {
+    height: 100%;
+    width: 55%;
+    float: right;
+}
+
+.divNomeSobrenome {
+    height: 100%;
+    width: 70%;
+}
+
+.lblDivCadastro2 {
+    font-size: calc(0.15rem + 1vw);
+    margin-left: 0%;
+}
+
+.txtDivCadastro2 {
+    height: 85%;
+    width: 100%;
     border: none;
     padding-left: 10px;
     padding-right: 10px;

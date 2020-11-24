@@ -20,7 +20,7 @@ namespace TCC
             {
                 divConectado.Visible = true;
                 divDesconectado.Visible = false;
-                divConectado.Attributes.CssStyle.Add("display", "block");
+                divConectado.Attributes.CssStyle.Add("display", "flex");
                 divDesconectado.Attributes.CssStyle.Add("display", "none");
                 string URL = $"https://localhost:44323/api/Agente/" + Session["userID"];
                 string urlParameters = "";
@@ -58,13 +58,13 @@ namespace TCC
             {
                 lblEmailAvisoLogin.Text = "Insira um email para efetuar o login";
                 camposPreenchidos = false;
-                divLog.Attributes.CssStyle.Add("display", "block");
+                divLog.Attributes.CssStyle.Add("display", "flex");
             }
             if (String.IsNullOrWhiteSpace(txtSenhaLogin.Text))
             {
                 lblSenhaAvisoLogin.Text = "Insira uma senha para efetuar o login";
                 camposPreenchidos = false;
-                divLog.Attributes.CssStyle.Add("display", "block");
+                divLog.Attributes.CssStyle.Add("display", "flex");
             }
             if (camposPreenchidos)
             {
@@ -90,7 +90,7 @@ namespace TCC
 
                     divConectado.Visible = true;
                     divDesconectado.Visible = false;
-                    divConectado.Attributes.CssStyle.Add("display", "block");
+                    divConectado.Attributes.CssStyle.Add("display", "flex");
                     divDesconectado.Attributes.CssStyle.Add("display", "none");
                     string URL2 = $"https://localhost:44323/api/Agente/" + Session["userID"];
                     string urlParameters2 = "";
@@ -122,11 +122,11 @@ namespace TCC
                     {
                         lblSenhaAvisoLogin.Text = "Usuário ou senha incorreto";
                     }
-                    divLog.Attributes.CssStyle.Add("display", "block");
+                    divLog.Attributes.CssStyle.Add("display", "flex");
                 }
 
                 client.Dispose();
-                lblEmailAvisoLogin.Text = "Beleza";
+                //lblEmailAvisoLogin.Text = "Beleza";
             }
         }
 

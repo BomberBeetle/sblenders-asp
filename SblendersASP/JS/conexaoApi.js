@@ -8,9 +8,8 @@ function TesteConexao() {
     }
     try {
         myRequest.send(null);
-        alert("Beleza");
-    }
-    catch(e){
+        //alert("Beleza");
+    } catch (e) {
         alert("Erro");
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mestre.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="TCC.Contact" %>
+﻿<%@ Page Title="Fale Conosco" Language="C#" MasterPageFile="~/Mestre.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="TCC.Contact" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" type="text/css" href="CSS/Contact.css" />

@@ -146,6 +146,7 @@
     <Content Include="Imagens\carroBurguer2.jpeg" />
     <Content Include="Imagens\check.png" />
     <Content Include="Imagens\churros.png" />
+    <Content Include="Imagens\favicon.ico" />
     <Content Include="Imagens\hotDog.png" />
     <Content Include="Imagens\iconeX.png" />
     <Content Include="Imagens\iconX.png" />

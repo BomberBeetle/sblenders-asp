@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mestre.Master" AutoEventWireup="true" CodeBehind="Ingredientes.aspx.cs" Inherits="TCC.Ingredientes" %>
+﻿<%@ Page Title="Monte Seu Sblurger" Language="C#" MasterPageFile="~/Mestre.Master" AutoEventWireup="true" CodeBehind="Ingredientes.aspx.cs" Inherits="TCC.Ingredientes" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" type="text/css" href="CSS/Ingredientes.css" />
@@ -48,8 +48,6 @@
                     </div>
                 </div>
                 <div class="divTot">
-                    <div class="divSubTot1">
-                    </div>
                     <div class="divSubTot2">
                         <asp:Label ID="lblTotalIngredientes" runat="server" Text="R$ 0" CssClass="lblTotalIngredientes" ClientIDMode="Static"></asp:Label>
                     </div>
@@ -59,7 +57,7 @@
         <div class="divBtnOpcoesPagLanches">
             <button class="btnIrCarrinho" id="btnIrCarrinho" runat="server" onserverclick="avancarCarrinho">
                 <div class="divTextoBtnCarrinho">
-                    <p>Ir Para o Carrinho</p>
+                    <p>Adicionar ao Carrinho</p>
                     <img src="Imagens/seta2.png" />
                 </div>
             </button>

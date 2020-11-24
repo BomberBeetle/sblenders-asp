@@ -1,5 +1,5 @@
 ﻿body {
-    background-image: url(ImagensCSS/IngredientesBackground.png);
+    background-image: url(../Imagens/background.png);
     background-size: 100% 100%;
     background-position: center;
     background-color: #fff;
@@ -21,8 +21,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
 }
 
 .divIngredientesCategoria {
@@ -66,20 +65,21 @@
     font-size: 42px;
     user-select: none;
     margin: auto;
-    margin-right: 0;
 }
 
 .selectCategoria {
     height: 60px;
     font-size: 42px;
-    background-color: #ed4218;
     text-align: center;
     border-radius: 30px;
-    color: #FFF;
     text-shadow: 2px 2px 2px #989898;
     display: flex;
     margin: auto;
     margin-left: 20px;
+}
+
+*:focus {
+    outline: none;
 }
 
 .select-selected:after {
@@ -115,6 +115,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 #ContentPlaceHolder1_divPaes {
@@ -274,6 +276,21 @@
     align-items: center;
 }
 
+.divIngredienteCliente {
+    height: 300px;
+    width: 80%;
+    float: left;
+    background-color: #f7f7f7;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px 20px;
+    box-shadow: 2px 2px #989898;
+    margin-bottom: 50px;
+}
+
 .divIngredienteFoto {
     height: 220px;
     width: 30%;
@@ -287,7 +304,7 @@
 
 .imgIngrediente {
     height: 180px;
-    width: 80%;
+    width: 98%;
 }
 
 .divIngredienteInfo {
@@ -329,6 +346,7 @@
 
 .lblValorIngredienteCliente {
     font-size: 20px;
+    margin-right: 10px;
 }
 
 .divIngredienteExcluir {
@@ -358,16 +376,9 @@
     margin-bottom: 30px;
 }
 
-.divSubTot1 {
-    height: 80px;
-    width: 50%;
-    float: left;
-}
-
 .divSubTot2 {
     height: 80px;
-    width: 50%;
-    float: left;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -381,12 +392,13 @@
 
 .divBtnOpcoesPagLanches {
     height: 80px;
-    width: 457px;
+    width: 500px;
     align-items: initial;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .btnIrCarrinho {
