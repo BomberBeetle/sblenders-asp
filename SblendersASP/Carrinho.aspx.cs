@@ -549,7 +549,15 @@ namespace TCC
 
         protected void Avancar(object sender, EventArgs e)
         {
-            Response.Redirect("LocalEntrega.aspx");
+            int prods = ((Pedido)Session["Carrinho"]).produtos.Length;
+            if (prods != 0)
+            {
+                Response.Redirect("LocalEntrega.aspx");
+            }
+            else
+            {
+
+            }
         }
 
         protected void Voltar(object sender, EventArgs e)
