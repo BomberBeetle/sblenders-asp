@@ -10,15 +10,18 @@
     <div class="divBodyAreaCliente" runat="server" id="divBodyAreaCliente">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <asp:Timer ID="Timer1" runat="server" Interval="120000" OnTick="Timer1_Tick"></asp:Timer>
-        <div class="inputs">
-            <asp:TextBox ID="TextBox1" runat="server" Text="" class="txtNome" placeholder="Nome"></asp:TextBox>
-            <asp:TextBox ID="TextBox2" runat="server" Text="" class="txtSobrenome" placeholder="Sobrenome"></asp:TextBox>
-            <asp:TextBox ID="txtSenha" runat="server" Text="" TextMode="Password" class="txtSenha" placeholder="Nova senha"></asp:TextBox>
-            <asp:TextBox ID="txtConfirmarSenha" runat="server" Text="" TextMode="Password" class="txtConfirmarSenha" placeholder="Confirme a Senha"></asp:TextBox>
-            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-            <asp:Button class="btnSalvar" ID="Button1" runat="server" Text="Salvar alterações" OnClick="alterarDados" />
+        <div class="jorge">
+            <div class="inputs">
+                <asp:TextBox ID="TextBox1" runat="server" Text="" class="txtNome" placeholder="Nome"></asp:TextBox>
+                <asp:TextBox ID="TextBox2" runat="server" Text="" class="txtSobrenome" placeholder="Sobrenome"></asp:TextBox>
+                <asp:TextBox ID="txtSenha" runat="server" Text="" TextMode="Password" class="txtSenha" placeholder="Nova senha"></asp:TextBox>
+                <asp:TextBox ID="txtConfirmarSenha" runat="server" Text="" TextMode="Password" class="txtConfirmarSenha" placeholder="Confirme a Senha"></asp:TextBox>
+                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                <asp:Button class="btnSalvar" ID="Button1" runat="server" Text="Salvar alterações" OnClick="alterarDados" />
+            </div>
         </div>
         <div class="pedidos">
+            <h1 class="tituloPedidos">Seus Pedidos</h1>
             <asp:PlaceHolder ID="PedidosPlaceholder" runat="server"></asp:PlaceHolder>
         </div>
     </div>

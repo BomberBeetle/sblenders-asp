@@ -5,11 +5,17 @@
     width: 70%;
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content:space-evenly;
     margin-top: 60px;
     padding: 60px;
     box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.3);
     margin: 60px auto auto auto;
+}
+
+.jorge{
+    display:flex;
+    justify-content:center;
+    width:50%;
 }
 
 .inputs {
@@ -17,7 +23,6 @@
     flex-direction: column;
     align-self: center;
     gap: 5px;
-    width: 276px;
     height: 225px;
     justify-content: space-around;
 }
@@ -26,6 +31,7 @@
 .txtSobrenome {
     outline: none;
     border: 1px solid #e1e1e1;
+    width:276px;
 }
 
 .txtNome:focus,
@@ -39,6 +45,7 @@
 .txtConfirmarSenha {
     background: #dcdcdc;
     border: 1px solid #e1e1e1;
+    width: 276px;
 }
 
 .btnSalvar {
@@ -59,6 +66,7 @@
 }
 
 .pedidos {
+    width:50%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

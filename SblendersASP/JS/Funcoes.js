@@ -443,22 +443,46 @@ function tamDivIngredientes() {
     var windowW = window.innerWidth;
     var windowH = window.innerHeight;
     if (windowH <= 1080 && windowW <= 1920) {
-        var divHeight = 600 * Math.trunc(count / 2) + 70 * Math.trunc(count / 2);
+        var trunc = Math.trunc(count / 2);
+        if ((trunc % 2) == 1) {
+            trunc + 1;
+        }
+        var divHeight = 600 * trunc + 70 * trunc;
         document.getElementById("ContentPlaceHolder1_divPaes").style.height = divHeight + "px";
 
-        var divHeight2 = 600 * Math.trunc(count2 / 2) + 70 * Math.trunc(count2 / 2);
+        var trunc2 = Math.trunc(count2 / 2);
+        if ((trunc2 % 2) == 1) {
+            trunc2 + 1;
+        }
+        var divHeight2 = 600 * trunc2 + 70 * trunc2;
         document.getElementById("ContentPlaceHolder1_divCarnes").style.height = divHeight2 + "px";
 
-        var divHeight3 = 600 * Math.trunc(count3 / 2) + 70 * Math.trunc(count3 / 2);
+        var trunc3 = Math.trunc(count3 / 2);
+        if ((trunc3 % 2) == 1) {
+            trunc3 + 1;
+        }
+        var divHeight3 = 600 * trunc3 + 70 * trunc3;
         document.getElementById("ContentPlaceHolder1_divVerduras").style.height = divHeight3 + "px";
 
-        var divHeight4 = 600 * Math.trunc(count4 / 2) + 70 * Math.trunc(count4 / 2);
+        var trunc4 = Math.trunc(count4 / 2);
+        if ((trunc4 % 2) == 1) {
+            trunc4 + 1;
+        }
+        var divHeight4 = 600 * trunc4 + 70 * trunc4;
         document.getElementById("ContentPlaceHolder1_divLegumes").style.height = divHeight4 + "px";
 
-        var divHeight5 = 600 * Math.trunc(count5 / 2) + 70 * Math.trunc(count5 / 2);
+        var trunc5 = Math.trunc(count5 / 2);
+        if ((trunc5 % 2) == 1) {
+            trunc5 + 1;
+        }
+        var divHeight5 = 600 * trunc5 + 70 * trunc5;
         document.getElementById("ContentPlaceHolder1_divQueijos").style.height = divHeight5 + "px";
 
-        var divHeight6 = 600 * Math.trunc(count6 / 2) + 70 * Math.trunc(count6 / 2);
+        var trunc6 = Math.trunc(count6 / 2);
+        if ((trunc6 % 2) == 1) {
+            trunc6 + 1;
+        }
+        var divHeight6 = 600 * trunc6 + 70 * trunc6;
         document.getElementById("ContentPlaceHolder1_divMolhos").style.height = divHeight6 + "px";
         if (windowH <= 720 && windowW <= 1280) {
             var divHeight = 600 * Math.trunc(count) + 50 * Math.trunc(count);
