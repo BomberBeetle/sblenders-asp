@@ -402,7 +402,7 @@ function tamanhoDivProdutos() {
             var divHeightC4 = 1700 * Math.trunc(count4 / 2) + 50 * Math.trunc(count4 / 2);
             document.getElementById("ContentPlaceHolder4_divProds").style.height = divHeight4 + "px";
             document.getElementById("divMolho").style.height = divHeightC4 + "px";
-        }           
+        }
         var divHeight = 1500 * Math.trunc(count / 3) + 100 * Math.trunc(2 * count / 3);
         var divHeightC = 2000 * Math.trunc(count / 3) + 100 * Math.trunc(2 * count / 3);
         document.getElementById("ContentPlaceHolder1_divProds").style.height = divHeight + "px";
@@ -443,6 +443,23 @@ function tamDivIngredientes() {
     var windowW = window.innerWidth;
     var windowH = window.innerHeight;
     if (windowH <= 1080 && windowW <= 1920) {
+        var divHeight = 600 * Math.trunc(count / 2) + 70 * Math.trunc(count / 2);
+        document.getElementById("ContentPlaceHolder1_divPaes").style.height = divHeight + "px";
+
+        var divHeight2 = 600 * Math.trunc(count2 / 2) + 70 * Math.trunc(count2 / 2);
+        document.getElementById("ContentPlaceHolder1_divCarnes").style.height = divHeight2 + "px";
+
+        var divHeight3 = 600 * Math.trunc(count3 / 2) + 70 * Math.trunc(count3 / 2);
+        document.getElementById("ContentPlaceHolder1_divVerduras").style.height = divHeight3 + "px";
+
+        var divHeight4 = 600 * Math.trunc(count4 / 2) + 70 * Math.trunc(count4 / 2);
+        document.getElementById("ContentPlaceHolder1_divLegumes").style.height = divHeight4 + "px";
+
+        var divHeight5 = 600 * Math.trunc(count5 / 2) + 70 * Math.trunc(count5 / 2);
+        document.getElementById("ContentPlaceHolder1_divQueijos").style.height = divHeight5 + "px";
+
+        var divHeight6 = 600 * Math.trunc(count6 / 2) + 70 * Math.trunc(count6 / 2);
+        document.getElementById("ContentPlaceHolder1_divMolhos").style.height = divHeight6 + "px";
         if (windowH <= 720 && windowW <= 1280) {
             var divHeight = 600 * Math.trunc(count) + 50 * Math.trunc(count);
             document.getElementById("ContentPlaceHolder1_divPaes").style.height = divHeight + "px";
@@ -462,23 +479,6 @@ function tamDivIngredientes() {
             var divHeight6 = 600 * Math.trunc(count6) + 50 * Math.trunc(count6);
             document.getElementById("ContentPlaceHolder1_divMolhos").style.height = divHeight6 + "px";
         }
-        var divHeight = 1200 * Math.trunc(count / 2) + 70 * Math.trunc(count / 2);
-        document.getElementById("ContentPlaceHolder1_divPaes").style.height = divHeight + "px";
-
-        var divHeight2 = 1200 * Math.trunc(count2 / 2) + 70 * Math.trunc(count2 / 2);
-        document.getElementById("ContentPlaceHolder1_divCarnes").style.height = divHeight2 + "px";
-
-        var divHeight3 = 1200 * Math.trunc(count3 / 2) + 70 * Math.trunc(count3 / 2);
-        document.getElementById("ContentPlaceHolder1_divVerduras").style.height = divHeight3 + "px";
-
-        var divHeight4 = 1200 * Math.trunc(count4 / 2) + 70 * Math.trunc(count4 / 2);
-        document.getElementById("ContentPlaceHolder1_divLegumes").style.height = divHeight4 + "px";
-
-        var divHeight5 = 1200 * Math.trunc(count5 / 2) + 70 * Math.trunc(count5 / 2);
-        document.getElementById("ContentPlaceHolder1_divQueijos").style.height = divHeight5 + "px";
-
-        var divHeight6 = 1200 * Math.trunc(count6 / 2) + 70 * Math.trunc(count6 / 2);
-        document.getElementById("ContentPlaceHolder1_divMolhos").style.height = divHeight6 + "px";
     }
 }
 
