@@ -136,7 +136,7 @@ namespace TCC
         }
 
         protected void alterarDados(object sender, EventArgs e)
-        {
+        {           
             if (txtSenha.Text != txtConfirmarSenha.Text)
             {
                 Label1.Text = "A senha e confirmação de senha não conferem";
@@ -148,7 +148,15 @@ namespace TCC
                 string urlParameters = "";
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(URL);
-                ClienteOnline cli = new ClienteOnline(TextBox1.Text, TextBox2.Text, null, txtSenha.Text);
+                ClienteOnline cli;
+                if (String.IsNullOrWhiteSpace(txtSenha.Text) || String.IsNullOrWhiteSpace(txtConfirmarSenha.Text))
+                {
+                     cli = new ClienteOnline(TextBox1.Text, TextBox2.Text, null, null);
+                }
+                else
+                {
+                     cli = new ClienteOnline(TextBox1.Text, TextBox2.Text, null, txtSenha.Text);
+                }              
 
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
                 // Add an Accept header for JSON format.

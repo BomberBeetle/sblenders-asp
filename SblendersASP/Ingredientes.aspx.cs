@@ -638,6 +638,7 @@ namespace TCC
                 ingPrec += p.Quantidade * pi[ind].Price;
             }
             lblTotalIngredientes.Text = "Total: R$ " + ingPrec;
+            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "traçar rota", "tamDivIngredientes()", true);
         }
 
         protected void AdicionarIngrediente(object sender, EventArgs e)

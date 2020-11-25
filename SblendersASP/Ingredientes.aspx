@@ -56,7 +56,7 @@
         </div>
         <div class="divBtnOpcoesPagLanches">
             <button class="btnIrCarrinho" id="btnIrCarrinho" runat="server" onserverclick="avancarCarrinho">
-                <div class="divTextoBtnCarrinho">
+                <div class="divTextoBtnCarrinho" onload="tamDivIngredientes()">
                     <p>Adicionar ao Carrinho</p>
                     <img src="Imagens/seta2.png" />
                 </div>
