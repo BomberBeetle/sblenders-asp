@@ -56,6 +56,7 @@ namespace TCC
 
             if (response.IsSuccessStatusCode)
             {
+                Session["Carrinho"] = new SblendersAPI.Models.Pedido(0, 0, 0, DateTime.Now, "", new PedidoProduto[0]);
                 Response.Redirect("Index2.aspx");
             }
             else

@@ -144,7 +144,7 @@ namespace TCC
                     // List data response.
                     JavaScriptSerializer serializer2 = new System.Web.Script.Serialization.JavaScriptSerializer();
                     HttpResponseMessage response2 = client2.GetAsync(urlParameters2).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-                    Dictionary<string, Object> resultado2 = (Dictionary<string, Object>)serializer2.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+                    Dictionary<string, Object> resultado2 = (Dictionary<string, Object>)serializer2.DeserializeObject(response2.Content.ReadAsStringAsync().Result);
 
                     if (response2.IsSuccessStatusCode)
                     {
