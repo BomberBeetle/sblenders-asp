@@ -84,9 +84,9 @@ body {
     transition: 0.5s;
 }
 
-.adivLinks:hover {
-    color: #fff;
-}
+    .adivLinks:hover {
+        color: #fff;
+    }
 
 .divLinksRow:hover {
     background-color: #ffad15;
@@ -115,11 +115,11 @@ body {
     font-size: 24px;
 }
 
-.abtn:hover {
-    color: #ff7300 !important;
-    background-color: #ffffff;
-    transition: 0.5s;
-}
+    .abtn:hover {
+        color: #ff7300 !important;
+        background-color: #ffffff;
+        transition: 0.5s;
+    }
 
 .divOpenMenu {
     display: none;
@@ -137,25 +137,40 @@ body {
 }
 
 .divCarrinho {
-    max-width: 40px;
+    height: 123px;
+    width: 130px;
+    align-items: center;
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-left: 20px;
+    align-items: center;
 }
 
-.aCarrinho {
-    width: 100%;
+.aCarrinhoTexto {
+    font-size: 20px;
+    color: #FFFFFF;
+    width: 90px;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
+.aCarrinho {
+    width: 40px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.divCarrinho {
+    display: flex;
+}
+
 .imgCarrinho {
-    width: 100%;
+    width: 40px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -163,14 +178,17 @@ body {
         font-size: 20px;
         padding: 10px 20px;
     }
+
     .adivLinks {
         font-size: 18px;
         padding: 0 15px;
     }
+
     .divLinksColunm {
         margin: 15px;
         gap: 5px;
     }
+
     .divbtn {
         padding: 0 5px;
     }
@@ -180,13 +198,16 @@ body {
     .abtn {
         padding: 5px 10px;
     }
+
     .adivLinks {
         padding: 0 5px;
     }
+
     .divLinksColunm {
         margin: 5px;
         gap: 2px;
     }
+
     .divbtn {
         padding: 0 3px;
     }
@@ -196,40 +217,50 @@ body {
     .adivLinks {
         font-size: 14px;
     }
+
     .divHeaderRow {
         justify-content: space-between;
     }
+
     .imgHeader {
         max-width: 80px;
     }
+
     .divLogBtns {
         display: none !important;
     }
+
     .divLinks {
         justify-content: flex-end;
         flex-grow: 1;
         margin-right: 15px;
         border-right: #ffa053 1px solid;
     }
+
     .divLinksHidden {
         display: none;
     }
+
     .divHeaderUser {
         display: none !important;
     }
     .divheaderusersidenav {
         display: none;
     }
+
     .divOpenMenu {
         display: flex;
     }
+
     .divProd {
         display: block;
     }
+
     .opmenu {
         display: flex;
         user-select: none;
     }
+
     .sidenav {
         display: block;
         position: fixed !important;
@@ -243,33 +274,37 @@ body {
         overflow-y: scroll;
         transition: 0.5s;
     }
+
     .SidenavCol {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: stretch;
     }
+
     .sidenav a {
         text-decoration: none;
         color: #ffffff;
         transition: 0.5s;
     }
+
     .asidenav .abtn {
         font-size: 18px;
     }
+
     .asidenav {
         width: 100%;
         padding: 5px 10px;
         transition: 0.5s;
         display: block;
     }
-    .asidenav:hover,
-    .closebtn:hover {
-        color: #ffad15;
-    }
+
+        .asidenav:hover,
+        .closebtn:hover {
+            color: #ffad15;
+        }
+
     .divasidenavfirst {
-        border-radius: 5px 5px 0 0;
-    }
     .divCarrinho {
         height: auto;
         max-width: 40px;
@@ -280,16 +315,20 @@ body {
         justify-content: center;
         margin: 10px 0 0 0;
     }
+        border-radius: 5px 5px 0 0;
+    }
     .divdivasidenav {
         padding: 0;
         margin: 0;
     }
+
     .divasidenav {
         transition: 0.5s;
         padding: 0;
         background-color: #ff5e00;
         border-bottom: 1px solid #ffffff;
     }
+
     .divbtnsidenav {
         display: flex;
         flex-direction: row;
@@ -297,15 +336,19 @@ body {
         flex-wrap: wrap;
         padding: 10px 0;
     }
+
     .abtn {
         padding: 10px 10px;
     }
+
     .divbtn {
         padding: 0;
     }
+
     .sidenav {
         font-size: 18px;
     }
+
     .closebtn {
         display: flex;
         justify-content: flex-end;
@@ -320,7 +363,8 @@ body {
     }
 }
 
-.divHeaderUser {}
+.divHeaderUser {
+}
 
 .divUser {
     margin-right: 10px;
@@ -355,7 +399,8 @@ body {
     height: 123px;
     display: flex;
     display: none;
-    width: 450px;
+    justify-content:space-evenly;
+    width: 600px;
 }
 
 .lblBemVindo {
@@ -378,9 +423,9 @@ body {
     cursor: pointer;
 }
 
-.lblSair:hover {
-    color: #323232 !important;
-}
+    .lblSair:hover {
+        color: #323232 !important;
+    }
 
 
 /* Atenção Admin pf deleta isso depois se for desnecessário */
@@ -407,24 +452,24 @@ body {
     justify-content: center;
 }
 
-.divTituloPagina h1 {
-    color: #FFF;
-    font-size: 35px;
-    padding-top: 5px;
-    text-shadow: 2px 2px 2px rgb(255, 173, 21);
-    -webkit-touch-callout: none;
-    /* iOS Safari */
-    -webkit-user-select: none;
-    /* Safari */
-    -khtml-user-select: none;
-    /* Konqueror HTML */
-    -moz-user-select: none;
-    /* Old versions of Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer/Edge */
-    user-select: none;
-    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-}
+    .divTituloPagina h1 {
+        color: #FFF;
+        font-size: 35px;
+        padding-top: 5px;
+        text-shadow: 2px 2px 2px rgb(255, 173, 21);
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Old versions of Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    }
 
 
 /* WIP */
@@ -439,16 +484,16 @@ body {
 }
 
 
-/* Corno do CabEsq maldito pior coisa do mundo */
+    /* Corno do CabEsq maldito pior coisa do mundo */
 
 
-/* WIP */
+    /* WIP */
 
-.CabEsq p {
-    font-size: 40px;
-    margin-top: 30px;
-    margin-left: 10px;
-}
+    .CabEsq p {
+        font-size: 40px;
+        margin-top: 30px;
+        margin-left: 10px;
+    }
 
 #divCad,
 #divLog,
@@ -512,9 +557,9 @@ body {
     transition: 0.5s;
 }
 
-.aDivSubLoginSair:hover {
-    color: #ffad15 !important;
-}
+    .aDivSubLoginSair:hover {
+        color: #ffad15 !important;
+    }
 
 .divSubLoginTitulo {
     padding: 0 20px;
@@ -567,7 +612,8 @@ body {
     justify-content: center;
 }
 
-.divSubEmailLogin3 {}
+.divSubEmailLogin3 {
+}
 
 .lblDivLogin,
 .lblEsqS,
@@ -611,10 +657,10 @@ body {
     border: none;
 }
 
-.btnLogin:hover {
-    background-color: #ffffff;
-    color: #ff7300 !important;
-}
+    .btnLogin:hover {
+        background-color: #ffffff;
+        color: #ff7300 !important;
+    }
 
 .aEsqueceuSenha:hover {
     text-decoration: underline !important;
@@ -711,19 +757,19 @@ body {
     padding: 0 0 0 10px;
 }
 
-.FooterLinks li {
-    font-size: 1em;
-    margin-bottom: 0;
-}
+    .FooterLinks li {
+        font-size: 1em;
+        margin-bottom: 0;
+    }
 
-.FooterLinks a {
-    color: #fff;
-}
+    .FooterLinks a {
+        color: #fff;
+    }
 
-.FooterLinks a:hover {
-    color: rgba(255, 193, 24, 0.795);
-    transition: 0.6s;
-}
+        .FooterLinks a:hover {
+            color: rgba(255, 193, 24, 0.795);
+            transition: 0.6s;
+        }
 
 .BottomFooter {
     background-color: #ffad15;
@@ -743,21 +789,21 @@ body {
     padding-left: .9375rem;
 }
 
-.BottomFooterColunm p {
-    text-align: center;
-    color: #444;
-    font-size: 0.8em;
-    margin: 0;
-    user-select: none;
-}
+    .BottomFooterColunm p {
+        text-align: center;
+        color: #444;
+        font-size: 0.8em;
+        margin: 0;
+        user-select: none;
+    }
 
-.BottomFooterColunm a {
-    color: #c70000e3;
-}
+    .BottomFooterColunm a {
+        color: #c70000e3;
+    }
 
-.BottomFooterColunm a:hover {
-    text-decoration: none;
-}
+        .BottomFooterColunm a:hover {
+            text-decoration: none;
+        }
 
 .borderleft {
     border-right: #ffa053 solid 1px;
@@ -777,9 +823,11 @@ body {
         width: 45vw;
         min-width: 236px;
     }
+
     .MainFooter * {
         max-width: auto;
     }
+
     .divFooter {
         padding: 0 24px;
     }
@@ -796,33 +844,41 @@ body {
         padding: 0;
         margin: 0;
     }
+
     .Nav {
         padding: 30px 0 30px 0;
     }
+
     .FooterLinks {
         padding: 0 0 0 5px;
     }
+
     .footer-Navigation {
         padding: 0 10px;
         padding-left: 0;
     }
+
     .footer-SblurgeMaker {
         padding: 0 10px;
     }
+
     .footer-Follow {
         padding: 0 10px;
         padding-right: 0;
     }
+
     .BottomFooterColunm p {
         text-align: center;
         color: #444;
         font-size: 0.6em;
         margin: 0;
     }
+
     .FooterLinks li {
         font-size: 0.8em;
         margin-bottom: 0;
     }
+
     .FootTitles {
         margin-bottom: 10px;
         font-size: 0.9em;

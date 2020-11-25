@@ -41,20 +41,31 @@
                     </ul>
                 </div>
                 <div class="divLogBtns" id="divDesconectado" runat="server">
+                    <div class="divCarrinho">
+                        <a href="Carrinho.aspx" class="aCarrinhoTexto">
+                            Carrinho
+                        </a>
+                        <a href="Carrinho.aspx" class="aCarrinho">
+                            <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
+                        </a>
+                    </div>
                     <div class="divbtn">
                         <a class="abtn " onclick="Login()" id="textoLogin">Login</a>
                     </div>
                     <div class="divbtn">
                         <a class="abtn " onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
                     </div>
+                </div>
+
+                <div class="divHeaderUser" id="divConectado" runat="server">
                     <div class="divCarrinho">
+                        <a href="Carrinho.aspx" class="aCarrinhoTexto">
+                            Carrinho
+                        </a>
                         <a href="Carrinho.aspx" class="aCarrinho">
                             <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
                         </a>
                     </div>
-                </div>
-
-                <div class="divHeaderUser" id="divConectado" runat="server">
                     <div class="divUser">
                         <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
                         <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="Sair">Sair</asp:LinkButton>
@@ -62,11 +73,6 @@
                     <div class="divUserPhoto">
                         <a href="AreaCliente.aspx" class="aUserPhoto">
                             <img src="Imagens/usuario.png" class="imgUsuario" />
-                        </a>
-                    </div>
-                    <div class="divCarrinho">
-                        <a href="Carrinho.aspx" class="aCarrinho">
-                            <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
                         </a>
                     </div>
                 </div>
@@ -168,14 +174,14 @@
         </section>
 
         <section id="divCad" runat="server">
-                <div class="divCadastro">
-                    <div class="divSubLoginSair">
-                        <a class="aDivSubLoginSair" onclick="sairCad()">&times;</a>
-                    </div>
+            <div class="divCadastro">
+                <div class="divSubLoginSair">
+                    <a class="aDivSubLoginSair" onclick="sairCad()">&times;</a>
+                </div>
 
-                    <div class="divSubLoginTitulo">
-                        <h1 class="h1LoginTitulo">Faça seu Cadastro</h1>
-                    </div>
+                <div class="divSubLoginTitulo">
+                    <h1 class="h1LoginTitulo">Faça seu Cadastro</h1>
+                </div>
 
                     <div class="divFicaJuntin">
                         <div class="divNome">
@@ -226,53 +232,53 @@
                         </div>
                     </div>
 
-                    <div class="divLoginSenha">
-                        <div class="divSubLoginEmail1">
-                            <asp:Label ID="lblConfirmarSenhaCadastro" runat="server" Text="Confirmar Senha" CssClass="lblDivCadastro"></asp:Label>
-                        </div>
-                        <div class="divSubLoginEmail2">
-                            <asp:TextBox ID="txtConfirmarSenhaCadastro" runat="server" CssClass="txtDivCadastro" TextMode="Password"></asp:TextBox>
-                        </div>
-                        <div class="divSubLoginEmail3">
-                            <asp:Label ID="lblAvisoConfirmarSenhaCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
-                        </div>
+                <div class="divLoginSenha">
+                    <div class="divSubLoginEmail1">
+                        <asp:Label ID="lblConfirmarSenhaCadastro" runat="server" Text="Confirmar Senha" CssClass="lblDivCadastro"></asp:Label>
                     </div>
-
-                    <div class="divLoginEntrar">
-                        <asp:Button ID="btnCadastro" runat="server" Text="Entrar" CssClass="btnDivCadastro" OnClientClick="verificarCamposCadastro()" OnClick="Cadastro" />
+                    <div class="divSubLoginEmail2">
+                        <asp:TextBox ID="txtConfirmarSenhaCadastro" runat="server" CssClass="txtDivCadastro" TextMode="Password"></asp:TextBox>
+                    </div>
+                    <div class="divSubLoginEmail3">
+                        <asp:Label ID="lblAvisoConfirmarSenhaCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
                     </div>
                 </div>
+
+                <div class="divLoginEntrar">
+                    <asp:Button ID="btnCadastro" runat="server" Text="Entrar" CssClass="btnDivCadastro" OnClientClick="verificarCamposCadastro()" OnClick="Cadastro" />
+                </div>
+            </div>
         </section>
 
         <section id="divEsqSenha" runat="server">
-                <div class="divEsqueceuSenha">
-                    <div class="divSubLoginSair">
-                        <a class="aDivSubLoginSair" onclick="esqueceuSenha()">&times;</a>
-                    </div>
+            <div class="divEsqueceuSenha">
+                <div class="divSubLoginSair">
+                    <a class="aDivSubLoginSair" onclick="esqueceuSenha()">&times;</a>
+                </div>
 
-                    <div class="divSubLoginTitulo">
-                        <h1 class="h1LoginTitulo">Esqueceu sua Senha?</h1>
-                    </div>
+                <div class="divSubLoginTitulo">
+                    <h1 class="h1LoginTitulo">Esqueceu sua Senha?</h1>
+                </div>
 
-                    <div class="divLoginEmail">
-                        <div class="divSubLoginEmail1">
-                            <asp:Label ID="Label1" runat="server" Text="Email" CssClass="lblEsqS"></asp:Label>
-                        </div>
-                        <div class="divSubLoginEmail2">
-                            <asp:TextBox ID="TextBox1" runat="server" CssClass="txtEsqS"></asp:TextBox>
-                        </div>
-                        <div class="divSubLoginEmail3">
-                            <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEsqS"></asp:Label>
-                        </div>
+                <div class="divLoginEmail">
+                    <div class="divSubLoginEmail1">
+                        <asp:Label ID="Label1" runat="server" Text="Email" CssClass="lblEsqS"></asp:Label>
                     </div>
-
-                    <div class="divLoginEntrar">
-                        <div class="divBtnSubLogin1">
-                            <a onclick="Login()" class="aEsqueceuSenha">Voltar ao Login</a>
-                        </div>
-                        <asp:Button ID="btnRecSenha" runat="server" Text="Entrar" CssClass="btnLogin" OnClick="RecuperarSenha" />
+                    <div class="divSubLoginEmail2">
+                        <asp:TextBox ID="TextBox1" runat="server" CssClass="txtEsqS"></asp:TextBox>
+                    </div>
+                    <div class="divSubLoginEmail3">
+                        <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEsqS"></asp:Label>
                     </div>
                 </div>
+
+                <div class="divLoginEntrar">
+                    <div class="divBtnSubLogin1">
+                        <a onclick="Login()" class="aEsqueceuSenha">Voltar ao Login</a>
+                    </div>
+                    <asp:Button ID="btnRecSenha" runat="server" Text="Entrar" CssClass="btnLogin" OnClick="RecuperarSenha" />
+                </div>
+            </div>
         </section>
 
         <section id="divCorpo">
