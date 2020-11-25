@@ -136,6 +136,29 @@ body {
     display: none;
 }
 
+.divCarrinho {
+    height: 123px;
+    width: 40px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.aCarrinho {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.imgCarrinho {
+    width: 100%;
+}
+
 @media screen and (max-width: 1200px) {
     .abtn {
         font-size: 20px;
@@ -319,7 +342,7 @@ body {
     height: 123px;
     display: flex;
     display: none;
-    width: 350px;
+    width: 450px;
 }
 
 .lblBemVindo {

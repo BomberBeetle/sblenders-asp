@@ -118,7 +118,7 @@ function expandirAcompanhamentos() {
 
         divAcompanhamento.style.height = "1300px";
         divAcompanhamento.style.transitionDuration = "2s";
-        setTimeout(function() { divAcompanhamento.style.overflow = "visible"; }, 2000);
+        setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         acompanhamentoAberto = true;
@@ -139,7 +139,7 @@ function expandirBebidas() {
     if (bebidaAberto === false) {
         divAcompanhamento.style.height = "1300px";
         divAcompanhamento.style.transitionDuration = "2s";
-        setTimeout(function() { divAcompanhamento.style.overflow = "visible"; }, 2000);
+        setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         bebidaAberto = true;
@@ -160,7 +160,7 @@ function expandirSobremesas() {
     if (sobremesaAberto === false) {
         divAcompanhamento.style.height = "1300px";
         divAcompanhamento.style.transitionDuration = "2s";
-        setTimeout(function() { divAcompanhamento.style.overflow = "visible"; }, 2000);
+        setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         sobremesaAberto = true;
@@ -181,7 +181,7 @@ function expandirMolhos() {
     if (molhoAberto === false) {
         divAcompanhamento.style.height = "1300px";
         divAcompanhamento.style.transitionDuration = "2s";
-        setTimeout(function() { divAcompanhamento.style.overflow = "visible"; }, 2000);
+        setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         molhoAberto = true;
@@ -265,7 +265,7 @@ function mostrarCategoriaSelecao() {
     }
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     /* $("#divAcompanhamento").click(function () {
          $("#divPro").clone().appendTo("#divProds");
@@ -293,7 +293,7 @@ for (i = 0; i < l; i++) {
         create a new DIV that will act as an option item:*/
         c = document.createElement("DIV");
         c.innerHTML = selElmnt.options[j].innerHTML;
-        c.addEventListener("click", function(e) {
+        c.addEventListener("click", function (e) {
             /*when an item is clicked, update the original select box,
             and the selected item:*/
             var y, i, k, s, h, sl, yl;
@@ -318,7 +318,7 @@ for (i = 0; i < l; i++) {
         b.appendChild(c);
     }
     x[i].appendChild(b);
-    a.addEventListener("click", function(e) {
+    a.addEventListener("click", function (e) {
         /*when the select box is clicked, close any other select boxes,
         and open/close the current select box:*/
         e.stopPropagation();
@@ -447,21 +447,39 @@ function tamDivIngredientes() {
     var windowW = window.innerWidth;
     var windowH = window.innerHeight;
     if (windowH <= 1080 && windowW <= 1920) {
+        if ((count % 2) == 1) {
+            count = count + 1;
+        }
         var divHeight = 600 * Math.trunc(count / 2) + 70 * Math.trunc(count / 2);
         document.getElementById("ContentPlaceHolder1_divPaes").style.height = divHeight + "px";
 
+        if ((count2 % 2) == 1) {
+            count2 = count2 + 1;
+        }
         var divHeight2 = 600 * Math.trunc(count2 / 2) + 70 * Math.trunc(count2 / 2);
         document.getElementById("ContentPlaceHolder1_divCarnes").style.height = divHeight2 + "px";
 
+        if ((count3 % 2) == 1) {
+            count3 = count3 + 1;
+        }
         var divHeight3 = 600 * Math.trunc(count3 / 2) + 70 * Math.trunc(count3 / 2);
         document.getElementById("ContentPlaceHolder1_divVerduras").style.height = divHeight3 + "px";
 
+        if ((count4 % 2) == 1) {
+            count4 = count4 + 1;
+        }
         var divHeight4 = 600 * Math.trunc(count4 / 2) + 70 * Math.trunc(count4 / 2);
         document.getElementById("ContentPlaceHolder1_divLegumes").style.height = divHeight4 + "px";
 
+        if ((count5 % 2) == 1) {
+            count5 = count5 + 1;
+        }
         var divHeight5 = 600 * Math.trunc(count5 / 2) + 70 * Math.trunc(count5 / 2);
         document.getElementById("ContentPlaceHolder1_divQueijos").style.height = divHeight5 + "px";
 
+        if ((count6 % 2) == 1) {
+            count6 = count6 + 1;
+        }
         var divHeight6 = 600 * Math.trunc(count6 / 2) + 70 * Math.trunc(count6 / 2);
         document.getElementById("ContentPlaceHolder1_divMolhos").style.height = divHeight6 + "px";
         if (windowH <= 720 && windowW <= 1280) {
@@ -487,6 +505,18 @@ function tamDivIngredientes() {
 }
 
 window.onresize = tamDivIngredientes;
+var visibilidadeAdicionado = false;
+
+function fecharAdicionado() {
+    var divAdicionado = document.getElementById("secProd2");
+    if (visibilidadeAdicionado == true) {
+        divAdicionado.style.display = "none";
+        visibilidadeAdicionado = false;
+        document.getElementById("divDescricaoProdutoCorpo2").innerHTML = "";
+    }
+    event.preventDefault();
+}
+
 var visibilidadeNutri = false;
 
 function fecharInfoNutri() {
