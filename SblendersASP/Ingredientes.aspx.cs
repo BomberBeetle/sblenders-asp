@@ -22,7 +22,7 @@ namespace TCC
         Ingredientes ingredient;
 
         protected void Page_Load(object sender, EventArgs e)
-        {                      
+        {
 
             string URL = $"https://localhost:44323/api/Produtos/23";
             string urlParameters = "";
@@ -44,9 +44,9 @@ namespace TCC
                 prod = resultado;
                 pi = resultado.ingredientes.ToList();
 
-                foreach(ProdutoIngrediente p in pi)
+                foreach (ProdutoIngrediente p in pi)
                 {
-                    if(p.CategoriaIngredienteID == 1)
+                    if (p.CategoriaIngredienteID == 1)
                     {
                         HtmlGenericControl divProduto = new HtmlGenericControl("DIV");
                         divProduto.Attributes.Add("class", "divProduto");
@@ -128,7 +128,7 @@ namespace TCC
                         hiddenTxt.ClientIDMode = ClientIDMode.Static;
                         divProduto.Controls.Add(hiddenTxt);
                     }
-                    else if(p.CategoriaIngredienteID == 2)
+                    else if (p.CategoriaIngredienteID == 2)
                     {
                         HtmlGenericControl divProduto = new HtmlGenericControl("DIV");
                         divProduto.Attributes.Add("class", "divProduto");
@@ -545,23 +545,23 @@ namespace TCC
 
             }
 
-            if(ppi.Count-1 < 0)
+            if (ppi.Count - 1 < 0)
             {
                 ingredient = new Ingredientes();
                 ppi = ingredient.getIngredientes().ToList();
                 ingredient.excluirList();
             }
-            
+
             int i = 0;
-            for(i=0; i <= ppi.Count-1; i++)
+            for (i = 0; i <= ppi.Count - 1; i++)
             {
                 int produtoIngredienteID = ppi[i].ProdutoIngredienteID;
                 int quantIngrediente = ppi[i].Quantidade;
                 Decimal valIngrediente = 0;
                 String nomeIngrediente = "";
-                foreach(ProdutoIngrediente p in pi)
+                foreach (ProdutoIngrediente p in pi)
                 {
-                    if(p.PIngredientID == produtoIngredienteID)
+                    if (p.PIngredientID == produtoIngredienteID)
                     {
                         nomeIngrediente = p.Name;
                         valIngrediente = p.Price;
@@ -626,7 +626,7 @@ namespace TCC
                 btnExcluirIngrediente.Text = "Excluir Ingrediente";
                 divIngredienteExcluir.Controls.Add(btnExcluirIngrediente);
                 btnExcluirIngrediente.Click += new EventHandler(ExcluirIngrediente);
-                          
+
             }
 
             decimal ingPrec = 0;
@@ -662,10 +662,10 @@ namespace TCC
                 {
 
                 }
-            }            
+            }
 
-            PedidoProdutoIngrediente ppa = new PedidoProdutoIngrediente(pid,Convert.ToInt32(hidden.Value),0);
-            ppi.Add(ppa);           
+            PedidoProdutoIngrediente ppa = new PedidoProdutoIngrediente(pid, Convert.ToInt32(hidden.Value), 0);
+            ppi.Add(ppa);
             int indice = ppi.Count - 1;
 
             int produtoIngredienteID = ppi[indice].ProdutoIngredienteID;
@@ -774,7 +774,7 @@ namespace TCC
         protected void avancarCarrinho(object sender, EventArgs e)
         {
             int quant = 0;
-            foreach(PedidoProdutoIngrediente en in ppi)
+            foreach (PedidoProdutoIngrediente en in ppi)
             {
                 quant = quant + en.Quantidade;
             }
@@ -782,18 +782,18 @@ namespace TCC
             int ingredienteU = ppi.Last().ProdutoIngredienteID;
             int catP = 0;
             int catU = 0;
-            foreach(ProdutoIngrediente ing in pi)
+            foreach (ProdutoIngrediente ing in pi)
             {
-                if(ing.PIngredientID == ingredienteP)
+                if (ing.PIngredientID == ingredienteP)
                 {
                     catP = ing.CategoriaIngredienteID;
                 }
-                else if(ing.PIngredientID == ingredienteU)
+                else if (ing.PIngredientID == ingredienteU)
                 {
                     catU = ing.CategoriaIngredienteID;
                 }
             }
-            if(ingredienteP == ingredienteU)
+            if (ingredienteP == ingredienteU)
             {
                 catU = catP;
             }
@@ -806,8 +806,12 @@ namespace TCC
                 ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
                 ppi.Clear();
                 Response.Redirect("Carrinho.aspx");
-            }            
+            }
         }
 
+        protected void excluirLanche(object sender, EventArgs e)
+        {
+
+        }
     }
 }

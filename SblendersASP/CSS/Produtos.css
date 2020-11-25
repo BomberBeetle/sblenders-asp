@@ -431,7 +431,7 @@ h1 {
     z-index: 999;
     position: fixed;
     align-items: initial;
-    display: none;
+    display: flex;
     display: none;
     flex-direction: row;
     flex-wrap: wrap;
@@ -506,9 +506,8 @@ h1 {
 .sectionProd2 {
     height: 100vh;
     width: 100%;
-    float: left;
     background-color: transparent;
-    z-index: 999;
+    z-index: 5;
     position: fixed;
     align-items: initial;
     display: flex;
@@ -542,6 +541,11 @@ h1 {
     color: green;
     font-weight: 700;
     margin-left: 1.35vw;
+}
+
+.btnFechar {
+    background-color:transparent;
+    border:0;
 }
 
 .btnAvancar {

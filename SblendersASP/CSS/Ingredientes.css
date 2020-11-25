@@ -96,9 +96,9 @@
     font-size: 30px;
 }
 
-.optionCategoria:hover {
-    background-color: #e3e3e3;
-}
+    .optionCategoria:hover {
+        background-color: #e3e3e3;
+    }
 
 .divMostrarIngredientes {
     height: auto;
@@ -151,10 +151,10 @@
     margin-bottom: 50px;
 }
 
-.divProduto a {
-    text-decoration: none;
-    color: black;
-}
+    .divProduto a {
+        text-decoration: none;
+        color: black;
+    }
 
 .divSubProduto1 {
     height: 250px;
@@ -222,10 +222,10 @@
     border-radius: 10px 10px;
 }
 
-.btnAdicionarCarrinho:hover {
-    background-color: #15b62a;
-    transition: 0.7s;
-}
+    .btnAdicionarCarrinho:hover {
+        background-color: #15b62a;
+        transition: 0.7s;
+    }
 
 .divSubProduto4 {
     height: 100px;
@@ -373,21 +373,66 @@
     height: 80px;
     width: 100%;
     margin-bottom: 30px;
-}
-
-.divSubTot2 {
-    height: 80px;
-    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
 #lblTotalIngredientes {
     font-size: 30px;
 }
+
+.divBotoes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.divBtnExcluirLanche {
+    height: 80px;
+    width: 500px;
+    align-items: initial;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.btnExcluirLanche {
+    width: 100%;
+    background-image: linear-gradient(135deg, rgba(39, 131, 219) 0%, rgba(27, 119, 207) 50%, rgba(15, 103, 186) 100%);
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 30px 30px;
+    border: 0px;
+    color: #DEDEDE;
+    box-shadow: 6px 6px 6px #656565;
+    padding-left: 20px;
+}
+
+.divTextoBtnExcluirLanche {
+    height: 80px;
+    width: 100%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+    .divTextoBtnExcluirLanche p {
+        margin-bottom: 0;
+    }
+
+    .divTextoBtnExcluirLanche img {
+        height: 90%;
+        float: left;
+    }
+
 
 .divBtnOpcoesPagLanches {
     height: 80px;
@@ -425,11 +470,11 @@
     justify-content: center;
 }
 
-.divTextoBtnCarrinho p {
-    margin-bottom: 0;
-}
+    .divTextoBtnCarrinho p {
+        margin-bottom: 0;
+    }
 
-.divTextoBtnCarrinho img {
-    height: 90%;
-    float: left;
-}
+    .divTextoBtnCarrinho img {
+        height: 90%;
+        float: left;
+    }

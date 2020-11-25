@@ -47,12 +47,19 @@
                         <h1>Seu Sblurger:</h1>
                     </div>
                 </div>
-                <div class="divTot">
-                    <div class="divSubTot2">
-                        <asp:Label ID="lblTotalIngredientes" runat="server" Text="R$ 0" CssClass="lblTotalIngredientes" ClientIDMode="Static"></asp:Label>
-                    </div>
-                </div>
             </div>
+        </div>
+        <div class="divTot">
+                <asp:Label ID="lblTotalIngredientes" runat="server" Text="R$ 0" CssClass="lblTotalIngredientes" ClientIDMode="Static"></asp:Label>
+        </div>
+        <div class="divBotoes">        
+        <div class="divBtnExcluirLanche">
+            <button class="btnExcluirLanche" id="btnExcluirLanche" runat="server" onserverclick="excluirLanche">
+                <div class="divTextoBtnExcluirLanche" onload="tamDivIngredientes()">
+                    <p>Excluir Sblurger</p>
+                    <img src="Imagens/iconeX.png" />
+                </div>
+            </button>
         </div>
         <div class="divBtnOpcoesPagLanches">
             <button class="btnIrCarrinho" id="btnIrCarrinho" runat="server" onserverclick="avancarCarrinho">
@@ -61,6 +68,7 @@
                     <img src="Imagens/seta2.png" />
                 </div>
             </button>
+        </div>
         </div>
     </div>
 </asp:Content>

@@ -47,6 +47,11 @@
                     <div class="divbtn">
                         <a class="abtn " onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
                     </div>
+                    <div class="divCarrinho">
+                        <a href="Carrinho.aspx" class="aCarrinho">
+                            <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
+                        </a>
+                    </div>
                 </div>
 
                 <div class="divHeaderUser" id="divConectado" runat="server">
@@ -57,6 +62,11 @@
                     <div class="divUserPhoto">
                         <a href="AreaCliente.aspx" class="aUserPhoto">
                             <img src="Imagens/usuario.png" class="imgUsuario" />
+                        </a>
+                    </div>
+                    <div class="divCarrinho">
+                        <a href="Carrinho.aspx" class="aCarrinho">
+                            <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
                         </a>
                     </div>
                 </div>

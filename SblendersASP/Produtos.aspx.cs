@@ -376,6 +376,7 @@ namespace TCC
                 int numeroProdutos = ppl.Count;
                 //Session["Carrinho"] = new SblendersAPI.Models.Pedido(0, 0, 0, DateTime.Now, "", new PedidoProduto[numeroProdutos - 1]);
                 ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
+                //secProd2.Attributes.CssStyle.Add("display", "flex"); IMPORTANTEEEEEEEEE
             }
             else
             {
@@ -387,6 +388,11 @@ namespace TCC
         protected void btnIrCarrinho_ServerClick(object sender, EventArgs e)
         {
             Response.Redirect("Carrinho.aspx");
+        }
+
+        protected void btnFechar_ServerClick(object sender, EventArgs e)
+        {
+            
         }
     }
 }
