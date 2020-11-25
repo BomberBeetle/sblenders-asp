@@ -793,6 +793,10 @@ namespace TCC
                     catU = ing.CategoriaIngredienteID;
                 }
             }
+            if(ingredienteP == ingredienteU)
+            {
+                catU = catP;
+            }
 
             if (quant <= 30 && catP == 1 && catU == 1)
             {
