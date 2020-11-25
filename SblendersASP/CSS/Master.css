@@ -137,8 +137,7 @@ body {
 }
 
 .divCarrinho {
-    height: 123px;
-    width: 40px;
+    max-width: 40px;
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -177,7 +176,7 @@ body {
     }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 980px) {
     .abtn {
         padding: 5px 10px;
     }
@@ -193,7 +192,7 @@ body {
     }
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 860px) {
     .adivLinks {
         font-size: 14px;
     }
@@ -204,7 +203,7 @@ body {
         max-width: 80px;
     }
     .divLogBtns {
-        display: none;
+        display: none !important;
     }
     .divLinks {
         justify-content: flex-end;
@@ -216,6 +215,9 @@ body {
         display: none;
     }
     .divHeaderUser {
+        display: none !important;
+    }
+    .divheaderusersidenav {
         display: none;
     }
     .divOpenMenu {
@@ -268,6 +270,16 @@ body {
     .divasidenavfirst {
         border-radius: 5px 5px 0 0;
     }
+    .divCarrinho {
+        height: auto;
+        max-width: 40px;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px 0 0 0;
+    }
     .divdivasidenav {
         padding: 0;
         margin: 0;
@@ -282,6 +294,7 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        flex-wrap: wrap;
         padding: 10px 0;
     }
     .abtn {
@@ -607,6 +620,23 @@ body {
     text-decoration: underline !important;
 }
 
+.divFicaJuntin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 10px;
+    margin: 0 20px;
+    gap: 10px;
+}
+
+.divNome {
+    flex: 35%;
+}
+
+.divSobrenome {
+    flex: 65%;
+}
+
 .divFooter {
     background-color: #ff7300;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
@@ -755,7 +785,7 @@ body {
     }
 }
 
-@media screen and (max-width: 883px) {
+@media screen and (max-width: 920px) {
     .MainFooter {
         padding: 30px 0 0 0;
     }
