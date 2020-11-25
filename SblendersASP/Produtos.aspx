@@ -13,7 +13,7 @@
             <div class="divDescricaoProduto">
                 <div class="divDescricaoProdutoTitulo">
                     <h1 class="h1InfoNutri">Informações Nutricionais</h1>
-                    <a onclick="fecharAdicionado()">
+                    <a onclick="fecharInfoNutri()">
                         <img src="Imagens/iconeX.png" class="imgIconX" />
                     </a>
                 </div>
