@@ -10,6 +10,7 @@
 
 * {
     font-family: 'Century Gothic';
+    outline: none;
 }
 
 body {
@@ -287,8 +288,8 @@ body {
 
 .divUser {
     margin-right: 10px;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
 
 .divUserPhoto {
@@ -413,146 +414,116 @@ body {
     margin-left: 10px;
 }
 
-#divCad {
-    height: 100vh;
-    display: none;
-    background-color: rgba(255, 255, 255, 0);
-    z-index: 3;
-    position: fixed;
-    justify-content: center;
-}
-
-#divLog {
-    height: 100vh;
-    display: none;
-    background-color: rgba(255, 255, 255, 0);
-    z-index: 3;
-    position: fixed;
-    justify-content: center;
-}
-
+#divCad,
+#divLog,
 #divEsqSenha {
-    height: 100vh;
+    height: 100%;
     display: none;
-    background-color: rgba(255, 255, 255, 0);
-    z-index: 3;
     position: fixed;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.5s ease-in-out;
+    overflow: overlay;
     justify-content: center;
+    align-items: center;
 }
+
+
+/* n sei o que é isso */
 
 .divFG {
     height: 100vh;
     float: left;
 }
 
-.divFacaLogin {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-}
 
+/* n sei o que é isso */
 
-/*Novo div Login*/
-
-.divLogin {
-    height: 60vh;
-    width: 65%;
-    /*background-color: rgba(255,115,0,1);*/
+.divLogin,
+.divCadastro,
+.divEsqueceuSenha {
     background-image: url("ImagensCSS/orangeTexture.jpg");
     background-repeat: round;
-    border-radius: 45px 45px;
-    color: #FEFEFE;
-    align-items: center;
-    margin-top: 3vh;
-    position: relative;
-    box-shadow: 1px 1px 1px #656565;
+    width: 485px;
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.3);
 }
 
 .divSubLoginSair {
-    width: 100%;
-    position: absolute;
-    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .aDivSubLoginSair {
-    float: right;
-    margin-right: 50px;
-    margin-top: 20px;
     cursor: pointer;
-}
-
-.imgDivSubLoginSair {
-    width: 30px;
-    height: 30px;
-}
-
-.divSubLoginLogo {
-    height: 15%;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    /*float:left;*/
-}
-
-.imgDivSubLoginLogo {
-    height: 100%;
-    width: 16%;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    margin-left: 20px;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+.aDivSubLoginSair:hover {
+    color: #ffad15 !important;
 }
 
 .divSubLoginTitulo {
-    height: 20%;
-    width: 100%;
-    /*float:left;*/
-    z-index: 5;
-    align-items: flex-end;
+    padding: 0 20px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
 .h1LoginTitulo {
-    font-size: calc(1.2rem + 1vw);
+    font-size: 24px;
     font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
 
-.divEspacoLogin {
-    height: 12%;
-    float: left;
-    width: 100%;
+.divLoginEmail,
+.divLoginSenha,
+.divLoginEntrar {
+    padding: 10px 10px;
 }
 
 .divLoginEmail,
 .divLoginSenha {
-    height: 23%;
-    width: 100%;
-    float: left;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .divLoginEntrar {
-    height: 22%;
-    width: 100%;
-    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .divSubLoginEmail1,
 .divSubLoginEmail2,
 .divSubLoginEmail3 {
-    width: 100%;
     text-align: center;
 }
 
 .divSubLoginEmail1 {
-    height: 30%;
-    float: left;
     text-align: left !important;
 }
 
 .divSubEmailLogin2 {
-    height: 50%;
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -560,453 +531,57 @@ body {
     justify-content: center;
 }
 
-.divSubEmailLogin3 {
-    height: 20%;
-    float: left;
-}
+.divSubEmailLogin3 {}
 
-.lblDivLogin {
-    font-size: calc(0.15rem + 1vw);
-    margin-left: 17.5%;
-}
-
-.txtDivLogin {
-    height: 65%;
-    width: 65%;
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: calc(0.09rem + 1vw);
-    border-radius: 20px 4px;
-}
-
-.lblDivAvisoLogin {
-    height: 50%;
-    width: 100%;
-    margin-top: 5px;
-    float: left;
-    font-size: calc(0.09rem + 1vw);
-}
-
-.divBtnLogin {
-    height: 24%;
-    margin-top: 20px;
-}
-
-.divBtnEspacoVazio {
-    height: 5%;
-}
-
-.divBtnSubLogin1 {
-    height: 35%;
-    width: 100%;
-    float: left;
-    text-align: center !important;
-    padding-top: 5px;
-}
-
-.aEsqueceuSenha {
-    font-size: calc(0.2rem + 1vw);
-    cursor: pointer;
-}
-
-.divBtnSubLogin2 {
-    height: 60%;
-    width: 100%;
-    float: left;
-}
-
-.btnLogin {
-    height: 70%;
-    color: #fff;
-    width: 30%;
-    margin-left: 34%;
-    background-color: #ffb300;
-    border-radius: 15px 15px;
-    font-size: calc(0.3rem + 1vw);
-    border: none;
-}
-
-
-/*Div Cadastro*/
-
-.divCadastro {
-    height: 75vh;
-    /*70vh*/
-    width: 75%;
-    /*background-color: rgba(255,115,0,1);*/
-    background-image: url("ImagensCSS/orangeTexture.jpg");
-    background-repeat: round;
-    border-radius: 45px 45px;
-    color: #FEFEFE;
-    align-items: center;
-    margin-top: 3vh;
-    /*8vh*/
-    position: relative;
-    box-shadow: 1px 1px 1px #656565;
-}
-
-.divSubCadastroSair {
-    width: 100%;
-    position: absolute;
-    z-index: 10;
-}
-
-.divSubCadastroSair a {
-    float: right;
-    margin-right: 50px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-.divSubCadastroSair img {
-    width: 30px;
-    height: 30px;
-}
-
-.divSubCadastroLogo {
-    height: 12%;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    /*float:left;*/
-}
-
-.divSubCadastroLogo img {
-    height: 100%;
-    width: 15%;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 20px;
-}
-
-.divSubCadastroTitulo {
-    height: 16%;
-    width: 100%;
-    /*float:left;*/
-    z-index: 5;
-    align-items: flex-end;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.divSubCadastroTitulo h1 {
-    font-size: calc(1.2rem + 1vw);
-    font-weight: bold;
-}
-
-.divEspacoCadastro {
-    height: 5%;
-    float: left;
-    width: 100%;
-}
-
-.divCadastroItem {
-    height: 16%;
-    width: 100%;
-    float: left;
-}
-
+.lblDivLogin,
+.lblEsqS,
+.lblDivAvisoLogin,
+.lblAvisoEsqS,
+.lblDivAvisoLogin,
+.lblDivCadastro2,
 .lblDivCadastro {
-    font-size: calc(0.15rem + 1vw);
-    margin-left: 15%;
+    font-size: 18px;
 }
 
-.txtDivCadastro {
-    height: 85%;
-    width: 70%;
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: calc(0.09rem + 1vw);
-    border-radius: 20px 4px;
-}
-
-.divCadastroItem2 {
-    height: 16%;
-    width: 100%;
-    float: left;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.divNomeCadastro {
-    height: 100%;
-    width: 35%;
-    float: left;
-}
-
-.divSobrenomeCadastro {
-    height: 100%;
-    width: 55%;
-    float: right;
-}
-
-.divNomeSobrenome {
-    height: 100%;
-    width: 70%;
-}
-
-.lblDivCadastro2 {
-    font-size: calc(0.15rem + 1vw);
-    margin-left: 0%;
-}
-
+.txtDivLogin,
+.txtEsqS,
+.txtDivCadastro,
 .txtDivCadastro2 {
-    height: 85%;
-    width: 100%;
     border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: calc(0.09rem + 1vw);
+    padding: 5px 10px;
+    font-size: 18px;
     border-radius: 20px 4px;
-}
-
-.divCadastroBtn {
-    height: 15%;
-    float: left;
     width: 100%;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.btnDivCadastro {
-    height: 60%;
-    color: #fff;
-    width: 30%;
-    background-color: #ffb300;
-    border-radius: 15px 15px;
-    font-size: calc(0.3rem + 1vw);
-    border: none;
-    /*margin-top: calc(0.3rem + 1vw);*/
-}
-
-#divCorpo {
-    height: auto;
-    width: 100%;
-    margin: 0 auto;
-}
-
-
-/*Div EsqueceuSenha*/
-
-.divEsqueceuSenha {
-    height: 40vh;
-    /*70vh*/
-    width: 50%;
-    /*background-color: rgba(255,115,0,1);*/
-    background-image: url("ImagensCSS/orangeTexture.jpg");
-    background-repeat: round;
-    border-radius: 45px 45px;
-    color: #FEFEFE;
-    align-items: center;
-    margin-top: 3vh;
-    /*8vh*/
-    position: relative;
-    box-shadow: 1px 1px 1px #656565;
-}
-
-.divSubEsqSenhaSair {
-    width: 100%;
-    position: absolute;
-    z-index: 10;
-}
-
-.aDivSubEsqSenhaSair {
-    float: right;
-    margin-right: 30px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-.imgDivSubEsqSenhaSair {
-    width: 20px;
-    height: 20px;
-}
-
-.divSubEsqSenhaLogo {
-    height: 15%;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    /*float:left;*/
-}
-
-.imgDivSubEsqSenhaLogo {
-    height: 100%;
-    width: 15%;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 20px;
-}
-
-.divSubEsqSenhaTitulo {
-    height: 30%;
-    width: 100%;
-    /*float:left;*/
-    z-index: 5;
-    align-items: flex-end;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.h1EsqSenhaTitulo {
-    font-size: calc(0.5rem + 1vw);
-    font-weight: bold;
-}
-
-.divEspacoLogin {
-    height: 12%;
-    float: left;
-    width: 100%;
-}
-
-.divEsqSenhaEmail {
-    height: 28%;
-    width: 100%;
-    float: left;
-}
-
-.divEsqSenhaEntrar {
-    height: 30%;
-    width: 100%;
-    float: left;
-}
-
-.divSubLoginEmail1,
-.divSubLoginEmail2,
-.divSubLoginEmail3 {
-    width: 100%;
-    text-align: center;
-}
-
-.divSubLoginEmail1 {
-    height: 30%;
-    float: left;
-    text-align: left !important;
-}
-
-.divSubEmailLogin2 {
-    height: 50%;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.divSubEmailLogin3 {
-    height: 20%;
-    float: left;
-}
-
-.lblDivLogin {
-    font-size: calc(0.10rem + 1vw);
-    margin-left: 17.5%;
-}
-
-.txtDivLogin {
-    height: 65%;
-    width: 65%;
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: calc(0.04rem + 1vw);
-    border-radius: 20px 4px;
-}
-
-.txtDivLogin2 {
-    height: 50%;
-    width: 65%;
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: calc(0.04rem + 1vw);
-    border-radius: 20px 4px;
-}
-
-.lblDivAvisoLogin {
-    height: 50%;
-    width: 100%;
-    margin-top: 5px;
-    float: left;
-    font-size: calc(0.04rem + 1vw);
-}
-
-.lblEsqS {
-    font-size: calc(0.03rem + 1vw);
-    margin-left: 17.5%;
-}
-
-.txtEsqS {
-    height: 30%;
-    width: 65%;
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: calc(0.04rem + 1vw);
-    border-radius: 20px 4px;
-}
-
-.lblAvisoEsqS {
-    height: 50%;
-    width: 100%;
-    margin-top: 5px;
-    float: left;
-    font-size: calc(0.02rem + 1vw);
-}
-
-.divBtnLogin {
-    height: 24%;
-    margin-top: 20px;
-}
-
-.divBtnEspacoVazio {
-    height: 5%;
 }
 
 .divBtnSubLogin1 {
-    height: 35%;
-    width: 100%;
-    float: left;
     text-align: center !important;
-    padding-top: 5px;
 }
 
 .aEsqueceuSenha {
-    font-size: calc(0.05rem + 1vw);
+    font-size: 18px;
     cursor: pointer;
+}
+
+.btnLogin,
+.btnCadastro {
+    padding: 10px;
+    margin: 0;
+    color: #fff;
+    background-color: #ffad15;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.5s;
+    border: none;
+}
+
+.btnLogin:hover {
+    background-color: #ffffff;
+    color: #ff7300 !important;
 }
 
 .aEsqueceuSenha:hover {
     text-decoration: underline !important;
-}
-
-.divBtnSubLogin2 {
-    height: 60%;
-    width: 100%;
-    float: left;
-}
-
-.btnLogin {
-    height: 70%;
-    color: #fff;
-    width: 30%;
-    margin-left: 34%;
-    background-color: #ffb300;
-    border-radius: 15px 15px;
-    font-size: calc(0.05rem + 1vw);
-    border: none;
 }
 
 .divFooter {

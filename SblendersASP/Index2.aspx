@@ -22,32 +22,76 @@
     <form id="form1" runat="server">
 
         <div id="divCorpoIndex">
-            <nav class="container-fluid" id="divCabecalho">
-                <div class="col-2 CabEsq">
-                    <a href="Index2.aspx">
-                        <img src="Imagens/NovoSblendersLogo.png" class="imgLogo" />
-                    </a>
-                </div>
-                <div class="col-6 CabEsq">
-                    <a class="aProjSblenders" href="Quem_somos.aspx" id="quemSomos">Quem Somos</a>
-                    <a class="aProjSblenders" href="Contact.aspx" id="faleConosco">Fale Conosco</a>
-                    <a class="aProjSblenders" href="Produtos.aspx">Faça seu pedido</a>
-                </div>
-                <div class="col-4 CabEsq" id="divDesconectado" runat="server">
-                    <a class="aCad" onclick="Login()" id="textoLogin">Login</a>
-                    <a class="aCad" onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
-                </div>
-                <div class="col-4 CabEsq" id="divConectado" runat="server">
-                    <div class="divUsuario">
-                        <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
-                        <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="linkSair_Click">Sair</asp:LinkButton>
-                        <!--<asp:Label ID="vvv" runat="server" Text="Sair" CssClass="lblSair" OnServerClick="lblSair_Click"></asp:Label>-->
-                    </div>
-                    <div class="divFotoUsuario">
-                        <a href="AreaCliente.aspx" class="aFotoUsuario">
-                            <img src="Imagens/usuario.png" class="imgUsuario" />
+            <nav class="divHeader">
+                <div class="divHeaderRow">
+                    <div class="imgHeader">
+                        <a href="Index2.aspx">
+                            <img src="Imagens/NovoSblendersLogo.png" class="imgLogo" />
                         </a>
+                    </div>
 
+                    <div class="divLinks">
+                        <ul class="divLinksColunm">
+                            <li class="divLinksRow divLinksHidden">
+                                <a class="adivLinks" href="Quem_somos.aspx">Quem Somos</a>
+                            </li>
+                            <li class="divLinksRow divLinksHidden">
+                                <a class="adivLinks" href="Contact.aspx">Fale Conosco</a>
+                            </li>
+                            <li class="divLinksRow">
+                                <a class="adivLinks" href="Produtos.aspx">Faça seu pedido</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="divLogBtns" id="divDesconectado" runat="server">
+                        <div class="divbtn">
+                            <a class="abtn " onclick="Login()" id="textoLogin">Login</a>
+                        </div>
+                        <div class="divbtn">
+                            <a class="abtn " onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
+                        </div>
+                    </div>
+
+                    <div class="divHeaderUser" id="divConectado" runat="server">
+                        <div class="divUser">
+                            <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
+                            <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="linkSair_Click">Sair</asp:LinkButton>
+                        </div>
+                        <div class="divUserPhoto">
+                            <a href="AreaCliente.aspx" class="aUserPhoto">
+                                <img src="Imagens/usuario.png" class="imgUsuario" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="divOpenMenu">
+                        <span class="opmenu" style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;</span>
+                    </div>
+                    
+                    <div id="mySidenav" class="sidenav">
+                        <div class="SidenavCol">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <ul class="divdivasidenav">
+                                <li class="divasidenav divasidenavfirst">
+                                    <a class="asidenav" href="Quem_somos.aspx">Quem Somos</a>
+                                </li>
+                                <li class="divasidenav">
+                                    <a class="asidenav" href="Contact.aspx">Fale Conosco</a>
+                                </li>
+                                <li class="divasidenav">
+                                    <a class="asidenav" href="Produtos.aspx">Faça seu Pedido</a>
+                                </li>
+                            </ul>
+                            <div class="divbtnsidenav">
+                                <div class="divbtn">
+                                    <a class="abtn " onclick="Login()" id="textoLogin">Login</a>
+                                </div>
+                                <div class="divbtn">
+                                    <a class="abtn " onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>

@@ -16,7 +16,9 @@ function Login() {
     var divEsqSenha = document.getElementById("divEsqSenha");
     if (visibilidadeLogin == false) {
         divCad.style.display = "none";
+        divLog.style.opacity = 0;
         divLog.style.display = "flex";
+        $("#divLog").animate({ opacity: 1 }, 0.1e3)
         divEsqSenha.style.display = "none";
         visibilidadeCad = false;
         visiblidadeEsqSenha = false;
@@ -35,8 +37,10 @@ function Cadastro() {
     var divEsqSenha = document.getElementById("divEsqSenha");
     if (visibilidadeCad == false) {
         divLog.style.display = "none";
+        divCad.style.opacity = 0;
         divEsqSenha.style.display = "none";
         divCad.style.display = "flex";
+        $("#divCad").animate({ opacity: 1 }, 0.1e3)
         visibilidadeLogin = false;
         visiblidadeEsqSenha = false;
         visibilidadeCad = true;

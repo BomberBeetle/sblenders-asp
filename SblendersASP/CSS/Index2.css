@@ -13,22 +13,279 @@ body {
 }
 
 * {
-    margin: 0 auto;
     font-family: 'Century Gothic';
 }
 
-#divCabecalho {
-    height: 15vh;
-    background-color: rgba(255, 250, 237,0); /*255,115,0*/
+.divHeader {
+    padding: 15px;
+    width: 100%;
+    background-color: rgba(255, 250, 237, 0);
+}
+
+.divHeaderRow {
+    margin: 0 auto;
+    display: flex;
+    flex: 90%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.imgHeader {
+    margin: 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100px;
+}
+
+.imgLogo {
+    max-width: 100%;
+    height: auto;
+}
+
+.divLinks {
+    margin: 0;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.divLinksColunm {
+    display: flex;
+    align-self: stretch;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 0;
+    margin: 20px;
+    gap: 10px;
+}
+
+.divLinksRow {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    transition: 0.5s;
+    padding: 0;
+}
+
+.adivLinks {
+    font-size: 22px;
+    color: #FFF;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.adivLinks:hover {
+    color: #fff;
+}
+
+.divLinksRow:hover {
+    background-color: #ffad15;
+    border-radius: 20rem;
+}
+
+.divLogBtns {
+    display: flex;
+    flex-direction: row;
+}
+
+.divbtn {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.abtn {
+    color: #ffffff !important;
+    background-color: #ffad15;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-size: 24px;
+}
+
+.abtn:hover {
+    color: #ff7300 !important;
+    background-color: #ffffff;
+    transition: 0.5s;
+}
+
+.divOpenMenu {
+    display: none;
+}
+
+.opmenu {
+    display: none;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidenav {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .abtn {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+    .adivLinks {
+        font-size: 18px;
+        padding: 0 15px;
+    }
+    .divLinksColunm {
+        margin: 15px;
+        gap: 5px;
+    }
+    .divbtn {
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .abtn {
+        padding: 5px 10px;
+    }
+    .adivLinks {
+        padding: 0 5px;
+    }
+    .divLinksColunm {
+        margin: 5px;
+        gap: 2px;
+    }
+    .divbtn {
+        padding: 0 3px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .adivLinks {
+        font-size: 14px;
+    }
+    .divHeaderRow {
+        justify-content: space-between;
+    }
+    .imgHeader {
+        max-width: 80px;
+    }
+    .divLogBtns {
+        display: none;
+    }
+    .divLinks {
+        justify-content: flex-end;
+        flex-grow: 1;
+        margin-right: 15px;
+    }
+    .divLinksHidden {
+        display: none;
+    }
+    .divHeaderUser {
+        display: none;
+    }
+    .divOpenMenu {
+        display: flex;
+    }
+    .divProd {
+        display: block;
+    }
+    .opmenu {
+        display: flex;
+        user-select: none;
+    }
+    .sidenav {
+        display: block;
+        position: fixed !important;
+        height: 100%;
+        width: 0;
+        z-index: 50;
+        top: 0;
+        right: 0;
+        background-color: #ff7a0e;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        transition: 0.5s;
+    }
+    .SidenavCol {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .sidenav a {
+        text-decoration: none;
+        color: #ffffff;
+        transition: 0.5s;
+    }
+    .asidenav .abtn {
+        font-size: 18px;
+    }
+    .asidenav {
+        width: 100%;
+        padding: 5px 10px;
+        transition: 0.5s;
+        display: block;
+    }
+    .asidenav:hover,
+    .closebtn:hover {
+        color: #ffad15;
+    }
+    .divasidenavfirst {
+        border-radius: 5px 5px 0 0;
+    }
+    .divdivasidenav {
+        padding: 0;
+        margin: 0;
+    }
+    .divasidenav {
+        transition: 0.5s;
+        padding: 0;
+        background-color: #ff5e00;
+        border-bottom: 1px solid #ffffff;
+    }
+    .divbtnsidenav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+    .abtn {
+        padding: 10px 10px;
+    }
+    .divbtn {
+        padding: 0;
+    }
+    .sidenav {
+        font-size: 18px;
+    }
+    .closebtn {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 15px 0 0;
+        font-size: 40px !important;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .divLinks {
+        display: none;
+    }
 }
 
 .CabEsq {
     height: 15vh;
     float: left;
-}
-
-#divDesconectado {
-    display: block;
 }
 
 #divConectado {
@@ -62,9 +319,9 @@ body {
     cursor: pointer;
 }
 
-    .lblSair:hover {
-        color: #323232 !important;
-    }
+.lblSair:hover {
+    color: #323232 !important;
+}
 
 .divFotoUsuario {
     height: 100%;
@@ -93,15 +350,6 @@ body {
     width: 50%;
 }
 
-.imgLogo {
-    /*height:13vh;
-    width:75%;
-    float:left;
-    margin-top:1vh;*/
-    margin-top: 2.5px;
-    width: 50%;
-}
-
 .CabEsq p {
     font-size: 40px;
     margin-top: 30px;
@@ -116,11 +364,11 @@ body {
     float: left;
 }
 
-    .aProjSblenders:hover {
-        color: #434343;
-        text-decoration: none;
-        transition: 0.5s;
-    }
+.aProjSblenders:hover {
+    color: #434343;
+    text-decoration: none;
+    transition: 0.5s;
+}
 
 .aCad {
     color: #fff !important;
@@ -135,11 +383,11 @@ body {
     cursor: pointer;
 }
 
-    .aCad:hover {
-        color: #6e6a5c !important;
-        background-color: #ffae00;
-        transition: 0.75s;
-    }
+.aCad:hover {
+    color: #6e6a5c !important;
+    background-color: #ffae00;
+    transition: 0.75s;
+}
 
 #divCorpo {
     height: auto;
@@ -152,26 +400,24 @@ body {
     background-color: #E374A1;
 }
 
-
 #divCorpoIndex {
     margin: 0 auto;
     height: 100vh;
     width: 100%;
 }
 
-    #divCorpoIndex nav:first-child {
-        position: relative;
-        z-index: 2;
-    }
+#divCorpoIndex nav:first-child {
+    position: absolute;
+    z-index: 50;
+}
 
-    #divCorpoIndex nav:last-child {
-        position: relative;
-        top: -15vh;
-        z-index: 1
-    }
+#divCorpoIndex nav:last-child {
+    position: static;
+    z-index: 1;
+}
 
 #carouselBanner {
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
 
@@ -194,11 +440,13 @@ body {
     z-index: 2;
 }
 
+
 /*BFSFSDKJHGK*/
+
 #divCad {
     height: 100vh;
     display: none;
-    background-color: rgba(255,255,255,0);
+    background-color: rgba(255, 255, 255, 0);
     z-index: 3;
     position: fixed;
 }
@@ -206,7 +454,7 @@ body {
 #divLog {
     height: 100vh;
     display: none;
-    background-color: rgba(255,255,255,0);
+    background-color: rgba(255, 255, 255, 0);
     z-index: 3;
     position: fixed;
 }
@@ -214,7 +462,7 @@ body {
 #divEsqSenha {
     height: 100vh;
     display: none;
-    background-color: rgba(255,255,255,0);
+    background-color: rgba(255, 255, 255, 0);
     z-index: 3;
     position: fixed;
 }
@@ -229,6 +477,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
 
 /*Novo div Login*/
 
@@ -303,7 +552,8 @@ body {
     width: 100%;
 }
 
-.divLoginEmail, .divLoginSenha {
+.divLoginEmail,
+.divLoginSenha {
     height: 23%;
     width: 100%;
     float: left;
@@ -315,7 +565,9 @@ body {
     float: left;
 }
 
-.divSubLoginEmail1, .divSubLoginEmail2, .divSubLoginEmail3 {
+.divSubLoginEmail1,
+.divSubLoginEmail2,
+.divSubLoginEmail3 {
     width: 100%;
     text-align: center;
 }
@@ -402,9 +654,12 @@ body {
     border: none;
 }
 
+
 /*Div Cadastro*/
+
 .divCadastro {
-    height: 75vh; /*70vh*/
+    height: 75vh;
+    /*70vh*/
     width: 75%;
     /*background-color: rgba(255,115,0,1);*/
     background-image: url("ImagensCSS/orangeTexture.jpg");
@@ -412,7 +667,8 @@ body {
     border-radius: 45px 45px;
     color: #FEFEFE;
     align-items: center;
-    margin-top: 3vh; /*8vh*/
+    margin-top: 3vh;
+    /*8vh*/
     position: relative;
     box-shadow: 1px 1px 1px #656565;
 }
@@ -423,17 +679,17 @@ body {
     z-index: 10;
 }
 
-    .divSubCadastroSair a {
-        float: right;
-        margin-right: 50px;
-        margin-top: 20px;
-        cursor: pointer;
-    }
+.divSubCadastroSair a {
+    float: right;
+    margin-right: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+}
 
-    .divSubCadastroSair img {
-        width: 30px;
-        height: 30px;
-    }
+.divSubCadastroSair img {
+    width: 30px;
+    height: 30px;
+}
 
 .divSubCadastroLogo {
     height: 12%;
@@ -443,13 +699,13 @@ body {
     /*float:left;*/
 }
 
-    .divSubCadastroLogo img {
-        height: 100%;
-        width: 15%;
-        align-items: center;
-        margin-top: 10px;
-        margin-left: 20px;
-    }
+.divSubCadastroLogo img {
+    height: 100%;
+    width: 15%;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+}
 
 .divSubCadastroTitulo {
     height: 16%;
@@ -463,10 +719,10 @@ body {
     justify-content: center;
 }
 
-    .divSubCadastroTitulo h1 {
-        font-size: calc(1.2rem + 1vw);
-        font-weight: bold;
-    }
+.divSubCadastroTitulo h1 {
+    font-size: calc(1.2rem + 1vw);
+    font-weight: bold;
+}
 
 .divEspacoCadastro {
     height: 5%;
@@ -560,10 +816,12 @@ body {
     /*margin-top: calc(0.3rem + 1vw);*/
 }
 
+
 /*Div EsqueceuSenha*/
 
 .divEsqueceuSenha {
-    height: 40vh; /*70vh*/
+    height: 40vh;
+    /*70vh*/
     width: 50%;
     /*background-color: rgba(255,115,0,1);*/
     background-image: url("ImagensCSS/orangeTexture.jpg");
@@ -571,7 +829,8 @@ body {
     border-radius: 45px 45px;
     color: #FEFEFE;
     align-items: center;
-    margin-top: 3vh; /*8vh*/
+    margin-top: 3vh;
+    /*8vh*/
     position: relative;
     box-shadow: 1px 1px 1px #656565;
 }
@@ -645,7 +904,9 @@ body {
     float: left;
 }
 
-.divSubLoginEmail1, .divSubLoginEmail2, .divSubLoginEmail3 {
+.divSubLoginEmail1,
+.divSubLoginEmail2,
+.divSubLoginEmail3 {
     width: 100%;
     text-align: center;
 }
@@ -748,9 +1009,9 @@ body {
     cursor: pointer;
 }
 
-    .aEsqueceuSenha:hover {
-        text-decoration: underline !important;
-    }
+.aEsqueceuSenha:hover {
+    text-decoration: underline !important;
+}
 
 .divBtnSubLogin2 {
     height: 60%;
@@ -767,4 +1028,15 @@ body {
     border-radius: 15px 15px;
     font-size: calc(0.05rem + 1vw);
     border: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a,
+li,
+ul {
+    list-style: none;
+    text-decoration: none;
 }
