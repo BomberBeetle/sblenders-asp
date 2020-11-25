@@ -116,7 +116,7 @@ function expandirAcompanhamentos() {
     var btnAcompanhamento = document.getElementById("btnExpandirAcompanhamento");
     if (acompanhamentoAberto === false) {
 
-        divAcompanhamento.style.height = "1300px";
+        divAcompanhamento.style.height = divAcom + "px";
         divAcompanhamento.style.transitionDuration = "2s";
         setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
@@ -137,7 +137,7 @@ function expandirBebidas() {
     var divAcompanhamento = document.getElementById("divBebida");
     var btnAcompanhamento = document.getElementById("btnExpandirBebida");
     if (bebidaAberto === false) {
-        divAcompanhamento.style.height = "1300px";
+        divAcompanhamento.style.height = divBeb + "px";
         divAcompanhamento.style.transitionDuration = "2s";
         setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
@@ -158,7 +158,7 @@ function expandirSobremesas() {
     var divAcompanhamento = document.getElementById("divSobremesa");
     var btnAcompanhamento = document.getElementById("btnExpandirSobremesa");
     if (sobremesaAberto === false) {
-        divAcompanhamento.style.height = "1300px";
+        divAcompanhamento.style.height = divSob + "px";
         divAcompanhamento.style.transitionDuration = "2s";
         setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
@@ -179,7 +179,7 @@ function expandirMolhos() {
     var divAcompanhamento = document.getElementById("divMolho");
     var btnAcompanhamento = document.getElementById("btnExpandirMolho");
     if (molhoAberto === false) {
-        divAcompanhamento.style.height = "1300px";
+        divAcompanhamento.style.height = divMol + "px";
         divAcompanhamento.style.transitionDuration = "2s";
         setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
@@ -374,6 +374,11 @@ document.addEventListener("click", closeAllSelect);
     }
 }*/
 
+var divSob = 0;
+var divAcom = 0;
+var divBeb = 0;
+var divMol = 0;
+
 function tamanhoDivProdutos() {
     var elements = document.getElementById("ContentPlaceHolder1_divProds").getElementsByClassName('divProduto');
     var count = elements.length;
@@ -396,7 +401,7 @@ function tamanhoDivProdutos() {
         var divHeight = 600 * Math.trunc(cFilho / 3) + 50 * Math.trunc(2 * cFilho / 3);
         var divHeightC = 700 * Math.trunc(cFilho / 3) + 50 * Math.trunc(2 * cFilho / 3);
         document.getElementById("ContentPlaceHolder1_divProds").style.height = divHeight + "px";
-        document.getElementById("divAcompanhamento").style.height = divHeightC + "px";
+        divAcom = divHeightC;
 
         var cFilho2 = count2;
         if ((count2 % 3) == 2) {
@@ -408,7 +413,7 @@ function tamanhoDivProdutos() {
         var divHeight2 = 600 * Math.trunc(cFilho2 / 3) + 50 * Math.trunc(2 * cFilho2 / 3);
         var divHeightC2 = 700 * Math.trunc(cFilho2 / 3) + 50 * Math.trunc(2 * cFilho2 / 3);
         document.getElementById("ContentPlaceHolder1_divProds2").style.height = divHeight2 + "px";
-        document.getElementById("divBebida").style.height = divHeightC2 + "px";
+        divBeb = divHeightC2;
 
         var cFilho3 = count3;
         if ((count3 % 3) == 2) {
@@ -420,7 +425,7 @@ function tamanhoDivProdutos() {
         var divHeight3 = 600 * Math.trunc(cFilho3 / 3) + 50 * Math.trunc(2 * cFilho3 / 3);
         var divHeightC3 = 700 * Math.trunc(cFilho3 / 3) + 50 * Math.trunc(2 * cFilho3 / 3);
         document.getElementById("ContentPlaceHolder1_divProds3").style.height = divHeight3 + "px";
-        document.getElementById("divSobremesa").style.height = divHeightC3 + "px";
+        divSob = divHeightC3;
 
         var cFilho4 = count4;
         if ((count4 % 3) == 2) {
@@ -432,28 +437,28 @@ function tamanhoDivProdutos() {
         var divHeight4 = 600 * Math.trunc(cFilho4 / 3) + 50 * Math.trunc(2 * cFilho4 / 3);
         var divHeightC4 = 700 * Math.trunc(cFilho4 / 3) + 50 * Math.trunc(2 * cFilho4 / 3);
         document.getElementById("ContentPlaceHolder1_divProds4").style.height = divHeight4 + "px";
-        document.getElementById("divMolho").style.height = divHeightC4 + "px";
+        divMol = divHeightC4;
         if (windowH <= 720 && windowW <= 1280) {
             
             var divHeight = 1200 * Math.trunc(count / 2) + 50 * Math.trunc(count / 2);
             var divHeightC = 1700 * Math.trunc(count / 2) + 50 * Math.trunc(count / 2);
             document.getElementById("ContentPlaceHolder1_divProds").style.height = divHeight + "px";
-            document.getElementById("divAcompanhamento").style.height = divHeightC + "px";
+            divAcom = divHeightC;
 
             var divHeight2 = 1200 * Math.trunc(count2 / 2) + 50 * Math.trunc(count2 / 2);
             var divHeightC2 = 1700 * Math.trunc(count2 / 2) + 50 * Math.trunc(count2 / 2);
             document.getElementById("ContentPlaceHolder1_divProds2").style.height = divHeight2 + "px";
-            document.getElementById("divBebida").style.height = divHeightC2 + "px";
+            divBeb = divHeightC2;
 
             var divHeight3 = 1200 * Math.trunc(count3 / 2) + 50 * Math.trunc(count3 / 2);
             var divHeightC3 = 1700 * Math.trunc(count3 / 2) + 50 * Math.trunc(count3 / 2);
             document.getElementById("ContentPlaceHolder1_divProds3").style.height = divHeight3 + "px";
-            document.getElementById("divSobremesa").style.height = divHeightC3 + "px";
+            divSob = divHeightC3;
 
             var divHeight4 = 1200 * Math.trunc(count4 / 2) + 50 * Math.trunc(count4 / 2);
             var divHeightC4 = 1700 * Math.trunc(count4 / 2) + 50 * Math.trunc(count4 / 2);
             document.getElementById("ContentPlaceHolder1_divProds4").style.height = divHeight4 + "px";
-            document.getElementById("divMolho").style.height = divHeightC4 + "px";
+            divMol = divHeightC4;
         }
     }
 }
@@ -492,7 +497,6 @@ function tamDivIngredientes() {
             count3 = count3 + 1;
         }
         var divHeight3 = 600 * Math.trunc(count3 / 2) + 70 * Math.trunc(count3 / 2);
-        alert(divHeight3);
         document.getElementById("ContentPlaceHolder1_divVerduras").style.height = divHeight3 + "px";
 
         if ((count4 % 2) == 1) {
