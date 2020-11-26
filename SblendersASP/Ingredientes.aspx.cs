@@ -811,7 +811,11 @@ namespace TCC
 
         protected void excluirLanche(object sender, EventArgs e)
         {
-
+            divIngredientesCliente.InnerHtml = @"<div class=""divIngredientesCategoria"">
+                        <h1>Seu Sblurger:</h1>
+                    </div>";
+            ppi.Clear();
+            lblTotalIngredientes.Text = "Total: R$ 0";
         }
     }
 }
