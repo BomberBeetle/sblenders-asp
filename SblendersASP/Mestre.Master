@@ -42,12 +42,11 @@
                 </div>
                 <div class="divLogBtns" id="divDesconectado" runat="server">
                     <div class="divCarrinho">
-                        <a href="Carrinho.aspx" class="aCarrinhoTexto">
-                            Carrinho
-                        </a>
-                        <a href="Carrinho.aspx" class="aCarrinho">
-                            <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
-                        </a>
+                        <li class="liCarrinho">
+                            <a href="Carrinho.aspx" class="aCarrinhoTexto">
+                                Carrinho <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
+                            </a>
+                        </li>
                     </div>
                     <div class="divbtn">
                         <a class="abtn " onclick="Login()" id="textoLogin">Login</a>
@@ -58,12 +57,11 @@
                 </div>
 
                 <div class="divHeaderUser" id="divConectado" runat="server">
-                    <div class="divCarrinho">
+                    <li class="liCarrinho">
                         <a href="Carrinho.aspx" class="aCarrinhoTexto">
-                            Carrinho
-                            <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
+                            Carrinho <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
                         </a>
-                    </div>
+                    </li>
                     <div class="divUser">
                         <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
                         <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="Sair">Sair</asp:LinkButton>
@@ -101,9 +99,11 @@
                                 <a class="abtn " onclick="sidenavCadastro()" id="textoCadastro">Cadastre-se</a>
                             </div>
                             <div class="divCarrinho">
-                                <a href="Carrinho.aspx" class="aCarrinho">
-                                    <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
-                                </a>
+                                <li class="liCarrinho">
+                                    <a href="Carrinho.aspx" class="aCarrinhoTexto">
+                                        Carrinho <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
+                                    </a>
+                                </li>
                             </div>
                         </div>
                         <div class="divheaderusersidenav" id="divsidenavConectado" runat="server">
@@ -116,11 +116,13 @@
                                     <img src="Imagens/usuario.png" class="imgUsuario" />
                                 </a>
                             </div>
-                            <div class="divCarrinho">
-                                <a href="Carrinho.aspx" class="aCarrinho">
-                                    <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
+                        </div>
+                        <div class="divCarrinho">
+                            <li class="liCarrinho">
+                                <a href="Carrinho.aspx" class="aCarrinhoTexto">
+                                    Carrinho <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
                                 </a>
-                            </div>
+                            </li>
                         </div>
                     </div>
                 </div>
