@@ -61,8 +61,6 @@
                     <div class="divCarrinho">
                         <a href="Carrinho.aspx" class="aCarrinhoTexto">
                             Carrinho
-                        </a>
-                        <a href="Carrinho.aspx" class="aCarrinho">
                             <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
                         </a>
                     </div>
@@ -97,10 +95,10 @@
 
                         <div class="divbtnsidenav" id="divsidenavDesconectado" runat="server">
                             <div class="divbtn">
-                                <a class="abtn " onclick="Login()" id="textoLogin">Login</a>
+                                <a class="abtn " onclick="sidenavLogin()" id="textoLogin">Login</a>
                             </div>
                             <div class="divbtn">
-                                <a class="abtn " onclick="Cadastro()" id="textoCadastro">Cadastre-se</a>
+                                <a class="abtn " onclick="sidenavCadastro()" id="textoCadastro">Cadastre-se</a>
                             </div>
                             <div class="divCarrinho">
                                 <a href="Carrinho.aspx" class="aCarrinho">

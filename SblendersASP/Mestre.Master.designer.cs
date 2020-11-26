@@ -69,6 +69,42 @@ namespace TCC
         protected global::System.Web.UI.WebControls.LinkButton linkSair;
 
         /// <summary>
+        /// divsidenavDesconectado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divsidenavDesconectado;
+
+        /// <summary>
+        /// divsidenavConectado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divsidenavConectado;
+
+        /// <summary>
+        /// lblBemVindoSidenav control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblBemVindoSidenav;
+
+        /// <summary>
+        /// linkSairSidenav control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton linkSairSidenav;
+
+        /// <summary>
         /// divLog control.
         /// </summary>
         /// <remarks>

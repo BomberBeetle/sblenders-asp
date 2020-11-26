@@ -21,15 +21,13 @@
                 </div>
             </div>
         </div>
-        <div id="secProd2" class="sectionProd2" runat="server">
+        <div id="secProd2" class="sectionProd2">
             <div class="divDescricaoProduto">
                 <div class="divDescricaoProdutoTitulo">
                     <h1 class="adicionado">Item adicionado ao carrinho</h1>
-                    <button class="btnFechar" id="btnFechar" runat="server">
-                        <div class="divTextoBtnAvancar">
-                            <img src="Imagens/iconeX.png" class="imgIconX" />
-                        </div>
-                    </button>
+                    <a onclick="fecharAdicao()">
+                        <img src="Imagens/iconeX.png" class="imgIconX" />
+                    </a>
                 </div>
                 <div class="divAdicaoProdutoCorpo" id="divDescricaoProdutoCorpo2">
                     <img src="Imagens/check.png" class="check" />

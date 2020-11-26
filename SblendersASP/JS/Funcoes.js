@@ -28,7 +28,6 @@ function Login() {
         divEsqSenha.style.display = "none";
         visibilidadeLogin = false;
     }
-
 }
 
 function Cadastro() {
@@ -69,6 +68,46 @@ function esqueceuSenha() {
         visiblidadeEsqSenha = false;
     }
     event.preventDefault();
+}
+
+function sidenavLogin() {
+    var divLog = document.getElementById("divLog");
+    var divCad = document.getElementById("divCad");
+    var divEsqSenha = document.getElementById("divEsqSenha");
+    if (visibilidadeLogin == false) {
+        divCad.style.display = "none";
+        divLog.style.opacity = 0;
+        divLog.style.display = "flex";
+        $("#divLog").animate({ opacity: 1 }, 0.1e3)
+        divEsqSenha.style.display = "none";
+        visibilidadeCad = false;
+        visiblidadeEsqSenha = false;
+        visibilidadeLogin = true;
+    } else if (visibilidadeLogin == true) {
+        divLog.style.display = "none";
+        divEsqSenha.style.display = "none";
+        visibilidadeLogin = false;
+    }
+}
+
+function sidenavCadastro() {
+    var divLog = document.getElementById("divLog");
+    var divCad = document.getElementById("divCad");
+    var divEsqSenha = document.getElementById("divEsqSenha");
+    if (visibilidadeCad == false) {
+        divLog.style.display = "none";
+        divCad.style.opacity = 0;
+        divEsqSenha.style.display = "none";
+        divCad.style.display = "flex";
+        $("#divCad").animate({ opacity: 1 }, 0.1e3)
+        visibilidadeLogin = false;
+        visiblidadeEsqSenha = false;
+        visibilidadeCad = true;
+    } else if (visibilidadeCad == true) {
+        divCad.style.display = "none";
+        divEsqSenha.style.display = "none";
+        visibilidadeCad = false;
+    }
 }
 
 function sair() {
@@ -118,7 +157,7 @@ function expandirAcompanhamentos() {
 
         divAcompanhamento.style.height = divAcom + "px";
         divAcompanhamento.style.transitionDuration = "2s";
-        setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
+        setTimeout(function() { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         acompanhamentoAberto = true;
@@ -139,7 +178,7 @@ function expandirBebidas() {
     if (bebidaAberto === false) {
         divAcompanhamento.style.height = divBeb + "px";
         divAcompanhamento.style.transitionDuration = "2s";
-        setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
+        setTimeout(function() { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         bebidaAberto = true;
@@ -160,7 +199,7 @@ function expandirSobremesas() {
     if (sobremesaAberto === false) {
         divAcompanhamento.style.height = divSob + "px";
         divAcompanhamento.style.transitionDuration = "2s";
-        setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
+        setTimeout(function() { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         sobremesaAberto = true;
@@ -181,7 +220,7 @@ function expandirMolhos() {
     if (molhoAberto === false) {
         divAcompanhamento.style.height = divMol + "px";
         divAcompanhamento.style.transitionDuration = "2s";
-        setTimeout(function () { divAcompanhamento.style.overflow = "visible"; }, 2000);
+        setTimeout(function() { divAcompanhamento.style.overflow = "visible"; }, 2000);
         btnAcompanhamento.style.transform = "rotate(180deg)";
         btnAcompanhamento.style.transitionDuration = "1s";
         molhoAberto = true;
@@ -265,7 +304,7 @@ function mostrarCategoriaSelecao() {
     }
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     /* $("#divAcompanhamento").click(function () {
          $("#divPro").clone().appendTo("#divProds");
@@ -293,7 +332,7 @@ for (i = 0; i < l; i++) {
         create a new DIV that will act as an option item:*/
         c = document.createElement("DIV");
         c.innerHTML = selElmnt.options[j].innerHTML;
-        c.addEventListener("click", function (e) {
+        c.addEventListener("click", function(e) {
             /*when an item is clicked, update the original select box,
             and the selected item:*/
             var y, i, k, s, h, sl, yl;
@@ -318,7 +357,7 @@ for (i = 0; i < l; i++) {
         b.appendChild(c);
     }
     x[i].appendChild(b);
-    a.addEventListener("click", function (e) {
+    a.addEventListener("click", function(e) {
         /*when the select box is clicked, close any other select boxes,
         and open/close the current select box:*/
         e.stopPropagation();
@@ -394,8 +433,7 @@ function tamanhoDivProdutos() {
         var cFilho = count;
         if ((count % 3) == 2) {
             cFilho = count + 1;
-        }
-        else if ((count % 3) == 1) {
+        } else if ((count % 3) == 1) {
             cFilho = count + 2;
         }
         var divHeight = 600 * Math.trunc(cFilho / 3) + 50 * Math.trunc(2 * cFilho / 3);
@@ -406,8 +444,7 @@ function tamanhoDivProdutos() {
         var cFilho2 = count2;
         if ((count2 % 3) == 2) {
             cFilho2 = count2 + 1;
-        }
-        else if ((count2 % 3) == 1) {
+        } else if ((count2 % 3) == 1) {
             cFilho2 = count2 + 2;
         }
         var divHeight2 = 600 * Math.trunc(cFilho2 / 3) + 50 * Math.trunc(2 * cFilho2 / 3);
@@ -418,8 +455,7 @@ function tamanhoDivProdutos() {
         var cFilho3 = count3;
         if ((count3 % 3) == 2) {
             cFilho3 = count3 + 1;
-        }
-        else if ((count3 % 3) == 1) {
+        } else if ((count3 % 3) == 1) {
             cFilho3 = count3 + 2;
         }
         var divHeight3 = 600 * Math.trunc(cFilho3 / 3) + 50 * Math.trunc(2 * cFilho3 / 3);
@@ -430,8 +466,7 @@ function tamanhoDivProdutos() {
         var cFilho4 = count4;
         if ((count4 % 3) == 2) {
             cFilho4 = count4 + 1;
-        }
-        else if ((count4 % 3) == 1) {
+        } else if ((count4 % 3) == 1) {
             cFilho4 = count4 + 2;
         }
         var divHeight4 = 600 * Math.trunc(cFilho4 / 3) + 50 * Math.trunc(2 * cFilho4 / 3);
@@ -439,7 +474,7 @@ function tamanhoDivProdutos() {
         document.getElementById("ContentPlaceHolder1_divProds4").style.height = divHeight4 + "px";
         divMol = divHeightC4;
         if (windowH <= 720 && windowW <= 1280) {
-            
+
             var divHeight = 1200 * Math.trunc(count / 2) + 50 * Math.trunc(count / 2);
             var divHeightC = 1700 * Math.trunc(count / 2) + 50 * Math.trunc(count / 2);
             document.getElementById("ContentPlaceHolder1_divProds").style.height = divHeight + "px";
@@ -517,28 +552,47 @@ function tamDivIngredientes() {
         var divHeight6 = 600 * Math.trunc(count6 / 2) + 70 * Math.trunc(count6 / 2);
         document.getElementById("ContentPlaceHolder1_divMolhos").style.height = divHeight6 + "px";
         if (windowH <= 720 && windowW <= 1280) {
-            var divHeight = 600 * Math.trunc(count) + 50 * Math.trunc(count);
+            var divHeight = 300 * Math.trunc(count) + 25 * Math.trunc(count);
             document.getElementById("ContentPlaceHolder1_divPaes").style.height = divHeight + "px";
 
-            var divHeight2 = 600 * Math.trunc(count2) + 50 * Math.trunc(count2);
+            var divHeight2 = 300 * Math.trunc(count2) + 25 * Math.trunc(count2);
             document.getElementById("ContentPlaceHolder1_divCarnes").style.height = divHeight2 + "px";
 
-            var divHeight3 = 600 * Math.trunc(count3) + 50 * Math.trunc(count3);            
+            var divHeight3 = 300 * Math.trunc(count3) + 25 * Math.trunc(count3);
             document.getElementById("ContentPlaceHolder1_divVerduras").style.height = divHeight3 + "px";
 
-            var divHeight4 = 600 * Math.trunc(count4) + 50 * Math.trunc(count4);
+            var divHeight4 = 300 * Math.trunc(count4) + 25 * Math.trunc(count4);
             document.getElementById("ContentPlaceHolder1_divLegumes").style.height = divHeight4 + "px";
 
-            var divHeight5 = 600 * Math.trunc(count5) + 50 * Math.trunc(count5);
+            var divHeight5 = 300 * Math.trunc(count5) + 25 * Math.trunc(count5);
             document.getElementById("ContentPlaceHolder1_divQueijos").style.height = divHeight5 + "px";
 
-            var divHeight6 = 600 * Math.trunc(count6) + 50 * Math.trunc(count6);
+            var divHeight6 = 300 * Math.trunc(count6) + 25 * Math.trunc(count6);
             document.getElementById("ContentPlaceHolder1_divMolhos").style.height = divHeight6 + "px";
         }
     }
 }
 
 window.onresize = tamDivIngredientes;
+
+var visibilidadeAdicao = false;
+
+function fecharAdicao() {
+    var divAdicao = document.getElementById("secProd2");
+    if (visibilidadeAdicao == true) {
+        divAdicao.style.display = "none";
+        visibilidadeAdicao = false;
+    }
+    event.preventDefault();
+}
+
+function exibirAdicao() {
+    var divAdicao = document.getElementById("secProd2");
+    if (visibilidadeAdicao == false) {
+        divAdicao.style.display = "flex";
+        visibilidadeAdicao = true;
+    }
+}
 
 var visibilidadeNutri = false;
 

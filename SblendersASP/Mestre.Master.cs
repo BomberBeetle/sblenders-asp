@@ -20,8 +20,12 @@ namespace TCC
             {
                 divConectado.Visible = true;
                 divDesconectado.Visible = false;
+                divsidenavConectado.Visible = true;
+                divsidenavDesconectado.Visible = false;
                 divConectado.Attributes.CssStyle.Add("display", "flex");
                 divDesconectado.Attributes.CssStyle.Add("display", "none");
+                divsidenavConectado.Attributes.CssStyle.Add("display", "flex");
+                divsidenavDesconectado.Attributes.CssStyle.Add("display", "none");
                 string URL = $"https://localhost:44323/api/Agente/" + Session["userID"];
                 string urlParameters = "";
                 HttpClient client = new HttpClient();
@@ -42,6 +46,7 @@ namespace TCC
                     if (resultado.ContainsKey("client_name"))
                     {
                         lblBemVindo.Text = "Bem vindo " + resultado["client_name"];
+                        lblBemVindoSidenav.Text = "Bem vindo " + resultado["client_name"];
                     }
 
                 }
@@ -90,8 +95,12 @@ namespace TCC
 
                     divConectado.Visible = true;
                     divDesconectado.Visible = false;
+                    divsidenavConectado.Visible = true;
+                    divsidenavDesconectado.Visible = false;
                     divConectado.Attributes.CssStyle.Add("display", "flex");
                     divDesconectado.Attributes.CssStyle.Add("display", "none");
+                    divsidenavConectado.Attributes.CssStyle.Add("display", "flex");
+                    divsidenavDesconectado.Attributes.CssStyle.Add("display", "none");
                     string URL2 = $"https://localhost:44323/api/Agente/" + Session["userID"];
                     string urlParameters2 = "";
                     HttpClient client2 = new HttpClient();
@@ -208,8 +217,12 @@ namespace TCC
             Session["userRID"] = null;
             divConectado.Visible = false;
             divDesconectado.Visible = true;
+            divsidenavConectado.Visible = false;
+            divsidenavDesconectado.Visible = true;
             divConectado.Attributes.CssStyle.Add("display", "none");
             divDesconectado.Attributes.CssStyle.Add("display", "block");
+            divsidenavConectado.Attributes.CssStyle.Add("display", "none");
+            divsidenavDesconectado.Attributes.CssStyle.Add("display", "block");
             Response.Redirect("Index2.aspx");
         }
 

@@ -52,7 +52,7 @@ namespace TCC
             // List data response.
             JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
             HttpResponseMessage response = client.PutAsync(urlParameters, new StringContent(serializer.Serialize(Session["Carrinho"]), Encoding.UTF8, "application/json")).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-            Dictionary<string, Object> resultado = (Dictionary<string, Object>)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+            //Dictionary<string, Object> resultado = (Dictionary<string, Object>)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
 
             if (response.IsSuccessStatusCode)
             {
