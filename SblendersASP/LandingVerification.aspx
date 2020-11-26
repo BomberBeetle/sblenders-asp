@@ -4,5 +4,7 @@
     <link rel="stylesheet" href="CSS/LandingVerification.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2 id="landingText" runat="server"></h2>
+    <div class="geral">
+        <h2 id="landingText" runat="server"></h2>
+    </div>
 </asp:Content>
