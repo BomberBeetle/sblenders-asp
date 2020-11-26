@@ -15,7 +15,7 @@ namespace TCC
         {
             if(Request.QueryString.Get("landing")!=null)
             {
-                landingText.InnerText = "Obrigado por se cadastar! Um email de verificacao foi enviado.";
+                landingText.InnerText = "Obrigado por se cadastar! Um email de verificação foi enviado.";
                 return;
             }
 
