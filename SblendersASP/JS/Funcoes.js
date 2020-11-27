@@ -575,25 +575,6 @@ function tamDivIngredientes() {
 
 window.onresize = tamDivIngredientes;
 
-var visibilidadeAdicao = false;
-
-function fecharAdicao() {
-    var divAdicao = document.getElementById("secProd2");
-    if (visibilidadeAdicao == true) {
-        divAdicao.style.display = "none";
-        visibilidadeAdicao = false;
-    }
-    event.preventDefault();
-}
-
-function exibirAdicao() {
-    var divAdicao = document.getElementById("secProd2");
-    if (visibilidadeAdicao == false) {
-        divAdicao.style.display = "flex";
-        visibilidadeAdicao = true;
-    }
-}
-
 var visibilidadeNutri = false;
 
 function fecharInfoNutri() {

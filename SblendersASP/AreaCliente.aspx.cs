@@ -101,7 +101,7 @@ namespace TCC
                                     PedidosPlaceholder.Controls.Add(new Literal()
                                     {
                                         Text = $@"<div class=""listapedidos-pedido"">
-                                                <strong>[{EstadoPedido.FromInt(resultado3.estadoID)}] Pedido {result[tam]["pedidoID"]}</strong>
+                                                <strong>[{EstadoPedido.FromInt(resultado3.estadoID)}] Pedido {result[tam]["pedidoID"]} - Horário - Endereço</strong>
                                                 {produtosBuilder.ToString()}
                                             </div>"
                                     });

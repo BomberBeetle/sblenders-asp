@@ -21,28 +21,6 @@
                 </div>
             </div>
         </div>
-        <div id="secProd2" class="sectionProd2">
-            <div class="divDescricaoProduto">
-                <div class="divDescricaoProdutoTitulo">
-                    <h1 class="adicionado">Item adicionado ao carrinho</h1>
-                    <a onclick="fecharAdicao()">
-                        <img src="Imagens/iconeX.png" class="imgIconX" />
-                    </a>
-                </div>
-                <div class="divAdicaoProdutoCorpo" id="divDescricaoProdutoCorpo2">
-                    <img src="Imagens/check.png" class="check" />
-                    <p class="corpo">O Item foi adicionado ao carrinho com sucesso! </p>
-                    <div class="buttons">
-                        <button class="btnAvancar" id="btnAvancar" runat="server" onserverclick="btnIrCarrinho_ServerClick">
-                            <div class="divTextoBtnAvancar">
-                                <p>Ir para o carrinho</p>
-                                <img src="Imagens/seta2.png" />
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="divAdicionarLanches">
             <div class="divCustomizarLanches">
                 <div class="divBurguer" id="divBurguer1">

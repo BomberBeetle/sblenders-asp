@@ -64,7 +64,9 @@
                     </li>
                     <div class="divUser">
                         <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
-                        <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="Sair">Sair</asp:LinkButton>
+                        <div class="saido">
+                            <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="Sair">Sair</asp:LinkButton>
+                        </div>
                     </div>
                     <div class="divUserPhoto">
                         <a href="AreaCliente.aspx" class="aUserPhoto">
@@ -107,22 +109,26 @@
                             </div>
                         </div>
                         <div class="divheaderusersidenav" id="divsidenavConectado" runat="server">
-                            <div class="divUser">
-                                <asp:Label ID="lblBemVindoSidenav" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
-                                <asp:LinkButton ID="linkSairSidenav" runat="server" CssClass="lblSair" OnClick="Sair">Sair</asp:LinkButton>
+                            <div class="divheaderusersidenavRow">
+                                <div class="divUser">
+                                    <asp:Label ID="lblBemVindoSidenav" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
+                                    <div class="saido">
+                                        <asp:LinkButton ID="linkSairSidenav" runat="server" CssClass="lblSair" OnClick="Sair">Sair</asp:LinkButton>
+                                    </div>
+                                </div>
+                                <div class="divUserPhoto">
+                                    <a href="AreaCliente.aspx" class="aUserPhoto">
+                                        <img src="Imagens/usuario.png" class="imgUsuario" />
+                                    </a>
+                                </div>
                             </div>
-                            <div class="divUserPhoto">
-                                <a href="AreaCliente.aspx" class="aUserPhoto">
-                                    <img src="Imagens/usuario.png" class="imgUsuario" />
-                                </a>
+                            <div class="divCarrinho">
+                                <li class="liCarrinho">
+                                    <a href="Carrinho.aspx" class="aCarrinhoTexto">
+                                        Carrinho <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
+                                    </a>
+                                </li>
                             </div>
-                        </div>
-                        <div class="divCarrinho">
-                            <li class="liCarrinho">
-                                <a href="Carrinho.aspx" class="aCarrinhoTexto">
-                                    Carrinho <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
-                                </a>
-                            </li>
                         </div>
                     </div>
                 </div>
@@ -245,7 +251,7 @@
                 </div>
 
                 <div class="divLoginEntrar">
-                    <asp:Button ID="btnCadastro" runat="server" Text="Entrar" CssClass="btnDivCadastro" OnClientClick="verificarCamposCadastro()" OnClick="Cadastro" />
+                    <asp:Button ID="btnCadastro" runat="server" Text="Cadastrar" CssClass="btnLogin" OnClientClick="verificarCamposCadastro()" OnClick="Cadastro" />
                 </div>
             </div>
         </section>
@@ -276,7 +282,7 @@
                     <div class="divBtnSubLogin1">
                         <a onclick="Login()" class="aEsqueceuSenha">Voltar ao Login</a>
                     </div>
-                    <asp:Button ID="btnRecSenha" runat="server" Text="Entrar" CssClass="btnLogin" OnClick="RecuperarSenha" />
+                    <asp:Button ID="btnRecSenha" runat="server" Text="Enviar" CssClass="btnLogin" OnClick="RecuperarSenha" />
                 </div>
             </div>
         </section>

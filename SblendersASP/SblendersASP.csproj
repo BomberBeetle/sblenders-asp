@@ -97,10 +97,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdicaoCarrinho.aspx" />
     <Content Include="AreaCliente.aspx" />
     <Content Include="Audio\teste.mp3" />
     <Content Include="Carrinho.aspx" />
+    <Content Include="ConfirmacaoPedido.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="CSS\AdicaoCarrinho.css" />
+    <Content Include="CSS\ConfirmacaoPedido.css" />
     <Content Include="CSS\LandingVerification.css" />
     <Content Include="CSS\Quem_somos.css" />
     <Content Include="CSS\AreaCliente.css" />
@@ -266,6 +270,13 @@
     <Content Include="scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdicaoCarrinho.aspx.cs">
+      <DependentUpon>AdicaoCarrinho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdicaoCarrinho.aspx.designer.cs">
+      <DependentUpon>AdicaoCarrinho.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Agente.cs" />
     <Compile Include="AreaCliente.aspx.cs">
       <DependentUpon>AreaCliente.aspx</DependentUpon>
@@ -282,6 +293,13 @@
       <DependentUpon>Carrinho.aspx</DependentUpon>
     </Compile>
     <Compile Include="ClienteOnline.cs" />
+    <Compile Include="ConfirmacaoPedido.aspx.cs">
+      <DependentUpon>ConfirmacaoPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfirmacaoPedido.aspx.designer.cs">
+      <DependentUpon>ConfirmacaoPedido.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

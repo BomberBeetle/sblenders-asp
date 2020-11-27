@@ -1,0 +1,96 @@
+﻿body {
+}
+
+.geral {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.obrigado{
+    width:45%;
+    font-size:30px;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.divAdicaoProdutoCorpo {
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.check {
+    height: 1vw;
+    float: left;
+    margin-left: .25vw;
+    margin-top: 0.9vh
+}
+
+.corpo {
+    font-size: 1.2vw;
+    color: green;
+    font-weight: 700;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btnJorge {
+    height: 70px;
+    width: 40%;
+    background-image: linear-gradient(135deg, rgba(39, 131, 219) 0%, rgba(27, 119, 207) 50%, rgba(15, 103, 186) 100%);
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-right: 0px;
+    border-radius: 30px 30px;
+    border: 0px;
+    color: #DEDEDE;
+    box-shadow: 6px 6px 6px #656565;
+}
+
+.divTextoBtnVoltar p {
+    margin: 0 !important;
+}
+
+.divTextoBtnVoltar img {
+    height: 90%;
+    transform: rotate(180deg);
+}
+
+.divTextoBtnVoltar {
+    height: 7vh;
+    width: 100%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.divTextoBtnAvancar {
+    height: 7vh;
+    width: 100%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+    .divTextoBtnAvancar p {
+        margin-bottom: 0;
+        font-size: 1vw;
+    }
+
+    .divTextoBtnAvancar img {
+        height: 90%;
+        float: left;
+    }

@@ -10,7 +10,7 @@
 
 * {
     font-family: 'Century Gothic';
-    outline: none;
+    outline: none !important;
 }
 
 body {
@@ -244,8 +244,15 @@ body {
     .divHeaderUser {
         display: none !important;
     }
+    .divheaderusersidenavRow {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        padding: 0 5px;
+    }
     .divheaderusersidenav {
         display: none;
+        flex-direction: column;
     }
     .divOpenMenu {
         display: flex;
@@ -312,12 +319,6 @@ body {
     .lblBemVindo {
         padding: 0;
     }
-    .divheaderusersidenav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 5px;
-    }
     .divasidenav {
         transition: 0.5s;
         padding: 0;
@@ -346,6 +347,9 @@ body {
         padding: 0 15px 0 0;
         font-size: 40px !important;
     }
+    .lblSair {
+        transition: none !important;
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -359,6 +363,7 @@ body {
 .divUser {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     flex-direction: column;
 }
 
@@ -387,15 +392,26 @@ body {
 }
 
 .lblBemVindo {
-    justify-content: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
     font-size: 16px;
     color: white;
 }
 
-.lblSair {
+.saido {
+    display: flex;
     justify-content: flex-end;
+}
+
+.lblSair {
+    justify-content: center;
     font-size: 16px;
-    text-decoration: underline;
+    background-color: #ffad15;
+    border-radius: 2px;
+    padding: 1px;
+    width: 40px;
     display: flex;
     color: white !important;
     cursor: pointer;
@@ -403,6 +419,7 @@ body {
 
 .lblSair:hover {
     color: #ffad15 !important;
+    background-color: #FFF;
 }
 
 
@@ -416,61 +433,25 @@ body {
 }*/
 
 .divTituloPagina {
-    margin-top: 1vw;
     border-radius: 0px 30px 30px 0px;
-    margin-left: 0px;
-    height: 85px;
-    width: 22.5%;
-    background-color: #ff5252;
+    margin: 20px 0;
+    width: 300px;
+    background-color: #ff7300;
     box-shadow: 0px 7px 0px rgb(255, 173, 21);
     align-items: center;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .divTituloPagina h1 {
     color: #FFF;
-    font-size: 35px;
-    padding-top: 5px;
-    text-shadow: 2px 2px 2px rgb(255, 173, 21);
-    -webkit-touch-callout: none;
-    /* iOS Safari */
-    -webkit-user-select: none;
-    /* Safari */
-    -khtml-user-select: none;
-    /* Konqueror HTML */
-    -moz-user-select: none;
-    /* Old versions of Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer/Edge */
+    font-size: 20px;
+    text-align: center;
+    padding: 7.5px;
+    text-shadow: 1px 1px 0 rgb(255, 173, 21);
     user-select: none;
-    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-}
-
-
-/* WIP */
-
-
-/* Corno do CabEsq maldito pior coisa do mundo */
-
-.CabEsq {
-    height: 15vh;
-    float: left;
-    color: #ff7300;
-}
-
-
-/* Corno do CabEsq maldito pior coisa do mundo */
-
-
-/* WIP */
-
-.CabEsq p {
-    font-size: 40px;
-    margin-top: 30px;
-    margin-left: 10px;
 }
 
 #divCad,

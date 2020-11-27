@@ -2,42 +2,9 @@
     background-size: cover;
 }
 
-
-/*
-#divlista {
-    display: flex;
-    flex-direction: column;
-    
-}
-
-#title {
-    height: 50px;
-    width: 20%;
-    border-top-right-radius: 10px;
-    margin: 10px 0px 0px 0px;
-    background-color: rgb(255, 76, 0);
-}
-
-h1 {
-    font-size: 2vw;
-    padding: 1vh;
-    text-align: center;
-    color: #fff;
-}
-
-#lista {
-    background-color: #e9e9e9;
-    height: 1000px;
-    width: 20%;
-    margin: 0;
-}*/
-
 .divCorpoProdutos {
     height: auto;
     width: 100%;
-    /*background-image:url(ImagensCSS/texturaRepetitiva.png);
-    background-repeat:repeat;
-    background-color:#EEE;*/
     background: linear-gradient(90deg, #e8e7e7 0%, #ffffff 100%);
 }
 
@@ -50,7 +17,6 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    /*background-color:#245676;*/
 }
 
 .divCustomizarLanches {
@@ -484,6 +450,9 @@ h1 {
 .divDescricaoProdutoCorpo {
     height: 85%;
     width: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 }
 
 .lblDescNutri {
@@ -544,8 +513,8 @@ h1 {
 }
 
 .btnFechar {
-    background-color:transparent;
-    border:0;
+    background-color: transparent;
+    border: 0;
 }
 
 .btnAvancar {

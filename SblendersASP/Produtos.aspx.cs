@@ -380,6 +380,7 @@ namespace TCC
                 //Session["Carrinho"] = new SblendersAPI.Models.Pedido(0, 0, 0, DateTime.Now, "", new PedidoProduto[numeroProdutos - 1]);
                 ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
                 ScriptManager.RegisterStartupScript(Page, Page.GetType(), "traçar rota", "exibirAdicao()", true);
+                Response.Redirect("AdicaoCarrinho.aspx");
             }
             else
             {

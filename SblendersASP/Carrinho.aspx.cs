@@ -290,6 +290,11 @@ namespace TCC
             }
             lblItens.Text = "Itens: " + itens;
             lblTotal.Text = "Total: R$ " + total;
+
+            if(itens == 0)
+            {
+                Button3.Attributes.CssStyle.Add("display", "none");
+            }
         }
 
         protected void ExcluirProduto(object sender, EventArgs e)
@@ -376,6 +381,11 @@ namespace TCC
             }
             lblItens.Text = "Itens: " + itens;
             lblTotal.Text = "Total: R$ " + total;
+
+            if (itens == 0)
+            {
+                Button3.Attributes.CssStyle.Add("display", "none");
+            }
 
             ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
         }
@@ -479,7 +489,12 @@ namespace TCC
             lblItens.Text = "Itens: " + itens;
             lblTotal.Text = "Total: R$ " + total;
 
-            if(en >= 0)
+            if (itens == 0)
+            {
+                Button3.Attributes.CssStyle.Add("display", "none");
+            }
+
+            if (en >= 0)
             {
                 decimal ingPrec = 0;
                 int ppId = 0;

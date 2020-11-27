@@ -78,7 +78,7 @@ namespace TCC
                         Label lblValorProduto = new Label();
                         lblValorProduto.ID = "lblValorProduto" + p.IngredientID;
                         lblValorProduto.CssClass = "lblValorProduto";
-                        lblValorProduto.Text = p.Price.ToString();
+                        lblValorProduto.Text = "R$" + p.Price.ToString();
                         divSubProduto2.Controls.Add(lblValorProduto);
 
                         HtmlGenericControl divSubProduto4 = new HtmlGenericControl("DIV");
@@ -160,7 +160,7 @@ namespace TCC
                         Label lblValorProduto = new Label();
                         lblValorProduto.ID = "lblValorProduto" + p.IngredientID;
                         lblValorProduto.CssClass = "lblValorProduto";
-                        lblValorProduto.Text = p.Price.ToString();
+                        lblValorProduto.Text = "R$" + p.Price.ToString();
                         divSubProduto2.Controls.Add(lblValorProduto);
 
                         HtmlGenericControl divSubProduto4 = new HtmlGenericControl("DIV");
@@ -242,7 +242,7 @@ namespace TCC
                         Label lblValorProduto = new Label();
                         lblValorProduto.ID = "lblValorProduto" + p.IngredientID;
                         lblValorProduto.CssClass = "lblValorProduto";
-                        lblValorProduto.Text = p.Price.ToString();
+                        lblValorProduto.Text = "R$" + p.Price.ToString();
                         divSubProduto2.Controls.Add(lblValorProduto);
 
                         HtmlGenericControl divSubProduto4 = new HtmlGenericControl("DIV");
@@ -324,7 +324,7 @@ namespace TCC
                         Label lblValorProduto = new Label();
                         lblValorProduto.ID = "lblValorProduto" + p.IngredientID;
                         lblValorProduto.CssClass = "lblValorProduto";
-                        lblValorProduto.Text = p.Price.ToString();
+                        lblValorProduto.Text = "R$" + p.Price.ToString();
                         divSubProduto2.Controls.Add(lblValorProduto);
 
                         HtmlGenericControl divSubProduto4 = new HtmlGenericControl("DIV");
@@ -406,7 +406,7 @@ namespace TCC
                         Label lblValorProduto = new Label();
                         lblValorProduto.ID = "lblValorProduto" + p.IngredientID;
                         lblValorProduto.CssClass = "lblValorProduto";
-                        lblValorProduto.Text = p.Price.ToString();
+                        lblValorProduto.Text = "R$" + p.Price.ToString();
                         divSubProduto2.Controls.Add(lblValorProduto);
 
                         HtmlGenericControl divSubProduto4 = new HtmlGenericControl("DIV");
@@ -488,7 +488,7 @@ namespace TCC
                         Label lblValorProduto = new Label();
                         lblValorProduto.ID = "lblValorProduto" + p.IngredientID;
                         lblValorProduto.CssClass = "lblValorProduto";
-                        lblValorProduto.Text = p.Price.ToString();
+                        lblValorProduto.Text = "R$" + p.Price.ToString();
                         divSubProduto2.Controls.Add(lblValorProduto);
 
                         HtmlGenericControl divSubProduto4 = new HtmlGenericControl("DIV");

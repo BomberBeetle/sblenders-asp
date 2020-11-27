@@ -18,7 +18,6 @@
                         <option class="optionCategoria" value="verduras">Vegetais</option>
                         <option class="optionCategoria" value="legumes">Queijos</option>
                         <option class="optionCategoria" value="queijos">Molhos</option>
-                        <!--TODO: fazer queijos serem queijos etc.-->
                     </select>
                 </div>
                 <div class="divMostrarIngredientes" id="divMostrarIngredientes" runat="server">
