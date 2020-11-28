@@ -268,13 +268,13 @@
 
                 <div class="divLoginEmail">
                     <div class="divSubLoginEmail1">
-                        <asp:Label ID="Label1" runat="server" Text="Email" CssClass="lblEsqS"></asp:Label>
+                        <asp:Label ID="lblEsqSenha" runat="server" Text="Email" CssClass="lblEsqS"></asp:Label>
                     </div>
                     <div class="divSubLoginEmail2">
-                        <asp:TextBox ID="TextBox1" runat="server" CssClass="txtEsqS"></asp:TextBox>
+                        <asp:TextBox ID="txtEsqSenha" runat="server" CssClass="txtEsqS"></asp:TextBox>
                     </div>
                     <div class="divSubLoginEmail3">
-                        <asp:Label ID="Label2" runat="server" Text="" CssClass="lblAvisoEsqS"></asp:Label>
+                        <asp:Label ID="lblAvisoEsqSenha" runat="server" Text="" CssClass="lblAvisoEsqS"></asp:Label>
                     </div>
                 </div>
 

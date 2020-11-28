@@ -13,33 +13,6 @@ namespace TCC {
     public partial class Produtos {
         
         /// <summary>
-        /// Controle secProd2.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl secProd2;
-        
-        /// <summary>
-        /// Controle btnFechar.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnFechar;
-        
-        /// <summary>
-        /// Controle btnAvancar.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnAvancar;
-        
-        /// <summary>
         /// Controle divProds.
         /// </summary>
         /// <remarks>
@@ -101,6 +74,15 @@ namespace TCC {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divProds4;
+        
+        /// <summary>
+        /// Controle btnAbrirProdAd.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAbrirProdAd;
         
         /// <summary>
         /// Controle btnIrCarrinho.

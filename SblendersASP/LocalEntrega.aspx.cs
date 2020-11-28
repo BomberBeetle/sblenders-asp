@@ -75,6 +75,7 @@ namespace TCC
                     ((Pedido)Session["Carrinho"]).agenteID = (int)Session["userID"];
                     ((Pedido)Session["Carrinho"]).restauranteID = RID;
                     ((Pedido)Session["Carrinho"]).instrucoes = txtInstrucoes.Text;
+                    ((Pedido)Session["Carrinho"]).dataHoraPedido = DateTime.Now;
                     EnviarPedido();
                 }
                 else

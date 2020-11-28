@@ -183,6 +183,7 @@
     <Content Include="Produtos.aspx" />
     <Content Include="CSS\Produtos.css" />
     <Content Include="Quem_somos.aspx" />
+    <Content Include="RedefinePass.aspx" />
     <Content Include="scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="scripts\jquery-3.0.0.min.map" />
     <Content Include="Fontes\Borg.ttf" />
@@ -369,6 +370,13 @@
     </Compile>
     <Compile Include="Quem_somos.aspx.designer.cs">
       <DependentUpon>Quem_somos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RedefinePass.aspx.cs">
+      <DependentUpon>RedefinePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RedefinePass.aspx.designer.cs">
+      <DependentUpon>RedefinePass.aspx</DependentUpon>
     </Compile>
     <Compile Include="Restaurante.cs" />
     <Compile Include="LandingVerification.aspx.cs">

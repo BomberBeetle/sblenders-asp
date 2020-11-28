@@ -100,7 +100,6 @@ namespace TCC
                             btnAdicionarCarrinho1.Text = "Adicionar ao Carrinho";
                             divSubProduto3.Controls.Add(btnAdicionarCarrinho1);
                             btnAdicionarCarrinho1.Click += new EventHandler(AdicionarProduto);
-                            btnAdicionarCarrinho1.Attributes.Add("onclick", "exibirAdicao()");
 
                             /*//Informações Nutricionais
                             HtmlGenericControl divNutri = new HtmlGenericControl("DIV");
@@ -208,7 +207,6 @@ namespace TCC
                             btnAdicionarCarrinho1.Text = "Adicionar ao Carrinho";
                             divSubProduto3.Controls.Add(btnAdicionarCarrinho1);
                             btnAdicionarCarrinho1.Click += new EventHandler(AdicionarProduto);
-                            btnAdicionarCarrinho1.Attributes.Add("onclick", "exibirAdicao()");
                             i--;
 
                         }
@@ -270,7 +268,6 @@ namespace TCC
                             btnAdicionarCarrinho1.Text = "Adicionar ao Carrinho";
                             divSubProduto3.Controls.Add(btnAdicionarCarrinho1);
                             btnAdicionarCarrinho1.Click += new EventHandler(AdicionarProduto);
-                            btnAdicionarCarrinho1.Attributes.Add("onclick", "exibirAdicao()");
                             i--;
 
                         }
@@ -332,7 +329,6 @@ namespace TCC
                             btnAdicionarCarrinho1.Text = "Adicionar ao Carrinho";                            
                             divSubProduto3.Controls.Add(btnAdicionarCarrinho1);
                             btnAdicionarCarrinho1.Click += new EventHandler(AdicionarProduto);
-                            btnAdicionarCarrinho1.Attributes.Add("onclick", "exibirAdicao()");
                             i--;
 
                         }
@@ -379,7 +375,6 @@ namespace TCC
                 int numeroProdutos = ppl.Count;
                 //Session["Carrinho"] = new SblendersAPI.Models.Pedido(0, 0, 0, DateTime.Now, "", new PedidoProduto[numeroProdutos - 1]);
                 ((Pedido)Session["Carrinho"]).produtos = ppl.ToArray();
-                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "traçar rota", "exibirAdicao()", true);
                 Response.Redirect("AdicaoCarrinho.aspx");
             }
             else

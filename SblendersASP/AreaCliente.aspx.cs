@@ -101,8 +101,9 @@ namespace TCC
                                     PedidosPlaceholder.Controls.Add(new Literal()
                                     {
                                         Text = $@"<div class=""listapedidos-pedido"">
-                                                <strong>[{EstadoPedido.FromInt(resultado3.estadoID)}] Pedido {result[tam]["pedidoID"]} - Horário - Endereço</strong>
+                                                <strong>[{EstadoPedido.FromInt(resultado3.estadoID)}] Pedido {result[tam]["pedidoID"]} - {resultado3.dataHoraPedido} - {resultado3.endereco}</strong>
                                                 {produtosBuilder.ToString()}
+                                                {createButtonCancelar(resultado3.estadoID, result[tam]["pedidoID"])}
                                             </div>"
                                     });
                                 }
@@ -132,6 +133,19 @@ namespace TCC
                 Response.Redirect("Index2.aspx");
             }
 
+        }
+
+        protected String createButtonCancelar(int estadoID, String pedidoID)
+        {
+            String button = "";
+            if (estadoID == 1)
+            {
+                button = $@"<button runat=""server"" onserverclick=""alterarEstadoPedido"" id=""btnCancel{pedidoID}"">Cancelar</button>";
+                return button;
+            }
+            else{
+                return button;
+            }
         }
 
         protected void alterarDados(object sender, EventArgs e)
@@ -189,7 +203,7 @@ namespace TCC
                 String textId = iButton.ID;
                 int id = Convert.ToInt32(textId.Substring(9, textId.Length - 9));
 
-                if (iButton.Text.Equals("1"))
+                if (id == 1)
                 {
                     string URL = $"https://localhost:44323/api/Pedidos/" + Session["userID"] + "/" + id.ToString() + "/6/";
                     string urlParameters = "";
