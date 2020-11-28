@@ -199,7 +199,7 @@ body {
         padding: 0;
     }
     .aCarrinhoTexto {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -219,7 +219,7 @@ body {
     }
 }
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 925px) {
     .adivLinks {
         font-size: 14px;
     }
@@ -350,6 +350,9 @@ body {
     .lblSair {
         transition: none !important;
     }
+    .divUserPhoto {
+        margin: 5px 0;
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -365,6 +368,8 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
+    width: 150px;
+    text-align: right;
 }
 
 .divUserPhoto {
@@ -376,7 +381,7 @@ body {
 }
 
 .aUserPhoto {
-    max-width: 80px;
+    max-width: 60px;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -394,7 +399,7 @@ body {
 .lblBemVindo {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
+    text-align: right;
     justify-content: center;
     font-size: 16px;
     color: white;
@@ -433,7 +438,7 @@ body {
 }*/
 
 .divTituloPagina {
-    border-radius: 0px 30px 30px 0px;
+    border-radius: 0px 15px 15px 0px;
     margin: 20px 0;
     width: 300px;
     background-color: #ff7300;
@@ -447,10 +452,11 @@ body {
 
 .divTituloPagina h1 {
     color: #FFF;
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
-    padding: 7.5px;
-    text-shadow: 1px 1px 0 rgb(255, 173, 21);
+    padding: 20px 0;
+    margin: 0px;
+    text-shadow: 1px 2px 1px rgb(255, 173, 21);
     user-select: none;
 }
 

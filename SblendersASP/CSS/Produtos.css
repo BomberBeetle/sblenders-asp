@@ -5,7 +5,6 @@
 .divCorpoProdutos {
     height: auto;
     width: 100%;
-    background: linear-gradient(90deg, #e8e7e7 0%, #ffffff 100%);
 }
 
 .divAdicionarLanches {
@@ -27,12 +26,7 @@
 .divBurguer {
     height: 250px;
     width: 100%;
-    float: left;
-    border-radius: 30px 30px;
-    /*background-color: #ffe76e;*/
-    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
-    margin-bottom: 40px;
-    box-shadow: 7px 7px 7px #878787;
+    box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.3);
 }
 
 .divBurguer a {
@@ -450,9 +444,9 @@
 .divDescricaoProdutoCorpo {
     height: 85%;
     width: 100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .lblDescNutri {
