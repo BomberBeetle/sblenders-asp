@@ -140,7 +140,7 @@ namespace TCC
             String button = "";
             if (estadoID == 1)
             {
-                button = $@"<button runat=""server"" onserverclick=""alterarEstadoPedido"" id=""btnCancel{pedidoID}"">Cancelar</button>";
+                button = $@"<button id=""btnCancel{pedidoID}"" runat=""server"" onserverclick=""AlterarEstadoPedido"" class=""btnCancel"">Cancelar</button>";
                 return button;
             }
             else
@@ -196,7 +196,7 @@ namespace TCC
 
         }
 
-        protected void alterarEstadoPedido(object sender, EventArgs e)
+        public void AlterarEstadoPedido(object sender, EventArgs e)
         {
             if (Session["userID"] != null)
             {
