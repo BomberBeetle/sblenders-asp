@@ -575,6 +575,29 @@ function tamDivIngredientes() {
 
 window.onresize = tamDivIngredientes;
 
+var visibilidadeInst = false;
+
+function fecharInstrucoes() {
+    var divInst = document.getElementById("secProd1");
+    if (visibilidadeInst == true) {
+        divInst.style.display = "none";
+        visibilidadeInst = false;
+        document.getElementById("divDescricaoProdutoCorpo1").innerHTML = "";
+    }
+    event.preventDefault();
+}
+
+function exibirInstrucoes() {
+    var divInst = document.getElementById("secProd1");
+    if (visibilidadeInst == false) {
+        divInst.style.display = "flex";
+        visibilidadeInst = true;
+    } else if (visibilidadeInst == true) {
+        divInst.style.display = "none";
+        visibilidadeInst = false;
+    }
+}
+
 var visibilidadeNutri = false;
 
 function fecharInfoNutri() {

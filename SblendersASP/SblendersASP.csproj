@@ -105,6 +105,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="CSS\AdicaoCarrinho.css" />
     <Content Include="CSS\ConfirmacaoPedido.css" />
+    <Content Include="Imagens\i.png" />
     <Content Include="CSS\LandingVerification.css" />
     <Content Include="CSS\Quem_somos.css" />
     <Content Include="CSS\AreaCliente.css" />

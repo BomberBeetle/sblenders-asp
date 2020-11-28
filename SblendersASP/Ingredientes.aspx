@@ -8,6 +8,20 @@
         <h1>Escolha os Ingredientes </h1>
     </div>
     <div class="geral">
+        <div id="secProd1" class="sectionProd">
+            <div class="divDescricaoProduto">
+                <div class="divDescricaoProdutoTitulo">
+                    <h1 class="h1InfoNutri">Como devo montar meu lanche?</h1>
+                    <a onclick="fecharInstrucoes()">
+                        <img src="Imagens/iconeX.png" class="imgIconX" />
+                    </a>
+                </div>
+                <div class="divDescricaoProdutoCorpo" id="divDescricaoProdutoCorpo1">
+                    <p>Adicione os ingredientes da esquerda a seu lanche e eles serão mostrados na direita.</p>
+                    <p>Seu lanche deve começar e terminar com uma fatia de pão e conter no máximo 30 ingredientes.</p>
+                </div>
+            </div>
+        </div>
         <div class="bigboy">
             <div class="divIngredientes">
                 <div class="divIngredientesCategoria">
@@ -19,6 +33,9 @@
                         <option class="optionCategoria" value="legumes">Queijos</option>
                         <option class="optionCategoria" value="queijos">Molhos</option>
                     </select>
+                    <a onclick="exibirInstrucoes()">
+                        <img src="Imagens/i.png" class="imgIconI" />
+                    </a>
                 </div>
                 <div class="divMostrarIngredientes" id="divMostrarIngredientes" runat="server">
                     <div class="divPaes" id="divPaes" runat="server">
@@ -49,25 +66,25 @@
             </div>
         </div>
         <div class="divTot">
-                <asp:Label ID="lblTotalIngredientes" runat="server" Text="R$ 0" CssClass="lblTotalIngredientes" ClientIDMode="Static"></asp:Label>
+            <asp:Label ID="lblTotalIngredientes" runat="server" Text="R$ 0" CssClass="lblTotalIngredientes" ClientIDMode="Static"></asp:Label>
         </div>
-        <div class="divBotoes">        
-        <div class="divBtnExcluirLanche">
-            <button class="btnExcluirLanche" id="btnExcluirLanche" runat="server" onserverclick="excluirLanche">
-                <div class="divTextoBtnExcluirLanche" onload="tamDivIngredientes()">
-                    <p>Excluir Sblurger</p>
-                    <img src="Imagens/iconeX.png" />
-                </div>
-            </button>
-        </div>
-        <div class="divBtnOpcoesPagLanches">
-            <button class="btnIrCarrinho" id="btnIrCarrinho" runat="server" onserverclick="avancarCarrinho">
-                <div class="divTextoBtnCarrinho" onload="tamDivIngredientes()">
-                    <p>Adicionar ao Carrinho</p>
-                    <img src="Imagens/seta2.png" />
-                </div>
-            </button>
-        </div>
+        <div class="divBotoes">
+            <div class="divBtnExcluirLanche">
+                <button class="btnExcluirLanche" id="btnExcluirLanche" runat="server" onserverclick="excluirLanche">
+                    <div class="divTextoBtnExcluirLanche" onload="tamDivIngredientes()">
+                        <p>Excluir Sblurger</p>
+                        <img src="Imagens/iconeX.png" />
+                    </div>
+                </button>
+            </div>
+            <div class="divBtnOpcoesPagLanches">
+                <button class="btnIrCarrinho" id="btnIrCarrinho" runat="server" onserverclick="avancarCarrinho">
+                    <div class="divTextoBtnCarrinho" onload="tamDivIngredientes()">
+                        <p>Adicionar ao Carrinho</p>
+                        <img src="Imagens/seta2.png" />
+                    </div>
+                </button>
+            </div>
         </div>
     </div>
 </asp:Content>
