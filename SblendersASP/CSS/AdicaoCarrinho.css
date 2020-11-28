@@ -16,14 +16,14 @@
 }
 
 .check {
-    height: 1vw;
+    height: 1.8vw;
     float: left;
     margin-left: .25vw;
     margin-top: 0.9vh
 }
 
 .corpo {
-    font-size: 1.2vw;
+    font-size: 2vw;
     color: green;
     font-weight: 700;
 }
@@ -78,7 +78,6 @@
 
 .divTextoBtnAvancar p {
     margin-bottom: 0;
-    font-size: 1vw;
 }
 
 .divTextoBtnAvancar img {

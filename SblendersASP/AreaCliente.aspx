@@ -12,6 +12,7 @@
         <asp:Timer ID="Timer1" runat="server" Interval="120000" OnTick="Timer1_Tick"></asp:Timer>
         <div class="jorge">
             <div class="inputs">
+                <p>Seus dados</p>
                 <asp:TextBox ID="TextBox1" runat="server" Text="" class="txtNome" placeholder="Nome"></asp:TextBox>
                 <asp:TextBox ID="TextBox2" runat="server" Text="" class="txtSobrenome" placeholder="Sobrenome"></asp:TextBox>
                 <asp:TextBox ID="txtSenha" runat="server" Text="" TextMode="Password" class="txtSenha" placeholder="Nova senha"></asp:TextBox>

@@ -101,10 +101,10 @@ namespace TCC
                                     PedidosPlaceholder.Controls.Add(new Literal()
                                     {
                                         Text = $@"<div class=""listapedidos-pedido"">
-                                                <strong>[{EstadoPedido.FromInt(resultado3.estadoID)}] Pedido {result[tam]["pedidoID"]} - {resultado3.dataHoraPedido} - {resultado3.endereco}</strong>
+                                                <strong> <div class=""pedidoFull""> <div class=""pedidoParcial""> <div class=""pedido""> [{EstadoPedido.FromInt(resultado3.estadoID)}] Pedido {result[tam]["pedidoID"]} </div> <div class=""data""> Data: {resultado3.dataHoraPedido} </div> <div class=""endereco""> Endereço: {resultado3.endereco} </div> </div> </strong> 
+                                        <div class=""button"">{createButtonCancelar(resultado3.estadoID, result[tam]["pedidoID"])} </div> </div>
                                                 {produtosBuilder.ToString()}
-                                                {createButtonCancelar(resultado3.estadoID, result[tam]["pedidoID"])}
-                                            </div>"
+                                                </div>"
                                     });
                                 }
                             }
@@ -143,7 +143,8 @@ namespace TCC
                 button = $@"<button runat=""server"" onserverclick=""alterarEstadoPedido"" id=""btnCancel{pedidoID}"">Cancelar</button>";
                 return button;
             }
-            else{
+            else
+            {
                 return button;
             }
         }
