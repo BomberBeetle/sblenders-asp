@@ -28,38 +28,28 @@
                         <div class="divTxtBurguer">
                             <h1>Monte seu Sblurger </h1>
                         </div>
-                        <div class="divImgBurguer">
-                            <img src="Imagens/burguer2.png" class="imgDivImgBurger" />
-                        </div>
                     </a>
                 </div>
                 <div class="divBurguer2">
-                    <a href="" class="aBurg">
-                        <div class="divTxtBurguer2">
-                            <h1>Personalize sua Batata Frita</h1>
-                        </div>
-                        <div class="divImgBurguer2">
-                            <img src="Imagens/batataFrita.png" class="imgDivImgBurger" />
-                        </div>
-                    </a>
-                </div>
-                <div class="divBurguer3">
-                    <a href="" class="aBurg">
-                        <div class="divTxtBurguer2">
-                            <h1>Personalize seu Hot Dog </h1>
-                        </div>
-                        <div class="divImgBurguer2">
-                            <img src="Imagens/hotDog.png" class="imgDivImgBurger" />
-                        </div>
-                    </a>
+                    <div class="divBurguer3">
+                        <a href="" class="aBurg">
+                            <div class="divTxtBurguer">
+                                <h1>Acompanhamentos</h1>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="divBurguer3">
+                        <a href="" class="aBurg">
+                            <div class="divTxtBurguer">
+                                <h1>Bebidas</h1>
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 <div class="divBurguer" id="divBurguer2">
                     <a href="">
                         <div class="divTxtBurguer">
-                            <h1>Personalize seu Churros </h1>
-                        </div>
-                        <div class="divImgBurguer">
-                            <img src="Imagens/churros.png" class="imgDivImgBurger" />
+                            <h1>Sobremesas</h1>
                         </div>
                     </a>
                 </div>
