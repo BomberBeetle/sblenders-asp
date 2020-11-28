@@ -193,7 +193,7 @@ namespace TCC
                 // List data response.
                 JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
                 HttpResponseMessage response = client.PutAsync(urlParameters, new StringContent(serializer.Serialize(new ClienteOnline(
-                    txtNomeCadastro.Text, txtSobrenomeCadastro.Text, txtEmailCadastro.Text, txtSenhaCadastro.Text)), Encoding.UTF8, "application/json")).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                txtNomeCadastro.Text, txtSobrenomeCadastro.Text, txtEmailCadastro.Text, txtSenhaCadastro.Text)), Encoding.UTF8, "application/json")).Result;
                 Dictionary<string, Object> resultado = (Dictionary<string, Object>)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
 
                 if (response.IsSuccessStatusCode)
@@ -228,7 +228,33 @@ namespace TCC
 
         protected void RecuperarSenha(object sender, EventArgs e)
         {
+            string URL = $"https://localhost:44323/api/ResetRequest/"+ HttpUtility.UrlEncode(txtEsqSenha.Text);
+            string urlParameters = "";
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(URL);
+            //ScriptManager.RegisterStartupScript(Page, Page.GetType(), "excecao", "Excecao()", true);
 
+
+            // Add an Accept header for JSON format.
+            client.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/json"));
+
+            // List data response.
+            JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            HttpResponseMessage response = client.GetAsync(urlParameters).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+            Dictionary<string, Object> resultado = (Dictionary<string, Object>)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
+
+            if (response.IsSuccessStatusCode)
+            {
+                lblAvisoEsqSenha.Text = "Verifique seu Email";
+                //Response.Redirect("LandingVerification.aspx?landing=bigfloppa");
+            }
+            else
+            {
+                lblAvisoEsqSenha.Text = "Erro";
+                //lblEmailAvisoCadastro.Text = "Email inválido";
+
+            }
         }
 
         protected void Carrinho(object sender, EventArgs e)
