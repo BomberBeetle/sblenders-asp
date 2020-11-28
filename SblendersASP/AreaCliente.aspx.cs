@@ -140,7 +140,7 @@ namespace TCC
             String button = "";
             if (estadoID == 1)
             {
-                button = $@"<button id=""btnCancel{pedidoID}"" runat=""server"" onserverclick=""AlterarEstadoPedido"" class=""btnCancel"">Cancelar</button>";
+                button = $@"<button id=""btnCancel{pedidoID}"" onclick=""AlterarEstadoPedido"" class=""btnCancel"">Cancelar</button>";
                 return button;
             }
             else

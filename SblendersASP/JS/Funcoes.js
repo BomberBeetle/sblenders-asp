@@ -621,14 +621,18 @@ function exibirInfoNutri(o) {
             var d = dados.infoNutr;
             var dCount = d.length - 1;
             while (dCount >= 0) {
+                let divDes = document.createElement("div");
+                document.getElementById("divDescricaoProdutoCorpo1").appendChild(divDes);
                 let lblDes = document.createElement("span");
                 lblDes.innerText = d[dCount].descricao;
                 lblDes.className = "lblDescNutri";
-                document.getElementById("divDescricaoProdutoCorpo1").appendChild(lblDes);
+                lblDes.appendChild(lblDes);
+                let divVal = document.createElement("div");
+                document.getElementById("divDescricaoProdutoCorpo1").appendChild(divVal);
                 let lblVal = document.createElement("span");
                 lblVal.innerText = d[dCount].val;
                 lblVal.className = "lblDescValor";
-                document.getElementById("divDescricaoProdutoCorpo1").appendChild(lblVal);
+                divVal.appendChild(lblVal);
                 dCount--;
             }
         }).catch((err) => {
