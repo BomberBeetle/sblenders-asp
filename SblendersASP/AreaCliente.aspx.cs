@@ -196,7 +196,7 @@ namespace TCC
 
         }
 
-        public void AlterarEstadoPedido(object sender, EventArgs e)
+        protected void AlterarEstadoPedido(object sender, EventArgs e)
         {
             if (Session["userID"] != null)
             {
