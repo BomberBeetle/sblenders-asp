@@ -8,6 +8,7 @@ using System.Text;
 using System.Web;
 using System.Web.Script.Serialization;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace TCC
@@ -89,23 +90,80 @@ namespace TCC
                                         return serializer.Deserialize<Produto>(res.Content.ReadAsStringAsync().Result);
                                     }).ToArray();
 
-                                    var produtosBuilder = new StringBuilder();
+                                    HtmlGenericControl divPedido = new HtmlGenericControl("DIV");
+                                    divPedido.Attributes.Add("class", "listapedidos-pedido");
+                                    PedidosPlaceholder.Controls.Add(divPedido);
+
+                                    HtmlGenericControl strongP = new HtmlGenericControl("STRONG");
+                                    divPedido.Controls.Add(strongP);
+
+                                    HtmlGenericControl divPedidoFull = new HtmlGenericControl("DIV");
+                                    divPedidoFull.Attributes.Add("class", "pedidoFull");
+                                    strongP.Controls.Add(divPedidoFull);
+
+                                    HtmlGenericControl divPedidoParcial = new HtmlGenericControl("DIV");
+                                    divPedidoParcial.Attributes.Add("class", "pedidoParcial");
+                                    divPedidoFull.Controls.Add(divPedidoParcial);
+
+                                    HtmlGenericControl divSubPedido = new HtmlGenericControl("DIV");
+                                    divSubPedido.ID = "divSubPedido" + result[tam]["pedidoID"];
+                                    divSubPedido.Attributes.Add("class", "pedido");
+                                    divSubPedido.InnerText = "["+EstadoPedido.FromInt(resultado3.estadoID)+"]" + " Pedido " + result[tam]["pedidoID"];
+                                    divPedidoParcial.Controls.Add(divSubPedido);
+
+                                    HtmlGenericControl divData = new HtmlGenericControl("DIV");
+                                    divData.Attributes.Add("class", "data");
+                                    divData.InnerText = "Data: " + resultado3.dataHoraPedido;
+                                    divPedidoParcial.Controls.Add(divData);
+
+                                    HtmlGenericControl divEndereco = new HtmlGenericControl("DIV");
+                                    divEndereco.Attributes.Add("class", "endereco");
+                                    divEndereco.InnerText = "Endereço: " + resultado3.endereco;
+                                    divPedidoParcial.Controls.Add(divEndereco);
+
+                                    HtmlGenericControl divButton = new HtmlGenericControl("DIV");
+                                    divButton.Attributes.Add("class", "button");
+                                    divPedido.Controls.Add(divButton);
+
+                                    if(resultado3.estadoID == 1)
+                                    {
+                                        Button btnCancelar = new Button();
+                                        btnCancelar.ID = "btnCancel" + result[tam]["pedidoID"];
+                                        btnCancelar.CssClass = "btnCancel";
+                                        btnCancelar.Text = "Cancelar";
+                                        btnCancelar.Click += new EventHandler(AlterarEstadoPedido);
+                                        divButton.Controls.Add(btnCancelar);
+                                    }
+
+                                    HtmlGenericControl divProdutos = new HtmlGenericControl("DIV");
+                                    divProdutos.Attributes.Add("class", "listapedidos-produto");
+                                    divPedido.Controls.Add(divProdutos);
+                                    //var produtosBuilder = new StringBuilder();
 
                                     foreach (var produto in produtos)
                                     {
-                                        produtosBuilder.Append($@"<div class=""listapedidos-produto"">
+                                        HtmlGenericControl pList = new HtmlGenericControl("P");
+                                        pList.Attributes.Add("class", "listapedidos-produto-preco");
+                                        pList.InnerText = resultado3.produtos.First(p => p.produtoID == produto.ID).pedidoProdutoQtde.ToString() + "x";
+                                        divProdutos.Controls.Add(pList);
+
+                                        HtmlGenericControl pListNome = new HtmlGenericControl("P");
+                                        pListNome.Attributes.Add("class", "listapedidos-produto-nome");
+                                        pListNome.InnerText = produto.Name;
+                                        divProdutos.Controls.Add(pListNome);
+                                        /*produtosBuilder.Append($@"<div class=""listapedidos-produto"">
                                                 <p class=""listapedidos-produto-preco"">{resultado3.produtos.First(p => p.produtoID == produto.ID).pedidoProdutoQtde} </p>x <p class=""listapedidos-produto-nome"">{produto.Name}</p>
-                                            </div>");
+                                            </div>");*/
                                     }
 
-                                    PedidosPlaceholder.Controls.Add(new Literal()
+                                    /*PedidosPlaceholder.Controls.Add(new Literal()
                                     {
                                         Text = $@"<div class=""listapedidos-pedido"">
                                                 <strong> <div class=""pedidoFull""> <div class=""pedidoParcial""> <div class=""pedido""> [{EstadoPedido.FromInt(resultado3.estadoID)}] Pedido {result[tam]["pedidoID"]} </div> <div class=""data""> Data: {resultado3.dataHoraPedido} </div> <div class=""endereco""> Endereço: {resultado3.endereco} </div> </div> </strong> 
                                         <div class=""button"">{createButtonCancelar(resultado3.estadoID, result[tam]["pedidoID"])} </div> </div>
                                                 {produtosBuilder.ToString()}
                                                 </div>"
-                                    });
+                                    });*/
                                 }
                             }
                             else
@@ -135,7 +193,7 @@ namespace TCC
 
         }
 
-        protected String createButtonCancelar(int estadoID, String pedidoID)
+        /*protected String createButtonCancelar(int estadoID, String pedidoID)
         {
             String button = "";
             if (estadoID == 1)
@@ -147,7 +205,7 @@ namespace TCC
             {
                 return button;
             }
-        }
+        }*/
 
         protected void alterarDados(object sender, EventArgs e)
         {
@@ -204,31 +262,32 @@ namespace TCC
                 String textId = iButton.ID;
                 int id = Convert.ToInt32(textId.Substring(9, textId.Length - 9));
 
-                if (id == 1)
-                {
-                    string URL = $"https://localhost:44323/api/Pedidos/" + Session["userID"] + "/" + id.ToString() + "/6/";
-                    string urlParameters = "";
-                    HttpClient client = new HttpClient();
-                    client.BaseAddress = new Uri(URL);
+                string URL = $"https://localhost:44323/api/Pedidos/" + Session["userID"] + "/" + id.ToString() + "/6/";
+                string urlParameters = "";
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(URL);
 
-                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
-                    // Add an Accept header for JSON format.
-                    client.DefaultRequestHeaders.Accept.Add(
-                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
+                client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
 
-                    // List data response.
-                    JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
-                    HttpResponseMessage response = client.PostAsync(urlParameters, null).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
+                // List data response.
+                JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+                HttpResponseMessage response = client.PostAsync(urlParameters, null).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
                                                                                                   //ClienteOnline resultado = (ClienteOnline)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
-                    if (response.IsSuccessStatusCode)
-                    {
-                        Label1.Text = "Certo";
-                    }
-                    else
-                    {
-                        Label1.Text = "Erro";
-                    }
+                if (response.IsSuccessStatusCode)
+                {
+                    Label1.Text = "Certo";
+                    String div = "divSubPedido" + id;
+                    HtmlGenericControl divId = (HtmlGenericControl)PedidosPlaceholder.FindControl(div);
+                    divId.InnerText = "[" + EstadoPedido.FromInt(6) + "]" + " Pedido " + id;
+                    iButton.Visible = false;
                 }
+                else
+                {
+                    Label1.Text = "Erro";
+                }
+                
             }
             else
             {
