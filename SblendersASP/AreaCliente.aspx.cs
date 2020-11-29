@@ -15,9 +15,9 @@ namespace TCC
 {
     public partial class AreaCliente : System.Web.UI.Page
     {
+        protected static bool textboxs = false;
         protected void Page_Load(object sender, EventArgs e)
-        {
-
+        {            
             if (Session["userID"] != null)
             {
                 string URL = $"https://localhost:44323/api/Agente/" + Session["userID"];
@@ -37,8 +37,12 @@ namespace TCC
 
                 if (response.IsSuccessStatusCode)
                 {
-                    TextBox1.Text = (string)resultado["client_name"];
-                    TextBox2.Text = (string)resultado["client_surname"];
+                    if (!textboxs)
+                    {
+                        TextBox1.Text = (string)resultado["client_name"];
+                        TextBox2.Text = (string)resultado["client_surname"];
+                        textboxs = true;
+                    }                    
 
                     string URL2 = $"https://localhost:44323/api/Pedidos/" + Session["userID"];
                     HttpClient client2 = new HttpClient();
@@ -193,20 +197,6 @@ namespace TCC
 
         }
 
-        /*protected String createButtonCancelar(int estadoID, String pedidoID)
-        {
-            String button = "";
-            if (estadoID == 1)
-            {
-                button = $@"<button id=""btnCancel{pedidoID}"" onclick=""AlterarEstadoPedido"" class=""btnCancel"">Cancelar</button>";
-                return button;
-            }
-            else
-            {
-                return button;
-            }
-        }*/
-
         protected void alterarDados(object sender, EventArgs e)
         {
             if (txtSenha.Text != txtConfirmarSenha.Text)
@@ -221,13 +211,18 @@ namespace TCC
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(URL);
                 ClienteOnline cli;
-                if (String.IsNullOrWhiteSpace(txtSenha.Text) || String.IsNullOrWhiteSpace(txtConfirmarSenha.Text))
+                if ((String.IsNullOrWhiteSpace(txtSenha.Text) || String.IsNullOrWhiteSpace(txtConfirmarSenha.Text)) && !String.IsNullOrWhiteSpace(TextBox1.Text) && !String.IsNullOrWhiteSpace(TextBox2.Text))
                 {
                     cli = new ClienteOnline(TextBox1.Text, TextBox2.Text, null, null);
                 }
-                else
+                else if(!String.IsNullOrWhiteSpace(TextBox1.Text) && !String.IsNullOrWhiteSpace(TextBox2.Text))
                 {
                     cli = new ClienteOnline(TextBox1.Text, TextBox2.Text, null, txtSenha.Text);
+                }
+                else
+                {
+                    Label1.Text = "Digite um nome e sobrenome";
+                    return;
                 }
 
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue((string)Session["userToken"]);
@@ -241,6 +236,7 @@ namespace TCC
                 if (response.IsSuccessStatusCode)
                 {
                     Label1.Text = "Dados alterados com sucesso!";
+                    textboxs = false;
                 }
                 else
                 {
@@ -277,7 +273,6 @@ namespace TCC
                                                                                                   //ClienteOnline resultado = (ClienteOnline)serializer.DeserializeObject(response.Content.ReadAsStringAsync().Result);
                 if (response.IsSuccessStatusCode)
                 {
-                    Label1.Text = "Certo";
                     String div = "divSubPedido" + id;
                     HtmlGenericControl divId = (HtmlGenericControl)PedidosPlaceholder.FindControl(div);
                     divId.InnerText = "[" + EstadoPedido.FromInt(6) + "]" + " Pedido " + id;
