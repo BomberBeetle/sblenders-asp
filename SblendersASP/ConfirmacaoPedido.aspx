@@ -6,7 +6,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="geral">
         <div class="obrigado">
-            Muito Obrigado pela preferência. Seu pedido está sendo preparado e logo chegará até você!
+            <img src="Imagens/check.png" class="check" />
+            <p>Muito Obrigado pela preferência. Seu pedido está sendo preparado e logo chegará até você!</p>
         </div>
         <div class="buttons">
             <button class="btnJorge" id="Button1" runat="server" onserverclick="btnVoltar_ServerClick">

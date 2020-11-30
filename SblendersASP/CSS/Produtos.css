@@ -471,14 +471,14 @@
 .lblDescNutri {
     font-size: 20px;
     float: left;
-    margin: 15px;
+    padding: 0 5px 0 5px;
     display: inline-block;
 }
 
 .lblDescValor {
     font-size: 20px;
     float: left;
-    margin: 15px;
+    padding: 0 5px 0 5px;
     display: inline-block;
 }
 
@@ -569,5 +569,8 @@
 .divInfos{
     width:100%;
     height:30px;
-    background-color:#37c418;
+    background-color:#d6d6d6;
+    border-radius:5px;
+    display:flex;
+    justify-content:center;
 }

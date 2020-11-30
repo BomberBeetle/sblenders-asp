@@ -368,7 +368,6 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 150px;
     text-align: right;
 }
 

@@ -1,4 +1,9 @@
 ﻿body {
+    
+}
+
+#divCorpo{
+    height:480px;
 }
 
 .divCorpoCarrinho {
@@ -261,7 +266,7 @@
 
 .btnIrCarrinho3 {
     height: 70px;
-    width: 28%;
+    width: 22%;
     background-image: linear-gradient(135deg, rgba(39, 131, 219) 0%, rgba(27, 119, 207) 50%, rgba(15, 103, 186) 100%);
     font-size: 22px;
     font-weight: bold;
