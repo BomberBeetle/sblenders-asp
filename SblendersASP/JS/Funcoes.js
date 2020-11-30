@@ -57,7 +57,9 @@ function esqueceuSenha() {
     if (visiblidadeEsqSenha == false) {
         divLog.style.display = "none";
         divCad.style.display = "none";
+        divEsqSenha.style.opacity = 0;
         divEsqSenha.style.display = "flex";
+        $("#divEsqSenha").animate({ opacity: 1 }, 0.1e3)
         visibilidadeLogin = false;
         visibilidadeCad = false;
         visiblidadeEsqSenha = true;
@@ -582,7 +584,6 @@ function fecharInstrucoes() {
     if (visibilidadeInst == true) {
         divInst.style.display = "none";
         visibilidadeInst = false;
-        document.getElementById("divDescricaoProdutoCorpo1").innerHTML = "";
     }
     event.preventDefault();
 }
@@ -596,6 +597,7 @@ function exibirInstrucoes() {
         divInst.style.display = "none";
         visibilidadeInst = false;
     }
+    event.preventDefault();
 }
 
 var visibilidadeNutri = false;

@@ -25,7 +25,7 @@ namespace TCC
                 divConectado.Attributes.CssStyle.Add("display", "flex");
                 divDesconectado.Attributes.CssStyle.Add("display", "none");
                 divsidenavConectado.Attributes.CssStyle.Add("display", "flex");
-                divsidenavDesconectado.Attributes.CssStyle.Add("display", "none");
+                divsidenavDesconectado.Attributes.CssStyle.Add("display", "none");                
                 string URL = $"https://localhost:44323/api/Agente/" + Session["userID"];
                 string urlParameters = "";
                 HttpClient client = new HttpClient();
@@ -52,6 +52,9 @@ namespace TCC
                 }
 
             }
+            divLog.Attributes.CssStyle.Add("display", "none");
+            divCad.Attributes.CssStyle.Add("display", "none");
+            divEsqSenha.Attributes.CssStyle.Add("display", "none");
         }
 
         protected void Login(object sender, EventArgs e)
@@ -64,12 +67,16 @@ namespace TCC
                 lblEmailAvisoLogin.Text = "Insira um email para efetuar o login";
                 camposPreenchidos = false;
                 divLog.Attributes.CssStyle.Add("display", "flex");
+                divCad.Attributes.CssStyle.Add("display", "none");
+                divEsqSenha.Attributes.CssStyle.Add("display", "none");
             }
             if (String.IsNullOrWhiteSpace(txtSenhaLogin.Text))
             {
                 lblSenhaAvisoLogin.Text = "Insira uma senha para efetuar o login";
                 camposPreenchidos = false;
                 divLog.Attributes.CssStyle.Add("display", "flex");
+                divCad.Attributes.CssStyle.Add("display", "none");
+                divEsqSenha.Attributes.CssStyle.Add("display", "none");
             }
             if (camposPreenchidos)
             {
@@ -132,6 +139,8 @@ namespace TCC
                         lblSenhaAvisoLogin.Text = "Usuário ou senha incorreto";
                     }
                     divLog.Attributes.CssStyle.Add("display", "flex");
+                    divCad.Attributes.CssStyle.Add("display", "none");
+                    divEsqSenha.Attributes.CssStyle.Add("display", "none");
                 }
 
                 client.Dispose();
@@ -206,8 +215,9 @@ namespace TCC
                     //lblNomeAvisoCadastro.Text = resultado.ToString();
                 }
             }
-
-            divCad.Attributes.CssStyle.Add("display", "block");
+            divLog.Attributes.CssStyle.Add("display", "none");
+            divCad.Attributes.CssStyle.Add("display", "flex");
+            divEsqSenha.Attributes.CssStyle.Add("display", "none");
         }
 
         protected void Sair(object sender, EventArgs e)
@@ -232,8 +242,6 @@ namespace TCC
             string urlParameters = "";
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(URL);
-            //ScriptManager.RegisterStartupScript(Page, Page.GetType(), "excecao", "Excecao()", true);
-
 
             // Add an Accept header for JSON format.
             client.DefaultRequestHeaders.Accept.Add(
@@ -247,14 +255,15 @@ namespace TCC
             if (response.IsSuccessStatusCode)
             {
                 lblAvisoEsqSenha.Text = "Verifique seu Email";
-                //Response.Redirect("LandingVerification.aspx?landing=bigfloppa");
+                Response.Redirect("LandingVerification.aspx?landing=bigfloppa");
             }
             else
             {
-                lblAvisoEsqSenha.Text = "Erro";
-                //lblEmailAvisoCadastro.Text = "Email inválido";
-
+                lblAvisoEsqSenha.Text = "Email inválido";
             }
+            divLog.Attributes.CssStyle.Add("display", "none");
+            divCad.Attributes.CssStyle.Add("display", "none");
+            divEsqSenha.Attributes.CssStyle.Add("display", "flex");
         }
 
         protected void Carrinho(object sender, EventArgs e)
