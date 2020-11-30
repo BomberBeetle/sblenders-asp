@@ -22,7 +22,7 @@
                             <asp:Label ID="lblOculto" runat="server" Text="" CssClass="hidden" ClientIDMode="Static"></asp:Label>
                         </div>
                         <div class="divBtnEntrega">
-                            <button id="btnCalcularRota" type="button" class="btnEnderecoMaps" onclick="tracarRota()">Calcular Frete</button>
+                            <button id="btnCalcularRota" type="button" class="btnEnderecoMaps" onclick="tracarRota()">Calcular Rota</button>
                             <asp:Button ID="hiddenFuncButton" runat="server" OnClick="Button1_Click" ClientIDMode="Static" CssClass="hidden" />
                             <!--<asp:Label ID="lblCustoFrete" runat="server" Text="Custo do Frete:" CssClass="lblCustoFrete"></asp:Label>-->
                             <asp:HiddenField ID="hiddenOk" runat="server" Value="bt" ClientIDMode="Static" />

@@ -177,8 +177,8 @@
 
 .btnFinalizarPedido {
     height: 80px;
-    width: 24%;
-    background-image: linear-gradient(135deg, rgba(39, 131, 219) 0%, rgba(27, 119, 207) 50%, rgba(15, 103, 186) 100%);
+    width: 18.5%;
+    background-color: #2464c1;
     font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
@@ -187,7 +187,7 @@
     border-radius: 30px 30px;
     border: 0px;
     color: #DEDEDE;
-    box-shadow: 6px 6px 6px #656565;
+    box-shadow: 5px 10px 19px rgba(0, 0, 0, 0.3);
     padding-left: 20px;
 }
 

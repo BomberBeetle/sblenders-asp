@@ -142,6 +142,7 @@ ul {
     height: 250px;
     width: 100%;
     box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.3);
+    padding:0 0 8px 10px;
 }
 
 .divBurguer a,
@@ -200,6 +201,7 @@ ul {
     height: 200px;
     width: 505px;
     box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.3);
+    padding: 0 0 8px 10px;
 }
 
 #divBurguer1 {
@@ -221,8 +223,14 @@ ul {
     overflow: hidden;
 }
 
-#divBurguer2 {
+.divBurguer4 {
     background-image: url(ImagensCSS/dessertswallpaper.png);
+    background-position: center;
+    overflow: hidden;
+}
+
+.divBurguer5 {
+    background-image: url(ImagensCSS/saucewallpaper.png);
     background-position: center;
     overflow: hidden;
 }

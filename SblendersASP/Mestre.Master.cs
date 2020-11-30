@@ -45,8 +45,8 @@ namespace TCC
                 {
                     if (resultado.ContainsKey("client_name"))
                     {
-                        lblBemVindo.Text = "Bem vindo " + resultado["client_name"];
-                        lblBemVindoSidenav.Text = "Bem vindo " + resultado["client_name"];
+                        lblBemVindo.Text = "Bem vindo(a) " + resultado["client_name"];
+                        lblBemVindoSidenav.Text = "Bem vindo(a) " + resultado["client_name"];
                     }
 
                 }
@@ -127,7 +127,7 @@ namespace TCC
                     {
                         if (resultado2.ContainsKey("client_name"))
                         {
-                            lblBemVindo.Text = "Bem vindo " + resultado2["client_name"];
+                            lblBemVindo.Text = "Bem vindo(a) " + resultado2["client_name"];
                         }
 
                     }

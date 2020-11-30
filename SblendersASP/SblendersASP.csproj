@@ -105,6 +105,15 @@
     <Content Include="Contact.aspx" />
     <Content Include="CSS\AdicaoCarrinho.css" />
     <Content Include="CSS\ConfirmacaoPedido.css" />
+    <Content Include="CSS\ImagensCSS\acompanhamentoswallpaper.png" />
+    <Content Include="CSS\ImagensCSS\dessertswallpaper.jpg" />
+    <Content Include="CSS\ImagensCSS\dessertswallpaper.png" />
+    <Content Include="CSS\ImagensCSS\hamburgerwallpaper.jpg" />
+    <Content Include="CSS\ImagensCSS\hamburgerwallpaper.png" />
+    <Content Include="CSS\ImagensCSS\saucewallpaper.png" />
+    <Content Include="CSS\ImagensCSS\sodawallpaper.png" />
+    <Content Include="CSS\ImagensCSS\woodwallpaper.jpg" />
+    <Content Include="CSS\RedefinePass.css" />
     <Content Include="Imagens\i.png" />
     <Content Include="CSS\LandingVerification.css" />
     <Content Include="CSS\Quem_somos.css" />

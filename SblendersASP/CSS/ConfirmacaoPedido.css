@@ -45,8 +45,8 @@
 
 .btnJorge {
     height: 70px;
-    width: 40%;
-    background-image: linear-gradient(135deg, rgba(39, 131, 219) 0%, rgba(27, 119, 207) 50%, rgba(15, 103, 186) 100%);
+    width: 37%;
+    background-color: #2464c1;
     font-size: 22px;
     font-weight: bold;
     text-transform: uppercase;
@@ -54,7 +54,7 @@
     border-radius: 30px 30px;
     border: 0px;
     color: #DEDEDE;
-    box-shadow: 6px 6px 6px #656565;
+    box-shadow: 5px 10px 19px rgba(0, 0, 0, 0.3);
 }
 
 .divTextoBtnVoltar p {

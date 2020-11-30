@@ -45,12 +45,21 @@
                     </a>
                 </div>
             </div>
-            <div class="divBurguer" id="divBurguer2">
-                <a href="#Sobremesas">
-                    <div class="divTxtBurguer">
-                        <h1>Sobremesas</h1>
-                    </div>
-                </a>
+            <div class="divBurguer2">
+                <div class="divBurguer3 divBurguer4">
+                    <a href="#Sobremesas" class="aBurg">
+                        <div class="divTxtBurguer2">
+                            <h1>Sobremesas</h1>
+                        </div>
+                    </a>
+                </div>
+                <div class="divBurguer3 divBurguer5">
+                    <a href="#Molhos" class="aBurg">
+                        <div class="divTxtBurguer2">
+                            <h1>Molhos</h1>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="divProdutosCustomizaveis">
@@ -122,7 +131,7 @@
 
             <div class="divBebidas">
                 <div class="divSubBebidas">
-                    <p><b>Molhos</b></p>
+                    <p id="Molhos"><b>Molhos</b></p>
                 </div>
             </div>
 

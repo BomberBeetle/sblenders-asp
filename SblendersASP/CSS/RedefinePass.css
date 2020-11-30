@@ -1,0 +1,36 @@
+﻿body {
+}
+
+.geral {
+    height: 55vh;
+    width: 476px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.campo {
+    margin-bottom: 20px;
+    padding: 0px 15px;
+    font-size: 18px;
+    border-radius: 20px 4px;
+}
+
+.aviso {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.botao {
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+    background: #18a180;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #18a180;
+}

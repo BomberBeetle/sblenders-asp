@@ -473,7 +473,7 @@
 
 .divBtnExcluirLanche {
     height: 80px;
-    width: 365px;
+    width: 360px;
     align-items: initial;
     display: flex;
     flex-direction: row;
@@ -493,7 +493,7 @@
     border-radius: 30px 30px;
     border: 0px;
     color: #DEDEDE;
-    box-shadow: 6px 6px 6px #656565;
+    box-shadow: 5px 10px 19px rgba(0, 0, 0, 0.3);
     padding-left: 20px;
 }
 
@@ -520,7 +520,7 @@
 
 .divBtnOpcoesPagLanches {
     height: 80px;
-    width: 500px;
+    width: 485px;
     align-items: initial;
     display: flex;
     flex-direction: row;
@@ -531,7 +531,7 @@
 
 .btnIrCarrinho {
     width: 100%;
-    background-image: linear-gradient(135deg, rgba(39, 131, 219) 0%, rgba(27, 119, 207) 50%, rgba(15, 103, 186) 100%);
+    background-color: #2464c1;
     font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
@@ -540,7 +540,7 @@
     border-radius: 30px 30px;
     border: 0px;
     color: #DEDEDE;
-    box-shadow: 6px 6px 6px #656565;
+    box-shadow: 5px 10px 19px rgba(0, 0, 0, 0.3);
     padding-left: 20px;
 }
 
