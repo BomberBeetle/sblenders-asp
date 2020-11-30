@@ -10,6 +10,80 @@
     flex-direction: column;
 }
 
+.sectionProd {
+    height: 100vh;
+    width: 100%;
+    float: left;
+    background-color: transparent;
+    z-index: 999;
+    position: fixed;
+    align-items: initial;
+    display: flex;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divDescricaoProduto {
+    height: 50vh;
+    width: 40%;
+    background-color: #e8e7e7;
+    margin-top: 5vh;
+    border-radius: 15px;
+}
+
+.divDescricaoProdutoTitulo {
+    height: 15%;
+    width: 100%;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #e8a13c;
+    border-bottom: 1px inset #e8a13c;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.h1InfoNutri {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 !important;
+}
+
+.divDescricaoProdutoTitulo a {
+    height: 100%;
+    float: right;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.imgIconX {
+    height: 80%;
+    float: right;
+}
+
+.divDescricaoProdutoCorpo {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: justify;
+}
+
+    .divDescricaoProdutoCorpo p {
+        font-size: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
 .bigboy {
     display: flex;
     width: 100%;
@@ -27,7 +101,7 @@
     height: 150px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 
@@ -63,7 +137,7 @@
 .divIngredientesCategoria h1 {
     font-size: 42px;
     user-select: none;
-    margin: auto;
+    margin: auto 0 auto 0;
 }
 
 .selectCategoria {
@@ -73,7 +147,7 @@
     border-radius: 30px;
     text-shadow: 2px 2px 2px #989898;
     display: flex;
-    margin: auto;
+    margin: auto 0 auto 0;
     margin-left: 20px;
 }
 
@@ -96,8 +170,18 @@
     font-size: 30px;
 }
 
-.optionCategoria:hover {
-    background-color: #e3e3e3;
+    .optionCategoria:hover {
+        background-color: #e3e3e3;
+    }
+
+.divIngredientesCategoria a {
+    width: 40px;
+    margin: auto 0 auto 0;
+    cursor: pointer;
+}
+
+.divIngredientesCategoria img {
+    width: 100%;
 }
 
 .divMostrarIngredientes {
@@ -151,10 +235,10 @@
     margin-bottom: 50px;
 }
 
-.divProduto a {
-    text-decoration: none;
-    color: black;
-}
+    .divProduto a {
+        text-decoration: none;
+        color: black;
+    }
 
 .divSubProduto1 {
     height: 250px;
@@ -222,10 +306,10 @@
     border-radius: 10px 10px;
 }
 
-.btnAdicionarCarrinho:hover {
-    background-color: #15b62a;
-    transition: 0.7s;
-}
+    .btnAdicionarCarrinho:hover {
+        background-color: #15b62a;
+        transition: 0.7s;
+    }
 
 .divSubProduto4 {
     height: 100px;
@@ -413,9 +497,9 @@
     padding-left: 20px;
 }
 
-.btnExcluirLanche:focus {
-    outline: none;
-}
+    .btnExcluirLanche:focus {
+        outline: none;
+    }
 
 .divTextoBtnExcluirLanche {
     height: 80px;
@@ -426,13 +510,13 @@
     justify-content: center;
 }
 
-.divTextoBtnExcluirLanche p {
-    margin-bottom: 0;
-}
+    .divTextoBtnExcluirLanche p {
+        margin-bottom: 0;
+    }
 
-.divTextoBtnExcluirLanche img {
-    height: 90%;
-}
+    .divTextoBtnExcluirLanche img {
+        height: 90%;
+    }
 
 .divBtnOpcoesPagLanches {
     height: 80px;
@@ -460,9 +544,9 @@
     padding-left: 20px;
 }
 
-.btnIrCarrinho:focus {
-    outline: none;
-}
+    .btnIrCarrinho:focus {
+        outline: none;
+    }
 
 .divTextoBtnCarrinho {
     height: 80px;
@@ -474,11 +558,11 @@
     justify-content: center;
 }
 
-.divTextoBtnCarrinho p {
-    margin-bottom: 0;
-}
+    .divTextoBtnCarrinho p {
+        margin-bottom: 0;
+    }
 
-.divTextoBtnCarrinho img {
-    height: 90%;
-    float: left;
-}
+    .divTextoBtnCarrinho img {
+        height: 90%;
+        float: left;
+    }

@@ -105,6 +105,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="CSS\AdicaoCarrinho.css" />
     <Content Include="CSS\ConfirmacaoPedido.css" />
+    <Content Include="Imagens\i.png" />
     <Content Include="CSS\LandingVerification.css" />
     <Content Include="CSS\Quem_somos.css" />
     <Content Include="CSS\AreaCliente.css" />
@@ -407,7 +408,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49926</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:4992/</IISUrl>
+          <IISUrl>http://localhost:49926/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -565,3 +565,9 @@
     height: 90%;
     float: left;
 }
+
+.divInfos{
+    width:100%;
+    height:30px;
+    background-color:#37c418;
+}

@@ -106,7 +106,7 @@
     flex-direction: column;
 }
 
-#btnCancel4 {
+.btnCancel {
     height: 30px;
     display: inline-block;
     background: #ff4242;

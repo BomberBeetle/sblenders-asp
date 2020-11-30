@@ -575,6 +575,29 @@ function tamDivIngredientes() {
 
 window.onresize = tamDivIngredientes;
 
+var visibilidadeInst = false;
+
+function fecharInstrucoes() {
+    var divInst = document.getElementById("secProd1");
+    if (visibilidadeInst == true) {
+        divInst.style.display = "none";
+        visibilidadeInst = false;
+        document.getElementById("divDescricaoProdutoCorpo1").innerHTML = "";
+    }
+    event.preventDefault();
+}
+
+function exibirInstrucoes() {
+    var divInst = document.getElementById("secProd1");
+    if (visibilidadeInst == false) {
+        divInst.style.display = "flex";
+        visibilidadeInst = true;
+    } else if (visibilidadeInst == true) {
+        divInst.style.display = "none";
+        visibilidadeInst = false;
+    }
+}
+
 var visibilidadeNutri = false;
 
 function fecharInfoNutri() {
@@ -598,14 +621,15 @@ function exibirInfoNutri(o) {
             var d = dados.infoNutr;
             var dCount = d.length - 1;
             while (dCount >= 0) {
-                let lblDes = document.createElement("span");
-                lblDes.innerText = d[dCount].descricao;
-                lblDes.className = "lblDescNutri";
-                document.getElementById("divDescricaoProdutoCorpo1").appendChild(lblDes);
-                let lblVal = document.createElement("span");
-                lblVal.innerText = d[dCount].val;
-                lblVal.className = "lblDescValor";
-                document.getElementById("divDescricaoProdutoCorpo1").appendChild(lblVal);
+                let divDes = document.createElement("div");
+                divDes.className = "divInfos";
+                let span1 = '<span class="lblDescNutri">';
+                let spanT = d[dCount].descricao;
+                let span2 = '</span>';
+                let span3 = '<span class="lblDescValor">';
+                let spanV = d[dCount].val;
+                divDes.innerHTML = span1 + spanT + span2 + span3 + spanV + span2;
+                document.getElementById("divDescricaoProdutoCorpo1").appendChild(divDes);               
                 dCount--;
             }
         }).catch((err) => {
