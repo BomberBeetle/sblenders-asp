@@ -21,38 +21,36 @@
                 </div>
             </div>
         </div>
-        <div class="divAdicionarLanches">
-            <div class="divCustomizarLanches">
-                <div class="divBurguer" id="divBurguer1">
-                    <a href="Ingredientes.aspx">
-                        <div class="divTxtBurguer">
-                            <h1>Monte seu Sblurger </h1>
+        <div class="divCustomizarLanches">
+            <div class="divBurguer" id="divBurguer1">
+                <a href="Ingredientes.aspx">
+                    <div class="divTxtBurguer">
+                        <h1>Monte seu Sblurger </h1>
+                    </div>
+                </a>
+            </div>
+            <div class="divBurguer2">
+                <div class="divBurguer3 AcomWall">
+                    <a href="#Acompanhamentos" class="aBurg">
+                        <div class="divTxtBurguer2">
+                            <h1>Acompanhamentos</h1>
                         </div>
                     </a>
                 </div>
-                <div class="divBurguer2">
-                    <div class="divBurguer3">
-                        <a href="" class="aBurg">
-                            <div class="divTxtBurguer">
-                                <h1>Acompanhamentos</h1>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="divBurguer3">
-                        <a href="" class="aBurg">
-                            <div class="divTxtBurguer">
-                                <h1>Bebidas</h1>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="divBurguer" id="divBurguer2">
-                    <a href="">
-                        <div class="divTxtBurguer">
-                            <h1>Sobremesas</h1>
+                <div class="divBurguer3 BebidasWall">
+                    <a href="#Bebidas" class="aBurg">
+                        <div class="divTxtBurguer2">
+                            <h1>Bebidas</h1>
                         </div>
                     </a>
                 </div>
+            </div>
+            <div class="divBurguer" id="divBurguer2">
+                <a href="#Sobremesas">
+                    <div class="divTxtBurguer">
+                        <h1>Sobremesas</h1>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="divProdutosCustomizaveis">
@@ -63,7 +61,7 @@
             </div>-->
             <div class="divBebidas">
                 <div class="divSubBebidas">
-                    <p><b>Acompanhamentos </b></p>
+                    <p id="Acompanhamentos"><b>Acompanhamentos </b></p>
                 </div>
             </div>
             <div class="divSubProdutosCustomizaveis" id="divAcompanhamento">
@@ -91,7 +89,7 @@
             </div>
             <div class="divBebidas">
                 <div class="divSubBebidas">
-                    <p><b>Bebidas </b></p>
+                    <p id="Bebidas"><b>Bebidas</b></p>
                 </div>
             </div>
             <div class="divSubProdutosCustomizaveis" id="divBebida">
@@ -106,7 +104,7 @@
 
             <div class="divBebidas">
                 <div class="divSubBebidas">
-                    <p><b>Sobremesas </b></p>
+                    <p id="Sobremesas"><b>Sobremesas </b></p>
                 </div>
             </div>
 
@@ -124,7 +122,7 @@
 
             <div class="divBebidas">
                 <div class="divSubBebidas">
-                    <p><b>Molhos </b></p>
+                    <p><b>Molhos</b></p>
                 </div>
             </div>
 

@@ -25,4 +25,39 @@
             <span class="sr-only">Próximo</span>
         </a>
     </div>
+    <div class="divProd">
+        <h1 class="Faca">Faça seu Pedido</h1>
+        <div class="divCustomizarLanches">
+            <div class="divBurguer" id="divBurguer1">
+                <a href="Ingredientes.aspx">
+                    <div class="divTxtBurguer">
+                        <h1>Monte seu Sblurger </h1>
+                    </div>
+                </a>
+            </div>
+            <div class="divBurguer2">
+                <div class="divBurguer3 AcomWall">
+                    <a href="Produtos.aspx#Acompanhamentos" class="aBurg">
+                        <div class="divTxtBurguer2">
+                            <h1>Acompanhamentos</h1>
+                        </div>
+                    </a>
+                </div>
+                <div class="divBurguer3 BebidasWall">
+                    <a href="Produtos.aspx#Bebidas" class="aBurg">
+                        <div class="divTxtBurguer2">
+                            <h1>Bebidas</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="divBurguer" id="divBurguer2">
+                <a href="Produtos.aspx#Sobremesas">
+                    <div class="divTxtBurguer">
+                        <h1>Sobremesas</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </asp:Content>

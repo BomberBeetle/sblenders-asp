@@ -8,7 +8,9 @@
     src: url('Fontes/Roboto-Black.ttf');
 }
 
-body {}
+body {
+    background-color: #ff7300;
+}
 
 * {
     font-family: 'Century Gothic';
@@ -83,10 +85,6 @@ body {}
     width: 100%;
 }
 
-.imgCarrouselBanner {
-    height: 100vh;
-}
-
 #carouselIndex2 {
     height: 100vh;
     width: 80%;
@@ -113,16 +111,172 @@ ul {
     text-decoration: none;
 }
 
-.divFooter {
-    display: none;
-}
-
-.BottomFooter {
-    display: none;
-}
-
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 925px) {
     .divLinks {
         border-right: #fff 1px solid;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .divHeader {
+        position: static !important;
+        width: auto !important;
+        background-color: #ff7300 !important;
+    }
+}
+
+.divProd {
+    padding: 80px 40px;
+    margin: 0 auto;
+    background-image: url(ImagensCSS/woodwallpaper.jpg);
+    background-size: cover;
+}
+
+.divCustomizarLanches {
+    margin: 0 auto;
+    height: auto;
+    width: 1011px;
+}
+
+.divBurguer {
+    height: 250px;
+    width: 100%;
+    box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.3);
+}
+
+.divBurguer a,
+.divBurguer3 a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.divTxtBurguer {
+    display: flex;
+    height: inherit;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.divTxtBurguer2 {
+    display: flex;
+    height: inherit;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.divTxtBurguer h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    text-shadow: 2px 2px 2px #000;
+    color: #f0f0f0;
+}
+
+.divTxtBurguer2 h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    text-shadow: 2px 2px 2px #000;
+    color: #f0f0f0;
+}
+
+.divBurguer2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divBurguer3 {
+    height: 200px;
+    width: 505px;
+    box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.3);
+}
+
+#divBurguer1 {
+    background-image: url(ImagensCSS/hamburgerwallpaper.png);
+    background-position: center;
+    background-repeat: space;
+    overflow: hidden;
+}
+
+.AcomWall {
+    background-image: url(ImagensCSS/acompanhamentoswallpaper.png);
+    background-position: center;
+    overflow: hidden;
+}
+
+.BebidasWall {
+    background-image: url(ImagensCSS/sodawallpaper.png);
+    background-position: center;
+    overflow: hidden;
+}
+
+#divBurguer2 {
+    background-image: url(ImagensCSS/dessertswallpaper.png);
+    background-position: center;
+    overflow: hidden;
+}
+
+.divFooter {
+    box-shadow: 0px 10px 19px rgba(0, 0, 0, 0.5);
+    margin: 0px;
+}
+
+.Faca {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 20px #000;
+}
+
+@media screen and (max-width: 1100px) {
+    .divProd {
+        padding: 80px 0;
+        margin: 0 auto;
+    }
+    .divCustomizarLanches {
+        width: 75%;
+    }
+    .divBurguer3 {
+        width: 50%;
+    }
+    .divTxtBurguer2 h1 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .Faca {
+        font-size: 30px;
+    }
+    .divTxtBurguer h1 {
+        font-size: 20px;
+        text-align: left;
+    }
+    .divTxtBurguer2 h1 {
+        font-size: 18px;
+    }
+    .divBurguer3 {
+        width: 100%;
+    }
+    .divBurguer2 {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-items: center;
     }
 }

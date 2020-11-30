@@ -323,9 +323,9 @@
                                 <div class="contentFooter">
                                     <ul class="FooterLinks">
                                         <li><a href="Ingredientes.aspx">Sblurger</a></li>
-                                        <li><a href="">Batata</a></li>
-                                        <li><a href="">Salada</a></li>
-                                        <li><a href="">Churros</a></li>
+                                        <li><a href="Produtos.aspx#Acompanhamentos">Acompanhamentos</a></li>
+                                        <li><a href="Produtos.aspx#Bebidas">Bebidas</a></li>
+                                        <li><a href="Produtos.aspx#Sobremesas">Sobremesas</a></li>
                                     </ul>
                                 </div>
                             </li>
