@@ -3,7 +3,7 @@
 
 .divBodyAreaCliente {
     height: auto;
-    width: 70%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -27,11 +27,12 @@
     align-self: center;
     gap: 5px;
     justify-content: space-around;
+    width: 276px;
 }
 
     .inputs p {
         font-size: 2.5rem;
-        margin-bottom:0;
+        margin-bottom: 0;
     }
 
 .txtNome,
@@ -56,7 +57,7 @@
 }
 
 .btnSalvar {
-    width: 276px;
+    width: 100%;
     height: 50px;
     display: inline-block;
     background: #18a180;
@@ -79,9 +80,13 @@
     align-items: flex-start;
 }
 
+.produtinhos {
+    display: flex;
+    flex-direction: column;
+}
+
 .listapedidos-produto {
     display: flex;
-    flex-direction: row;
     text-align: center;
     gap: 5px;
 }
@@ -117,4 +122,50 @@
     color: #fff;
     border: 1px solid #ff4242;
     border-radius: 20px 20px;
+}
+
+@media screen and (max-width:705px) {
+    .divBodyAreaCliente {
+        flex-direction: column;
+    }
+
+    .jorge {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .inputs{
+        width:100%;
+    }
+
+    .inputs p {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .txtNome,
+    .txtSobrenome, .txtSenha,
+    .txtConfirmarSenha {
+        width: 100%;
+    }
+
+    .pedidos {
+        width: 90%;
+    }
+
+    .tituloPedidos {
+        font-size: 1.5rem;
+    }
+
+    .pedido {
+        font-size: 1rem;
+    }
+
+    .listapedidos-produto {
+        gap: 0px;
+    }
+
+        .listapedidos-produto p {
+            font-size: 1rem;
+        }
 }

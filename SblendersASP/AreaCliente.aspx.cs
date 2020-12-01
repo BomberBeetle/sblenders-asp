@@ -127,7 +127,7 @@ namespace TCC
 
                                     HtmlGenericControl divButton = new HtmlGenericControl("DIV");
                                     divButton.Attributes.Add("class", "button");
-                                    divPedido.Controls.Add(divButton);
+                                    divPedidoFull.Controls.Add(divButton);
 
                                     if(resultado3.estadoID == 1)
                                     {
@@ -139,9 +139,13 @@ namespace TCC
                                         divButton.Controls.Add(btnCancelar);
                                     }
 
+                                    HtmlGenericControl divProdutinhos = new HtmlGenericControl("DIV");
+                                    divProdutinhos.Attributes.Add("class", "produtinhos");
+                                    divPedido.Controls.Add(divProdutinhos);
+
                                     HtmlGenericControl divProdutos = new HtmlGenericControl("DIV");
                                     divProdutos.Attributes.Add("class", "listapedidos-produto");
-                                    divPedido.Controls.Add(divProdutos);
+                                    divProdutinhos.Controls.Add(divProdutos);
                                     //var produtosBuilder = new StringBuilder();
 
                                     foreach (var produto in produtos)
