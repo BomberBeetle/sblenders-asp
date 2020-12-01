@@ -4,8 +4,11 @@
     <link rel="stylesheet" type="text/css" href="CSS/Ingredientes.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="divOpenMenuIngre">
+        <span class="opmenuIngre" style="font-size: 30px; cursor: pointer" onclick="openNavIngredientes()">Visualizar Sblurger</span>
+    </div>
     <div class="divTituloPagina">
-        <h1>Escolha os Ingredientes </h1>
+        <h1>Escolha os Ingredientes</h1>
     </div>
     <div class="geral">
         <div id="secProd1" class="sectionProd">
@@ -57,7 +60,8 @@
                     </div>
                 </div>
             </div>
-            <div class="smallboy">
+            <div class="smallboy" id="Smallboy">
+                <a href="javascript:void(0)" class="closebtnIngre" onclick="closeNavIngredientes()">&times;</a>
                 <div class="divIngredientesCliente" id="divIngredientesCliente" runat="server">
                     <div class="divIngredientesCategoria">
                         <h1>Seu Sblurger:</h1>

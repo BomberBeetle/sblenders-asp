@@ -631,7 +631,7 @@ function exibirInfoNutri(o) {
                 let span3 = '<span class="lblDescValor">';
                 let spanV = d[dCount].val;
                 divDes.innerHTML = span1 + spanT + span2 + span3 + spanV + span2;
-                document.getElementById("divDescricaoProdutoCorpo1").appendChild(divDes);               
+                document.getElementById("divDescricaoProdutoCorpo1").appendChild(divDes);
                 dCount--;
             }
         }).catch((err) => {
@@ -684,12 +684,16 @@ function subtrair(o) {
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.body.style.backgroundColor = "white";
+}
+
+function openNavIngredientes() {
+    document.getElementById("Smallboy").style.width = "90%";
+}
+
+function closeNavIngredientes() {
+    document.getElementById("Smallboy").style.width = "0";
 }

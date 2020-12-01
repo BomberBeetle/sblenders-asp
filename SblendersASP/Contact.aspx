@@ -9,23 +9,27 @@
 
 
     </div>
-    <div class="divContent" style="padding: 5px; margin: 0 auto; display: flex; flex-direction: column; padding: 30px;">
-        <p>Alguma dúvida? Dissatisfeito com nossos produtos? Tem alguma reclamação? Escreva para nós abaixo e entraremos em contato!</p>
-        <p>Caso prefira, também temos outros meios de contato:</p>
-        <div>
-            <img src="Imagens/zap.png" style="width: 20px; height: 20px;">
-            +55 11 4738-8467 
-        </div>
-        <div>
-            <img src="Imagens/mail.png" style="width: 20px; height: 20px;">
-            sblenders.fast.food@gmail.com 
-        </div>
-        <p style="">Sua mensagem:</p>
-        <textarea id="conteudo" name="tutorial" rows="3" cols="40" maxlength="750"></textarea>
-        <p style="">Seu Email:</p>
-        <textarea id="email" name="tutorial" rows="1" cols="40" maxlength="50"></textarea>
-        <div class="divEnviar">
-            <button class="enviar" id="enviar">Enviar</button>
+    <div class="divContent">
+        <div class="divContentRow">
+            <div class="divContentCol">
+                <p>Alguma dúvida? Dissatisfeito com nossos produtos? Tem alguma reclamação? Escreva para nós abaixo e entraremos em contato!</p>
+                <p>Caso prefira, também temos outros meios de contato:</p>
+                <div>
+                    <img src="Imagens/zap.png" style="width: 20px; height: 20px;">
+                    +55 11 4738-8467 
+                </div>
+                <div>
+                    <img src="Imagens/mail.png" style="width: 20px; height: 20px;">
+                    sblenders.fast.food@gmail.com 
+                </div>
+                <p style="">Sua mensagem:</p>
+                <textarea id="conteudo" name="tutorial" rows="5" cols="40" maxlength="750"></textarea>
+                <p style="">Seu Email:</p>
+                <textarea id="email" name="tutorial" rows="1" cols="40" maxlength="50"></textarea>
+                <div class="divEnviar">
+                    <button class="enviar" id="enviar">Enviar</button>
+                </div>
+            </div>
         </div>
     </div>
 </asp:Content>

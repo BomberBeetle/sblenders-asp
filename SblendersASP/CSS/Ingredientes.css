@@ -78,11 +78,11 @@
     text-align: justify;
 }
 
-    .divDescricaoProdutoCorpo p {
-        font-size: 30px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+.divDescricaoProdutoCorpo p {
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 .bigboy {
     display: flex;
@@ -170,9 +170,9 @@
     font-size: 30px;
 }
 
-    .optionCategoria:hover {
-        background-color: #e3e3e3;
-    }
+.optionCategoria:hover {
+    background-color: #e3e3e3;
+}
 
 .divIngredientesCategoria a {
     width: 40px;
@@ -235,10 +235,10 @@
     margin-bottom: 50px;
 }
 
-    .divProduto a {
-        text-decoration: none;
-        color: black;
-    }
+.divProduto a {
+    text-decoration: none;
+    color: black;
+}
 
 .divSubProduto1 {
     height: 250px;
@@ -306,10 +306,10 @@
     border-radius: 10px 10px;
 }
 
-    .btnAdicionarCarrinho:hover {
-        background-color: #15b62a;
-        transition: 0.7s;
-    }
+.btnAdicionarCarrinho:hover {
+    background-color: #15b62a;
+    transition: 0.7s;
+}
 
 .divSubProduto4 {
     height: 100px;
@@ -454,12 +454,11 @@
 }
 
 .divTot {
-    height: 80px;
     margin-bottom: 30px;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-left: 72.45%
+    margin-left: 72%;
 }
 
 #lblTotalIngredientes {
@@ -497,9 +496,9 @@
     padding-left: 20px;
 }
 
-    .btnExcluirLanche:focus {
-        outline: none;
-    }
+.btnExcluirLanche:focus {
+    outline: none;
+}
 
 .divTextoBtnExcluirLanche {
     height: 80px;
@@ -510,13 +509,13 @@
     justify-content: center;
 }
 
-    .divTextoBtnExcluirLanche p {
-        margin-bottom: 0;
-    }
+.divTextoBtnExcluirLanche p {
+    margin-bottom: 0;
+}
 
-    .divTextoBtnExcluirLanche img {
-        height: 90%;
-    }
+.divTextoBtnExcluirLanche img {
+    height: 90%;
+}
 
 .divBtnOpcoesPagLanches {
     height: 80px;
@@ -544,9 +543,9 @@
     padding-left: 20px;
 }
 
-    .btnIrCarrinho:focus {
-        outline: none;
-    }
+.btnIrCarrinho:focus {
+    outline: none;
+}
 
 .divTextoBtnCarrinho {
     height: 80px;
@@ -558,11 +557,76 @@
     justify-content: center;
 }
 
-    .divTextoBtnCarrinho p {
-        margin-bottom: 0;
-    }
+.divTextoBtnCarrinho p {
+    margin-bottom: 0;
+}
 
-    .divTextoBtnCarrinho img {
-        height: 90%;
-        float: left;
+.divTextoBtnCarrinho img {
+    height: 90%;
+    float: left;
+}
+
+.divOpenMenuIngre {
+    display: none;
+}
+
+.closebtnIngre {
+    display: none;
+}
+
+@media screen and (max-width: 925px) {
+    body {
+        background-image: none;
     }
+    .divHeader {
+        z-index: 100;
+    }
+    .divOpenMenuIngre {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .opmenuIngre {
+        display: flex;
+        user-select: none;
+        color: rgb(31, 31, 31);
+        background-color: #ffad15;
+        padding: 5px 5px;
+        font-size: 20px !important;
+        border-radius: 10px 0 0 10px;
+    }
+    .divTituloPagina {
+        margin: 0;
+    }
+    .smallboy {
+        display: block;
+        position: fixed !important;
+        height: 100%;
+        width: 0;
+        z-index: 50;
+        top: 0;
+        right: 0;
+        background-color: #ffad15;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        transition: 0.5s;
+    }
+    .divTot {
+        justify-content: center;
+        margin: 0 0 30px 0;
+    }
+    .divIngredientes {
+        width: auto;
+    }
+    .closebtnIngre {
+        display: block;
+        position: absolute;
+        padding: 0 15px;
+        font-size: 40px !important;
+        text-decoration: none;
+        color: #ffffff;
+        transition: 0.5s;
+    }
+    .closebtnIngre:hover {
+        color: #ff5e00;
+    }
+}

@@ -1,31 +1,64 @@
 ﻿body {
+    background-color: rgb(255, 255, 255);
 }
 
-.divBodyAreaCliente {
-    height: auto;
-    width: 100%;
-    float: left;
+.divContent {
+    max-width: 75rem;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-flow: row wrap;
 }
 
-.divNomePagina {
-    width: 100%;
+.divContentCol {
+    background-color: #FFF;
+    border-radius: 2px;
+    box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    padding: 30px;
 }
 
-.principal {
-    margin: auto;
-    text-align: center;
-    height: 100%;
-    width: 70%;
+.divContentRow {
+    padding: 0 15px;
+    margin: 0 auto;
+    min-width: 0;
 }
 
-    .principal p {
-        text-align: justify;
-    }
+.divContentCol {
+    text-align: justify;
+    text-justify: inter-word;
+}
 
 .titulo {
-    font-size: 2.2vw;
+    text-align: center;
 }
 
-.somos {
-    font-size: 1vw;
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.imgSblebs {
+    max-width: 250px;
+    width: 100%;
+}
+
+.sallya {
+    font-size: 14px;
+    text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+    .divTituloPagina {
+        width: 250px;
+    }
+    .divContentRow {
+        padding: 0;
+    }
+    .divContentCol {
+        padding: 10px;
+    }
 }
