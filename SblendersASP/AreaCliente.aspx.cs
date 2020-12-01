@@ -142,14 +142,15 @@ namespace TCC
                                     HtmlGenericControl divProdutinhos = new HtmlGenericControl("DIV");
                                     divProdutinhos.Attributes.Add("class", "produtinhos");
                                     divPedido.Controls.Add(divProdutinhos);
-
-                                    HtmlGenericControl divProdutos = new HtmlGenericControl("DIV");
-                                    divProdutos.Attributes.Add("class", "listapedidos-produto");
-                                    divProdutinhos.Controls.Add(divProdutos);
+                                   
                                     //var produtosBuilder = new StringBuilder();
 
                                     foreach (var produto in produtos)
                                     {
+                                        HtmlGenericControl divProdutos = new HtmlGenericControl("DIV");
+                                        divProdutos.Attributes.Add("class", "listapedidos-produto");
+                                        divProdutinhos.Controls.Add(divProdutos);
+
                                         HtmlGenericControl pList = new HtmlGenericControl("P");
                                         pList.Attributes.Add("class", "listapedidos-produto-preco");
                                         pList.InnerText = resultado3.produtos.First(p => p.produtoID == produto.ID).pedidoProdutoQtde.ToString() + "x";
