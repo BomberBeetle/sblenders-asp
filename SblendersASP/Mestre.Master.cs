@@ -255,7 +255,6 @@ namespace TCC
             if (response.IsSuccessStatusCode)
             {
                 lblAvisoEsqSenha.Text = "Verifique seu Email";
-                Response.Redirect("LandingVerification.aspx?landing=bigfloppa");
             }
             else
             {
