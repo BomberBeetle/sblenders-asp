@@ -5,7 +5,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="geral">
-        
         <asp:TextBox ID="txtSenha" runat="server" CssClass="campo" TextMode="Password" placeholder="Nova senha" Text=""></asp:TextBox>
         <asp:TextBox ID="txtConfirmarSenha" runat="server" CssClass="campo" TextMode="Password" placeholder="Confirme a Senha" Text=""></asp:TextBox>
         <asp:Label ID="lblAvisoSenha" runat="server" Text="" CssClass="aviso"></asp:Label>

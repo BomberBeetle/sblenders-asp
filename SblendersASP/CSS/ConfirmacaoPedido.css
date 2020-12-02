@@ -10,20 +10,19 @@
     justify-content: center;
 }
 
-.obrigado{
-    width:50%;
-    font-size:30px;
-    text-align:center;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+.obrigado {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.obrigado img{
-    height:60px;
-    width:60px;
-}
+    .obrigado img {
+        height: 60px;
+        width: 60px;
+    }
 
 .divAdicaoProdutoCorpo {
     height: 85%;
@@ -33,28 +32,36 @@
 }
 
 .corpo {
-    font-size: 1.2vw;
+    font-size: 35px;
     color: green;
     font-weight: 700;
+    padding: 0 5px 0 5px;
 }
 
 .buttons {
     display: flex;
     justify-content: space-evenly;
+    width: 45%;
 }
 
-.btnJorge {
+.btnJorge1, .btnJorge2 {
     height: 70px;
-    width: 37%;
     background-color: #2464c1;
     font-size: 22px;
     font-weight: bold;
     text-transform: uppercase;
-    padding-right: 0px;
     border-radius: 30px 30px;
     border: 0px;
     color: #DEDEDE;
     box-shadow: 5px 10px 19px rgba(0, 0, 0, 0.3);
+}
+
+.btnJorge1 {
+    width: 220px;
+}
+
+.btnJorge2 {
+    width: 220px;
 }
 
 .divTextoBtnVoltar p {
@@ -94,3 +101,68 @@
         height: 90%;
         float: left;
     }
+
+@media screen and (max-width:1650px) {
+    .corpo {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:1450px) {
+    .corpo {
+        font-size: 25px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:1190px) {
+    .buttons {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:865px) {
+    .buttons {
+        width: 80%;
+    }
+
+    .btnJorge1, .btnJorge2 {
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .btnJorge1 {
+        width: 200px;
+    }
+
+    .btnJorge2 {
+        width: 200px;
+    }
+
+    .divTextoBtnVoltar, .divTextoBtnAvancar {
+        height: 58px;
+    }
+}
+
+@media screen and (max-width:730px) {
+    .buttons {
+        width: 80%;
+    }
+
+    .btnJorge1, .btnJorge2 {
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .btnJorge1 {
+        width: 160px;
+    }
+
+    .btnJorge2 {
+        width: 160px;
+    }
+
+    .divTextoBtnVoltar, .divTextoBtnAvancar {
+        height: 48px;
+    }
+}

@@ -15,6 +15,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    min-height: 380px;
 }
 
 .divCaixaItens {
@@ -91,7 +92,7 @@
 }
 
 .divImgItem {
-    height: 300px;
+    height: 100%;
     width: 25%;
     float: left;
     align-items: center;
@@ -102,34 +103,31 @@
 }
 
 .imgItem {
-    height: 250px;
-    width: 80%;
+    width: 100%;
+    max-height:100%;
+    max-width:300px;
 }
 
 .divInfoItem {
-    height: 300px;
+    height: 100%;
     width: 35%;
     float: left;
+    display:flex;
+    justify-content:space-evenly;
+    flex-direction:column;
 }
 
 .divSubInfoItem1 {
-    height: 150px;
+    height: auto;
     width: 100%;
 }
 
-    .divSubInfoItem1::before {
-        height: 100%;
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-    }
-
 .lblNomeItem {
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .divSubInfoItem2 {
-    height: 150px;
+    height: auto;
     width: 100%;
     float: left;
     display: flex;
@@ -140,8 +138,6 @@
 }
 
 .btnExcluirItem {
-    height: 40px;
-    width: 20%;
     background-color: #ff4524;
     border: none;
     border-radius: 5px 5px;
@@ -163,7 +159,7 @@
 }
 
 .divQuantidadeItem {
-    height: 300px;
+    height: 100%;
     width: 20%;
     float: left;
     align-items: center;
@@ -180,7 +176,7 @@
 }
 
 .divPrecoItem {
-    height: 300px;
+    height: 100%;
     width: 20%;
     float: left;
     align-items: center;
@@ -195,7 +191,6 @@
 }
 
 .divTotal {
-    height: 70px;
     width: 100%;
     float: left;
     margin-top: 20px;
@@ -214,7 +209,7 @@
     font-size: 24px;
 }
 
-.divBtnAvancar {
+.divButtons {
     height: 150px;
     width: 100%;
     float: left;
@@ -225,11 +220,9 @@
     justify-content: space-evenly;
 }
 
-.btnIrCarrinho2 {
-    height: 70px;
-    width: 22%;
+.btnJorge1, .btnJorge2 {
     background-color: #2464c1;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
     padding-right: 0px;
@@ -237,10 +230,17 @@
     border: 0px;
     color: #DEDEDE;
     box-shadow: 5px 10px 19px rgba(0, 0, 0, 0.3);
-    padding-left: 20px;
 }
 
-.divTextoBtnCarrinho2 {
+.btnJorge1 {
+    width: 200px;
+}
+
+.btnJorge2 {
+    width: 275px;
+}
+
+.divTextoBtnCarrinho2, .divTextoBtnCarrinho3 {
     height: 70px;
     width: 100%;
     float: left;
@@ -260,31 +260,6 @@
         float: left;
     }
 
-.btnIrCarrinho3 {
-    height: 70px;
-    width: 15%;
-    background-color: #2464c1;
-    font-size: 22px;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding-left: 0px;
-    border-radius: 30px 30px;
-    border: 0px;
-    color: #DEDEDE;
-    box-shadow: 5px 10px 19px rgba(0, 0, 0, 0.3);
-    padding-right: 20px;
-}
-
-.divTextoBtnCarrinho3 {
-    height: 70px;
-    width: 100%;
-    float: left;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
     .divTextoBtnCarrinho3 p {
         margin-bottom: 0;
     }
@@ -299,4 +274,70 @@
 .divCaixaItens2 {
     height: auto;
     width: 80%;
+}
+
+@media screen and (max-width:1450px) {
+    .lblNomeItem,.h1Campo,.selectQuantidadeItem,.lblPrecoItem {
+        font-size: 25px;
+    }
+
+    .h1Campo2{
+        font-size:40px;
+    }
+}
+
+@media screen and (max-width:1230px) {
+    .divItemCarrinho {
+        height: 215px;
+    }
+}
+
+@media screen and (max-width:1070px) {
+    .lblNomeItem, .h1Campo, .selectQuantidadeItem, .lblPrecoItem {
+        font-size: 22.5px;
+    }
+
+    .h1Campo2 {
+        font-size: 35px;
+    }
+
+    .divItemCarrinho {
+        height: 245px;
+    }
+}
+
+@media screen and (max-width:860px) {
+    .divItemCarrinho {
+        height: 172px;
+    }
+}
+
+@media screen and (max-width:715px) {
+    .lblNomeItem, .h1Campo, .selectQuantidadeItem, .lblPrecoItem {
+        font-size: 18px;
+    }
+
+    .h1Campo2 {
+        font-size: 28px;
+    }
+
+    .divItemCarrinho{
+        height:135px;
+    }
+
+    .btnJorge1,.btnJorge2{
+        font-size:15px;
+    }
+
+    .btnJorge1 {
+        width: 160px;
+    }
+
+    .btnJorge2 {
+        width: 225px;
+    }
+
+    .divTextoBtnCarrinho2, .divTextoBtnCarrinho3 {
+        height:50px;
+    }
 }

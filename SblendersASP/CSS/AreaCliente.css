@@ -18,7 +18,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-content: center;
-    width: 50%;
+    width: 30%;
 }
 
 .inputs {
@@ -74,7 +74,7 @@
 }
 
 .pedidos {
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -104,6 +104,7 @@
 .pedidoFull {
     display: flex;
     justify-content: space-between;
+    margin-bottom:20px;
 }
 
 .pedidoParcial {
@@ -124,14 +125,94 @@
     border-radius: 20px 20px;
 }
 
-@media screen and (max-width:705px) {
+@media screen and (max-width:1400px) {
+    .divBodyAreaCliente {
+    }
+
+    .jorge {
+        width: 30%;
+    }
+
+    .inputs {
+        width: 100%;
+    }
+
+        .inputs p {
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+
+    .txtNome,
+    .txtSobrenome, .txtSenha,
+    .txtConfirmarSenha {
+        width: 100%;
+    }
+
+    .pedidos {
+        width: 50%;
+    }
+
+    .tituloPedidos {
+        font-size: 2rem;
+    }
+
+    .pedido {
+        font-size: 1rem;
+    }
+
+        .listapedidos-produto p {
+            font-size: 1rem;
+        }
+}
+
+@media screen and (max-width:1010px) {
+    .divBodyAreaCliente {
+    }
+
+    .jorge {
+        width: 30%;
+    }
+
+    .inputs {
+        width: 100%;
+    }
+
+        .inputs p {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+
+    .txtNome,
+    .txtSobrenome, .txtSenha,
+    .txtConfirmarSenha {
+        width: 100%;
+    }
+
+    .pedidos {
+        width: 60%;
+    }
+
+    .tituloPedidos {
+        font-size: 1.5rem;
+    }
+
+    .pedido {
+        font-size: 1rem;
+    }
+
+        .listapedidos-produto p {
+            font-size: 1rem;
+        }
+}
+
+@media screen and (max-width:920px) {
     .divBodyAreaCliente {
         flex-direction: column;
     }
 
     .jorge {
-        width: 90%;
-        margin-bottom: 20px;
+        width: 100%;
+        margin-bottom: 50px;
     }
 
     .inputs{
@@ -150,7 +231,7 @@
     }
 
     .pedidos {
-        width: 90%;
+        width: 100%;
     }
 
     .tituloPedidos {
@@ -159,10 +240,6 @@
 
     .pedido {
         font-size: 1rem;
-    }
-
-    .listapedidos-produto {
-        gap: 0px;
     }
 
         .listapedidos-produto p {

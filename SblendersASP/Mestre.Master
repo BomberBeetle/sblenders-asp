@@ -43,8 +43,8 @@
                 <div class="divLogBtns" id="divDesconectado" runat="server">
                     <div class="divCarrinho">
                         <li class="liCarrinho">
-                            <a href="Carrinho.aspx" class="aCarrinhoTexto">
-                                Carrinho <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
+                            <a href="Carrinho.aspx" class="aCarrinhoTexto">Carrinho
+                                <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
                             </a>
                         </li>
                     </div>
@@ -58,12 +58,14 @@
 
                 <div class="divHeaderUser" id="divConectado" runat="server">
                     <li class="liCarrinho">
-                        <a href="Carrinho.aspx" class="aCarrinhoTexto">
-                            Carrinho <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
+                        <a href="Carrinho.aspx" class="aCarrinhoTexto">Carrinho
+                            <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
                         </a>
                     </li>
                     <div class="divUser">
-                        <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
+                        <a href="AreaCliente.aspx">
+                            <asp:Label ID="lblBemVindo" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
+                        </a>
                         <div class="saido">
                             <asp:LinkButton ID="linkSair" runat="server" CssClass="lblSair" OnClick="Sair">Sair</asp:LinkButton>
                         </div>
@@ -102,8 +104,8 @@
                             </div>
                             <div class="divCarrinho">
                                 <li class="liCarrinho">
-                                    <a href="Carrinho.aspx" class="aCarrinhoTexto">
-                                        Carrinho <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
+                                    <a href="Carrinho.aspx" class="aCarrinhoTexto">Carrinho
+                                        <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
                                     </a>
                                 </li>
                             </div>
@@ -111,7 +113,9 @@
                         <div class="divheaderusersidenav" id="divsidenavConectado" runat="server">
                             <div class="divheaderusersidenavRow">
                                 <div class="divUser">
-                                    <asp:Label ID="lblBemVindoSidenav" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
+                                    <a href="AreaCliente.aspx">
+                                        <asp:Label ID="lblBemVindoSidenav" runat="server" Text="Bem vindo " CssClass="lblBemVindo"></asp:Label>
+                                    </a>
                                     <div class="saido">
                                         <asp:LinkButton ID="linkSairSidenav" runat="server" CssClass="lblSair" OnClick="Sair">Sair</asp:LinkButton>
                                     </div>
@@ -124,8 +128,8 @@
                             </div>
                             <div class="divCarrinho">
                                 <li class="liCarrinho">
-                                    <a href="Carrinho.aspx" class="aCarrinhoTexto">
-                                        Carrinho <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
+                                    <a href="Carrinho.aspx" class="aCarrinhoTexto">Carrinho
+                                        <img src="CSS/ImagensCSS/carrinhoCompras.png" class="imgCarrinho" />
                                     </a>
                                 </li>
                             </div>
@@ -189,54 +193,54 @@
                     <h1 class="h1LoginTitulo">Faça seu Cadastro</h1>
                 </div>
 
-                    <div class="divFicaJuntin">
-                        <div class="divNome">
-                            <div class="divSubLoginEmail1">
-                                <asp:Label ID="lblNomeCadastro" runat="server" Text="Nome" CssClass="lblDivCadastro2"></asp:Label>
-                            </div>
-                            <div class="divSubLoginEmail2">
-                                <asp:TextBox ID="txtNomeCadastro" runat="server" CssClass="txtDivCadastro2"></asp:TextBox>
-                            </div>
-                            <div class="divSubLoginEmail3">
-                                <asp:Label ID="lblNomeAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
-                            </div>
+                <div class="divFicaJuntin">
+                    <div class="divNome">
+                        <div class="divSubLoginEmail1">
+                            <asp:Label ID="lblNomeCadastro" runat="server" Text="Nome" CssClass="lblDivCadastro2"></asp:Label>
                         </div>
-
-                        <div class="divSobrenome">
-                            <div class="divSubLoginEmail1">
-                                <asp:Label ID="lblSobrenomeCadastro" runat="server" Text="Sobrenome" CssClass="lblDivCadastro2"></asp:Label>
-                            </div>
-                            <div class="divSubLoginEmail2">
-                                <asp:TextBox ID="txtSobrenomeCadastro" runat="server" CssClass="txtDivCadastro2"></asp:TextBox>
-                            </div>
-                            <div class="divSubLoginEmail3">
-                                <asp:Label ID="lblSobrenomeAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
-                            </div>
+                        <div class="divSubLoginEmail2">
+                            <asp:TextBox ID="txtNomeCadastro" runat="server" CssClass="txtDivCadastro2"></asp:TextBox>
+                        </div>
+                        <div class="divSubLoginEmail3">
+                            <asp:Label ID="lblNomeAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
                         </div>
                     </div>
 
-                    <div class="divLoginSenha">
+                    <div class="divSobrenome">
                         <div class="divSubLoginEmail1">
-                            <asp:Label ID="lblEmailCadastro" runat="server" Text="E-mail" CssClass="lblDivCadastro"></asp:Label>
+                            <asp:Label ID="lblSobrenomeCadastro" runat="server" Text="Sobrenome" CssClass="lblDivCadastro2"></asp:Label>
                         </div>
                         <div class="divSubLoginEmail2">
-                            <asp:TextBox ID="txtEmailCadastro" runat="server" CssClass="txtDivCadastro"></asp:TextBox>
+                            <asp:TextBox ID="txtSobrenomeCadastro" runat="server" CssClass="txtDivCadastro2"></asp:TextBox>
                         </div>
                         <div class="divSubLoginEmail3">
-                            <asp:Label ID="lblEmailAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
+                            <asp:Label ID="lblSobrenomeAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
                         </div>
                     </div>
-                    <div class="divLoginSenha">
-                        <div class="divSubLoginEmail1">
-                            <asp:Label ID="lblSenhaCadastro" runat="server" Text="Senha" CssClass="lblDivCadastro"></asp:Label>
-                        </div>
-                        <div class="divSubLoginEmail2">
-                            <asp:TextBox ID="txtSenhaCadastro" runat="server" CssClass="txtDivCadastro" TextMode="Password"></asp:TextBox>
-                        </div>
-                        <div class="divSubLoginEmail3">
-                            <asp:Label ID="lblSenhaAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
-                        </div>
+                </div>
+
+                <div class="divLoginSenha">
+                    <div class="divSubLoginEmail1">
+                        <asp:Label ID="lblEmailCadastro" runat="server" Text="E-mail" CssClass="lblDivCadastro"></asp:Label>
                     </div>
+                    <div class="divSubLoginEmail2">
+                        <asp:TextBox ID="txtEmailCadastro" runat="server" CssClass="txtDivCadastro"></asp:TextBox>
+                    </div>
+                    <div class="divSubLoginEmail3">
+                        <asp:Label ID="lblEmailAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
+                    </div>
+                </div>
+                <div class="divLoginSenha">
+                    <div class="divSubLoginEmail1">
+                        <asp:Label ID="lblSenhaCadastro" runat="server" Text="Senha" CssClass="lblDivCadastro"></asp:Label>
+                    </div>
+                    <div class="divSubLoginEmail2">
+                        <asp:TextBox ID="txtSenhaCadastro" runat="server" CssClass="txtDivCadastro" TextMode="Password"></asp:TextBox>
+                    </div>
+                    <div class="divSubLoginEmail3">
+                        <asp:Label ID="lblSenhaAvisoCadastro" runat="server" Text="" CssClass="lblDivAvisoLogin"></asp:Label>
+                    </div>
+                </div>
 
                 <div class="divLoginSenha">
                     <div class="divSubLoginEmail1">
