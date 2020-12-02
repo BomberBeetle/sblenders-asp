@@ -10,7 +10,7 @@
                 <img class="d-block w-100 imgCarrouselBanner" src="Imagens/sblenders1.jpg" alt="Primeiro Slide" />
             </div>
             <div class="carousel-item" id="itemCarro2">
-                <img class="d-block w-100 imgCarrouselBanner" src="Imagens/carroBurguer2.jpeg" alt="Segundo Slide" />
+                <img class="d-block w-100 imgCarrouselBanner" src="Imagens/sblenders3.jpg" alt="Segundo Slide" />
             </div>
             <div class="carousel-item" id="itemCarro3">
                 <img class="d-block w-100 imgCarrouselBanner" src="Imagens/sblenders2.jpg" alt="Terceiro Slide" />
