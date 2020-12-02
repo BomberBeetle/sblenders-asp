@@ -69,8 +69,7 @@ namespace TCC
 
         public void FinalizarPedido(object sender, EventArgs e)
         {
-            lblOculto.Text = "";
-            lblOculto.CssClass = "hidden";
+            
             if (Session["userID"] != null)
             {
                 if (!String.IsNullOrEmpty(endereco))
@@ -91,7 +90,7 @@ namespace TCC
             }
             else
             {                
-                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "login", "Login()", true);
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "login", "Login(); tracarRotaReverso()", true);
             }
         }
     }
