@@ -11,32 +11,30 @@
 }
 
 .sectionProd {
-    height: 100vh;
-    width: 100%;
-    float: left;
-    background-color: transparent;
-    z-index: 999;
-    position: fixed;
-    align-items: initial;
-    display: flex;
+    height: 100%;
     display: none;
-    flex-direction: row;
-    flex-wrap: wrap;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.5s ease-in-out;
+    overflow: overlay;
     justify-content: center;
+    align-items: center;
 }
 
 .divDescricaoProduto {
-    height: 50vh;
-    width: 40%;
+    display: flex;
+    flex-flow: column;
     background-color: #e8e7e7;
-    margin-top: 5vh;
+    width: 400px;
     border-radius: 15px;
 }
 
 .divDescricaoProdutoTitulo {
-    height: 15%;
     width: 100%;
-    float: left;
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -48,40 +46,36 @@
 
 .h1InfoNutri {
     color: #FFF;
-    font-size: 32px;
+    font-size: 20px;
     font-weight: bold;
     margin: 0 !important;
 }
 
 .divDescricaoProdutoTitulo a {
-    height: 100%;
-    float: right;
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left: 60px;
     cursor: pointer;
 }
 
 .imgIconX {
-    height: 80%;
-    float: right;
+    height: 40px;
+    width: 40px;
 }
 
 .divDescricaoProdutoCorpo {
-    height: 85%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding: 30px 30px;
     text-align: justify;
+    text-justify: inter-word;
+    border-radius: 15px;
 }
 
 .divDescricaoProdutoCorpo p {
-    font-size: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
+    font-size: 16px;
 }
 
 .bigboy {
@@ -137,18 +131,25 @@
 .divIngredientesCategoria h1 {
     font-size: 42px;
     user-select: none;
+    text-align: center;
+    justify-content: center;
     margin: auto 0 auto 0;
 }
 
 .selectCategoria {
-    height: 60px;
-    font-size: 42px;
+    font-size: 36px;
     text-align: center;
     border-radius: 30px;
     text-shadow: 2px 2px 2px #989898;
     display: flex;
     margin: auto 0 auto 0;
-    margin-left: 20px;
+}
+
+.divAmiguinhosRow {
+    display: flex;
+    flex-direction: row;
+    padding: 0 5px;
+    gap: 5px;
 }
 
 *:focus {
@@ -191,15 +192,13 @@
 }
 
 .divPaes {
-    height: auto;
+    height: auto !important;
     width: 100%;
-    float: left;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-content: space-between;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0 50px;
 }
 
 #ContentPlaceHolder1_divPaes {
@@ -228,11 +227,12 @@
 
 .divProduto {
     height: 600px;
-    width: 45%;
+    width: 300px;
+    padding: 20px;
     border-radius: 40px;
     background-color: #FFF;
-    filter: drop-shadow(8px 8px 10px #656565);
-    margin-bottom: 50px;
+    margin: 0 10px 50px 10px;
+    box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.3);
 }
 
 .divProduto a {
@@ -242,7 +242,7 @@
 
 .divSubProduto1 {
     height: 250px;
-    width: 100%;
+    width: 250px;
     float: left;
     align-items: center;
     display: flex;
@@ -253,13 +253,12 @@
 
 .imgSubProduto {
     height: 200px;
-    width: 60%;
+    width: auto;
 }
 
 .divSubProduto2 {
     height: 150px;
     width: 100%;
-    float: left;
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -273,23 +272,21 @@
     height: 60px;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
+    font-size: 18px;
+    margin: 0 15px;
+    text-align: center;
 }
 
 .lblValorProduto {
     width: 100%;
     font-size: 34px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: 0 15px;
+    /* margin-right: 15px; */
     font-weight: bold;
 }
 
 .divSubProduto3 {
-    height: 90px;
     width: 100%;
-    float: left;
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -298,42 +295,41 @@
 }
 
 .btnAdicionarCarrinho {
-    height: 55px;
-    width: 65%;
+    padding: 10px;
     background-color: #37c418;
     color: #EEE;
-    font-size: 22px;
+    font-size: 16px;
     border-radius: 10px 10px;
+    border: none;
 }
 
 .btnAdicionarCarrinho:hover {
     background-color: #15b62a;
-    transition: 0.7s;
+    transition: 0.5s;
 }
 
 .divSubProduto4 {
     height: 100px;
     width: 100%;
-    float: left;
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .btnAumentar {
-    height: 35px;
-    width: 10%;
     background-color: #fa4120;
     font-size: 26px;
     font-weight: bold;
     color: #FFF;
-    border-radius: 10px 10px;
+    border-radius: 25px;
     border: 0px;
     box-shadow: 1px 1px #545454;
     padding: 0;
     text-align: center;
+    height: 40px;
+    width: 40px;
 }
 
 .txtQuantidade {
@@ -347,6 +343,7 @@
     width: 45%;
     display: flex;
     flex-direction: column;
+    transition: 0;
 }
 
 .divIngredientesCliente {
@@ -360,82 +357,87 @@
 }
 
 .divIngredienteCliente {
-    height: 300px;
+    /* height: 300px; */
     width: 80%;
-    float: left;
+    /* float: left; */
     background-color: #f7f7f7;
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     border-radius: 20px 20px;
-    box-shadow: 2px 2px #989898;
+    /* box-shadow: 2px 2px #989898; */
     margin-bottom: 50px;
+    padding: 20px 0px;
+    gap: 5px;
 }
 
 .divIngredienteFoto {
-    height: 220px;
-    width: 30%;
-    float: left;
+    /* height: 220px; */
+    /* width: 30%; */
+    /* float: left; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .imgIngrediente {
-    height: 180px;
-    width: 98%;
+    height: 150px;
+    /* width: 98%; */
 }
 
 .divIngredienteInfo {
-    height: 220px;
-    width: 70%;
-    float: left;
+    /* height: 220px; */
+    /* width: 70%; */
+    /* float: left; */
 }
 
 .divSubIngredienteInfo1 {
-    height: 110px;
-    width: 100%;
-    float: left;
+    /* height: 110px; */
+    /* width: 100%; */
+    /* float: left; */
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .lblNomeIngredienteCliente {
-    font-size: 26px;
+    font-size: 18px;
     color: #323232;
+    text-align: center;
 }
 
 .divSubIngredienteInfo2 {
-    height: 110px;
-    width: 100%;
-    float: left;
+    /* height: 110px; */
+    /* width: 100%; */
+    /* float: left; */
     align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .lblQuantidadeIngredienteCliente {
-    font-size: 20px;
+    font-size: 16px;
+    text-align: center;
 }
 
 .lblValorIngredienteCliente {
-    font-size: 20px;
-    margin-right: 10px;
+    font-size: 16px;
+    /* margin-right: 10px; */
+    text-align: center;
 }
 
 .divIngredienteExcluir {
-    height: 80px;
-    width: 100%;
-    float: left;
+    /* height: 80px; */
+    /* width: 100%; */
+    /* float: left; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -445,7 +447,7 @@
 
 .btnExcluirIngrediente {
     height: 45px;
-    width: 40%;
+    /* width: 40%; */
     border: 0px;
     border-radius: 10px 10px;
     background-color: #fa4120;
@@ -587,28 +589,29 @@
     }
     .opmenuIngre {
         display: flex;
+        position: fixed;
         user-select: none;
-        color: rgb(31, 31, 31);
+        z-index: 101;
+        color: #1d1a14;
         background-color: #ffad15;
+        box-shadow: 5px 5px 19px rgba(0, 0, 0, 0.3);
         padding: 5px 5px;
         font-size: 20px !important;
-        border-radius: 10px 0 0 10px;
-    }
-    .divTituloPagina {
-        margin: 0;
+        border-radius: 10px 0 0 0px;
+        bottom: 0;
+        right: 0;
     }
     .smallboy {
         display: block;
         position: fixed !important;
         height: 100%;
         width: 0;
-        z-index: 50;
+        z-index: 150;
         top: 0;
         right: 0;
         background-color: #ffad15;
         overflow-x: hidden;
         overflow-y: scroll;
-        transition: 0.5s;
     }
     .divTot {
         justify-content: center;
@@ -628,5 +631,172 @@
     }
     .closebtnIngre:hover {
         color: #ff5e00;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .selectCategoria {
+        font-size: 26px;
+    }
+    .divIngredientesCategoria h1 {
+        font-size: 26px;
+        margin: 0;
+    }
+    .divBotoes {
+        display: flex;
+        flex-flow: column-reverse;
+        gap: 20px;
+    }
+    .btnIrCarrinho {
+        width: auto;
+        padding-right: 0;
+    }
+    .btnIrCarrinho,
+    .btnExcluirLanche {
+        font-size: 20px;
+    }
+    .divIngredientesCategoria {
+        flex-direction: column;
+    }
+    .divAmiguinhosRow {
+        justify-content: center;
+        padding: 20px 0;
+    }
+    .divIngredientesCategoria {
+        height: auto;
+        justify-content: flex-start;
+    }
+    .divTextoBtnExcluirLanche {
+        justify-content: space-between;
+    }
+    .btnExcluirLanche {
+        font-size: 20px;
+        padding: 0 20px;
+        width: auto;
+        height: auto;
+    }
+    .divBtnExcluirLanche {
+        width: auto;
+        height: auto;
+        align-items: initial;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .divBtnOpcoesPagLanches {
+        width: auto;
+        height: auto;
+        align-items: initial;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .btnIrCarrinho {
+        font-size: 20px;
+        padding: 0 20px;
+        width: auto;
+        height: auto;
+    }
+    .divPaes {
+        padding: 0;
+    }
+    .divProduto {
+        width: 250px;
+        padding: 0;
+    }
+    .divTituloPagina {
+        width: 250px;
+    }
+    .divTituloPagina h1 {
+        font-size: 20px;
+    }
+    .binbosbinbos {
+        padding: 40px 0 !important;
+    }
+    .divIngredienteExcluir {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: auto;
+        float: none;
+    }
+    .btnExcluirIngrediente {
+        height: 45px;
+        width: auto;
+        border: 0px;
+        border-radius: 10px 10px;
+        background-color: #fa4120;
+        color: white;
+        font-size: 20px;
+    }
+    .divIngredienteCliente {
+        height: auto;
+        width: 80%;
+        float: none;
+        background-color: #f7f7f7;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 20px 20px;
+        box-shadow: none;
+        margin-bottom: 20px;
+        padding: 20px 0;
+    }
+    .divIngredienteFoto {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: auto;
+    }
+    .imgIngrediente {
+        height: 150px;
+        width: auto;
+    }
+    .divIngredienteInfo {
+        padding: 0 20px;
+        text-align: center;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        float: none;
+    }
+    .divSubIngredienteInfo1 {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+    }
+    .lblNomeIngredienteCliente {
+        font-size: 16px;
+        color: #323232;
+        text-align: center;
+    }
+    .divSubIngredienteInfo2 {
+        align-items: center;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .lblQuantidadeIngredienteCliente {
+        font-size: 14px;
+    }
+    .lblValorIngredienteCliente {
+        font-size: 14px;
+        /* margin-right: 10px; */
     }
 }

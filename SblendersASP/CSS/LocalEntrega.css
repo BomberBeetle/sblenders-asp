@@ -1,5 +1,4 @@
-﻿body {
-}
+﻿body {}
 
 .divCorpoEntrega {
     height: auto;
@@ -17,23 +16,20 @@
 }
 
 .divEnderecoEntrega {
-    height: 700px;
+    /* height: 700px; */
     width: 35%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .divSubEndereco {
-    height: 250px;
-    width: 90%;
+    padding: 20px;
 }
 
 .divLblEntrega {
-    height: 40px;
     width: 100%;
-    float: left;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -43,12 +39,12 @@
 
 .lblEnderecoMaps {
     font-size: 30px;
+    text-align: center;
 }
 
 .divTxtEntrega {
     height: 70px;
     width: 100%;
-    float: left;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -66,7 +62,6 @@
 .divLblAvisoEntrega {
     height: 30px;
     width: 100%;
-    float: left;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -79,9 +74,6 @@
 }
 
 .divBtnEntrega {
-    height: 70px;
-    width: 100%;
-    float: left;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -90,8 +82,7 @@
 }
 
 .btnEnderecoMaps {
-    height: 40px;
-    width: 45%;
+    padding: 10px;
     background-color: #04cf15;
     border: none;
     border-radius: 5px 5px;
@@ -114,15 +105,11 @@
 }
 
 .divInstrucoes {
-    height: 250px;
-    width: 90%;
-    float: left;
+    padding: 20px;
 }
 
 .divSubInstrucoes1 {
-    height: 60px;
     width: 100%;
-    float: left;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -130,9 +117,10 @@
     align-items: center;
 }
 
-    .divSubInstrucoes1 p {
-        font-size: 30px;
-    }
+.divSubInstrucoes1 p {
+    font-size: 30px;
+    text-align: center;
+}
 
 .divSubInstrucoes2 {
     height: 190px;
@@ -150,8 +138,8 @@
     width: 90%;
     padding: 5px;
     overflow: hidden;
-    max-height:220px;
-    min-height:140px;
+    max-height: 220px;
+    min-height: 140px;
 }
 
 .divMapsEntrega {
@@ -178,36 +166,56 @@
 }
 
 .btnFinalizarPedido {
-    height: 80px;
-    width: 18.5%;
+    /* height: 80px; */
+    /* width: 18.5%; */
     background-color: #2464c1;
-    font-size: 30px;
+    /* font-size: 30px; */
     font-weight: bold;
     text-transform: uppercase;
-    padding-left: 0px;
-    padding-right: 0px;
+    /* padding-left: 0px; */
+    /* padding-right: 0px; */
     border-radius: 30px 30px;
     border: 0px;
     color: #DEDEDE;
     box-shadow: 5px 10px 19px rgba(0, 0, 0, 0.3);
-    padding-left: 20px;
+    /* padding-left: 20px; */
 }
 
 .divTextoBtnFinalizar {
-    height: 80px;
-    width: 100%;
-    float: left;
+    /* width: 100%; */
+    /* float: left; */
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-    .divTextoBtnFinalizar p {
-        margin-bottom: 0;
-    }
+.divTextoBtnFinalizar p {
+    margin-bottom: 0;
+}
 
-    .divTextoBtnFinalizar img {
-        height: 90%;
-        float: left;
+.divTextoBtnFinalizar img {
+    height: 40px;
+}
+
+@media screen and (max-width: 700px) {
+    .geral2 {
+        flex-direction: column;
     }
+    .divEnderecoEntrega {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .divMapsEntrega {
+        width: auto;
+    }
+    .divTituloPagina {
+        width: 250px;
+    }
+    .txtEnderecoMaps {
+        width: 100%;
+    }
+    .txtInstrucoes {
+        width: 100%;
+    }
+}

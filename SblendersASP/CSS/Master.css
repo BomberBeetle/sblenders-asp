@@ -269,7 +269,7 @@ body {
         position: fixed !important;
         height: 100%;
         width: 0;
-        z-index: 50;
+        z-index: 110;
         top: 0;
         right: 0;
         background-color: #ff7a0e;
@@ -466,7 +466,7 @@ body {
     display: none;
     position: fixed;
     background: rgba(255, 255, 255, 0.85);
-    z-index: 99999;
+    z-index: 1000;
     top: 0;
     left: 0;
     right: 0;
@@ -653,6 +653,7 @@ body {
     padding: 0px 48px;
     margin-top: 60px;
     justify-content: flex-end;
+    z-index: 102;
 }
 
 .MainFooter {

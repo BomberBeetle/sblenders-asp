@@ -29,16 +29,19 @@
             <div class="divIngredientes">
                 <div class="divIngredientesCategoria">
                     <h1>Selecione a Categoria:</h1>
-                    <select id="select1" name="select1" class="selectCategoria ls-select" onchange="mostrarCategoriaSelecao()">
-                        <option class="optionCategoria" value="paes">Pães</option>
-                        <option class="optionCategoria" value="carnes">Carnes</option>
-                        <option class="optionCategoria" value="verduras">Vegetais</option>
-                        <option class="optionCategoria" value="legumes">Queijos</option>
-                        <option class="optionCategoria" value="queijos">Molhos</option>
-                    </select>
-                    <a onclick="exibirInstrucoes()">
-                        <img src="Imagens/i.png" class="imgIconI" />
-                    </a>
+                    
+                    <div class="divAmiguinhosRow">
+                        <select id="select1" name="select1" class="selectCategoria ls-select" onchange="mostrarCategoriaSelecao()">
+                            <option class="optionCategoria" value="paes">Pães</option>
+                            <option class="optionCategoria" value="carnes">Carnes</option>
+                            <option class="optionCategoria" value="verduras">Vegetais</option>
+                            <option class="optionCategoria" value="legumes">Queijos</option>
+                            <option class="optionCategoria" value="queijos">Molhos</option>
+                        </select>
+                        <a onclick="exibirInstrucoes()">
+                            <img src="Imagens/i.png" class="imgIconI" />
+                        </a>
+                    </div>
                 </div>
                 <div class="divMostrarIngredientes" id="divMostrarIngredientes" runat="server">
                     <div class="divPaes" id="divPaes" runat="server">
@@ -63,7 +66,7 @@
             <div class="smallboy" id="Smallboy">
                 <a href="javascript:void(0)" class="closebtnIngre" onclick="closeNavIngredientes()">&times;</a>
                 <div class="divIngredientesCliente" id="divIngredientesCliente" runat="server">
-                    <div class="divIngredientesCategoria">
+                    <div class="divIngredientesCategoria binbosbinbos">
                         <h1>Seu Sblurger:</h1>
                     </div>
                 </div>

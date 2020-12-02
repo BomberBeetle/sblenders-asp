@@ -692,8 +692,18 @@ function closeNav() {
 
 function openNavIngredientes() {
     document.getElementById("Smallboy").style.width = "90%";
+    $("#Smallboy").animate(0.1e3)
 }
 
 function closeNavIngredientes() {
     document.getElementById("Smallboy").style.width = "0";
+    $("#Smallboy").animate(0.1e3)
+}
+
+window.onresize = () => {
+    if (window.innerWidth > 925) {
+        document.getElementById("Smallboy").style.width = "45%";
+    } else {
+        document.getElementById("Smallboy").style.width = "0";
+    }
 }
