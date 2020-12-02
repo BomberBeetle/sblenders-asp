@@ -151,12 +151,10 @@
 
         <div class="divBtnOpcoesPagLanches">
             <button class="btnIrCarrinho" id="btnIrCarrinho" runat="server" onserverclick="btnIrCarrinho_ServerClick">
-                <div class="divTextoBtnCarrinhoRow">
-                    <div class="divTextoBtnCarrinho">
-                        <p>Ir Para o Carrinho</p>
-                    </div>
-                    <img src="Imagens/seta2.png" />
+                <div class="divTextoBtnCarrinho">
+                    <p>Ir Para o Carrinho</p>
                 </div>
+                <img src="Imagens/seta2.png" />
             </button>
         </div>
     </div>

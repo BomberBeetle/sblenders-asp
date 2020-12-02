@@ -144,6 +144,8 @@
     box-shadow: 1px 1px 1px #454545;
     font-size: 18px;
     color: #FFF;
+    width:20%;
+    height:40px;
 }
 
 .btnAlterarItem {
