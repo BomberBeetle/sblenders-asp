@@ -150,6 +150,8 @@
     width: 90%;
     padding: 5px;
     overflow: hidden;
+    max-height:220px;
+    min-height:140px;
 }
 
 .divMapsEntrega {

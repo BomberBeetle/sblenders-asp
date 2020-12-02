@@ -33,7 +33,7 @@
 
                     <div class="divInstrucoes">
                         <div class="divSubInstrucoes1">
-                            <p>Instruções do Pedido </p>
+                            <p>Instruções do Pedido (Opcional)</p>
                         </div>
                         <div class="divSubInstrucoes2">
                             <asp:TextBox ID="txtInstrucoes" runat="server" MaxLength="200" CssClass="txtInstrucoes" TextMode="MultiLine" Wrap="True"></asp:TextBox>

@@ -21,7 +21,7 @@ namespace TCC
         private static String endereco;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -33,6 +33,8 @@ namespace TCC
                 RID = Convert.ToInt32(hiddenRID.Value);
                 endereco = txtEndMaps.Text;                                
                 ScriptManager.RegisterStartupScript(Page, Page.GetType(), "traçar rota", "tracarRotaReverso()", true);
+                lblOculto.Text = "Endereço Selecionado";
+                lblOculto.CssClass = "geral2";
             }
                        
         }
@@ -67,7 +69,9 @@ namespace TCC
 
         public void FinalizarPedido(object sender, EventArgs e)
         {
-            if(Session["userID"] != null)
+            lblOculto.Text = "";
+            lblOculto.CssClass = "hidden";
+            if (Session["userID"] != null)
             {
                 if (!String.IsNullOrEmpty(endereco))
                 {
@@ -81,6 +85,8 @@ namespace TCC
                 else
                 {
                     ScriptManager.RegisterStartupScript(Page, Page.GetType(), "traçar rota", "tracarRotaReverso()", true);
+                    lblOculto.Text = "Escolha o endereço";
+                    lblOculto.CssClass = "geral2";
                 }
             }
             else

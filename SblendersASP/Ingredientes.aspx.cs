@@ -798,7 +798,7 @@ namespace TCC
                 catU = catP;
             }
 
-            if (quant <= 30 && catP == 1 && catU == 1)
+            if (quant <= 30 && catP == 1 && catU == 1 && ppi.Count != 1)
             {
                 PedidoProduto ppc = new PedidoProduto(1, 23, ppi.ToArray());
                 ppl = new List<PedidoProduto>(((Pedido)Session["Carrinho"]).produtos);
